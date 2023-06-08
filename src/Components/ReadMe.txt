@@ -1,0 +1,1 @@
+This folder contains reusable components that can be used across different pages or sections of your application. It is further divided into subfolders based on the component's purpose, such as common components, layout components, and page components.

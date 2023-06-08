@@ -1,0 +1,1 @@
+This folder contains utility files or helper functions that can be used throughout your application.

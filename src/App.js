@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import ProfileDropdownComponent from './Components/Common/ProfileDropdownComponent';
+import HomePage from './Components/Pages/HomePage';
+import LandingPage from './Components/Pages/LandingPage';
+import LogInPage from './Components/Pages/LogInPage';
+import RestaurantsPage from './Components/Pages/RestaurantsPage';
+import SignUpPage from './Components/Pages/SignUpPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>
+        {/* -----Landing Page----- */}
+        {/* <LandingPage/> */}
+        {/* -----Sign Up Page----- */}
+        {/* <SignUpPage/> */}
+        {/* -----Log In Page----- */}
+        {/* <LogInPage/> */}
+        {/* -----Home Page----- */}
+        {/* <HomePage/> */}
+        {/* -----Profile Dropdown----- */}
+        {/* <ProfileDropdownComponent/> */}
+        {/* -----Restaurants Page----- */}
+        <RestaurantsPage/>
+      </>
     </div>
   );
 }
