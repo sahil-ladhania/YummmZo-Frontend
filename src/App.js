@@ -17,6 +17,7 @@ import VegOnlyToggleComponent from './Components/Menu/VegOnlyToggleComponent';
 import MenuSectionComponent from './Components/Menu/MenuSectionComponent';
 import RestaurantLisenceComponent from './Components/Menu/RestaurantLisenceComponent';
 import CheckoutPage from './Components/Pages/CheckoutPage';
+import HelpAndSupportPage from './Components/Pages/HelpAndSupportPage';
 
 function App() {
   return (
@@ -50,7 +51,9 @@ function App() {
         {/* <MenuSectionComponent/> */}
         {/* <RestaurantLisenceComponent/> */}
         {/* Checkout Page */}
-        <CheckoutPage/>
+        {/* <CheckoutPage/> */}
+        {/* Help and Support Page */}
+        <HelpAndSupportPage/>
       </>
     </div>
   );
