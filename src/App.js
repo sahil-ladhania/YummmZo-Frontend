@@ -18,6 +18,9 @@ import MenuSectionComponent from './Components/Menu/MenuSectionComponent';
 import RestaurantLisenceComponent from './Components/Menu/RestaurantLisenceComponent';
 import CheckoutPage from './Components/Pages/CheckoutPage';
 import HelpAndSupportPage from './Components/Pages/HelpAndSupportPage';
+import UpperFooterComponent from './Components/Common/UpperFooterComponent';
+import MiddleFooterComponent from './Components/Common/MiddleFooterComponent';
+import LocateMeComponent from './Components/Layout/LocateMeComponent';
 
 function App() {
   return (
@@ -53,7 +56,10 @@ function App() {
         {/* Checkout Page */}
         {/* <CheckoutPage/> */}
         {/* Help and Support Page */}
-        <HelpAndSupportPage/>
+        {/* <HelpAndSupportPage/> */}
+        {/* <UpperFooterComponent/> */}
+        {/* <LocateMeComponent/> */}
+        <SignUpPage/>
       </>
     </div>
   );

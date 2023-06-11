@@ -1,0 +1,60 @@
+/* Layout */
+.flex{
+    display: flex;
+}
+.fd-r{
+    flex-direction: row;
+}
+.fd-c{
+    flex-direction: column;
+}
+.jc-fs{
+    justify-content: flex-start;
+}
+.ai-c{
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Spacing */
+.ml-80{
+    margin-left: 80px;
+}
+.w-200{
+    width: 200px;
+}
+.mr-200{
+    margin-right: 200px;
+}
+
+/* Styling */
+.b-1-black-solid{
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+

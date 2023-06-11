@@ -1,0 +1,33 @@
+/* Layout */
+.flex{
+    display: flex;
+}
+.fd-r{
+    flex-direction: row;
+}
+.fd-c{
+    flex-direction: column;
+}
+.ai-fs{
+    align-items: flex-start;
+}
+.jc-sa{
+    justify-content: space-around;
+}
+.ls-n{
+    list-style: none;
+}
+
+/* Spacing */
+.ml-40{
+    margin-left: 40px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.lh-1{
+    line-height: 1.8;
+}

@@ -1,0 +1,41 @@
+/* Layout */
+.flex{
+    display: flex;
+}
+.jc-sa{
+    justify-content: space-around;
+}
+.jc-fs{
+    justify-content: flex-start;
+}
+.ai-c{
+    align-items: center;
+}
+.ai-fs{
+    align-items: flex-start;
+}
+.fd-r{
+    flex-direction: row;
+}
+.fd-c{
+    flex-direction: column;
+}
+
+/* Spacing */
+.ml-280{
+    margin-left: 280px;
+}
+.ml-240{
+    margin-left: 240px;
+}
+.mr-5{
+    margin-right: 5px;
+}
+.w-200{
+    width: 200px;
+}
+
+/* Styling */
+.ls-n{
+    list-style: none;
+}
