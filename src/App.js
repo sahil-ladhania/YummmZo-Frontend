@@ -59,7 +59,9 @@ function App() {
         {/* <HelpAndSupportPage/> */}
         {/* <UpperFooterComponent/> */}
         {/* <LocateMeComponent/> */}
-        <SignUpPage/>
+        {/* <SignUpPage/> */}
+        {/* <LogInPage/> */}
+        <LandingPage/>
       </>
     </div>
   );

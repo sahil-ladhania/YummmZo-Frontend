@@ -6,7 +6,7 @@ const LocateMeComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className=''>
+                <div className='h-400'>
                     {/* Landing Page Mini Navbar */}
                     <div className='flex jc-sa ai-c fd-r'>
                         <div>

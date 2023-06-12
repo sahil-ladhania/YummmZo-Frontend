@@ -8,6 +8,9 @@
 .jc-fs{
     justify-content: flex-start;
 }
+.jc-c{
+    justify-content: center;
+}
 .ai-c{
     align-items: center;
 }
@@ -20,8 +23,14 @@
 .fd-c{
     flex-direction: column;
 }
+.ta-c{
+    text-align: center;
+}
 
 /* Spacing */
+.h-400{
+    height: 400px;
+}
 .ml-280{
     margin-left: 280px;
 }
@@ -33,6 +42,18 @@
 }
 .w-200{
     width: 200px;
+}
+.h-300{
+    height: 300px;
+}
+.h-200{
+    height: 200px;
+}
+.w-a{
+    width: auto;
+}
+.mb-10{
+    margin-bottom: 10px;
 }
 
 /* Styling */

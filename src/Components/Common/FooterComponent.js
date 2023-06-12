@@ -7,12 +7,14 @@ const FooterComponent = () => {
     return (
         <div>
             <>
-                {/* Upper Footer Section */}
-                <UpperFooterComponent/>
-                {/* Middle Footer Section */}
-                <MiddleFooterComponent/>
-                {/* Lower Footer Section */}
-                <LowerFooterComponent/>
+                <div>
+                    {/* Upper Footer Section */}
+                    <UpperFooterComponent/>
+                    {/* Middle Footer Section */}
+                    <MiddleFooterComponent/>
+                    {/* Lower Footer Section */}
+                    <LowerFooterComponent/>
+                </div>
             </>
         </div>
     )

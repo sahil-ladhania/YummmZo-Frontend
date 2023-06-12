@@ -5,9 +5,9 @@ const LogInComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='flex fd-r jc-fs ai-c ml-80'>
                     {/* Log In Form */}
-                    <div>
+                    <div className='flex fd-c ai-c b-1-black-solid mr-200'>
                         {/* Log In with Google Section */}
                         <div>
                             <h1>Log in to YummmZo</h1>
@@ -19,14 +19,14 @@ const LogInComponent = () => {
                             <p>----------Or----------</p>
                         </div>
                         {/* Log In with Email & Password Section */}
-                        <div>
-                            <input type="email" name="" id="" placeholder='name@gmail.com'/>
-                            <input type="password" name="" id="" placeholder='Password'/>
+                        <div className='flex fd-c'>
+                            <input className='w-200' type="email" name="" id="" placeholder='name@gmail.com'/>
+                            <input className='w-200' type="password" name="" id="" placeholder='Password'/>
                             <a href="#">Forgot Password ?</a>
                         </div>
                         {/* Log In */}
                         <div>
-                            <button>Log in</button>
+                            <button className='w-200'>Log in</button>
                         </div>
                     </div>
                     {/* Image */}

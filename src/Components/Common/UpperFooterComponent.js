@@ -8,9 +8,9 @@ const UpperFooterComponent = () => {
                 {/* Main Component */}
                 <div className='flex fd-r ai-fs jc-sa'>
                     {/* First Column */}
-                    <div className='flex fd-c ai-fs'>
+                    <div className='flex fd-c ai-fs ml-70'>
                         {/* Heading */}
-                        <div className='ml-40'>
+                        <div>
                             Company
                         </div>
                         <div className=''>
@@ -30,7 +30,7 @@ const UpperFooterComponent = () => {
                     {/* Second Column */}
                     <div className='flex fd-c ai-fs'>
                         {/* Heading */}
-                        <div className='ml-40'>
+                        <div>
                             Contact
                         </div>
                         <div className=''>
@@ -44,7 +44,7 @@ const UpperFooterComponent = () => {
                     {/* Third Column */}
                     <div className='flex fd-c ai-fs'>
                         {/* Heading */}
-                        <div className='ml-40'>
+                        <div>
                             Legal
                         </div>
                         <div className=''>
@@ -55,8 +55,8 @@ const UpperFooterComponent = () => {
                                 <li className='ls-n lh-1'><a className='' href="#">Cookie Policy</a></li>
                                 <li className='ls-n lh-1'><a className='' href="#">Offer Terms</a></li>
                                 <li className='ls-n lh-1'><a className='' href="#">Phishing & Fraud</a></li>
-                                <li className='ls-n lh-1'><a className='' href="#">Corporate - YummmZo Money Codes Terms and Conditions</a></li>
-                                <li className='ls-n lh-1'><a className='' href="#">Corporate - YummmZo Discount Voucher Terms and Conditions</a></li>
+                                <li className='ls-n lh-1'><a className='' href="#">Corporate - YummmZo Money Codes Terms and <br /> Conditions</a></li>
+                                <li className='ls-n lh-1'><a className='' href="#">Corporate - YummmZo Discount Voucher Terms and <br /> Conditions</a></li>
                             </ul>
                         </div>
                     </div>

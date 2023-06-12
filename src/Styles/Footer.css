@@ -1,3 +1,9 @@
+/* For whole Landing Page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* Layout */
 .flex{
     display: flex;
@@ -19,6 +25,12 @@
 }
 
 /* Spacing */
+.ml-a{
+    margin-left: auto;
+}
+.mr-a{
+    margin-right: auto;
+}
 .ml-40{
     margin-left: 40px;
 }
@@ -30,4 +42,19 @@
 }
 .lh-1{
     line-height: 1.8;
+}
+.ml-130{
+    margin-left: 130px;
+}
+.ml-70{
+    margin-left: 70px;
+}
+.maxw-1300{
+    max-width: 1300px;
+}
+.minw-1300{
+    min-width: 1300px;
+}
+.ml-30{
+    margin-left: 30px;
 }
