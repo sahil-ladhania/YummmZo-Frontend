@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import '../../Styles/Navbar.css';
 
 const NavbarComponent = () => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='flex fd-r jc-sa ai-c'>
                     {/* Left Part */}
                     <div>
                         <div>
@@ -14,18 +15,18 @@ const NavbarComponent = () => {
                         <div>
                             <a href="#">
                                 Other 
-                                <img src="" alt="Down-Arrow-Image" />
+                                {/* <img src="" alt="Down-Arrow-Image" /> */}
                             </a>
                         </div>
                     </div>
                     {/* Right Part */}
                     <div>
-                        <ul>
-                            <li><a href="#"><img src="" alt="Restaurant-Button-Icon" />Restaurants</a></li>
-                            <li><a href="#"><img src="" alt="Offers-Button-Icon" />Offers</a></li>
-                            <li><a href="#"><img src="" alt="Help-Button-Icon" />Help</a></li>
-                            <li><a href="#"><img src="" alt="SignIn-Button-Icon" />Sign In</a></li>
-                            <li><a href="#"><img src="" alt="Cart-Button-Icon" />Cart</a></li>
+                        <ul className='flex fd-r'>
+                            <li className='ls-n'><a href="#">Restaurants</a></li>
+                            <li className='ls-n'><a href="#">Offers</a></li>
+                            <li className='ls-n'><a href="#">Help</a></li>
+                            <li className='ls-n'><a href="#">Sign In</a></li>
+                            <li className='ls-n'><a href="#">Cart</a></li>
                         </ul>
                     </div>
                 </div>

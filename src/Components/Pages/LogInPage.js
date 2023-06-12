@@ -6,10 +6,12 @@ const LogInPage = () => {
     return (
         <div>
             <>
-                {/* YummmZo Logo */}
-                <YummmZoLogoComponent/>
-                {/* Log In Form */}
-                <LogInComponent/>
+                <div className='maxw-1300 minw-1300 ml-a mr-a'>
+                    {/* YummmZo Logo */}
+                    <YummmZoLogoComponent/>
+                    {/* Log In Form */}
+                    <LogInComponent/>
+                </div>
             </>
         </div>
     )

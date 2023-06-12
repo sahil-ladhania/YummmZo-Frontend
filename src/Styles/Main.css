@@ -1,0 +1,19 @@
+/* For whole Page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Spacing */
+.ml-a{
+    margin-left: auto;
+}
+.mr-a{
+    margin-right: auto;
+}
+.maxw-1300{
+    max-width: 1300px;
+}
+.minw-1300{
+    min-width: 1300px;
+}

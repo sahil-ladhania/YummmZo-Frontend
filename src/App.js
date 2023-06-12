@@ -21,6 +21,7 @@ import HelpAndSupportPage from './Components/Pages/HelpAndSupportPage';
 import UpperFooterComponent from './Components/Common/UpperFooterComponent';
 import MiddleFooterComponent from './Components/Common/MiddleFooterComponent';
 import LocateMeComponent from './Components/Layout/LocateMeComponent';
+import NavbarComponent from './Components/Common/NavbarComponent';
 
 function App() {
   return (
@@ -61,7 +62,9 @@ function App() {
         {/* <LocateMeComponent/> */}
         {/* <SignUpPage/> */}
         {/* <LogInPage/> */}
-        <LandingPage/>
+        {/* <LandingPage/> */}
+        {/* <HomePage/> */}
+        <NavbarComponent/>
       </>
     </div>
   );

@@ -6,10 +6,12 @@ const SignUpPage = () => {
     return (
         <div>
             <>
-                {/* YummmZo Logo */}
-                <YummmZoLogoComponent/>
-                {/* Sign Up Form */}
-                <SignUpComponent/>
+                <div className='maxw-1300 minw-1300 ml-a mr-a'>
+                    {/* YummmZo Logo */}
+                    <YummmZoLogoComponent/>
+                    {/* Sign Up Form */}
+                    <SignUpComponent/>
+                </div>
             </>
         </div>
     )
