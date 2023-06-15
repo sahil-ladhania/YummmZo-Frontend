@@ -7,12 +7,14 @@ const EmptyCartPage = () => {
     return (
         <div>
             <>
-                {/* Customised Navbar for this page Section */}
-                <NavbarComponent/>
-                {/* Image | Content | Button Section */}
-                <ImageContentButtonComponent/>
-                {/* Footer Section */}
-                <FooterComponent/>
+                <div className='maxw-1000 minw-1000 ml-a mr-a'>
+                    {/* Customised Navbar for this page Section */}
+                    <NavbarComponent/>
+                    {/* Image | Content | Button Section */}
+                    <ImageContentButtonComponent/>
+                    {/* Footer Section */}
+                    <FooterComponent/>
+                </div>
             </>
         </div>
     )

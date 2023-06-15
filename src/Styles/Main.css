@@ -86,3 +86,12 @@
 .fw-w{
     flex-wrap: wrap;
 }
+.h-800{
+    height: 800px;
+}
+.h-550{
+    height: 550px;
+}
+.fs-xxl{
+    font-size: xx-large;
+}

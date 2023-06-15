@@ -5,14 +5,14 @@ const ImageContentButtonComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='h-800 flex fd-c ai-c'>
                     {/* Image Section */}
                     <div>
-                        <img src="" alt="Empty-Cart-Image" />
+                        <img className='h-550 w-a' src="https://media.istockphoto.com/id/861576608/vector/empty-shopping-bag-icon-online-business-vector-icon-template.jpg?s=612x612&w=0&k=20&c=I7MbHHcjhRH4Dy0NVpf4ZN4gn8FVDnwn99YdRW2x5k0=" alt="Empty-Cart-Image" />
                     </div>
                     {/* Content Section */}
-                    <div>
-                        <div>
+                    <div className='flex fd-c ai-c mb-20'>
+                        <div className='fs-xxl'>
                             Your cart is empty
                         </div>
                         <div>
@@ -21,7 +21,7 @@ const ImageContentButtonComponent = () => {
                     </div>
                     {/* Button Section */}
                     <div>
-                        <button>See Restaurant near you</button>
+                        <button className='h-40 p-0-10'>See Restaurants near you</button>
                     </div>
                 </div>
             </>

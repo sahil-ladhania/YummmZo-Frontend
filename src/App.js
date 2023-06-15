@@ -4,6 +4,7 @@ import LogInPage from './Components/Pages/LogInPage';
 import SignUpPage from './Components/Pages/SignUpPage';
 import HomePage from './Components/Pages/HomePage';
 import RestaurantsPage from './Components/Pages/RestaurantsPage';
+import EmptyCartPage from './Components/Pages/EmptyCartPage';
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
         {/* <LogInPage/> */}
         {/* Home Page */}
         {/* <HomePage/> */}
-        <RestaurantsPage/>
+        {/* Restaurants Page */}
+        {/* <RestaurantsPage/> */}
+        <EmptyCartPage/>
       </>
     </div>
   );
