@@ -17,3 +17,24 @@
 .minw-1000{
     min-width: 1000px;
 }
+.h-100{
+    height: 100px;
+}
+.w-a{
+    width: auto;
+}
+.br-50{
+    border-radius: 50px;
+}
+.m-0-30{
+    margin: 0 30px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.ta-c{
+    text-align: center;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
