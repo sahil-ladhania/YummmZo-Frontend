@@ -6,7 +6,7 @@ const YummmZoLogoComponent = () => {
         <div>
             <>
                 {/* YummmZo Logo */}
-                <div className='ml-80'>
+                <div className='h-100 flex ai-c'>
                     <img src="" alt="YummmZo-Logo-Image" />
                 </div>
             </>

@@ -6,7 +6,7 @@ const SignUpPage = () => {
     return (
         <div>
             <>
-                <div className='maxw-1300 minw-1300 ml-a mr-a'>
+                <div className='maxw-1000 minw-1000 ml-a mr-a'>
                     {/* YummmZo Logo */}
                     <YummmZoLogoComponent/>
                     {/* Sign Up Form */}

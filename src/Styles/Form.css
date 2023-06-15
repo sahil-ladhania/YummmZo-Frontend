@@ -14,6 +14,9 @@
 .ai-c{
     align-items: center;
 }
+.jc-sa{
+    justify-content: space-around;
+}
 
 /* Spacing */
 .ml-80{
@@ -24,6 +27,30 @@
 }
 .mr-200{
     margin-right: 200px;
+}
+.h-450{
+    height: 450px;
+}
+.h-600{
+    height: 600px;
+}
+.w-500{
+    width: 500px;
+}
+.h-300{
+    height: 300px;
+}
+.w-400{
+    width: 400px;
+}
+.w-300{
+    width: 300px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+.ml-30{
+    margin-left: 30px;
 }
 
 /* Styling */

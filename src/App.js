@@ -27,7 +27,9 @@ function App() {
   return (
     <div className="App">
       <>
-        <LandingPage/>
+        {/* Landing Page */}
+        {/* <LandingPage/> */}
+        <SignUpPage/>
       </>
     </div>
   );
