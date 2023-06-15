@@ -19,6 +19,21 @@
 }
 
 /* Spacing */
+.ml-180{
+    margin-left: 180px;
+}
+.maxw-1000{
+    max-width: 1000px;
+}
+.minw-1000{
+    min-width: 1000px;
+}
+.ml-a{
+    margin-left: auto;
+}
+.mr-a{
+    margin-right: auto;
+}
 .ml-80{
     margin-left: 80px;
 }
