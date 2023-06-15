@@ -3,6 +3,7 @@ import LandingPage from './Components/Pages/LandingPage';
 import LogInPage from './Components/Pages/LogInPage';
 import SignUpPage from './Components/Pages/SignUpPage';
 import HomePage from './Components/Pages/HomePage';
+import RestaurantsPage from './Components/Pages/RestaurantsPage';
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         {/* <SignUpPage/> */}
         {/* Log In Page */}
         {/* <LogInPage/> */}
-        <HomePage/>
+        {/* Home Page */}
+        {/* <HomePage/> */}
+        <RestaurantsPage/>
       </>
     </div>
   );

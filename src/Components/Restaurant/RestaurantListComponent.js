@@ -6,15 +6,13 @@ const RestaurantListComponent = () => {
         <div>
             <>
                 {/* Restaurant Detail Component */}
-                <div>
-                    <ul>
-                        <li><RestaurantDetailComponent/></li>
-                        <li><RestaurantDetailComponent/></li>
-                        <li><RestaurantDetailComponent/></li>
-                        <li><RestaurantDetailComponent/></li>
-                        <li><RestaurantDetailComponent/></li>
-                        <li><RestaurantDetailComponent/></li>
-                    </ul>
+                <div className='flex fw-w jc-sb'> 
+                    <RestaurantDetailComponent/>
+                    <RestaurantDetailComponent/>
+                    <RestaurantDetailComponent/>
+                    <RestaurantDetailComponent/>
+                    <RestaurantDetailComponent/>
+                    <RestaurantDetailComponent/>
                 </div>
             </>
         </div>

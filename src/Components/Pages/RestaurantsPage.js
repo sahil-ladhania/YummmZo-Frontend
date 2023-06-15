@@ -10,18 +10,20 @@ const RestaurantsPage = () => {
     return (
         <div>
             <>
-                {/* Navbar Component */}
-                <NavbarComponent/>
-                {/* Restaurant Search Bar Component */}
-                <RestaurantSearchComponent/>
-                {/* Top Brands Component */}
-                <TopBrandsComponent/>
-                {/* Filters Component */}
-                <RestaurantFilterComponent/>
-                {/* Restaurant Lists Component */}
-                <RestaurantListComponent/>
-                {/* Footer Component */}
-                <FooterComponent/>
+                <div className='maxw-1000 minw-1000 ml-a mr-a'>
+                    {/* Navbar Component */}
+                    <NavbarComponent/>
+                    {/* Restaurant Search Bar Component */}
+                    <RestaurantSearchComponent/>
+                    {/* Top Brands Component */}
+                    <TopBrandsComponent/>
+                    {/* Filters Component */}
+                    <RestaurantFilterComponent/>
+                    {/* Restaurant Lists Component */}
+                    <RestaurantListComponent/>
+                    {/* Footer Component */}
+                    <FooterComponent/>
+                </div>
             </>
         </div>
     )

@@ -38,3 +38,51 @@
 .mb-50{
     margin-bottom: 50px;
 }
+.h-50{
+    height: 50px;
+}
+.h-40{
+    height: 40px;
+}
+.w-800{
+    width: 800px;
+}
+.h-150{
+    height: 150px;
+}
+.br-80{
+    border-radius: 80px;
+}
+.ml-80{
+    margin-left: 80px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.w-350{
+    width: 350px;
+}
+.flex{
+    display: flex;
+}
+.fd-c{
+    flex-direction: column;
+}
+.jc-sb{
+    justify-content: space-between;
+}
+.ai-fs{
+    align-items: flex-start;
+}
+.h-15{
+    height: 15px;
+}
+.w-a{
+    width: auto;
+}
+.b-1-b-s{
+    border: 1px black solid;
+}
+.fw-w{
+    flex-wrap: wrap;
+}

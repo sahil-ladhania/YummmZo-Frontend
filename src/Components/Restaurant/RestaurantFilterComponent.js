@@ -1,31 +1,37 @@
 import React from 'react'
+import { UilClock } from '@iconscout/react-unicons'
+import { UilStar } from '@iconscout/react-unicons'
+import { UilArrowCircleUp } from '@iconscout/react-unicons'
+import { UilArrowCircleDown } from '@iconscout/react-unicons'
 
 const RestaurantFilterComponent = () => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='h-50 flex jc-sb ai-c'>
                     {/* Left Section */}
                     <div>
                         {/* No of Restaurants */}
-                        <div>
-                            259 restaurants
-                        </div>
+                        <span>259 restaurants</span>
                     </div>
                     {/* Right Section */}
-                    <div>
+                    <div className='flex'>
                         {/* Filter Options Section */}
-                        <div>
+                        <div className='flex ai-c ml-10'>
+                            <UilClock className='h-20 w-a'/>
                             <a href="#">Delivery Time</a>
                         </div>
-                        <div>
+                        <div className='flex ai-c ml-10'>
+                            <UilStar className='h-20 w-a'/>
                             <a href="#">Rating</a>
                         </div>
-                        <div>
+                        <div className='flex ai-c ml-10'>
+                            <UilArrowCircleUp className='h-20 w-a'/>
                             <a href="#">Cost : Low to High</a>
                         </div>
-                        <div>
+                        <div className='flex ai-c ml-10'>
+                            <UilArrowCircleDown className='h-20 w-a'/>
                             <a href="#">Cost : High to Low</a>
                         </div>
                     </div>
