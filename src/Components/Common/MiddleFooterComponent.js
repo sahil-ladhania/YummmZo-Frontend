@@ -5,15 +5,15 @@ const MiddleFooterComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex fd-c'>
+                <div className='flex fd-c mb-20'>
                     {/* Heading Container */}
-                    <div className='ml-130'>
+                    <div className='mb-10'>
                         We Deliver To
                     </div>
                     {/* Delivery Location's Container */}
-                    <div className='flex jc-sa fd-r ai-fs'>
+                    <div className='flex jc-sb fd-r ai-fs'>
                         {/* First Column */}
-                        <div>
+                        <div className='w-150px'>
                             <ul>
                                 <li className='ls-n lh-1'><a href="#">Azamgarh</a></li>
                                 <li className='ls-n lh-1'><a href="#">Aurangabad</a></li>
@@ -24,10 +24,11 @@ const MiddleFooterComponent = () => {
                                 <li className='ls-n lh-1'><a href="#">Darjeeling</a></li>
                                 <li className='ls-n lh-1'><a href="#">Delhi</a></li>
                                 <li className='ls-n lh-1'><a href="#">Eluru</a></li>
+                                <li className='ls-n lh-1'><a href="#">Etawah</a></li>
                             </ul>
                         </div>
                         {/* Second Column */}
-                        <div>
+                        <div className='w-150px'>
                             <ul>
                                 <li className='ls-n lh-1'><a href="#">Etah</a></li>
                                 <li className='ls-n lh-1'><a href="#">Faridabad</a></li>
@@ -38,10 +39,11 @@ const MiddleFooterComponent = () => {
                                 <li className='ls-n lh-1'><a href="#">Hisar</a></li>
                                 <li className='ls-n lh-1'><a href="#">Jaipur</a></li>
                                 <li className='ls-n lh-1'><a href="#">Jammu</a></li>
+                                <li className='ls-n lh-1'><a href="#">Jhansi</a></li>
                             </ul>
                         </div>
                         {/* Third Column */}
-                        <div>
+                        <div className='w-150px'>
                             <ul>
                                 <li className='ls-n lh-1'><a href="#">Kanpur</a></li>
                                 <li className='ls-n lh-1'><a href="#">Kolkata</a></li>
@@ -52,10 +54,11 @@ const MiddleFooterComponent = () => {
                                 <li className='ls-n lh-1'><a href="#">Nagpur</a></li>
                                 <li className='ls-n lh-1'><a href="#">Nashik</a></li>
                                 <li className='ls-n lh-1'><a href="#">Patna</a></li>
+                                <li className='ls-n lh-1'><a href="#">Puri</a></li>
                             </ul>
                         </div>
                         {/* Fourth Column */}
-                        <div>
+                        <div className='w-150px'>
                             <ul>
                                 <li className='ls-n lh-1'><a href="#">Pune</a></li>
                                 <li className='ls-n lh-1'><a href="#">Raipur</a></li>

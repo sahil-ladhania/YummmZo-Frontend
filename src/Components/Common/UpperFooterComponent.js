@@ -6,11 +6,11 @@ const UpperFooterComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex fd-r ai-fs jc-sa'>
+                <div className='flex fd-r ai-fs jc-sb mb-20'>
                     {/* First Column */}
-                    <div className='flex fd-c ai-fs ml-70'>
+                    <div className='flex fd-c ai-fs'>
                         {/* Heading */}
-                        <div>
+                        <div className='mb-10'>
                             Company
                         </div>
                         <div className=''>
@@ -30,7 +30,7 @@ const UpperFooterComponent = () => {
                     {/* Second Column */}
                     <div className='flex fd-c ai-fs'>
                         {/* Heading */}
-                        <div>
+                        <div className='mb-10'>
                             Contact
                         </div>
                         <div className=''>
@@ -44,7 +44,7 @@ const UpperFooterComponent = () => {
                     {/* Third Column */}
                     <div className='flex fd-c ai-fs'>
                         {/* Heading */}
-                        <div>
+                        <div className='mb-10'>
                             Legal
                         </div>
                         <div className=''>
@@ -64,11 +64,11 @@ const UpperFooterComponent = () => {
                     <div className='flex fd-c'>
                         {/* Image 1 */}
                         <div className='mb-20'>
-                            <img className='' src="" alt="Download-on-App-Store" />
+                            <img className='' src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-AppStore_lg30tv" alt="Download-on-App-Store" />
                         </div>
                         {/* Image 2 */}
                         <div className='mt-20'>
-                            <img className='' src="" alt="Download-on-Play-Store" />
+                            <img className='' src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-GooglePlay_1_zixjxl" alt="Download-on-Play-Store" />
                         </div>
                     </div>
                 </div>

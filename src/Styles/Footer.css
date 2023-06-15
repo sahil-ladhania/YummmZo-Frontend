@@ -20,11 +20,17 @@
 .jc-sa{
     justify-content: space-around;
 }
+.jc-sb{
+    justify-content: space-between;
+}
 .ls-n{
     list-style: none;
 }
 
 /* Spacing */
+.h-100{
+    height: 100px;
+}
 .ml-a{
     margin-left: auto;
 }
@@ -57,4 +63,28 @@
 }
 .ml-30{
     margin-left: 30px;
+}
+.c-blue{
+    color: blue;
+}
+.c-purple{
+    color: purple;
+}
+.c-0ac3ff{
+    color: #0ac3ff;
+}
+.c-4343ff{
+    color: #4343ff;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.w-150px{
+    width: 150px;
+}
+.mb-20{
+    margin-bottom: 20px;
 }

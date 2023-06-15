@@ -27,44 +27,7 @@ function App() {
   return (
     <div className="App">
       <>
-        {/* -----Landing Page----- */}
-        {/* <LandingPage/> */}
-        {/* -----Sign Up Page----- */}
-        {/* <SignUpPage/> */}
-        {/* -----Log In Page----- */}
-        {/* <LogInPage/> */}
-        {/* -----Home Page----- */}
-        {/* <HomePage/> */}
-        {/* -----Profile Dropdown----- */}
-        {/* <ProfileDropdownComponent/> */}
-        {/* -----Restaurants Page----- */}
-        {/* <RestaurantsPage/> */}
-        {/* -----Menu Page----- */}
-        {/* <MenuPage/> */}
-        {/* -----Empty Cart Page----- */}
-        {/* <EmptyCartPage/> */}
-        {/* Cart Component */}
-        {/* <CartComponent/> */}
-        {/* Empty Cart Component */}
-        {/* <EmptyCartComponent/> */}
-        {/* <LinkFavSearchComponent/> */}
-        {/* <RestaurantNameAddressCuisineRatingComponent/> */}
-        {/* <TimeAndPriceForTwoComponent/> */}
-        {/* <CouponsSectionComponent/> */}
-        {/* <VegOnlyToggleComponent/> */}
-        {/* <MenuSectionComponent/> */}
-        {/* <RestaurantLisenceComponent/> */}
-        {/* Checkout Page */}
-        {/* <CheckoutPage/> */}
-        {/* Help and Support Page */}
-        {/* <HelpAndSupportPage/> */}
-        {/* <UpperFooterComponent/> */}
-        {/* <LocateMeComponent/> */}
-        {/* <SignUpPage/> */}
-        {/* <LogInPage/> */}
-        {/* <LandingPage/> */}
-        {/* <HomePage/> */}
-        <NavbarComponent/>
+        <LandingPage/>
       </>
     </div>
   );

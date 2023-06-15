@@ -1,13 +1,17 @@
 import React from 'react'
+import { UilFacebookF } from '@iconscout/react-unicons'
+import { UilInstagram } from '@iconscout/react-unicons'
+import { UilTwitter } from '@iconscout/react-unicons'
+import { UilLinkedin } from '@iconscout/react-unicons'
 
 const LowerFooterComponent = () => {
     return (
         <div>
         <>
             {/* Main Component */}
-            <div className='flex jc-sa ai-c fd-r'>
+            <div className='flex jc-sb ai-c fd-r h-100'>
                 {/* Logo Container */}
-                <div className='ml-30'>
+                <div className=''>
                     <img src="" alt="YummmZo-Logo" />
                 </div>
                 {/* Trademark Container */}
@@ -16,10 +20,11 @@ const LowerFooterComponent = () => {
                 </div>
                 {/* Social Media Handles Container */}
                 <div className=''>
-                    <a href="#"><img src="" alt="Facebook" /></a>
-                    <a href="#"><img src="" alt="Pintrest" /></a>
-                    <a href="#"><img src="" alt="Instagram" /></a>
-                    <a href="#"><img src="" alt="Twitter" /></a>
+                    {/* <a href="#"><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-facebook_tfqsuc" alt="Facebook" /></a> */}
+                    <a href="#"><UilFacebookF className="c-blue mr-10"/></a>
+                    <a href="#"><UilInstagram className="c-purple mr-10"/></a>
+                    <a href="#"><UilTwitter className="c-0ac3ff mr-10"/></a>
+                    <a href="#"><UilLinkedin className="c-4343ff mr-10"/></a>
                 </div>
             </div>
         </>

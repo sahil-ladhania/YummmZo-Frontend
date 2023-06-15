@@ -8,7 +8,7 @@ const LandingPage = () => {
     return (
         <div>
             <>
-                <div className='maxw-1300 minw-1300 ml-a mr-a'>
+                <div className='maxw-1000 minw-1000 ml-a mr-a'>
                     {/* Locate Me | Login | Signup Section */}
                     <LocateMeComponent/>
                     {/* Banner and USP's Section */}
