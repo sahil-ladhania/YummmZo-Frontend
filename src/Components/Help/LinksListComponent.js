@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../Styles/Main.css'
 
 const LinksListComponent = () => {
     return (
@@ -7,11 +8,11 @@ const LinksListComponent = () => {
                 {/* Main Component */}
                 <div>
                     {/* Links List Section */}
-                    <div>
-                        <ul>
-                            <li><a href="#">General Issues</a></li>
-                            <li><a href="#">Legal , Terms & Conditions</a></li>
-                            <li><a href="#">FAQs</a></li>
+                    <div className='h-150 flex ai-c b-1-b-s w-300'>
+                        <ul >
+                            <li className='ls-n m-20-0 p-0-50'><a href="#">General Issues</a></li>
+                            <li className='ls-n m-20-0 p-0-50'><a href="#">Legal , Terms & Conditions</a></li>
+                            <li className='ls-n m-20-0 p-0-50'><a href="#">FAQs</a></li>
                         </ul>
                     </div>
                 </div>

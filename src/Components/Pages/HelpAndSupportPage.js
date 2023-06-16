@@ -8,14 +8,16 @@ const HelpAndSupportPage = () => {
     return (
         <div>
             <>
-                {/* Navbar Component */}
-                <NavbarComponent/>
-                {/* Heading Component */}
-                <HeadingComponent/>
-                {/* Options Component */}
-                <OptionsComponent/>
-                {/* Footer Component */}
-                <FooterComponent/>
+                <div className='maxw-1000 minw-1000 ml-a mr-a'>
+                    {/* Navbar Component */}
+                    <NavbarComponent/>
+                    {/* Heading Component */}
+                    <HeadingComponent/>
+                    {/* Options Component */}
+                    <OptionsComponent/>
+                    {/* Footer Component */}
+                    <FooterComponent/>
+                </div>
             </>
         </div>
     )

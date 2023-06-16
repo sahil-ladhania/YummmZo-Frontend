@@ -10,12 +10,13 @@ const OptionsComponent = () => {
             <>
                 {/* Links List Component */}
                 <LinksListComponent/>
+                <br />
                 {/* General Issues Component */}
-                <GeneralIssuesComponent/>
+                {/* <GeneralIssuesComponent/> */}
                 {/* Terms and Conditions Component */}
-                <LegalTermsConditions/>
+                {/* <LegalTermsConditions/> */}
                 {/* FAQs Component */}
-                <FAQComponent/>
+                {/* <FAQComponent/> */}
             </>
         </div>
     )
