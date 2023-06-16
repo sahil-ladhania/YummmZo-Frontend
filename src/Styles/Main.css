@@ -95,3 +95,30 @@
 .fs-xxl{
     font-size: xx-large;
 }
+.w-600{
+    width: 600px;
+}
+.p-0-20{
+    padding: 0px 20px;
+}
+.h-60{
+    height: 60px;
+}
+.h-10{
+    height: 10px;
+}
+.w-260{
+    width: 260px;
+}
+.h-350{
+    height: 350px;
+}
+.p-10-20{
+    padding: 10px 20px;
+}
+.mt-100{
+    margin-top: 100px;
+}
+.b-1-b-d{
+    border: 1px black dashed;
+}

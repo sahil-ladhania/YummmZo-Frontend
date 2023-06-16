@@ -10,18 +10,24 @@ const CheckoutPage = () => {
     return (
         <div>
             <>
-                {/* Navbar Component */}
-                <NavbarComponent/>
-                {/* Delivery Option Component */}
-                <DeliveryAddressComponent/>
-                {/* Bill Component */}
-                <BillComponent/>
-                {/* Payment Component */}
-                <PaymentComponent/>
-                {/* Cancellation Policy Component */}
-                <CancellationPolicyComponent/>
-                {/* Footer Component */}
-                <FooterComponent/>
+                <div className='maxw-1000 minw-1000 ml-a mr-a'>
+                    {/* Navbar Component */}
+                    <NavbarComponent/>
+                    <div className='flex jc-sb mb-20 h-350'>
+                        {/* Delivery Option Component */}
+                        <DeliveryAddressComponent/>
+                        {/* Bill Component */}
+                        <BillComponent/>
+                    </div>
+                    <div className='flex jc-sb mb-20 h-350'>
+                        {/* Payment Component */}
+                        <PaymentComponent/>
+                        {/* Cancellation Policy Component */}
+                        <CancellationPolicyComponent/>
+                    </div>
+                    {/* Footer Component */}
+                    <FooterComponent/>
+                </div>
             </>
         </div>
     )

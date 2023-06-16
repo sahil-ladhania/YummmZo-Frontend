@@ -5,6 +5,7 @@ import SignUpPage from './Components/Pages/SignUpPage';
 import HomePage from './Components/Pages/HomePage';
 import RestaurantsPage from './Components/Pages/RestaurantsPage';
 import EmptyCartPage from './Components/Pages/EmptyCartPage';
+import CheckoutPage from './Components/Pages/CheckoutPage';
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
         {/* <HomePage/> */}
         {/* Restaurants Page */}
         {/* <RestaurantsPage/> */}
-        <EmptyCartPage/>
+        {/* Empty Cart Page */}
+        {/* <EmptyCartPage/> */}
+        <CheckoutPage/>
       </>
     </div>
   );

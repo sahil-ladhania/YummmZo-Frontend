@@ -1,15 +1,16 @@
 import React from 'react'
+import { UilInfoCircle } from '@iconscout/react-unicons'
 
 const BillComponent = () => {
     return (
-        <div>
+        <div className='b-1-b-d'>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='w-300 p-10-20'>
                     {/* Image and Restaurant Name Section */}
-                    <div>
+                    <div className='flex ai-c mb-20'>
                         <div>
-                            <img src="" alt="Restaurant-Image" />
+                            <img className='h-60 mr-10' src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/0bf19a82b109b40c2f5c56d00f071a33" alt="Restaurant-Image" />
                         </div>
                         <div>
                             <a href="#">
@@ -23,9 +24,9 @@ const BillComponent = () => {
                         </div>
                     </div>
                     {/* Item Section */}
-                    <div>
+                    <div className='flex fd-r ai-c jc-sb mb-20'>
                         <div>
-                            <img src="" alt="Veg-Nonveg-Image" />
+                            <img className='h-10' src="https://i.pinimg.com/originals/e4/1f/f3/e41ff3b10a26b097602560180fb91a62.png" alt="Veg-Nonveg-Image" />
                         </div>
                         <div>
                             <p>
@@ -33,7 +34,7 @@ const BillComponent = () => {
                             </p>
                         </div>
                         <div>
-                            <button>Increment / Decrement</button>
+                            <button>- | +</button>
                         </div>
                         <div>
                             <p>
@@ -42,17 +43,17 @@ const BillComponent = () => {
                         </div>
                     </div>
                     {/* Suggestion Textfeild */}
-                    <div>
-                        <input type="text" name="" id="" placeholder='Any Suggestion?'/>
+                    <div className='mb-20'>
+                        <input className='h-40 w-260 p-0-10' type="text" name="" id="" placeholder='Any Suggestion?'/>
                     </div>
                     {/* Bill Details */}
-                    <div>
-                        <div>
+                    <div className='flex fd-c'>
+                        <div className='mb-10'>
                             <p>
                                 Bill Details
                             </p>
                         </div>
-                        <div>
+                        <div className='flex jc-sb'>
                             <p>
                                 Item Total
                             </p>
@@ -60,7 +61,7 @@ const BillComponent = () => {
                                 Rs.269
                             </p>
                         </div>
-                        <div>
+                        <div className='flex jc-sb mb-10'>
                             <p>
                                 Delivery Fee
                             </p>
@@ -68,23 +69,22 @@ const BillComponent = () => {
                                 Free
                             </p>
                         </div>
-                        <div>
-                            <p>
-                                Platform Fee
-                            </p>
-                            <p>
-                                Rs.2
-                            </p>
+                        <div className='flex jc-sb'>
+                            <div className='flex ai-c'>
+                                <span>Platform Fee</span>
+                                <UilInfoCircle className='h-15 w-a'/>
+                            </div>
+                            <span>Rs.2</span>
                         </div>
-                        <div>
-                            <p>
-                                GST & Restaurant Charges
-                            </p>
-                            <p>
-                                Rs. 20
-                            </p>
+                        <div className='flex jc-sb mb-10'>
+                            <div className='flex ai-c'> 
+                                <span>GST & Restaurant Charges</span>
+                                <UilInfoCircle className='h-15 w-a'/>
+                            </div>
+                            <span>Rs. 20</span>
                         </div>
-                        <div>
+                        <hr />
+                        <div className='flex jc-sb'>
                             <p>
                                 To Pay
                             </p>
