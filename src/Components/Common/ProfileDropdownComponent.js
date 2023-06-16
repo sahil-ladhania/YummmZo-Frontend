@@ -1,26 +1,27 @@
 import React from 'react'
+import '../../Styles/Main.css'
 
 const ProfileDropdownComponent = () => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='w-400 ml-500 p-10-20 b-1-b-s'>
                     {/* Profile Title */}
-                    <div>
+                    <div className='h-50'>
                         Hello, Sahil!
                     </div>
                     {/* Profile Divider */}
                     <div>
-
+                        <hr />
                     </div>
                     {/* Profile Body */}
                     <div>
                         {/* Name and Email Section */}
-                        <div>
+                        <div className='h-120 mt-20'>
                             {/* Name Row */}
                             <div>
-                                <div>
+                                <div className='flex jc-sb mb-10'>
                                     <div>
                                         Name
                                     </div>
@@ -28,13 +29,13 @@ const ProfileDropdownComponent = () => {
                                         <a href="#">Edit</a>
                                     </div>
                                 </div>
-                                <div>
+                                <div className='mb-10'>
                                     Sahil
                                 </div>
                             </div>
                             {/* Email Row */}
                             <div>
-                                <div>
+                                <div className='mb-10'>
                                     Email
                                 </div>
                                 <div>
@@ -42,9 +43,13 @@ const ProfileDropdownComponent = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* Phone Number Section */}
+                        {/* Profile Divider */}
                         <div>
-                            <div>
+                            <hr />
+                        </div>
+                        {/* Phone Number Section */}
+                        <div className='h-80 mt-20'>
+                            <div className='flex jc-sb mb-10'>
                                 <div>
                                     Phone
                                 </div>
@@ -56,9 +61,13 @@ const ProfileDropdownComponent = () => {
                                 What's your phone number?
                             </div>
                         </div>
-                        {/* Password Section */}
+                        {/* Profile Divider */}
                         <div>
-                            <div>
+                            <hr />
+                        </div>
+                        {/* Password Section */}
+                        <div className='h-80 mt-20'>
+                            <div className='flex jc-sb mb-10'>
                                 <div>
                                     Password
                                 </div>
@@ -70,22 +79,26 @@ const ProfileDropdownComponent = () => {
                                 ********
                             </div>
                         </div>
-                        {/* Manage Preference Section */}
+                        {/* Profile Divider */}
                         <div>
-                            <div>
+                            <hr />
+                        </div>
+                        {/* Manage Preference Section */}
+                        <div className='mt-20'>
+                            <div className='mb-10'>
                                 Manage preferences
                             </div>
-                            <div>
-                                <p>
-                                    We use customer data to improve the experience of our service <br /> and show relevant promotions.
+                            <div className='mb-10'>
+                                <p className='ta-j fs-s'>
+                                    We use customer data to improve the experience of our service and show relevant promotions.
                                 </p>
                             </div>
                             <div>
-                                <p>
-                                    Glovo may share user data (such as hashed emails, phones, <br /> or device identifiers) with Facebook and similar platforms <br /> to personalise and measure ads and content and to create <br /> audiences. You can always opt out of receiving these kinds <br /> of communications by deactivating this toggle.
+                                <p className='ta-j fs-s p-10 b-1-b-s mb-10'>
+                                    Glovo may share user data (such as hashed emails, phones, or device identifiers) with Facebook and similar platforms to personalise and measure ads and content and to create audiences. You can always opt out of receiving these kinds of communications by deactivating this toggle.
                                 </p>
                             </div>
-                            <div>
+                            <div className='flex jc-sb ai-c h-50 mb-10'>
                                 <div>
                                     <p>
                                         Receive special deals and promotions
@@ -96,9 +109,13 @@ const ProfileDropdownComponent = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* Promo Code Section */}
+                        {/* Profile Divider */}
                         <div>
-                            <div>
+                            <hr />
+                        </div>
+                        {/* Promo Code Section */}
+                        <div className='mt-20'>
+                            <div className='flex jc-sb ai-c'>
                                 <div>
                                     Promo code
                                 </div>
@@ -106,13 +123,17 @@ const ProfileDropdownComponent = () => {
                                     <a href="#">Add</a>
                                 </div>
                             </div>
-                            <div>
+                            <div className='mb-10'>
                                 -
                             </div>
                         </div>
-                        {/* Logout Section */}
+                        {/* Profile Divider */}
                         <div>
-                            <div>
+                            <hr />
+                        </div>
+                        {/* Logout Section */}
+                        <div className='mt-20'>
+                            <div className='flex jc-fe'>
                                 <a href="#">Log out</a>
                             </div>
                         </div>

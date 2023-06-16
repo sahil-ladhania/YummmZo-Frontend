@@ -131,3 +131,21 @@
 .p-0-50{
     padding: 0 50px;
 }
+.ml-500{
+    margin-left: 500px;
+}
+.p-10-20{
+    padding: 10px 20px;
+}
+.ta-j{
+    text-align: justify;
+}
+.fs-s{
+    font-size: smaller;
+}
+.p-10{
+    padding: 10px;
+}
+.jc-fe{
+    justify-content: flex-end;
+}

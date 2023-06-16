@@ -7,6 +7,7 @@ import RestaurantsPage from './Components/Pages/RestaurantsPage';
 import EmptyCartPage from './Components/Pages/EmptyCartPage';
 import CheckoutPage from './Components/Pages/CheckoutPage';
 import HelpAndSupportPage from './Components/Pages/HelpAndSupportPage';
+import ProfileDropdownComponent from './Components/Common/ProfileDropdownComponent';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         {/* Checkout Page */}
         {/* <CheckoutPage/> */}
         {/* <HelpAndSupportPage/> */}
+        <ProfileDropdownComponent/>
       </>
     </div>
   );
