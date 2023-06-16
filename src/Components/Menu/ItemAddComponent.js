@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../Styles/Main.css'
 
 const ItemAddComponent = () => {
     return (
@@ -8,7 +9,7 @@ const ItemAddComponent = () => {
                 <div>
                     {/* Add Button Section */}
                     <div>
-                        <button>Add</button>
+                        <button className='h-40 w-100'>Add</button>
                     </div>
                 </div>
             </>

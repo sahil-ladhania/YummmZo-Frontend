@@ -1,21 +1,26 @@
 import React from 'react'
+import { UilStar } from '@iconscout/react-unicons'
 
 const StarAndRatingComponent = () => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='p-10-20 b-1-b-s'>
                     {/* Icon Section */}
-                    <div>
-                        <img src="" alt="Star-Icon" />
+                    <div className='flex jc-c ai-c mb-5'>
+                        <span><UilStar className='h-20 w-a mr-5'/></span>
                         <p>
                             3.5
                         </p>
                     </div>
-                    {/* Rating Content Section */}
+                    {/* Divider Section */}
                     <div>
-                        <p>
+                        <hr />
+                    </div>
+                    {/* Rating Content Section */}
+                    <div className='mt-5'>
+                        <p className='fs-s'>
                             100+ ratings
                         </p>
                     </div>

@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 /* Spacing */
+.h-20{
+    height: 20px;
+}
 .ml-a{
     margin-left: auto;
 }
@@ -154,4 +157,34 @@
 }
 .fs-l{
     font-size: larger;
+}
+.fs-xxs{
+    font-size: xx-small;
+}
+.pointer{
+    cursor: pointer;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.fs-xl{
+    font-size: x-large;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.mr-5{
+    margin-right: 5px;
+}
+.w-250{
+    width: 250px;
+}
+.jc-se{
+    justify-content: space-evenly;
+}
+.h-30{
+    height: 30px;
 }

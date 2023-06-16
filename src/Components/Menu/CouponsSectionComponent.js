@@ -1,18 +1,16 @@
 import React from 'react'
+import CouponComponent from './CouponComponent';
 
 const CouponsSectionComponent = () => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='flex jc-sb mb-20'>
                     {/* Coupen's Section */}
-                    <ul>
-                        <li><a href="#"> <CouponsSectionComponent/> </a></li>
-                        <li><a href="#"> <CouponsSectionComponent/> </a></li>
-                        <li><a href="#"> <CouponsSectionComponent/> </a></li>
-                        <li><a href="#"> <CouponsSectionComponent/> </a></li>
-                    </ul>
+                    <CouponComponent/>
+                    <CouponComponent/>
+                    <CouponComponent/>
                 </div>
             </>
         </div>

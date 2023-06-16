@@ -11,6 +11,7 @@ import ProfileDropdownComponent from './Components/Common/ProfileDropdownCompone
 import CartComponent from './Components/Cart/CartComponent';
 import EmptyCartComponent from './Components/Cart/EmptyCartComponent';
 import AddNewAddressComponent from './Components/Checkout/AddNewAddressComponent';
+import MenuPage from './Components/Pages/MenuPage';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         {/* <EmptyCartComponent/> */}
         {/* Add New Address Component */}
         {/* <AddNewAddressComponent/> */}
+        <MenuPage/>
       </>
     </div>
   );
