@@ -10,6 +10,7 @@ import HelpAndSupportPage from './Components/Pages/HelpAndSupportPage';
 import ProfileDropdownComponent from './Components/Common/ProfileDropdownComponent';
 import CartComponent from './Components/Cart/CartComponent';
 import EmptyCartComponent from './Components/Cart/EmptyCartComponent';
+import AddNewAddressComponent from './Components/Checkout/AddNewAddressComponent';
 
 function App() {
   return (
@@ -34,7 +35,10 @@ function App() {
         {/* <ProfileDropdownComponent/> */}
         {/* Cart Dropdown Component */}
         {/* <CartComponent/> */}
-        <EmptyCartComponent/>
+        {/* Empty Cart Dropdown Component */}
+        {/* <EmptyCartComponent/> */}
+        {/* Add New Address Component */}
+        {/* <AddNewAddressComponent/> */}
       </>
     </div>
   );
