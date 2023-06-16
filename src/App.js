@@ -8,6 +8,8 @@ import EmptyCartPage from './Components/Pages/EmptyCartPage';
 import CheckoutPage from './Components/Pages/CheckoutPage';
 import HelpAndSupportPage from './Components/Pages/HelpAndSupportPage';
 import ProfileDropdownComponent from './Components/Common/ProfileDropdownComponent';
+import CartComponent from './Components/Cart/CartComponent';
+import EmptyCartComponent from './Components/Cart/EmptyCartComponent';
 
 function App() {
   return (
@@ -28,7 +30,11 @@ function App() {
         {/* Checkout Page */}
         {/* <CheckoutPage/> */}
         {/* <HelpAndSupportPage/> */}
-        <ProfileDropdownComponent/>
+        {/* Profile Dropdown Component */}
+        {/* <ProfileDropdownComponent/> */}
+        {/* Cart Dropdown Component */}
+        {/* <CartComponent/> */}
+        <EmptyCartComponent/>
       </>
     </div>
   );
