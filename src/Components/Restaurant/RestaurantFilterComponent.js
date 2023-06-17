@@ -13,26 +13,26 @@ const RestaurantFilterComponent = () => {
                     {/* Left Section */}
                     <div>
                         {/* No of Restaurants */}
-                        <span>259 restaurants</span>
+                        <span className='fs-r'>259 restaurants</span>
                     </div>
                     {/* Right Section */}
                     <div className='flex'>
                         {/* Filter Options Section */}
                         <div className='flex ai-c ml-10'>
                             <UilClock className='h-20 w-a'/>
-                            <a href="#">Delivery Time</a>
+                            <a className='fs-r' href="#">Delivery Time</a>
                         </div>
                         <div className='flex ai-c ml-10'>
                             <UilStar className='h-20 w-a'/>
-                            <a href="#">Rating</a>
+                            <a className='fs-r' href="#">Rating</a>
                         </div>
                         <div className='flex ai-c ml-10'>
                             <UilArrowCircleUp className='h-20 w-a'/>
-                            <a href="#">Cost : Low to High</a>
+                            <a className='fs-r' href="#">Cost : Low to High</a>
                         </div>
                         <div className='flex ai-c ml-10'>
                             <UilArrowCircleDown className='h-20 w-a'/>
-                            <a href="#">Cost : High to Low</a>
+                            <a className='fs-r' href="#">Cost : High to Low</a>
                         </div>
                     </div>
                 </div>

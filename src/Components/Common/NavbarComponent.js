@@ -20,8 +20,8 @@ const NavbarComponent = () => {
                         </div>
                         <div className=''>
                             <a className='flex ai-c' href="#">
-                                <span className='mr-5'>HOME</span>
-                                <span className='mr-5'>G.T.Road, Kailash Park</span>
+                                <span className='mr-5 fs-r'>HOME</span>
+                                <span className='mr-5 fs-r'>G.T.Road, Kailash Park</span>
                                 <UilAngleDown/>
                             </a>
                         </div>
@@ -29,11 +29,11 @@ const NavbarComponent = () => {
                     {/* Right Part */}
                     <div>
                         <ul className='flex fd-r'>
-                            <li className='ml-20 ls-n flex ai-c'><UilRestaurant className='h-20 w-a'/><a className='ml-5' href="#">Restaurants</a></li>
-                            <li className='ml-20 ls-n flex ai-c'><UilPercentage className='h-20 w-a'/><a className='ml-5' href="#">Offers</a></li>
-                            <li className='ml-20 ls-n flex ai-c'><UilInfo className='h-20 w-a'/><a className='ml-5' href="#">Help</a></li>
-                            <li className='ml-20 ls-n flex ai-c'><UilUser className='h-20 w-a'/><a className='ml-5' href="#">Sign In</a></li>
-                            <li className='ml-20 ls-n flex ai-c'><UilShoppingBag className='h-20 w-a'/><a className='ml-5' href="#">Cart</a></li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'><UilRestaurant className='h-20 w-a'/><a className='ml-5' href="#">Restaurants</a></li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'><UilPercentage className='h-20 w-a'/><a className='ml-5' href="#">Offers</a></li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'><UilInfo className='h-20 w-a'/><a className='ml-5' href="#">Help</a></li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'><UilUser className='h-20 w-a'/><a className='ml-5' href="#">Sign In</a></li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'><UilShoppingBag className='h-20 w-a'/><a className='ml-5' href="#">Cart</a></li>
                         </ul>
                     </div>
                 </div>

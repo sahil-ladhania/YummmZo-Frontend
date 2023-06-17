@@ -9,6 +9,7 @@ import MenuSectionComponent from '../Menu/MenuSectionComponent';
 import RestaurantLisenceComponent from '../Menu/RestaurantLisenceComponent';
 import FooterComponent from '../Common/FooterComponent';
 import ItemCategoryHeadingComponent from '../Menu/ItemCategoryHeadingComponent';
+import '../../Styles/Fonts.css'
 
 const MenuPage = () => {
     return (

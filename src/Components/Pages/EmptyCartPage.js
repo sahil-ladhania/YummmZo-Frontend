@@ -2,6 +2,7 @@ import React from 'react'
 import NavbarComponent from '../Common/NavbarComponent';
 import ImageContentButtonComponent from '../Cart/ImageContentButtonComponent';
 import FooterComponent from '../Common/FooterComponent';
+import '../../Styles/Fonts.css'
 
 const EmptyCartPage = () => {
     return (

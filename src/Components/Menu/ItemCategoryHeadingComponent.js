@@ -6,7 +6,7 @@ const ItemCategoryHeadingComponent = () => {
             <>
                 {/* Main Component */}
                 <div>
-                    <div className='fs-l fw-b'>
+                    <div className='fs-l fw-b fs-r'>
                         Recommended (114)
                     </div>
                 </div>

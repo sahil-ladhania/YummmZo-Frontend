@@ -7,11 +7,11 @@ const EmptyCartComponent = () => {
                 {/* Main Component */}
                 <div className='w-300 ml-500 b-1-b-s p-10-20'>
                     {/* Heading Section */}
-                    <div className='h-50 flex ai-c fs-xxl fw-b'>
+                    <div className='h-50 flex ai-c fs-xxl fw-b fs-r'>
                         Cart Empty
                     </div>
                     {/* Content Section */}
-                    <div className='h-80 flex ai-c ta-j'>
+                    <div className='h-80 flex ai-c ta-j fs-r'>
                         Good food is always cooking! <br /> Go ahead, order some yummy <br /> items from the menu.
                     </div>
                 </div>

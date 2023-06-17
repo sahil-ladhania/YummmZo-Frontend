@@ -8,26 +8,26 @@ const CancellationPolicyComponent = () => {
                 <div className='w-300 p-10-20 b-1-b-s'>
                     {/* Heading Section */}
                     <div className='mb-20'>
-                        <p>
+                        <p className='fs-r'>
                             Review your order and address <br /> details to avoid cancellations
                         </p>
                     </div>
                     {/* Note Section */}
                     <div className='mb-20'>
-                        <span>Note :</span>
-                        <p>
+                        <span className='fs-r'>Note :</span>
+                        <p className='fs-r'>
                             If you cancel within 60 seconds of placing your order, a 100% refund will be issued. No refund for cancellations made after 60 seconds.
                         </p>
                     </div>
                     {/* Ending Note Section */}
                     <div className='mb-20'>
-                        <p>
+                        <p className='fs-r'>
                             Avoid cancellation as it leads to food wastage.
                         </p>
                     </div>
                     {/* Link Section */}
                     <div>
-                        <a href="#">Read Cancellation Policy</a>
+                        <a className='fs-r' href="#">Read Cancellation Policy</a>
                     </div>
                 </div>
             </>

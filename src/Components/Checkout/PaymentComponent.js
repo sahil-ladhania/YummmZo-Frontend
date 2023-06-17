@@ -11,7 +11,7 @@ const PaymentComponent = () => {
                     {/* Text Component */}
                     <div className='flex ai-c'>
                         <UilWallet className='h-20 w-a mr-10'/>
-                        <span>Payment</span>
+                        <span className='fs-r'>Payment</span>
                     </div>
                 </div>
             </>

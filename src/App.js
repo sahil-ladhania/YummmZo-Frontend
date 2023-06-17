@@ -18,29 +18,31 @@ function App() {
     <div className="App">
       <>
         {/* Landing Page */}
-        {/* <LandingPage/> */}
+        <LandingPage/>
         {/* Sign Up Page */}
-        {/* <SignUpPage/> */}
+        <SignUpPage/>
         {/* Log In Page */}
-        {/* <LogInPage/> */}
+        <LogInPage/>
         {/* Home Page */}
-        {/* <HomePage/> */}
+        <HomePage/>
         {/* Restaurants Page */}
-        {/* <RestaurantsPage/> */}
+        <RestaurantsPage/>
         {/* Empty Cart Page */}
-        {/* <EmptyCartPage/> */}
+        <EmptyCartPage/>
         {/* Checkout Page */}
-        {/* <CheckoutPage/> */}
-        {/* <HelpAndSupportPage/> */}
+        <CheckoutPage/>
+        {/* Help and Support Page */}
+        <HelpAndSupportPage/>
         {/* Profile Dropdown Component */}
-        {/* <ProfileDropdownComponent/> */}
+        <ProfileDropdownComponent/>
         {/* Cart Dropdown Component */}
-        {/* <CartComponent/> */}
+        <CartComponent/>
         {/* Empty Cart Dropdown Component */}
-        {/* <EmptyCartComponent/> */}
+        <EmptyCartComponent/>
         {/* Add New Address Component */}
-        {/* <AddNewAddressComponent/> */}
-        {/* <MenuPage/> */}
+        <AddNewAddressComponent/>
+        {/* Menu Page */}
+        <MenuPage/>
       </>
     </div>
   );

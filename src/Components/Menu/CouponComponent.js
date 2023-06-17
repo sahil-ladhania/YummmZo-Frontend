@@ -10,15 +10,15 @@ const CouponComponent = () => {
                     {/* First Child */}
                     <div className='flex'>
                         <UilPercentage className='h-20 w-a mr-10'/>
-                        <p className='fs-s'>40% OFF UPTO ₹80</p>
+                        <p className='fs-s fs-r'>40% OFF UPTO ₹80</p>
                     </div>
                     {/* Second Child */}
                     <div className='flex'>
-                        <p className='fs-s'>
+                        <p className='fs-s fs-r'>
                             USE TRYNEW
                         </p>
                         <p className='mr-5 ml-5 fs-s'>|</p>
-                        <p className='fs-s'>
+                        <p className='fs-s fs-r'>
                             ON SELECT ITEMS
                         </p>
                     </div>

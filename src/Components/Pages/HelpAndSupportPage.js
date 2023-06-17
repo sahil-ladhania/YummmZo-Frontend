@@ -3,6 +3,7 @@ import HeadingComponent from '../Help/HeadingComponent'
 import OptionsComponent from '../Help/OptionsComponent'
 import NavbarComponent from '../Common/NavbarComponent';
 import FooterComponent from '../Common/FooterComponent';
+import '../../Styles/Fonts.css'
 
 const HelpAndSupportPage = () => {
     return (

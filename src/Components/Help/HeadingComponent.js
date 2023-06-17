@@ -7,8 +7,8 @@ const HeadingComponent = () => {
             <>
                 {/* Main Component */}
                 <div className='h-120 flex fd-c jc-c'>
-                    <h1>Help & Support</h1>
-                    <p>Let's take a step ahead and help you better.</p>
+                    <h1 className='fs-r'>Help & Support</h1>
+                    <p className='fs-r'>Let's take a step ahead and help you better.</p>
                 </div>
             </>
         </div>

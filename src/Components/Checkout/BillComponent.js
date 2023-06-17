@@ -1,5 +1,7 @@
 import React from 'react'
 import { UilInfoCircle } from '@iconscout/react-unicons'
+// CSS Files
+import '../../Styles/Input.css'
 
 const BillComponent = () => {
     return (
@@ -14,10 +16,10 @@ const BillComponent = () => {
                         </div>
                         <div>
                             <a href="#">
-                                <p>
+                                <p className='fs-r'>
                                     Subway
                                 </p>
-                                <p>
+                                <p className='fs-r'>
                                     Vasundhra
                                 </p>
                             </a>
@@ -29,66 +31,66 @@ const BillComponent = () => {
                             <img className='h-10' src="https://i.pinimg.com/originals/e4/1f/f3/e41ff3b10a26b097602560180fb91a62.png" alt="Veg-Nonveg-Image" />
                         </div>
                         <div>
-                            <p>
+                            <p className='fs-r'>
                                 Paneer Achari
                             </p>
                         </div>
                         <div>
-                            <button>- | +</button>
+                            <button className='fs-r p-0-10'> - | + </button>
                         </div>
                         <div>
-                            <p>
+                            <p className='fs-r'>
                                 Rs.269
                             </p>
                         </div>
                     </div>
                     {/* Suggestion Textfeild */}
                     <div className='mb-20'>
-                        <input className='h-40 w-260 p-0-10' type="text" name="" id="" placeholder='Any Suggestion?'/>
+                        <input className='h-40 w-260 p-0-10 b-1-t-s br-5 bc-ws' type="text" name="" id="" placeholder='" Any Suggestion? "'/>
                     </div>
                     {/* Bill Details */}
                     <div className='flex fd-c'>
                         <div className='mb-10'>
-                            <p>
+                            <p className='fs-r'>
                                 Bill Details
                             </p>
                         </div>
                         <div className='flex jc-sb'>
-                            <p>
+                            <p className='fs-r'>
                                 Item Total
                             </p>
-                            <p>
+                            <p className='fs-r'>
                                 Rs.269
                             </p>
                         </div>
                         <div className='flex jc-sb mb-10'>
-                            <p>
+                            <p className='fs-r'>
                                 Delivery Fee
                             </p>
-                            <p>
+                            <p className='fs-r'>
                                 Free
                             </p>
                         </div>
                         <div className='flex jc-sb'>
                             <div className='flex ai-c'>
-                                <span>Platform Fee</span>
+                                <span className='fs-r'>Platform Fee</span>
                                 <UilInfoCircle className='h-15 w-a'/>
                             </div>
-                            <span>Rs.2</span>
+                            <span className='fs-r'>Rs.2</span>
                         </div>
                         <div className='flex jc-sb mb-10'>
                             <div className='flex ai-c'> 
-                                <span>GST & Restaurant Charges</span>
+                                <span className='fs-r'>GST & Restaurant Charges</span>
                                 <UilInfoCircle className='h-15 w-a'/>
                             </div>
-                            <span>Rs. 20</span>
+                            <span className='fs-r'>Rs. 20</span>
                         </div>
                         <hr />
                         <div className='flex jc-sb'>
-                            <p>
+                            <p className='fs-r'>
                                 To Pay
                             </p>
-                            <p>
+                            <p className='fs-r'>
                                 Rs.294
                             </p>
                         </div>

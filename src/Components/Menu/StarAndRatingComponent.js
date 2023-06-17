@@ -10,7 +10,7 @@ const StarAndRatingComponent = () => {
                     {/* Icon Section */}
                     <div className='flex jc-c ai-c mb-5'>
                         <span><UilStar className='h-20 w-a mr-5'/></span>
-                        <p>
+                        <p className='fs-r'>
                             3.5
                         </p>
                     </div>
@@ -20,7 +20,7 @@ const StarAndRatingComponent = () => {
                     </div>
                     {/* Rating Content Section */}
                     <div className='mt-5'>
-                        <p className='fs-s'>
+                        <p className='fs-s fs-r'>
                             100+ ratings
                         </p>
                     </div>

@@ -12,7 +12,7 @@ const RestaurantLisenceComponent = () => {
                             <img className='h-30 w-a mr-10' src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_120,h_60/fssai_final_edss9i" alt="Fssai-Image" />
                         </div>
                         <div>
-                            <p className='fs-s'>
+                            <p className='fs-s fs-r'>
                                 License No. 12722052001425
                             </p>
                         </div>
@@ -23,10 +23,10 @@ const RestaurantLisenceComponent = () => {
                     </div>
                     {/* Restaurant Name and Outlet Section */}
                     <div>
-                        <p className='mb-10'>
+                        <p className='mb-10 fs-r'>
                             Subway
                         </p>
-                        <p className='fs-s'>
+                        <p className='fs-s fs-r'>
                             (Outlet:Vasundhara)
                         </p>
                     </div>

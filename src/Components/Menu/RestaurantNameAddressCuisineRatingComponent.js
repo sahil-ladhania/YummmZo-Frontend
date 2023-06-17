@@ -10,13 +10,13 @@ const RestaurantNameAddressCuisineRatingComponent = () => {
                     {/* Name | Cuisine | Address Section */}
                     <div>
                         <div>
-                            <p className='fs-xl mb-5'>
+                            <p className='fs-xl mb-5 fs-r'>
                                 Subway
                             </p>
-                            <p className='fs-s mb-5'>
+                            <p className='fs-s mb-5 fs-r'>
                                 Salads , Snacks
                             </p>
-                            <p className='fs-s'>
+                            <p className='fs-s fs-r'>
                                 Vasundhra , 3.7km
                             </p>
                         </div>

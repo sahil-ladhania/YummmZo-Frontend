@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../Styles/Buttons.css'
 
 const CartComponent = () => {
     return (
@@ -13,15 +14,15 @@ const CartComponent = () => {
                         </div>
                         <div>
                             <div className='mb-10'>
-                                <p>
+                                <p className='fs-r'>
                                     Subway
                                 </p>
-                                <p>
+                                <p className='fs-r'>
                                     Arthala
                                 </p>
                             </div>
                             <div>
-                                <a href="#">VIEW FULL MENU</a>
+                                <a className='fs-r' href="#">VIEW FULL MENU</a>
                             </div>
                         </div>
                     </div>
@@ -33,11 +34,11 @@ const CartComponent = () => {
                     <div className='flex ai-c jc-sb mt-20 mb-20'>
                         <div className='flex ai-c'>
                             <img className='h-15 w-a mr-10' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Veg_symbol.svg/1200px-Veg_symbol.svg.png" alt="Veg-Nonveg-Icon" />
-                            <p className='fs-s'>
+                            <p className='fs-s fs-r'>
                                 Paneer Achari x 1
                             </p>
                         </div>
-                        <div className='fs-s'>
+                        <div className='fs-s fs-r'>
                             Rs.269
                         </div>
                     </div>
@@ -48,20 +49,20 @@ const CartComponent = () => {
                     {/* Subtotal Section */}
                     <div className='mt-20 mb-20'>
                         <div className='flex jc-sb ai-c'>
-                            <p>
+                            <p className='fs-r'>
                                 Sub total
                             </p>
-                            <p>
+                            <p className='fs-r'>
                                 Rs.269
                             </p>
                         </div>
-                        <div className='fs-s'>
+                        <div className='fs-s fs-r'>
                             Extra charges may apply
                         </div>
                     </div>
                     {/* Checkout Section */}
                     <div>
-                        <button className='h-40 w-260'>CHECKOUT</button>
+                        <button className='h-40 w-260 b-1-t-s br-5 fs-r'>CHECKOUT</button>
                     </div>
                 </div>
             </>

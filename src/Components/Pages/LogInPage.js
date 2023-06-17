@@ -1,6 +1,7 @@
 import React from 'react'
 import YummmZoLogoComponent from '../Common/YummmZoLogoComponent'
 import LogInComponent from '../Auth/LogInComponent'
+import '../../Styles/Fonts.css'
 
 const LogInPage = () => {
     return (

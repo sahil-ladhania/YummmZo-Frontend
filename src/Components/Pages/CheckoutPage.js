@@ -5,6 +5,8 @@ import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
 import BillComponent from '../Checkout/BillComponent';
 import PaymentComponent from '../Checkout/PaymentComponent';
 import CancellationPolicyComponent from '../Checkout/CancellationPolicyComponent';
+// CSS Files
+import '../../Styles/Fonts.css'
 
 const CheckoutPage = () => {
     return (

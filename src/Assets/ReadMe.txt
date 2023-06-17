@@ -1,1 +1,0 @@
-This folder contains various assets used in your application, such as images, stylesheets, fonts, etc.

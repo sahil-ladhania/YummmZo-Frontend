@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../Styles/Buttons.css'
 
 const ImageContentButtonComponent = () => {
     return (
@@ -12,16 +13,16 @@ const ImageContentButtonComponent = () => {
                     </div>
                     {/* Content Section */}
                     <div className='flex fd-c ai-c mb-20'>
-                        <div className='fs-xxl'>
+                        <div className='fs-xxl fs-r'>
                             Your cart is empty
                         </div>
-                        <div>
+                        <div className='fs-r'>
                             You can go to home page to view more restaurants
                         </div>
                     </div>
                     {/* Button Section */}
                     <div>
-                        <button className='h-40 p-0-10'>See Restaurants near you</button>
+                        <button className='h-40 w-300 b-1-t-s br-5 fs-r'>See Restaurants near you</button>
                     </div>
                 </div>
             </>

@@ -1,0 +1,28 @@
+/* Spacing */
+.h-40{
+    height: 40px;
+}
+.p-0-30{
+    padding: 0 30px;
+}
+.w-300{
+    width: 300px;
+}
+.w-260{
+    width: 260px;
+}
+
+
+
+/* Border Styling */
+.br-5{
+    border-radius: 5px;
+}
+.b-1-t-s{
+    border: 1px transparent solid;
+}
+button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Color Styling */

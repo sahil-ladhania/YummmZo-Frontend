@@ -1,6 +1,9 @@
 import React from 'react'
 import '../../Styles/Main.css'
 import { UilTimes } from '@iconscout/react-unicons'
+// CSS Files
+import '../../Styles/Buttons.css'
+import '../../Styles/Input.css'
 
 const AddNewAddressComponent = () => {
     return (
@@ -11,7 +14,7 @@ const AddNewAddressComponent = () => {
                     {/* Heading Section */}
                     <div className='mb-20 flex ai-c'>
                         <UilTimes className='h-20 w-a mr-10'/>
-                        <span className='fs-l'>Save Delivery Address</span>
+                        <span className='fs-l fs-r'>Save Delivery Address</span>
                     </div>
                     {/* Map Section */}
                     <div>
@@ -23,17 +26,17 @@ const AddNewAddressComponent = () => {
                     </div>
                     {/* Textfeilds Section */}
                     <div className='mb-20'>
-                        <input className='h-40 w-260 p-0-10' type="text" placeholder='Door / Flat No.'/>
-                        <input className='h-40 w-260 p-0-10' type="text" placeholder='Landmark'/>
+                        <input className='h-40 w-260 p-0-10 b-1-t-s br-5 bc-ws mb-5' type="text" placeholder='Door / Flat No.'/>
+                        <input className='h-40 w-260 p-0-10 b-1-t-s br-5 bc-ws mb-5' type="text" placeholder='Landmark'/>
                         <div className='flex jc-sb ai-c'>
-                            <button className='h-40 w-100'>Home</button>
-                            <button className='h-40 w-100'>Work</button>
-                            <button className='h-40 w-100'>Other</button>
+                            <button className='h-40 w-100 b-1-t-s fs-r'>Home</button>
+                            <button className='h-40 w-100 b-1-t-s fs-r'>Work</button>
+                            <button className='h-40 w-100 b-1-t-s fs-r'>Other</button>
                         </div>
                     </div>
                     {/* Button Section */}
                     <div>
-                        <button className='h-40 w-260'>Save Address & Proceed</button>
+                        <button className='h-40 w-260 b-1-t-s br-5 fs-r'>Save Address & Proceed</button>
                     </div>
                 </div>
             </>

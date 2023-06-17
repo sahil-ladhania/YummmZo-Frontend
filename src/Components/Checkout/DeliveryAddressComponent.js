@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../Styles/Main.css'
 import { UilMapMarkerPlus } from '@iconscout/react-unicons'
+import '../../Styles/Buttons.css'
 
 const DeliveryAddressComponent = () => {
     return (
@@ -10,10 +11,10 @@ const DeliveryAddressComponent = () => {
                 <div className='w-600 p-10-20'>
                     {/* Heading Component */}
                     <div className=''>
-                        <p>
+                        <p className='fs-r'> 
                             Choose a delivery address
                         </p>
-                        <p>
+                        <p className='fs-r'> 
                             Multiple addresses in this location
                         </p>
                     </div>
@@ -22,9 +23,9 @@ const DeliveryAddressComponent = () => {
                         <a href="#">
                             <div className='mb-20 flex ai-c'>
                                 <UilMapMarkerPlus className='h-20 w-a'/>
-                                <span>Add New Address</span>
+                                <span className='fs-r'>Add New Address</span>
                             </div>
-                            <button>Add New</button>
+                            <button className='h-40 p-0-30 b-1-t-s br-5 fs-r'>Add New</button>
                         </a>
                     </div>
                 </div>

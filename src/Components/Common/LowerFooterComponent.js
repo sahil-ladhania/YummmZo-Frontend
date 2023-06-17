@@ -15,7 +15,7 @@ const LowerFooterComponent = () => {
                     <img src="" alt="YummmZo-Logo" />
                 </div>
                 {/* Trademark Container */}
-                <div className=''>
+                <div className='fs-r'>
                     © 2023 YummmZo
                 </div>
                 {/* Social Media Handles Container */}

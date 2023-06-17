@@ -5,6 +5,7 @@ import RestaurantSearchComponent from '../Restaurant/RestaurantSearchComponent';
 import TopBrandsComponent from '../Restaurant/TopBrandsComponent';
 import RestaurantFilterComponent from '../Restaurant/RestaurantFilterComponent';
 import RestaurantListComponent from '../Restaurant/RestaurantListComponent';
+import '../../Styles/Fonts.css'
 
 const RestaurantsPage = () => {
     return (
