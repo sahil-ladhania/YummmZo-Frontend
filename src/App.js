@@ -40,7 +40,7 @@ function App() {
         {/* <EmptyCartComponent/> */}
         {/* Add New Address Component */}
         {/* <AddNewAddressComponent/> */}
-        <MenuPage/>
+        {/* <MenuPage/> */}
       </>
     </div>
   );
