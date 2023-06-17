@@ -15,7 +15,7 @@ const BillComponent = () => {
                             <img className='h-60 mr-10' src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/0bf19a82b109b40c2f5c56d00f071a33" alt="Restaurant-Image" />
                         </div>
                         <div>
-                            <a href="#">
+                            <a className='td-n c-b' href="#">
                                 <p className='fs-r'>
                                     Subway
                                 </p>

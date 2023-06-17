@@ -1,7 +1,9 @@
 import React from 'react'
 import SignUpComponent from '../Auth/SignUpComponent'
 import YummmZoLogoComponent from '../Common/YummmZoLogoComponent';
+// CSS Files
 import '../../Styles/Fonts.css'
+import '../../Styles/Links.css'
 
 const SignUpPage = () => {
     return (

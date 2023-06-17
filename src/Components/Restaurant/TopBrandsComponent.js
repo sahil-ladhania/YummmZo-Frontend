@@ -19,12 +19,12 @@ const TopBrandsComponent = () => {
                                 </a>
                             </div>
                             <div className='mb-10'>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <h5 className='fs-r'>Andra Gunpowder</h5>
                                 </a>
                             </div>
                             <div>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <p className='fs-r'>21 min</p>
                                 </a>
                             </div>
@@ -36,12 +36,12 @@ const TopBrandsComponent = () => {
                                 </a>
                             </div>
                             <div className='mb-10'>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <h5 className='fs-r'>Burger King</h5>
                                 </a>
                             </div>
                             <div>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <p className='fs-r'>30 min</p>
                                 </a>
                             </div>
@@ -53,12 +53,12 @@ const TopBrandsComponent = () => {
                                 </a>
                             </div>
                             <div className='mb-10'>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <h5 className='fs-r'>Mani's Dum Biryani</h5>
                                 </a>
                             </div>
                             <div>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <p className='fs-r'>45 min</p>
                                 </a>
                             </div>
@@ -70,12 +70,12 @@ const TopBrandsComponent = () => {
                                 </a>
                             </div>
                             <div className='mb-10'>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <h5 className='fs-r'>Subway</h5>
                                 </a>
                             </div>
                             <div>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <p className='fs-r'>30 min</p>
                                 </a>
                             </div>
@@ -87,12 +87,12 @@ const TopBrandsComponent = () => {
                                 </a>
                             </div>
                             <div className='mb-10'>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <h5 className='fs-r'>Truffles</h5>
                                 </a>
                             </div>
                             <div>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <p className='fs-r'>20 min</p>
                                 </a>
                             </div>
@@ -104,12 +104,12 @@ const TopBrandsComponent = () => {
                                 </a>
                             </div>
                             <div className='mb-10'>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <h5 className='fs-r'>Pizza Hut</h5>
                                 </a>
                             </div>
                             <div>
-                                <a href="#">
+                                <a className='td-n c-b' href="#">
                                     <p className='fs-r'>21 min</p>
                                 </a>
                             </div>

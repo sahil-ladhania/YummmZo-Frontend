@@ -20,7 +20,7 @@ const DeliveryAddressComponent = () => {
                     </div>
                     {/* Address Component */}
                     <div className='h-100 w-200 mt-100 p-10-20 b-1-b-d'>
-                        <a href="#">
+                        <a className='td-n c-b' href="#">
                             <div className='mb-20 flex ai-c'>
                                 <UilMapMarkerPlus className='h-20 w-a'/>
                                 <span className='fs-r'>Add New Address</span>

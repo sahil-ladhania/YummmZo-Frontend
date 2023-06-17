@@ -4,7 +4,9 @@ import PopularCuisinesComponent from '../Layout/PopularCuisinesComponent'
 import AnythingDeliveredComponent from '../Layout/AnythingDeliveredComponent'
 import FooterComponent from '../Common/FooterComponent';
 import '../../Styles/Main.css'
+// CSS Files
 import '../../Styles/Fonts.css'
+import '../../Styles/Links.css'
 
 const HomePage = () => {
     return (

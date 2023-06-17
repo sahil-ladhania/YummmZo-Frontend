@@ -15,15 +15,15 @@ const UpperFooterComponent = () => {
                         </div>
                         <div className=''>
                             <ul className=''>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">About us</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Team</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Careers</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">YummmZo Blog</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Bug Bounty</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">YummmZo One</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">YummmZo Corporate</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">YummmZo Instamart</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">YummmZo Genie</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">About us</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Team</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Careers</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo Blog</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Bug Bounty</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo One</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo Corporate</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo Instamart</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo Genie</a></li>
                             </ul>
                         </div>
                     </div>
@@ -35,9 +35,9 @@ const UpperFooterComponent = () => {
                         </div>
                         <div className=''>
                             <ul className=''>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Help and Support</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Partner with us</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Ride with us</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Help and Support</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Partner with us</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Ride with us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -49,14 +49,14 @@ const UpperFooterComponent = () => {
                         </div>
                         <div className=''>
                             <ul className=''>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Terms & Condition</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Refund & Cancellation</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Privacy Policy</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Cookie Policy</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Offer Terms</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Phishing & Fraud</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Corporate - YummmZo Money Codes Terms and <br /> Conditions</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='' href="#">Corporate - YummmZo Discount Voucher Terms and <br /> Conditions</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Terms & Condition</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Refund & Cancellation</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Privacy Policy</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Cookie Policy</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Offer Terms</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Phishing & Fraud</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Corporate - YummmZo Money Codes Terms and <br /> Conditions</a></li>
+                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Corporate - YummmZo Discount Voucher Terms and <br /> Conditions</a></li>
                             </ul>
                         </div>
                     </div>

@@ -4,6 +4,7 @@ import { UilGoogle } from '@iconscout/react-unicons'
 // CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
+import '../../Styles/Links.css'
 
 
 const SignUpComponent = () => {
@@ -17,7 +18,7 @@ const SignUpComponent = () => {
                         {/* Sign up with Google Section */}
                         <div className='flex fd-c ai-c'>
                             <h1 className='mb-10 fs-r'>Create Account</h1>
-                            <div className='mb-10 fs-r'>Already have an account ? <a className='fs-r' href="#">Log in</a></div>
+                            <div className='mb-10 fs-r'>Already have an account ? <a className='fs-r td-n c-b' href="#">Log in</a></div>
                             <button className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r'><UilGoogle className='h-20 w-a mr-10'/>Sign up with Google</button>
                         </div>
                         {/* ----- or ----- Section */}
@@ -38,7 +39,7 @@ const SignUpComponent = () => {
                         <div>
                             <p className='fs-r'>
                                 By creating an account, I agree with YummmZo's <br /> 
-                                <a className='ml-30 fs-r' href="#">Privacy Policy</a> and <a className='fs-r' href="#">Terms and Condition</a>
+                                <a className='ml-30 fs-r td-n c-b' href="#">Privacy Policy</a> and <a className='fs-r td-n c-b' href="#">Terms and Condition</a>
                             </p>
                         </div>
                     </div>

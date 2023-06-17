@@ -1,7 +1,9 @@
 import React from 'react'
 import YummmZoLogoComponent from '../Common/YummmZoLogoComponent'
 import LogInComponent from '../Auth/LogInComponent'
+// CSS Files
 import '../../Styles/Fonts.css'
+import '../../Styles/Links.css'
 
 const LogInPage = () => {
     return (

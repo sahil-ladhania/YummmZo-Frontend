@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../Styles/Main.css'
+// CSS Files
+import '../../Styles/Links.css'
 
 const ProfileDropdownComponent = () => {
     return (
@@ -26,7 +28,7 @@ const ProfileDropdownComponent = () => {
                                         Name
                                     </div>
                                     <div>
-                                        <a className='fs-r' href="#">Edit</a>
+                                        <a className='fs-r td-n c-b' href="#">Edit</a>
                                     </div>
                                 </div>
                                 <div className='mb-10 fs-r'>
@@ -54,7 +56,7 @@ const ProfileDropdownComponent = () => {
                                     Phone
                                 </div>
                                 <div>
-                                    <a className='fs-r' href="#">Edit</a>
+                                    <a className='fs-r td-n c-b' href="#">Edit</a>
                                 </div>
                             </div>
                             <div className='fs-r'>
@@ -72,7 +74,7 @@ const ProfileDropdownComponent = () => {
                                     Password
                                 </div>
                                 <div>
-                                    <a className='fs-r' href="#">Edit</a>
+                                    <a className='fs-r td-n c-b' href="#">Edit</a>
                                 </div>
                             </div>
                             <div className='fs-r'>
@@ -120,7 +122,7 @@ const ProfileDropdownComponent = () => {
                                     Promo code
                                 </div>
                                 <div>
-                                    <a className='fs-r' href="#">Add</a>
+                                    <a className='fs-r td-n c-b' href="#">Add</a>
                                 </div>
                             </div>
                             <div className='mb-10 fs-r'>
@@ -134,7 +136,7 @@ const ProfileDropdownComponent = () => {
                         {/* Logout Section */}
                         <div className='mt-20'>
                             <div className='flex jc-fe'>
-                                <a className='fs-r' href="#">Log out</a>
+                                <a className='fs-r td-n c-b' href="#">Log out</a>
                             </div>
                         </div>
                     </div>

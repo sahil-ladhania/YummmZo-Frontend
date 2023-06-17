@@ -7,6 +7,7 @@ import PaymentComponent from '../Checkout/PaymentComponent';
 import CancellationPolicyComponent from '../Checkout/CancellationPolicyComponent';
 // CSS Files
 import '../../Styles/Fonts.css'
+import '../../Styles/Links.css'
 
 const CheckoutPage = () => {
     return (

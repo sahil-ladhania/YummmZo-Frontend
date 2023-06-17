@@ -1,8 +1,10 @@
 import React from 'react';
 import '../../Styles/LocateMeComponent.css';
 import { UilLocationPoint } from '@iconscout/react-unicons'
+// CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
+import '../../Styles/Links.css'
 
 const LocateMeComponent = () => {
     return (
@@ -38,16 +40,16 @@ const LocateMeComponent = () => {
                     {/* Landing Page Mini Footer */}
                     <div className='h-50 w-500'>
                         <ul className='flex fd-r jc-fs fw-w'>
-                            <li className='ls-n mr-5 fs-r'><a href="#">Ahmedabad</a></li>
-                            <li className='ls-n mr-5 fs-r'><a href="#">Bangalore</a></li>
-                            <li className='ls-n mr-5 fs-r'><a href="#">Chennai</a></li>
-                            <li className='ls-n mr-5 fs-r'><a href="#">Delhi</a></li>
-                            <li className='ls-n mr-5 fs-r'><a href="#">Gurgaon</a></li>
-                            <li className='ls-n mr-5 fs-r'><a href="#">Hyderabad</a></li>
-                            <li className='ls-n mr-5 fs-r'><a href="#">Kolkata</a></li>
-                            <li className='ls-n mr-5 fs-r'><a href="#">Mumbai</a></li>
-                            <li className='ls-n mr-5 fs-r'><a href="#">Pune</a></li>
-                            <li className='ls-n mr-5 fs-r'><a href="#">& more</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">Ahmedabad</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">Bangalore</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">Chennai</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">Delhi</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">Gurgaon</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">Hyderabad</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">Kolkata</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">Mumbai</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">Pune</a></li>
+                            <li className='ls-n mr-5 fs-r'><a className='td-n c-b' href="#">& more</a></li>
                         </ul>
                     </div>
                 </div>

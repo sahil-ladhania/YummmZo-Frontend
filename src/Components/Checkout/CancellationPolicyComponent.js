@@ -27,7 +27,7 @@ const CancellationPolicyComponent = () => {
                     </div>
                     {/* Link Section */}
                     <div>
-                        <a className='fs-r' href="#">Read Cancellation Policy</a>
+                        <a className='fs-r td-n c-b' href="#">Read Cancellation Policy</a>
                     </div>
                 </div>
             </>

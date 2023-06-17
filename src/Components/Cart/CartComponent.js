@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../Styles/Buttons.css'
+// CSS Files
+import '../../Styles/Links.css'
 
 const CartComponent = () => {
     return (
@@ -22,7 +24,7 @@ const CartComponent = () => {
                                 </p>
                             </div>
                             <div>
-                                <a className='fs-r' href="#">VIEW FULL MENU</a>
+                                <a className='fs-r td-n c-b' href="#">VIEW FULL MENU</a>
                             </div>
                         </div>
                     </div>

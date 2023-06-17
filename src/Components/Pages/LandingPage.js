@@ -3,7 +3,9 @@ import FooterComponent from '../Common/FooterComponent';
 import BannerUSPComponent from '../Layout/BannerUSPComponent';
 import LocateMeComponent from '../Layout/LocateMeComponent';
 import '../../Styles/Footer.css';
+// CSS Files
 import '../../Styles/Fonts.css'
+import '../../Styles/Links.css'
 
 const LandingPage = () => {
     return (
