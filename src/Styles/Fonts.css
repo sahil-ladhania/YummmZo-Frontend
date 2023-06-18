@@ -4,3 +4,30 @@
 .fs-r{
     font-family: 'Roboto', sans-serif;
 }
+.fs-s{
+    font-size: small;
+}
+.fs-m{
+    font-size: medium;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.ls-1{
+    letter-spacing: 1px;
+}
+.c-g{
+    color: gray;
+}
+.c-575757{
+    color: #575757;
+}
+.c-3d3d3d{
+    color: #3d3d3d;
+}
+.fw-500{
+    font-weight: 500;
+}

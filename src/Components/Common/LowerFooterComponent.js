@@ -15,12 +15,12 @@ const LowerFooterComponent = () => {
                     <img src="" alt="YummmZo-Logo" />
                 </div>
                 {/* Trademark Container */}
-                <div className='fs-r'>
-                    © 2023 YummmZo
+                <div className='fs-r flex ai-c'>
+                    <span>©</span>
+                    <span>2023 YummmZo</span>
                 </div>
                 {/* Social Media Handles Container */}
                 <div className=''>
-                    {/* <a href="#"><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-facebook_tfqsuc" alt="Facebook" /></a> */}
                     <a href="#"><UilFacebookF className="c-blue mr-10"/></a>
                     <a href="#"><UilInstagram className="c-purple mr-10"/></a>
                     <a href="#"><UilTwitter className="c-0ac3ff mr-10"/></a>

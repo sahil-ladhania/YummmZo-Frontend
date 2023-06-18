@@ -7,8 +7,8 @@ const MiddleFooterComponent = () => {
                 {/* Main Component */}
                 <div className='flex fd-c mb-20'>
                     {/* Heading Container */}
-                    <div className='mb-10 fs-r'>
-                        We Deliver To
+                    <div className='mb-10 fs-r c-g ls-1 fw-500'>
+                        WE DELIVER TO
                     </div>
                     {/* Delivery Location's Container */}
                     <div className='flex jc-sb fd-r ai-fs'>

@@ -14,7 +14,7 @@ const SignUpComponent = () => {
                 {/* Main Component */}
                 <div className='flex fd-r jc-sb ai-c h-600'>
                     {/* Sign up Form */}
-                    <div className='flex fd-c jc-sa ai-c b-1-black-solid h-450 w-500'>
+                    <div className='flex fd-c jc-sa ai-c b-1-black-solid h-500 w-500 br-5'>
                         {/* Sign up with Google Section */}
                         <div className='flex fd-c ai-c'>
                             <h1 className='mb-10 fs-r'>Create Account</h1>

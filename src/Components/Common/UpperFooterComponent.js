@@ -10,8 +10,8 @@ const UpperFooterComponent = () => {
                     {/* First Column */}
                     <div className='flex fd-c ai-fs'>
                         {/* Heading */}
-                        <div className='mb-10 fs-r'>
-                            Company
+                        <div className='mb-10 fs-r c-g ls-1 fw-500'>
+                            COMPANY
                         </div>
                         <div className=''>
                             <ul className=''>
@@ -30,8 +30,8 @@ const UpperFooterComponent = () => {
                     {/* Second Column */}
                     <div className='flex fd-c ai-fs'>
                         {/* Heading */}
-                        <div className='mb-10 fs-r'>
-                            Contact
+                        <div className='mb-10 fs-r c-g ls-1 fw-500'>
+                            CONTACT
                         </div>
                         <div className=''>
                             <ul className=''>
@@ -44,8 +44,8 @@ const UpperFooterComponent = () => {
                     {/* Third Column */}
                     <div className='flex fd-c ai-fs'>
                         {/* Heading */}
-                        <div className='mb-10 fs-r'>
-                            Legal
+                        <div className='mb-10 fs-r c-g ls-1 fw-500'>
+                            LEGAL
                         </div>
                         <div className=''>
                             <ul className=''>
