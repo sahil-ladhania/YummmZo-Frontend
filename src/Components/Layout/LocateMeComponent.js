@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../Styles/LocateMeComponent.css';
 import { UilLocationPoint } from '@iconscout/react-unicons'
 // CSS Files
@@ -15,11 +16,11 @@ const LocateMeComponent = () => {
                     {/* Landing Page Mini Navbar */}
                     <div className='flex jc-sb ai-c fd-r h-100'>
                         <div>
-                            <a href="#"><img src="" alt="YummmZo-Logo-Img" /></a>
+                            <Link to="/">YummmZo</Link>
                         </div>
                         <div>
-                            <button className='mr-10 h-40 p-0-30 b-1-t-s br-5 fs-r fs-s fw-500'>Login</button>
-                            <button className='ml-10 h-40 p-0-30 b-1-t-s br-5 fs-r fs-s fw-500'>Sign up</button>
+                            <Link className='mr-10 h-40 p-0-30 b-1-t-s br-5 fs-r fs-s fw-500' to="/login">Login</Link>
+                            <Link className='mr-10 h-40 p-0-30 b-1-t-s br-5 fs-r fs-s fw-500' to="/signup">Sign Up</Link>
                         </div>
                     </div>
                     {/* Changing Heading & Description */}

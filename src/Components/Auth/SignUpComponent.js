@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../Styles/Form.css';
 import { UilGoogle } from '@iconscout/react-unicons'
 // CSS Files
@@ -18,7 +19,7 @@ const SignUpComponent = () => {
                         {/* Sign up with Google Section */}
                         <div className='flex fd-c ai-c'>
                             <h1 className='mb-10 fs-r'>Create Account</h1>
-                            <div className='mb-10 fs-r'>Already have an account ? <a className='fs-r td-n c-b' href="#">Log in</a></div>
+                            <div className='mb-10 fs-r'>Already have an account ? <Link className='fs-r td-n c-b' to="/login">Log in</Link></div>
                             <button className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r'><UilGoogle className='h-20 w-a mr-10'/>Sign up with Google</button>
                         </div>
                         {/* ----- or ----- Section */}

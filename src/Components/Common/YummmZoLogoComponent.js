@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../Styles/Form.css';
 
 const YummmZoLogoComponent = () => {
@@ -7,7 +8,7 @@ const YummmZoLogoComponent = () => {
             <>
                 {/* YummmZo Logo */}
                 <div className='h-100 flex ai-c'>
-                    <img src="" alt="YummmZo-Logo-Image" />
+                    <Link to="/">YummmZo</Link>
                 </div>
             </>
         </div>

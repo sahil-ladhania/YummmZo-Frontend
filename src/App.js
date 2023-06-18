@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './Components/Pages/LandingPage';
 import LogInPage from './Components/Pages/LogInPage';
 import SignUpPage from './Components/Pages/SignUpPage';
@@ -17,32 +18,42 @@ function App() {
   return (
     <div className="App">
       <>
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/restaurants" element={<RestaurantsPage/>}/>
+          <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
+          <Route path="/login" element={<LogInPage/>}/>
+          <Route path="/cart" element={<EmptyCartPage/>}/>
+          <Route path="/signup" element={<SignUpPage/>}/>
+          <Route path="/landing" element={<LandingPage/>}/>
+        </Routes>
         {/* Landing Page */}
-        <LandingPage/>
+        {/* <LandingPage/> */}
         {/* Sign Up Page */}
-        <SignUpPage/>
+        {/* <SignUpPage/> */}
         {/* Log In Page */}
-        <LogInPage/>
+        {/* <LogInPage/> */}
         {/* Home Page */}
-        <HomePage/>
+        {/* <HomePage/> */}
         {/* Restaurants Page */}
-        <RestaurantsPage/>
+        {/* <RestaurantsPage/> */}
         {/* Empty Cart Page */}
-        <EmptyCartPage/>
+        {/* <EmptyCartPage/> */}
         {/* Checkout Page */}
-        <CheckoutPage/>
+        {/* <CheckoutPage/> */}
         {/* Help and Support Page */}
-        <HelpAndSupportPage/>
+        {/* <HelpAndSupportPage/> */}
         {/* Profile Dropdown Component */}
-        <ProfileDropdownComponent/>
+        {/* <ProfileDropdownComponent/> */}
         {/* Cart Dropdown Component */}
-        <CartComponent/>
+        {/* <CartComponent/> */}
         {/* Empty Cart Dropdown Component */}
-        <EmptyCartComponent/>
+        {/* <EmptyCartComponent/> */}
         {/* Add New Address Component */}
-        <AddNewAddressComponent/>
+        {/* <AddNewAddressComponent/> */}
         {/* Menu Page */}
-        <MenuPage/>
+        {/* <MenuPage/> */}
       </>
     </div>
   );

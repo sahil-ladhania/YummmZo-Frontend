@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../Styles/Navbar.css';
+import { Link } from 'react-router-dom';
 import { UilAngleDown } from '@iconscout/react-unicons'
 import { UilShoppingBag } from '@iconscout/react-unicons'
 import { UilUser } from '@iconscout/react-unicons'
@@ -16,7 +17,7 @@ const NavbarComponent = () => {
                     {/* Left Part */}
                     <div className='flex ai-c'>
                         <div>
-                            <a className='mr-20' href="#"><img src="" alt="YummmZo-Logo" /></a>
+                            <Link className='mr-20' to="/">YummmZo</Link>
                         </div>
                         <div className=''>
                             <a className='flex ai-c td-n c-b' href="#">
@@ -29,11 +30,36 @@ const NavbarComponent = () => {
                     {/* Right Part */}
                     <div>
                         <ul className='flex fd-r'>
-                            <li className='ml-20 ls-n flex ai-c fs-r'><UilRestaurant className='h-20 w-a'/><a className='ml-5 td-n c-b' href="#">Restaurants</a></li>
-                            <li className='ml-20 ls-n flex ai-c fs-r'><UilPercentage className='h-20 w-a'/><a className='ml-5 td-n c-b' href="#">Offers</a></li>
-                            <li className='ml-20 ls-n flex ai-c fs-r'><UilInfo className='h-20 w-a'/><a className='ml-5 td-n c-b' href="#">Help</a></li>
-                            <li className='ml-20 ls-n flex ai-c fs-r'><UilUser className='h-20 w-a'/><a className='ml-5 td-n c-b' href="#">Sign In</a></li>
-                            <li className='ml-20 ls-n flex ai-c fs-r'><UilShoppingBag className='h-20 w-a'/><a className='ml-5 td-n c-b' href="#">Cart</a></li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'>
+                                <UilRestaurant className='h-20 w-a'/>
+                                <Link className='ml-5 td-n c-b' to="/restaurants">
+                                    Restaurants
+                                </Link>
+                            </li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'>
+                                <UilPercentage className='h-20 w-a'/>
+                                <Link className='ml-5 td-n c-b' to="/offers">
+                                    Offers
+                                </Link>
+                            </li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'>
+                                <UilInfo className='h-20 w-a'/>
+                                <Link className='ml-5 td-n c-b' to="/helpandsupport">
+                                    Help
+                                </Link>
+                            </li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'>
+                                <UilUser className='h-20 w-a'/>
+                                <Link className='ml-5 td-n c-b' to="/login">
+                                    Login
+                                </Link>
+                            </li>
+                            <li className='ml-20 ls-n flex ai-c fs-r'>
+                                <UilShoppingBag className='h-20 w-a'/>
+                                <Link className='ml-5 td-n c-b' to="/cart">
+                                    Cart 
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
