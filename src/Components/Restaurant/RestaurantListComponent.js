@@ -8,11 +8,6 @@ const RestaurantListComponent = () => {
                 {/* Restaurant Detail Component */}
                 <div className='flex fw-w jc-sb'> 
                     <RestaurantDetailComponent/>
-                    <RestaurantDetailComponent/>
-                    <RestaurantDetailComponent/>
-                    <RestaurantDetailComponent/>
-                    <RestaurantDetailComponent/>
-                    <RestaurantDetailComponent/>
                 </div>
             </>
         </div>

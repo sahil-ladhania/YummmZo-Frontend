@@ -27,7 +27,7 @@ const pizzaRestaurants = [
         priceForTwo : "500"
     },
     {
-        imgSrc : "",
+        imgSrc : "https://b.zmtcdn.com/data/dish_photos/931/ef681225d36a3981f0403b3b855f8931.jpg",
         imgAlt : "La-Pino'z-Pizza-Image",
         restaurantName : "La Pino'z Pizza",
         cuisine : "Pizza",
@@ -70,6 +70,15 @@ const pizzaRestaurants = [
         rating : "4.1",
         deliveryTime : "50 MINS",
         priceForTwo : "600"
+    },
+    {
+        imgSrc : "https://b.zmtcdn.com/data/dish_photos/570/fc272163855c0dce2ccb181c56054570.jpg",
+        imgAlt : "Roms-Pizza-Image",
+        restaurantName : "Roms Pizza",
+        cuisine : "Pizza",
+        rating : "3.1",
+        deliveryTime : "50 MINS",
+        priceForTwo : "400"
     }
 ]
 
