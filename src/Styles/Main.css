@@ -191,3 +191,15 @@
 .shadow{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+.mb-40{
+    margin-bottom: 40px;
+}
+.c-3d3d3d{
+    color: #3d3d3d;
+} 
+.ls-1{
+    letter-spacing: 1px;
+}
+.b-1-d8d8d8-s{
+    border: 1px #d8d8d8 solid;
+}

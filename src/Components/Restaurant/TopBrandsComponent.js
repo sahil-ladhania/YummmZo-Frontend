@@ -8,7 +8,7 @@ const TopBrandsComponent = () => {
                 <div className='mb-20'>
                     {/* Heading Section */}
                     <div className='mb-20'>
-                        <h2 className='fs-r'>Top Brands For You</h2>
+                        <h2 className='fs-r c-3d3d3d ls-1'>Top Brands For You</h2>
                     </div>
                     {/* Brands Section */}
                     <div className='flex jc-sb'>
@@ -20,12 +20,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className='mb-10'>
                                 <a className='td-n c-b' href="#">
-                                    <h5 className='fs-r'>Andra Gunpowder</h5>
+                                    <h5 className='fs-r c-3d3d3d'>Andra Gunpowder</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='td-n c-b' href="#">
-                                    <p className='fs-r'>21 min</p>
+                                    <p className='fs-r c-3d3d3d'>21 min</p>
                                 </a>
                             </div>
                         </div>
@@ -37,12 +37,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className='mb-10'>
                                 <a className='td-n c-b' href="#">
-                                    <h5 className='fs-r'>Burger King</h5>
+                                    <h5 className='fs-r c-3d3d3d'>Burger King</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='td-n c-b' href="#">
-                                    <p className='fs-r'>30 min</p>
+                                    <p className='fs-r c-3d3d3d'>30 min</p>
                                 </a>
                             </div>
                         </div>
@@ -54,12 +54,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className='mb-10'>
                                 <a className='td-n c-b' href="#">
-                                    <h5 className='fs-r'>Mani's Dum Biryani</h5>
+                                    <h5 className='fs-r c-3d3d3d'>Mani's Dum Biryani</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='td-n c-b' href="#">
-                                    <p className='fs-r'>45 min</p>
+                                    <p className='fs-r c-3d3d3d'>45 min</p>
                                 </a>
                             </div>
                         </div>
@@ -71,12 +71,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className='mb-10'>
                                 <a className='td-n c-b' href="#">
-                                    <h5 className='fs-r'>Subway</h5>
+                                    <h5 className='fs-r c-3d3d3d'>Subway</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='td-n c-b' href="#">
-                                    <p className='fs-r'>30 min</p>
+                                    <p className='fs-r c-3d3d3d'>30 min</p>
                                 </a>
                             </div>
                         </div>
@@ -88,12 +88,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className='mb-10'>
                                 <a className='td-n c-b' href="#">
-                                    <h5 className='fs-r'>Truffles</h5>
+                                    <h5 className='fs-r c-3d3d3d'>Truffles</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='td-n c-b' href="#">
-                                    <p className='fs-r'>20 min</p>
+                                    <p className='fs-r c-3d3d3d'>20 min</p>
                                 </a>
                             </div>
                         </div>
@@ -105,12 +105,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className='mb-10'>
                                 <a className='td-n c-b' href="#">
-                                    <h5 className='fs-r'>Pizza Hut</h5>
+                                    <h5 className='fs-r c-3d3d3d'>Pizza Hut</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='td-n c-b' href="#">
-                                    <p className='fs-r'>21 min</p>
+                                    <p className='fs-r c-3d3d3d'>21 min</p>
                                 </a>
                             </div>
                         </div>

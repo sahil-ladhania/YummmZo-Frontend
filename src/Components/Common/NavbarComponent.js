@@ -13,7 +13,7 @@ const NavbarComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex fd-r jc-sb ai-c h-100'>
+                <div className='flex fd-r jc-sb ai-c h-100 mb-20'>
                     {/* Left Part */}
                     <div className='flex ai-c'>
                         <div>

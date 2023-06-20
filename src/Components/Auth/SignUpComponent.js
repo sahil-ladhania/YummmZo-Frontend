@@ -15,16 +15,16 @@ const SignUpComponent = () => {
                 {/* Main Component */}
                 <div className='flex fd-r jc-sb ai-c h-600'>
                     {/* Sign up Form */}
-                    <div className='flex fd-c jc-sa ai-c b-1-black-solid h-500 w-500 br-5'>
+                    <form className='flex fd-c jc-sa ai-c b-1-black-solid h-500 w-500 br-5' action="">
                         {/* Sign up with Google Section */}
                         <div className='flex fd-c ai-c'>
-                            <h1 className='mb-10 fs-r'>Create Account</h1>
-                            <div className='mb-10 fs-r'>Already have an account ? <Link className='fs-r td-n c-b' to="/login">Log in</Link></div>
-                            <button className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r'><UilGoogle className='h-20 w-a mr-10'/>Sign up with Google</button>
+                            <h1 className='mb-10 fs-r c-3d3d3d'>Create Account</h1>
+                            <div className='mb-10 fs-r c-3d3d3d'>Already have an account ? <Link className='fs-r td-n c-3d3d3d' to="/login">Log in</Link></div>
+                            <button className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'><UilGoogle className='h-20 w-a mr-10 c-3d3d3d'/>Sign up with Google</button>
                         </div>
                         {/* ----- or ----- Section */}
                         <div>
-                            <p>--------------------------Or--------------------------</p>
+                            <p className='c-3d3d3d'>--------------------------Or--------------------------</p>
                         </div>
                         {/* Sign up with Number / Email Section */}
                         <div className='flex fd-c'>
@@ -34,19 +34,19 @@ const SignUpComponent = () => {
                         </div>
                         {/* Create Account */}
                         <div>
-                            <button className='h-40 w-300 b-1-t-s br-5 fs-r'>Create Account</button>
+                            <button className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'>Create Account</button>
                         </div>
                         {/* Privacy Policy | Terms & Condition Section */}
                         <div>
-                            <p className='fs-r'>
+                            <p className='fs-r c-3d3d3d'>
                                 By creating an account, I agree with YummmZo's <br /> 
-                                <a className='ml-30 fs-r td-n c-b' href="#">Privacy Policy</a> and <a className='fs-r td-n c-b' href="#">Terms and Condition</a>
+                                <a className='ml-30 fs-r td-n c-b c-3d3d3d' href="#">Privacy Policy</a> and <a className='fs-r td-n c-b' href="#">Terms and Condition</a>
                             </p>
                         </div>
-                    </div>
+                    </form>
                     {/* Image */}
                     <div className='h-300 w-400'>
-                        <img src="" alt="Image" />
+                            <img src="" alt="Image" />
                     </div>
                 </div>
             </>

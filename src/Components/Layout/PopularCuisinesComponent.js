@@ -8,8 +8,8 @@ const PopularCuisinesComponent = () => {
                 {/* Main Component */}
                 <div className='flex fd-c ai-c mb-20 h-400'>
                     {/* Heading Section */}
-                    <div className='mb-20'>
-                        <h2>Popular Cuisines</h2>
+                    <div className='mb-40'>
+                        <h2 className='fs-r c-3d3d3d ls-1'>Popular Cuisines</h2>
                     </div>
                     {/* Cuisines Section */}
                     <div>

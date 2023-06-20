@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../Styles/Buttons.css'
+import '../../Styles/Main.css'
+import { Link } from 'react-router-dom'
 
 const ImageContentButtonComponent = () => {
     return (
@@ -22,7 +24,8 @@ const ImageContentButtonComponent = () => {
                     </div>
                     {/* Button Section */}
                     <div>
-                        <button className='h-40 w-300 b-1-t-s br-5 fs-r'>See Restaurants near you</button>
+                        <Link className='fs-r td-n c-3d3d3d p-10 b-1-d8d8d8-s br-5 shadow' to="/restaurants">See Restaurants near you</Link>
+                        {/* <button className='h-40 w-300 b-1-t-s br-5 fs-r'>See Restaurants near you</button> */}
                     </div>
                 </div>
             </>

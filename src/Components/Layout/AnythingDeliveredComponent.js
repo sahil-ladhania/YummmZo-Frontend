@@ -7,8 +7,8 @@ const AnythingDeliveredComponent = () => {
                 {/* Main Component */}
                 <div className='flex fd-c mb-50'>
                     {/* Heading Section */}
-                    <div className='flex jc-c mb-20'>
-                        <h2 className='fs-r'>Anything Delivered</h2>
+                    <div className='flex jc-c mb-40'>
+                        <h2 className='fs-r c-3d3d3d ls-1'>Anything Delivered</h2>
                     </div>
                     {/* Features Section */}
                     <div className='flex fd-r jc-sb'> 

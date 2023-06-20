@@ -13,7 +13,7 @@ const LogInComponent = () => {
                 {/* Main Component */}
                 <div className='flex fd-r jc-sb ai-c h-600'>
                     {/* Log In Form */}
-                    <div className='flex fd-c jc-sa ai-c b-1-black-solid h-500 w-500'>
+                    <form className='flex fd-c jc-sa ai-c b-1-black-solid h-500 w-500' action="">
                         {/* Log In with Google Section */}
                         <div className='flex fd-c ai-c'>
                             <h1 className='mb-10 fs-r'>Log in to YummmZo</h1>
@@ -34,7 +34,7 @@ const LogInComponent = () => {
                         <div>
                             <button className='h-40 w-300 b-1-t-s br-5 fs-r'>Log in</button>
                         </div>
-                    </div>
+                    </form>
                     {/* Image */}
                     <div className='h-300 w-400'>
                         <img src="" alt="Image" />
