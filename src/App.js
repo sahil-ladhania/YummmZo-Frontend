@@ -27,6 +27,7 @@ function App() {
           <Route path="/cart" element={<EmptyCartPage/>}/>
           <Route path="/signup" element={<SignUpPage/>}/>
           <Route path="/landing" element={<LandingPage/>}/>
+          <Route path="/menu" element={<MenuPage/>}/>
         </Routes>
         {/* Landing Page */}
         {/* <LandingPage/> */}
