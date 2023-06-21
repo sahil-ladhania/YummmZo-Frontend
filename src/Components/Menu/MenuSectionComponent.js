@@ -14,6 +14,10 @@ const MenuSectionComponent = () => {
                     {/* Add Item Component */}
                     <ItemAddComponent/>
                 </div>
+                {/* Item Diivder */}
+                <div className='mt-10'>
+                        <hr className='bc-g b-n h-1'/>
+                </div>
             </>
         </div>
     )

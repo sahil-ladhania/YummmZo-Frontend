@@ -8,16 +8,17 @@ const VegOnlyToggleComponent = () => {
                 <div className='flex ai-c mb-20'>
                     {/* Title Section */}
                     <div>
-                        <p className='mr-10 fs-s fs-r'>Veg Only</p>
+                        <p className='mr-10 fs-m fs-r fw-500 ls-1'>Veg Only</p>
                     </div>
                     {/* Toggle Button Section */}
-                    <div>
-                        <button className='fs-r'>Toggle</button>
-                    </div>
-                </div>
+                    <label className="toggle">
+                        <input type="checkbox"/>
+                        <span className="slider"></span>
+                    </label>
                 {/* Divider Section */}
                 <div className='mb-20'>
                     <hr />
+                </div>
                 </div>
             </>
         </div>
