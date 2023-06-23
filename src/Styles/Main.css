@@ -284,3 +284,6 @@ input[type="checkbox"]:checked ~ .section {
 .bc-f1f1f6{
     background-color:#F1F1F6 ;
 }
+.w-30{
+    width: 30px;
+}
