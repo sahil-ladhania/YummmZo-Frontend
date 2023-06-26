@@ -13,6 +13,7 @@ import CartComponent from './Components/Cart/CartComponent';
 import EmptyCartComponent from './Components/Cart/EmptyCartComponent';
 import AddNewAddressComponent from './Components/Checkout/AddNewAddressComponent';
 import MenuPage from './Components/Pages/MenuPage';
+import AddRestaurantPage from './Components/Pages/AddRestaurantPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/restaurants" element={<RestaurantsPage/>}/>
+          <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>
           <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
           <Route path="/login" element={<LogInPage/>}/>
           <Route path="/cart" element={<EmptyCartPage/>}/>

@@ -5,8 +5,8 @@ import { UilAngleDown } from '@iconscout/react-unicons'
 import { UilShoppingBag } from '@iconscout/react-unicons'
 import { UilUser } from '@iconscout/react-unicons'
 import { UilInfo } from '@iconscout/react-unicons'
-import { UilPercentage } from '@iconscout/react-unicons'
 import { UilRestaurant } from '@iconscout/react-unicons'
+import { UilPlus } from '@iconscout/react-unicons'
 
 const NavbarComponent = () => {
     return (
@@ -37,9 +37,9 @@ const NavbarComponent = () => {
                                 </Link>
                             </li>
                             <li className='ml-20 ls-n flex ai-c fs-r'>
-                                <UilPercentage className='h-20 w-a'/>
-                                <Link className='ml-5 td-n c-b' to="/offers">
-                                    Offers
+                                <UilPlus className='h-20 w-a'/>
+                                <Link className='ml-5 td-n c-b' to="/addRestaurant">
+                                    Add Restaurant
                                 </Link>
                             </li>
                             <li className='ml-20 ls-n flex ai-c fs-r'>

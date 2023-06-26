@@ -287,3 +287,38 @@ input[type="checkbox"]:checked ~ .section {
 .w-30{
     width: 30px;
 }
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.card {
+    height: 300px;
+    width: 280px;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.card-image {
+    width: 100px;
+    height: 100px;
+}
+.card-heading {
+    font-size: large;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.card-sub-heading{
+    font-size: medium;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.card-paragraph {
+    margin-top: 10px;
+    font-size: small;
+    color: #3d3d3d;
+    line-height: 1.5;
+}
