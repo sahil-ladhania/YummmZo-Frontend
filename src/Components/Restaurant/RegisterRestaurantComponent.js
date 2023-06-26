@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const RegisterRestaurantComponent = () => {
     return (
@@ -13,7 +14,7 @@ const RegisterRestaurantComponent = () => {
                         And get ads worth INR 1500. Valid for new restaurant partners in select cities.
                     </div>
                     <div>
-                        <a className='h-40 td-n br-5 fs-r p-10 shadow b-1-d8d8d8-s c-3d3d3d' href="#">Register Your Restaurant</a>
+                        <Link className='h-40 td-n br-5 fs-r p-10 shadow b-1-d8d8d8-s c-3d3d3d' to="/registerRestaurant">Register Your Restaurant</Link>
                     </div>
                     <div>
                         <span className='fs-r'>Need help? Please email us at </span>
