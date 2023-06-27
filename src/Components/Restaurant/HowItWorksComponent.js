@@ -5,7 +5,7 @@ const HowItWorksComponent = () => {
     return (
         <div>
             <>
-                <div className='flex fd-c jc-sb ai-c mb-20'>
+                <div className='flex fd-c ai-c mb-20'>
                     <div className='fs-r fs-xxl fw-600 mb-20'>
                         How it works ? 
                     </div>
