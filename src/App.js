@@ -6,16 +6,12 @@ import SignUpPage from './Components/Pages/SignUpPage';
 import HomePage from './Components/Pages/HomePage';
 import RestaurantsPage from './Components/Pages/RestaurantsPage';
 import EmptyCartPage from './Components/Pages/EmptyCartPage';
-import CheckoutPage from './Components/Pages/CheckoutPage';
 import HelpAndSupportPage from './Components/Pages/HelpAndSupportPage';
-import ProfileDropdownComponent from './Components/Common/ProfileDropdownComponent';
-import CartComponent from './Components/Cart/CartComponent';
-import EmptyCartComponent from './Components/Cart/EmptyCartComponent';
-import AddNewAddressComponent from './Components/Checkout/AddNewAddressComponent';
 import MenuPage from './Components/Pages/MenuPage';
 import AddRestaurantPage from './Components/Pages/AddRestaurantPage';
 import RegisterRestaurantPage from './Components/Pages/RegisterRestaurantPage';
 import SearchInRestaurantPage from './Components/Pages/SearchInRestaurantPage';
+import FourZeroFourPage from './Components/Pages/FourZeroFourPage';
 
 function App() {
   return (
@@ -34,34 +30,8 @@ function App() {
           <Route path="/landing" element={<LandingPage/>}/>
           <Route path="/menu" element={<MenuPage/>}/>
           <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
-          {/* <Route path="/profileDropdown" element={<ProfileDropdownComponent/>}/> */}
+          <Route path="*" element={<FourZeroFourPage/>}/>
         </Routes>
-        {/* Landing Page */}
-        {/* <LandingPage/> */}
-        {/* Sign Up Page */}
-        {/* <SignUpPage/> */}
-        {/* Log In Page */}
-        {/* <LogInPage/> */}
-        {/* Home Page */}
-        {/* <HomePage/> */}
-        {/* Restaurants Page */}
-        {/* <RestaurantsPage/> */}
-        {/* Empty Cart Page */}
-        {/* <EmptyCartPage/> */}
-        {/* Checkout Page */}
-        {/* <CheckoutPage/> */}
-        {/* Help and Support Page */}
-        {/* <HelpAndSupportPage/> */}
-        {/* Profile Dropdown Component */}
-        {/* <ProfileDropdownComponent/> */}
-        {/* Cart Dropdown Component */}
-        {/* <CartComponent/> */}
-        {/* Empty Cart Dropdown Component */}
-        {/* <EmptyCartComponent/> */}
-        {/* Add New Address Component */}
-        {/* <AddNewAddressComponent/> */}
-        {/* Menu Page */}
-        {/* <MenuPage/> */}
       </>
     </div>
   );
