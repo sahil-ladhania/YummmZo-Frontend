@@ -15,6 +15,7 @@ import AddNewAddressComponent from './Components/Checkout/AddNewAddressComponent
 import MenuPage from './Components/Pages/MenuPage';
 import AddRestaurantPage from './Components/Pages/AddRestaurantPage';
 import RegisterRestaurantPage from './Components/Pages/RegisterRestaurantPage';
+import SearchInRestaurantPage from './Components/Pages/SearchInRestaurantPage';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/signup" element={<SignUpPage/>}/>
           <Route path="/landing" element={<LandingPage/>}/>
           <Route path="/menu" element={<MenuPage/>}/>
+          <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
         </Routes>
         {/* Landing Page */}
         {/* <LandingPage/> */}

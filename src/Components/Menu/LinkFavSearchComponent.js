@@ -4,8 +4,10 @@ import { UilSearch } from '@iconscout/react-unicons'
 import { Link } from 'react-router-dom';
 
 const LinkFavSearchComponent = () => {
+    // State Variables.
     const [favourites, setFavorites] = useState(false);
 
+// Handler Functions.
     const handleFavourite = () => {
         setFavorites(!favourites);
     }
@@ -26,13 +28,13 @@ const LinkFavSearchComponent = () => {
                         <span className='flex ai-c'>
                             <p onClick={handleFavourite}>
                                 {
-                                            favourites ? 
-                                                <p className='h-20 w-a mr-10 pointer'>❤️</p>
-                                                :
-                                                <UilHeart className='h-20 w-a mr-10 pointer'/>
+                                    favourites ? 
+                                        <p className='h-20 w-a mr-10 pointer'>❤️</p>
+                                        :
+                                        <UilHeart className='h-20 w-a mr-10 pointer'/>
                                 }
                             </p>
-                            <UilSearch className='h-20 w-a ml-10 pointer'/>
+                            <Link className='td-n c-b' to="/searchInRestaurant"><UilSearch className='h-20 w-a ml-10 pointer'/></Link>
                         </span>
                     </div>
                 </div>
