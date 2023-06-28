@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../Styles/Navbar.css';
 import { Link } from 'react-router-dom';
 import { UilAngleDown } from '@iconscout/react-unicons'
@@ -9,6 +9,25 @@ import { UilRestaurant } from '@iconscout/react-unicons'
 import { UilPlus } from '@iconscout/react-unicons'
 
 const NavbarComponent = () => {
+    // State Variables
+    const [activeLink , setActiveLink] =  useState('restaurants')
+    
+    // Handler Functions
+    const handleRestaurantLink = () => {
+
+    }
+    const handleAddRestaurantLink = () => {
+
+    }
+    const handleHelpLink = () => {
+
+    }
+    const handleLoginLink = () => {
+
+    }
+    const handleCartLink = () => {
+
+    }
     return (
         <div>
             <>
@@ -32,31 +51,31 @@ const NavbarComponent = () => {
                         <ul className='flex fd-r'>
                             <li className='ml-20 ls-n flex ai-c fs-r'>
                                 <UilRestaurant className='h-20 w-a'/>
-                                <Link className='ml-5 td-n c-b' to="/restaurants">
+                                <Link onClick={handleRestaurantLink} className='ml-5 td-n c-b' to="/restaurants">
                                     Restaurants
                                 </Link>
                             </li>
                             <li className='ml-20 ls-n flex ai-c fs-r'>
                                 <UilPlus className='h-20 w-a'/>
-                                <Link className='ml-5 td-n c-b' to="/addRestaurant">
+                                <Link onClick={handleAddRestaurantLink} className='ml-5 td-n c-b' to="/addRestaurant">
                                     Add Restaurant
                                 </Link>
                             </li>
                             <li className='ml-20 ls-n flex ai-c fs-r'>
                                 <UilInfo className='h-20 w-a'/>
-                                <Link className='ml-5 td-n c-b' to="/helpandsupport">
+                                <Link onClick={handleHelpLink} className='ml-5 td-n c-b' to="/helpandsupport">
                                     Help
                                 </Link>
                             </li>
                             <li className='ml-20 ls-n flex ai-c fs-r'>
                                 <UilUser className='h-20 w-a'/>
-                                <Link className='ml-5 td-n c-b' to="/login">
+                                <Link onClick={handleLoginLink} className='ml-5 td-n c-b' to="/login">
                                     Login
                                 </Link>
                             </li>
                             <li className='ml-20 ls-n flex ai-c fs-r'>
                                 <UilShoppingBag className='h-20 w-a'/>
-                                <Link className='ml-5 td-n c-b' to="/cart">
+                                <Link onClick={handleCartLink} className='ml-5 td-n c-b' to="/cart">
                                     Cart 
                                 </Link>
                             </li>
