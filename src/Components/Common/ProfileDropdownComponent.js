@@ -8,7 +8,7 @@ const ProfileDropdownComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='w-400 ml-500 p-10-20 b-1-b-s'>
+                <div className='w-400 p-10-20 b-1-b-s bc-w'>
                     {/* Profile Title */}
                     <div className='h-50 fs-r'>
                         Hello, Sahil!
@@ -97,7 +97,7 @@ const ProfileDropdownComponent = () => {
                             </div>
                             <div>
                                 <p className='ta-j fs-s p-10 b-1-b-s mb-10 fs-r'>
-                                    Glovo may share user data (such as hashed emails, phones, or device identifiers) with Facebook and similar platforms to personalise and measure ads and content and to create audiences. You can always opt out of receiving these kinds of communications by deactivating this toggle.
+                                    YummmZo may share user data (such as hashed emails, phones, or device identifiers) with Facebook and similar platforms to personalise and measure ads and content and to create audiences. You can always opt out of receiving these kinds of communications by deactivating this toggle.
                                 </p>
                             </div>
                             <div className='flex jc-sb ai-c h-50 mb-10'>

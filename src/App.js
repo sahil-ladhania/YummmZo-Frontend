@@ -34,6 +34,7 @@ function App() {
           <Route path="/landing" element={<LandingPage/>}/>
           <Route path="/menu" element={<MenuPage/>}/>
           <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
+          {/* <Route path="/profileDropdown" element={<ProfileDropdownComponent/>}/> */}
         </Routes>
         {/* Landing Page */}
         {/* <LandingPage/> */}

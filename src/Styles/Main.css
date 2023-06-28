@@ -342,3 +342,6 @@ select {
 .active{
     color: orange;
 }
+.bc-w{
+    background-color: #fff;
+}
