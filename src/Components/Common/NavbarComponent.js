@@ -36,7 +36,7 @@ const NavbarComponent = () => {
                     {/* Left Part */}
                     <div className='flex ai-c'>
                         <div>
-                            <Link className='mr-20' to="/">YummmZo</Link>
+                            <Link className='mr-20 td-n c-b' to="/">YummmZo</Link>
                         </div>
                         <div className=''>
                             <a className='flex ai-c td-n c-b' href="#">
