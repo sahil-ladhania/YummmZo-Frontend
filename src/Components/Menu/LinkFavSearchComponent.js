@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import { UilHeart } from '@iconscout/react-unicons'
-import { UilSearch } from '@iconscout/react-unicons'
+import { BsSearch } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import { MdFavorite } from "react-icons/md";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 const LinkFavSearchComponent = () => {
     // State Variables.
@@ -29,12 +30,12 @@ const LinkFavSearchComponent = () => {
                             <p onClick={handleFavourite}>
                                 {
                                     favourites ? 
-                                        <p className='h-20 w-a mr-10 pointer'>❤️</p>
+                                        <p className='h-20 w-a mr-10 pointer'><MdFavorite/></p>
                                         :
-                                        <UilHeart className='h-20 w-a mr-10 pointer'/>
+                                        <MdOutlineFavoriteBorder className='h-20 w-a mr-10 pointer'/>
                                 }
                             </p>
-                            <Link className='td-n c-b' to="/searchInRestaurant"><UilSearch className='h-20 w-a ml-10 pointer'/></Link>
+                            <Link className='td-n c-b' to="/searchInRestaurant"><BsSearch className='h-20 w-a ml-10 pointer'/></Link>
                         </span>
                     </div>
                 </div>

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import '../../Styles/Navbar.css';
-import { NavLink } from 'react-router-dom';
-import { UilAngleDown } from '@iconscout/react-unicons'
-import { UilShoppingBag } from '@iconscout/react-unicons'
-import { UilUser } from '@iconscout/react-unicons'
-import { UilInfo } from '@iconscout/react-unicons'
-import { UilRestaurant } from '@iconscout/react-unicons'
-import { UilPlus } from '@iconscout/react-unicons'
 import ProfileDropdownComponent from './ProfileDropdownComponent';
+import { NavLink } from 'react-router-dom';
+import { FaAngleDown } from "react-icons/fa";
+import { IoRestaurant } from "react-icons/io5";
+import { IoAddCircle } from "react-icons/io5";
+import { IoHelpBuoySharp } from "react-icons/io5";
+import { FaUserCircle } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
 
 const NavbarComponent = () => {
     // State Variables
@@ -35,7 +34,7 @@ const NavbarComponent = () => {
                             <a className='flex ai-c td-n c-b' href="#">
                                 <span className='mr-5 fs-r'>HOME</span>
                                 <span className='mr-5 fs-r'>G.T.Road, Kailash Park</span>
-                                <UilAngleDown/>
+                                <FaAngleDown/>
                             </a>
                         </div>
                     </div>
@@ -44,19 +43,20 @@ const NavbarComponent = () => {
                         <ul className='flex fd-r'>
                             <li className='ml-20 ls-n'>
                                 <NavLink to="/restaurants" className="mr-20 td-n c-b flex ai-c fs-r">
-                                    <UilRestaurant className='h-20 w-a'/>
+                                    {/* <UilRestaurant className='h-20 w-a'/> */}
+                                    <IoRestaurant className='h-20 w-a'/>
                                     <span>Restaurants</span>
                                 </NavLink>
                             </li>
                             <li className='ml-20 ls-n'>
                                 <NavLink to="/addRestaurant" className="mr-20 td-n c-b flex ai-c fs-r">
-                                    <UilPlus className='h-20 w-a'/>
+                                    <IoAddCircle className='h-20 w-a'/>
                                     <span>Add Restaurant</span>
                                 </NavLink>
                             </li>
                             <li className='ml-20 ls-n'>
                                 <NavLink to="/helpandsupport" className="mr-20 td-n c-b flex ai-c fs-r">
-                                    <UilInfo className='h-20 w-a'/>
+                                    <IoHelpBuoySharp className='h-20 w-a'/>
                                     <span>Help</span>
                                 </NavLink>
                             </li>
@@ -65,7 +65,7 @@ const NavbarComponent = () => {
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                                 >
-                                    <UilUser className='h-20 w-a'/>
+                                    <FaUserCircle className='h-20 w-a'/>
                                     <span>Login</span>
                                 </NavLink>
                                 {
@@ -77,7 +77,7 @@ const NavbarComponent = () => {
                             </li>
                             <li className='ml-20 ls-n'>
                                 <NavLink to="/cart" className="mr-20 td-n c-b flex ai-c fs-r">
-                                    <UilShoppingBag className='h-20 w-a'/>
+                                    <FaCartShopping className='h-20 w-a'/>
                                     <span>Cart</span>
                                 </NavLink>
                             </li>
