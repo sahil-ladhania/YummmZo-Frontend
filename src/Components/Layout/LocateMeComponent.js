@@ -16,7 +16,7 @@ const LocateMeComponent = () => {
                     {/* Landing Page Mini Navbar */}
                     <div className='flex jc-sb ai-c fd-r h-100'>
                         <div>
-                            <Link to="/">YummmZo</Link>
+                            <Link to="/home">YummmZo</Link>
                         </div>
                         <div>
                             <Link className='mr-10 h-40 p-0-30 b-1-t-s br-5 fs-r fs-s fw-500' to="/login">Login</Link>

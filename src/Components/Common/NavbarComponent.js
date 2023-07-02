@@ -28,7 +28,7 @@ const NavbarComponent = () => {
                     {/* Left Part */}
                     <div className='flex ai-c'>
                         <div>
-                            <NavLink exact to= "/" className="mr-20 td-n c-b">YummmZo</NavLink>
+                            <NavLink exact to= "/home" className="mr-20 td-n c-b">YummmZo</NavLink>
                         </div>
                         <div className=''>
                             <a className='flex ai-c td-n c-b' href="#">
