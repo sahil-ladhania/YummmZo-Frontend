@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import '../../Styles/Form.css';
 import { UilGoogle } from '@iconscout/react-unicons'
+import registerUser from '../../Services/RegistrationService';
 // CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
@@ -9,6 +10,44 @@ import '../../Styles/Links.css'
 
 
 const SignUpComponent = () => {
+    // Defining State Variables.
+    const [firstName , setFirstName] = useState("");
+    const [lastName , setLastName] = useState("");
+    const [email , setEmail] = useState("");
+    const [password , setPassword] = useState("");
+    const [confirmPassword , setConfirmPassword] = useState("");
+    // Handler Functions.
+    const handleFirstName = (e) => {
+        setFirstName(e.target.value);
+    }
+    const handleLastName = (e) => {
+        setLastName(e.target.value);
+    }
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+    }
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+    }
+    const handleConfirmPassword = (e) => {
+        setConfirmPassword(e.target.value);
+    }
+    const handleRegister = (e) => {
+        // Handeling Default Form Submission To Avoid Page Reload.
+        e.preventDefault();
+        // Checking If User Has Filled All the Feilds Or Not.
+        if ( !firstName || !lastName || !email || !password || !confirmPassword ){
+            alert("Please Fill all the Feilds !!!");
+        }
+        // Checking If the Password And Confirm Password Is Same Or Not.
+        else if (password !== confirmPassword) {
+            alert('Password and Confirm Password should be the same!');
+        } 
+        else{
+            const userData = { firstName , lastName , email , password , confirmPassword };
+            registerUser(userData);
+        }
+    }
     return (
         <div>
             <>
@@ -28,13 +67,50 @@ const SignUpComponent = () => {
                         </div>
                         {/* Sign up with Number / Email Section */}
                         <div className='flex fd-c'>
-                            <input className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' type="number" name="" id="" placeholder='Phone Number'/>
-                            <input className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' type="text" name="" id="" placeholder='Name'/>
-                            <input className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' type="email" name="" id="" placeholder='Email Address'/>
+                            <input 
+                            value={firstName}
+                            onChange={handleFirstName}
+                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
+                            type="text" 
+                            name="" 
+                            id="" 
+                            placeholder='First Name'/>
+                            <input 
+                            value={lastName}
+                            onChange={handleLastName}
+                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
+                            type="text" 
+                            name="" 
+                            id="" 
+                            placeholder='Last Name'/>
+                            <input 
+                            value={email}
+                            onChange={handleEmail}
+                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
+                            type="email" 
+                            name="" 
+                            id="" 
+                            placeholder='Email Address'/>
+                            <input 
+                            value={password}
+                            onChange={handlePassword}
+                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
+                            type="password" 
+                            name="" 
+                            id="" 
+                            placeholder='Password'/>
+                            <input 
+                            value={confirmPassword}
+                            onChange={handleConfirmPassword}
+                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
+                            type="password" 
+                            name="" 
+                            id="" 
+                            placeholder='Confirm Password'/>
                         </div>
                         {/* Create Account */}
                         <div>
-                            <button className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'>Create Account</button>
+                            <button onClick={handleRegister} type='submit' className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'>Register</button>
                         </div>
                         {/* Privacy Policy | Terms & Condition Section */}
                         <div>
