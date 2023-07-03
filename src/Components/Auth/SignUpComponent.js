@@ -1,52 +1,37 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import '../../Styles/Form.css';
 import { UilGoogle } from '@iconscout/react-unicons'
-import registerUser from '../../Services/RegistrationService';
 // CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
 import '../../Styles/Links.css'
+import registerUser from '../../Services/RegistrationService';
 
 
 const SignUpComponent = () => {
     // Defining State Variables.
-    const [firstName , setFirstName] = useState("");
-    const [lastName , setLastName] = useState("");
-    const [email , setEmail] = useState("");
-    const [password , setPassword] = useState("");
-    const [confirmPassword , setConfirmPassword] = useState("");
+    const [formData , setFormData] = useState({
+        firstName : '',
+        lastName : '',
+        email : '',
+        password : '',
+        confirmPassword : ''
+    });
     // Handler Functions.
-    const handleFirstName = (e) => {
-        setFirstName(e.target.value);
+    const handleChange = (e) => {
+        setFormData({...formData , [e.target.name] : e.target.value})
     }
-    const handleLastName = (e) => {
-        setLastName(e.target.value);
-    }
-    const handleEmail = (e) => {
-        setEmail(e.target.value);
-    }
-    const handlePassword = (e) => {
-        setPassword(e.target.value);
-    }
-    const handleConfirmPassword = (e) => {
-        setConfirmPassword(e.target.value);
-    }
-    const handleRegister = (e) => {
-        // Handeling Default Form Submission To Avoid Page Reload.
+    const handleSubmit = (e) => {
         e.preventDefault();
-        // Checking If User Has Filled All the Feilds Or Not.
-        if ( !firstName || !lastName || !email || !password || !confirmPassword ){
-            alert("Please Fill all the Feilds !!!");
-        }
-        // Checking If the Password And Confirm Password Is Same Or Not.
-        else if (password !== confirmPassword) {
-            alert('Password and Confirm Password should be the same!');
-        } 
-        else{
-            const userData = { firstName , lastName , email , password , confirmPassword };
-            registerUser(userData);
-        }
+        // Connecting Frontend With Backend.
+        registerUser(formData);
+        setFormData({
+            firstName : '',
+            lastName : '',
+            email : '',
+            password : '',
+            confirmPassword : ''
+        });
     }
     return (
         <div>
@@ -54,7 +39,7 @@ const SignUpComponent = () => {
                 {/* Main Component */}
                 <div className='flex fd-r jc-sb ai-c h-600'>
                     {/* Sign up Form */}
-                    <form className='flex fd-c jc-sa ai-c b-1-black-solid h-500 w-500 br-5' action="">
+                    <form className='flex fd-c jc-sa ai-c b-1-black-solid h-500 w-500 br-5' onSubmit={handleSubmit}>
                         {/* Sign up with Google Section */}
                         <div className='flex fd-c ai-c'>
                             <h1 className='mb-10 fs-r c-3d3d3d'>Create Account</h1>
@@ -68,49 +53,49 @@ const SignUpComponent = () => {
                         {/* Sign up with Number / Email Section */}
                         <div className='flex fd-c'>
                             <input 
-                            value={firstName}
-                            onChange={handleFirstName}
+                            value={formData.firstName}
+                            onChange={handleChange}
                             className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
                             type="text" 
-                            name="" 
-                            id="" 
+                            name="firstName" 
+                            required
                             placeholder='First Name'/>
                             <input 
-                            value={lastName}
-                            onChange={handleLastName}
+                            value={formData.lastName}
+                            onChange={handleChange}
                             className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
                             type="text" 
-                            name="" 
-                            id="" 
+                            name="lastName" 
+                            required
                             placeholder='Last Name'/>
                             <input 
-                            value={email}
-                            onChange={handleEmail}
+                            value={formData.email}
+                            onChange={handleChange}
                             className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
                             type="email" 
-                            name="" 
-                            id="" 
+                            name="email" 
+                            required
                             placeholder='Email Address'/>
                             <input 
-                            value={password}
-                            onChange={handlePassword}
+                            value={formData.password}
+                            onChange={handleChange}
                             className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
                             type="password" 
-                            name="" 
-                            id="" 
+                            name="password" 
+                            required
                             placeholder='Password'/>
                             <input 
-                            value={confirmPassword}
-                            onChange={handleConfirmPassword}
+                            value={formData.confirmPassword}
+                            onChange={handleChange}
                             className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
                             type="password" 
-                            name="" 
-                            id="" 
+                            name="confirmPassword" 
+                            required
                             placeholder='Confirm Password'/>
                         </div>
                         {/* Create Account */}
                         <div>
-                            <button onClick={handleRegister} type='submit' className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'>Register</button>
+                            <button type='submit' className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'>Register</button>
                         </div>
                         {/* Privacy Policy | Terms & Condition Section */}
                         <div>

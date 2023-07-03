@@ -1,19 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { UilGoogle } from '@iconscout/react-unicons'
 // CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
 import '../../Styles/Links.css'
+import loginUser from '../../Services/LoginService';
 
 const LogInComponent = () => {
+    // Defining State Variables.
+    const [formData , setFormData] = useState({
+        email : '',
+        password : ''
+    });
+    // Handler Functions.
+    const handleChange = (e) => {
+        setFormData({...formData , [e.target.name] : e.target.value});
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        loginUser(formData)
+            .then(() => {
+                alert("Login Successfull...");
+            })
+            .catch((error) => {
+                alert(`Invalid Credentials : ${error}`);
+            })
+        setFormData({
+            email : '',
+            password : ''
+        });
+    }
     return (
         <div>
             <>
                 {/* Main Component */}
                 <div className='flex fd-r jc-sb ai-c h-600'>
                     {/* Log In Form */}
-                    <form className='flex fd-c jc-sa ai-c b-1-black-solid h-500 w-500' action="">
+                    <form className='flex fd-c jc-sa ai-c b-1-black-solid h-500 w-500' onSubmit={handleSubmit}>
                         {/* Log In with Google Section */}
                         <div className='flex fd-c ai-c'>
                             <h1 className='mb-10 fs-r'>Log in to YummmZo</h1>
@@ -26,13 +50,27 @@ const LogInComponent = () => {
                         </div>
                         {/* Log In with Email & Password Section */}
                         <div className='flex fd-c'>
-                            <input className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' type="email" name="" id="" placeholder='name@gmail.com'/>
-                            <input className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' type="password" name="" id="" placeholder='Password'/>
+                            <input 
+                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
+                            onChange={handleChange}
+                            type="email" 
+                            name="email" 
+                            value={formData.email}
+                            required
+                            placeholder='name@gmail.com'/>
+                            <input 
+                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
+                            onChange={handleChange}
+                            type="password" 
+                            name="password" 
+                            value={formData.password}
+                            required
+                            placeholder='Password'/>
                             <a className='ml-180 fs-r td-n c-b' href="#">Forgot Password ?</a>
                         </div>
                         {/* Log In */}
                         <div>
-                            <button className='h-40 w-300 b-1-t-s br-5 fs-r'>Log in</button>
+                            <button className='h-40 w-300 b-1-t-s br-5 fs-r' type='submit'>Log in</button>
                         </div>
                     </form>
                     {/* Image */}

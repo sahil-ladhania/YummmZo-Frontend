@@ -1,14 +1,15 @@
 import axios from 'axios';
 
-const registerUser = (userData) => {
+const registerUser = (formData) => {
     // Defining API Endpoint.
-    const endpoint = "/api/users/register";
-    return axios.post(endpoint , userData)
+    const endpoint = "http://localhost:81/api/users/register";
+    return axios.post(endpoint , formData)
         .then((response) => {
-            console.log(response.data.Message);
+            console.log(response.data);
+            return response.data;
         })
         .catch((error) => {
-            console.log(`Registration Failed !!! , ${error}`);
+            console.log(`Registration Failed !!! : ${error}`);
         })
 }
 
