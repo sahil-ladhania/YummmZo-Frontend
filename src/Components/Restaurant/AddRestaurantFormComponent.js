@@ -2,6 +2,7 @@ import React from 'react'
 import RestaurantForm from './RestaurantForm'
 import MenuItemForm from './MenuItemForm'
 import RestaurantTypeFormComponent from './RestaurantTypeFormComponent'
+import RestaurantPageSidebarComponent from './RestaurantPageSidebarComponent'
 
 const AddRestaurantFormComponent = () => {
     return (
@@ -9,9 +10,10 @@ const AddRestaurantFormComponent = () => {
             <>
                 {/* Main Component */}
                 <div>
-                    <RestaurantForm/>
+                    <RestaurantPageSidebarComponent/>
+                    {/* <RestaurantForm/>
                     <RestaurantTypeFormComponent/>
-                    <MenuItemForm/>
+                    <MenuItemForm/> */}
                 </div>
             </>
         </div>
