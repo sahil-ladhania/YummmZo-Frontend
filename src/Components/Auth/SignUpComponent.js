@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UilGoogle } from '@iconscout/react-unicons'
+import { toast } from 'react-toastify';
 // CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
@@ -14,9 +15,9 @@ const SignUpComponent = () => {
         firstName : '',
         lastName : '',
         email : '',
-        password : '',
-        confirmPassword : ''
+        password : ''
     });
+    const navigate = useNavigate();
     // Handler Functions.
     const handleChange = (e) => {
         setFormData({...formData , [e.target.name] : e.target.value})
@@ -29,9 +30,10 @@ const SignUpComponent = () => {
             firstName : '',
             lastName : '',
             email : '',
-            password : '',
-            confirmPassword : ''
+            password : ''
         });
+        toast.success("Successfully Registered...");
+        setTimeout(()=>navigate('/login'), 2000);
     }
     return (
         <div>
@@ -84,14 +86,6 @@ const SignUpComponent = () => {
                             name="password" 
                             required
                             placeholder='Password'/>
-                            <input 
-                            value={formData.confirmPassword}
-                            onChange={handleChange}
-                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
-                            type="password" 
-                            name="confirmPassword" 
-                            required
-                            placeholder='Confirm Password'/>
                         </div>
                         {/* Create Account */}
                         <div>

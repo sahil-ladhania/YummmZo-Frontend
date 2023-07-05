@@ -1,5 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import LandingPage from './Components/Pages/LandingPage';
 import LogInPage from './Components/Pages/LogInPage';
 import SignUpPage from './Components/Pages/SignUpPage';
@@ -33,6 +35,7 @@ function App() {
           <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
           <Route path="*" element={<FourZeroFourPage/>}/>
         </Routes>
+        <ToastContainer/>
       </>
     </div>
   );

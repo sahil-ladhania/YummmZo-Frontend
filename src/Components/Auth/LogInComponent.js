@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-import { UilGoogle } from '@iconscout/react-unicons'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { UilGoogle } from '@iconscout/react-unicons';
+import { toast } from 'react-toastify';
 // CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
@@ -13,6 +14,7 @@ const LogInComponent = () => {
         email : '',
         password : ''
     });
+    const navigate = useNavigate();
     // Handler Functions.
     const handleChange = (e) => {
         setFormData({...formData , [e.target.name] : e.target.value});
@@ -21,10 +23,11 @@ const LogInComponent = () => {
         e.preventDefault();
         loginUser(formData)
             .then(() => {
-                alert("Login Successfull...");
+                toast.success("Successfully Logged In...");
+                setTimeout(()=>navigate('/home'), 2000);
             })
             .catch((error) => {
-                alert(`Invalid Credentials : ${error}`);
+                toast.error(`Invalid Credentials : ${error}`)
             })
         setFormData({
             email : '',
