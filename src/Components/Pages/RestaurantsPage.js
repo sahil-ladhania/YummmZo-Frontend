@@ -1,11 +1,12 @@
 // Importing Components | Modules | Libraries
-import React from 'react'
+import React, {useContext} from 'react'
 import NavbarComponent from '../Common/NavbarComponent';
 import FooterComponent from '../Common/FooterComponent';
 import RestaurantSearchComponent from '../Restaurant/RestaurantSearchComponent';
 import TopBrandsComponent from '../Restaurant/TopBrandsComponent';
 import RestaurantFilterComponent from '../Restaurant/RestaurantFilterComponent';
 import RestaurantListComponent from '../Restaurant/RestaurantListComponent';
+import { RestaurantContext } from '../../Contexts/RestaurantContext';
 // Importing CSS Files
 import '../../Styles/Links.css'
 import '../../Styles/Buttons.css'
@@ -21,6 +22,7 @@ import '../../Styles/Footer.css'
 import '../../Styles/Main.css'
 
 const RestaurantsPage = () => {
+    const restaurants = useContext(RestaurantContext);
     return (
         <div>
             <>
@@ -34,7 +36,7 @@ const RestaurantsPage = () => {
                     {/* Filters Component */}
                     <RestaurantFilterComponent/>
                     {/* Restaurant Lists Component */}
-                    <RestaurantListComponent/>
+                    <RestaurantListComponent restaurants={restaurants}/>
                     {/* Footer Component */}
                     <FooterComponent/>
                 </div>

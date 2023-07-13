@@ -1,13 +1,19 @@
 import React from 'react'
-import RestaurantDetailComponent from './RestaurantDetailComponent';
+import BiryaniRestaurantsComponent from './CuisineRestaurant/BiryaniRestaurantsComponent';
 
-const RestaurantListComponent = () => {
+const RestaurantListComponent = ({restaurants}) => {
     return (
         <div>
             <>
-                {/* Restaurant Detail Component */}
                 <div className='flex fw-w jc-sb'> 
-                    <RestaurantDetailComponent/>
+                    {
+                        restaurants.map((restaurant , index) => (
+                            <BiryaniRestaurantsComponent
+                                key={restaurant.id}
+                                restaurant={restaurant}
+                            />
+                        ))
+                    }
                 </div>
             </>
         </div>
