@@ -1,19 +1,15 @@
 import React from 'react'
-import RestaurantForm from './RestaurantForm'
-import MenuItemForm from './MenuItemForm'
-import RestaurantTypeFormComponent from './RestaurantTypeFormComponent'
 import RestaurantPageSidebarComponent from './RestaurantPageSidebarComponent'
+import RestaurantInformationComponent from './RestaurantInformationComponent'
 
 const AddRestaurantFormComponent = () => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='flex fd-r'>
                     <RestaurantPageSidebarComponent/>
-                    {/* <RestaurantForm/>
-                    <RestaurantTypeFormComponent/>
-                    <MenuItemForm/> */}
+                    <RestaurantInformationComponent/>
                 </div>
             </>
         </div>
