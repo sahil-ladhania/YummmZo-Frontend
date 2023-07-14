@@ -1,6 +1,7 @@
 import React from 'react'
 import RestaurantPageSidebarComponent from './RestaurantPageSidebarComponent'
 import RestaurantInformationComponent from './RestaurantInformationComponent'
+import UploadMenuComponent from './UploadMenuComponent'
 
 const AddRestaurantFormComponent = () => {
     return (
@@ -10,6 +11,7 @@ const AddRestaurantFormComponent = () => {
                 <div className='flex fd-r'>
                     <RestaurantPageSidebarComponent/>
                     <RestaurantInformationComponent/>
+                    {/* <UploadMenuComponent/> */}
                 </div>
             </>
         </div>

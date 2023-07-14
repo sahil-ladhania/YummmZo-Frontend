@@ -25,6 +25,13 @@ const RestaurantInformationComponent = () => {
                                 <input className='h-40 w-500 p-0-10 mb-20 b-1-t-s br-5 bc-ws' type="text" name="" id="" placeholder='Restaurant Cuisine'/>
                                 <input className='h-40 w-500 p-0-10 mb-20 b-1-t-s br-5 bc-ws' type="text" name="" id="" placeholder='Average Delivery Time'/>
                                 <input className='h-40 w-500 p-0-10 mb-20 b-1-t-s br-5 bc-ws' type="text" name="" id="" placeholder='Price For Two'/>
+                                <div className='mb-20'>
+                                    <label htmlFor="file-upload" className="custom-file-upload">
+                                    <input id="file-upload" type="file" name="restaurantImage" accept="image/*"/>
+                                        Choose File
+                                    </label>
+                                    <span id="file-selected">No file chosen</span>
+                                </div>
                                 <input className='h-40 w-500 p-0-10 mb-20 b-1-t-s br-5 bc-ws' type="text" name="" id="" placeholder='Restaurant Complete Address'/>
                             </div>
                         </div>
