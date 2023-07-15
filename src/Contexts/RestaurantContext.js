@@ -1,5 +1,5 @@
 import React, {createContext , useEffect , useState} from 'react'
-import getAllRestaurants from '../Services/RestaurantService';
+import {getAllRestaurants} from '../Services/RestaurantService';
 
 // Creating Context.
 const RestaurantContext = createContext();
