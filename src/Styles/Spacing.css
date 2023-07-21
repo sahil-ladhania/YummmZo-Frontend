@@ -1,0 +1,149 @@
+/* Spacing Styles */
+/* -----Height Styles----- */
+.h-600{
+    height: 600px;
+}
+.h-20{
+    height: 20px;
+}
+.h-100{
+    height: 100px;
+}
+.h-50{
+    height: 50px;
+}
+.h-40{
+    height: 40px;
+}
+.h-150{
+    height: 150px;
+}
+.h-15{
+    height: 15px;
+}
+.h-800{
+    height: 800px;
+}
+.h-550{
+    height: 550px;
+}
+.h-680{
+    height: 680px;
+}
+.h-60{
+    height: 60px;
+}
+.h-10{
+    height: 10px;
+}
+.h-350{
+    height: 350px;
+}
+.h-120{
+    height: 120px;
+}
+.h-30{
+    height: 30px;
+}
+.h-1{
+    height: 1px;
+}
+/* -----Width Styles----- */
+.w-30{
+    width: 30px;
+}
+.w-250{
+    width: 250px;
+}
+.w-260{
+    width: 260px;
+}
+.w-600{
+    width: 600px;
+}
+.w-a{
+    width: auto;
+}
+.w-350{
+    width: 350px;
+}
+.w-800{
+    width: 800px;
+}
+.w-a{
+    width: auto;
+}
+.w-500{
+    width: 500px;
+}
+.maxw-1000{
+    max-width: 1000px;
+}
+.minw-1000{
+    min-width: 1000px;
+}
+/* -----Padding Styles----- */
+.p-10{
+    padding: 10px;
+}
+.p-10-20{
+    padding: 10px 20px;
+}
+.p-0-50{
+    padding: 0 50px;
+}
+.p-10-20{
+    padding: 10px 20px;
+}
+.p-0-20{
+    padding: 0px 20px;
+}
+/* -----Margin Styles----- */
+.mb-40{
+    margin-bottom: 40px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.mr-5{
+    margin-right: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.ml-500{
+    margin-left: 500px;
+}
+.m-20-0{
+    margin: 20px 0;
+}
+.mt-100{
+    margin-top: 100px;
+}
+.ml-80{
+    margin-left: 80px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+.m-0-30{
+    margin: 0 30px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.ml-100{
+    margin-left: 100px;
+}
+.ml-a{
+    margin-left: auto;
+}
+.mr-a{
+    margin-right: auto;
+}

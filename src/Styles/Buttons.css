@@ -1,28 +1,26 @@
-/* Spacing */
-.h-40{
-    height: 40px;
-}
-.p-0-30{
-    padding: 0 30px;
-}
-.w-300{
-    width: 300px;
-}
-.w-260{
-    width: 260px;
-}
-
-
-
-/* Border Styling */
+/* Button Styles */
+/* -----Border Styles----- */
 .br-5{
     border-radius: 5px;
 }
-.b-1-t-s{
-    border: 1px transparent solid;
+.br-50{
+    border-radius: 50px;
 }
-button {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.br-80{
+    border-radius: 80px;
 }
-
-/* Color Styling */
+.b-1-b-s{
+    border: 1px black solid;
+}
+.b-1-b-d{
+    border: 1px black dashed;
+}
+.b-1-d8d8d8-s{
+    border: 1px #d8d8d8 solid;
+}
+.b-1-dcd8d8-s{
+    border : 1px #dcd8d8 solid
+}
+.b-n{
+    border: none;
+}

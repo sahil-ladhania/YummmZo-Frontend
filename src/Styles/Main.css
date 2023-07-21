@@ -4,165 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Spacing */
-.h-600{
-    height: 600px;
-}
-.h-20{
-    height: 20px;
-}
-.ml-a{
-    margin-left: auto;
-}
-.mr-a{
-    margin-right: auto;
-}
-.maxw-1000{
-    max-width: 1000px;
-}
-.minw-1000{
-    min-width: 1000px;
-}
-.h-100{
-    height: 100px;
-}
-.w-500{
-    width: 500px;
-}
-.w-a{
-    width: auto;
-}
-.ml-100{
-    margin-left: 100px;
-}
-.br-50{
-    border-radius: 50px;
-}
-.m-0-30{
-    margin: 0 30px;
-}
-.mb-20{
-    margin-bottom: 20px;
-}
 .ta-c{
     text-align: center;
 }
-.mb-50{
-    margin-bottom: 50px;
-}
-.h-50{
-    height: 50px;
-}
-.h-40{
-    height: 40px;
-}
-.w-800{
-    width: 800px;
-}
-.h-150{
-    height: 150px;
-}
-.br-80{
-    border-radius: 80px;
-}
-.ml-80{
-    margin-left: 80px;
-}
-.mb-10{
-    margin-bottom: 10px;
-}
-.w-350{
-    width: 350px;
-}
-.flex{
-    display: flex;
-}
-.fd-c{
-    flex-direction: column;
-}
-.jc-sb{
-    justify-content: space-between;
-}
-.ai-fs{
-    align-items: flex-start;
-}
-.h-15{
-    height: 15px;
-}
-.w-a{
-    width: auto;
-}
-.b-1-b-s{
-    border: 1px black solid;
-}
-.fw-w{
-    flex-wrap: wrap;
-}
-.h-800{
-    height: 800px;
-}
-.h-550{
-    height: 550px;
-}
-.h-680{
-    height: 680px;
-}
-.fs-xxl{
-    font-size: xx-large;
-}
-.w-600{
-    width: 600px;
-}
-.p-0-20{
-    padding: 0px 20px;
-}
-.h-60{
-    height: 60px;
-}
-.h-10{
-    height: 10px;
-}
-.w-260{
-    width: 260px;
-}
-.h-350{
-    height: 350px;
-}
-.p-10-20{
-    padding: 10px 20px;
-}
-.mt-100{
-    margin-top: 100px;
-}
-.b-1-b-d{
-    border: 1px black dashed;
-}
-.h-120{
-    height: 120px;
-}
-.m-20-0{
-    margin: 20px 0;
-}
-.p-0-50{
-    padding: 0 50px;
-}
-.ml-500{
-    margin-left: 500px;
-}
-.p-10-20{
-    padding: 10px 20px;
-}
 .ta-j{
     text-align: justify;
-}
-.fs-s{
-    font-size: smaller;
-}
-.p-10{
-    padding: 10px;
-}
-.jc-fe{
-    justify-content: flex-end;
 }
 .fw-b{
     font-weight: bolder;
@@ -176,57 +22,21 @@
 .pointer{
     cursor: pointer;
 }
-.mt-10{
-    margin-top: 10px;
-}
 .fs-xl{
     font-size: x-large;
-}
-.mb-5{
-    margin-bottom: 5px;
-}
-.mt-5{
-    margin-top: 5px;
-}
-.mr-5{
-    margin-right: 5px;
-}
-.w-250{
-    width: 250px;
-}
-.jc-se{
-    justify-content: space-evenly;
-}
-.h-30{
-    height: 30px;
 }
 .shadow{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-.mb-40{
-    margin-bottom: 40px;
-}
-.c-3d3d3d{
-    color: #3d3d3d;
-} 
 .ls-1{
     letter-spacing: 1px;
-}
-.b-1-d8d8d8-s{
-    border: 1px #d8d8d8 solid;
 }
 .fw-700{
     font-weight: 700;
 }
-.c-3d9b6d{
-    color: #3d9b6d;
-}
 hr.dashed {
     border: none;
     border-top: 1px dashed #000; /* Adjust color as needed */
-}
-.b-1-dcd8d8-s{
-    border : 1px #dcd8d8 solid
 }
 /* Veg Only Toggle */
 .toggle {
@@ -287,52 +97,6 @@ input[type="checkbox"]:checked ~ .section {
 .b-n{
     border: none;
 }
-.h-1{
-    height: 1px;
-}
-.bc-g{
-    background-color: rgb(215, 215, 215);
-}
-.bc-f1f1f6{
-    background-color:#F1F1F6 ;
-}
-.w-30{
-    width: 30px;
-}
-.card-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.card {
-    height: 300px;
-    width: 280px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-.card-image {
-    width: 100px;
-    height: 100px;
-}
-.card-heading {
-    font-size: large;
-    font-weight: 500;
-    margin-top: 10px;
-}
-.card-sub-heading{
-    font-size: medium;
-    font-weight: 500;
-    margin-top: 10px;
-}
-.card-paragraph {
-    margin-top: 10px;
-    font-size: small;
-    color: #3d3d3d;
-    line-height: 1.5;
-}
 .cuisine-dropdown {
     margin-bottom: 20px;
 }
@@ -351,9 +115,6 @@ select {
 .active{
     color: orange;
 }
-.bc-w{
-    background-color: #fff;
-}
 /* CSS code */
 .custom-file-upload {
     display: inline-block;
@@ -371,3 +132,15 @@ select {
     margin-left: 10px;
     color: #777;
 }  
+.fs-s{
+    font-size: small;
+}
+.ls-1{
+    letter-spacing: 1px;
+} 
+.fs-m{
+    font-size: medium;
+} 
+.fw-500{
+    font-weight: 500;
+}
