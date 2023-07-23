@@ -1,5 +1,7 @@
 // Importing Components | Modules | Libraries
-import React from 'react'
+import React, {useContext} from 'react';
+import { useParams } from 'react-router-dom';
+import { RestaurantDetailsContext } from '../../Contexts/RestaurantDetailsContext';
 import NavbarComponent from '../Common/NavbarComponent';
 import LinkFavSearchComponent from '../Menu/LinkFavSearchComponent';
 import RestaurantNameAddressCuisineRatingComponent from '../Menu/RestaurantNameAddressCuisineRatingComponent';
@@ -25,6 +27,10 @@ import '../../Styles/Footer.css'
 import '../../Styles/Main.css'
 
 const MenuPage = () => {
+    const restaurantDetails = useContext(RestaurantDetailsContext);
+    console.log('Restaurant Details:', restaurantDetails);
+    const { id } = useParams();
+    console.log('ID from URL:', id);
     return (
         <div>
             <>
@@ -32,11 +38,11 @@ const MenuPage = () => {
                     {/* Navbar Section */}
                     <NavbarComponent/>
                     {/* Links | Favourites | Search in Menu Section */}
-                    <LinkFavSearchComponent/>
+                    <LinkFavSearchComponent restaurantDetails={restaurantDetails}/>
                     {/* Restaurant Name | Address | Cuisine | Rating Section */}
-                    <RestaurantNameAddressCuisineRatingComponent/>
+                    <RestaurantNameAddressCuisineRatingComponent restaurantDetails={restaurantDetails}/>
                     {/* Time and Price for two Section */}
-                    <TimeAndPriceForTwoComponent/>
+                    <TimeAndPriceForTwoComponent restaurantDetails={restaurantDetails}/>
                     {/* Coupons Section */}
                     <CouponsSectionComponent/>
                     {/* Veg Only Section */}

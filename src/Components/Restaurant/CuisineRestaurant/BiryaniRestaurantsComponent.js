@@ -9,7 +9,7 @@ const BiryaniRestaurantsComponent = ({restaurant}) => {
         <div>
             <>
                 {/* Main Component */}
-                <Link className='td-n c-3d3d3d' to="/menu">
+                <Link className='td-n c-3d3d3d' to={`/menu/${restaurant._id}`}>
                     <div className='restaurant-card'>
                         <img src={imageURL} alt={restaurantName} />
                         <div className='restaurant-info'>

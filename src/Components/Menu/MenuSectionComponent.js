@@ -16,7 +16,7 @@ const MenuSectionComponent = () => {
                 </div>
                 {/* Item Diivder */}
                 <div className='mt-10'>
-                        <hr className='bc-g b-n h-1'/>
+                    <hr className='bc-g b-n h-1'/>
                 </div>
             </>
         </div>

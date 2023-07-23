@@ -3,7 +3,8 @@ import '../../Styles/Main.css'
 import { IoTime } from "react-icons/io5";
 import { HiCurrencyRupee } from "react-icons/hi2";
 
-const TimeAndPriceForTwoComponent = () => {
+const TimeAndPriceForTwoComponent = ({restaurantDetails}) => {
+    const {deliveryTime , priceForTwo} = restaurantDetails  || {};
     return (
         <div>
             <>
@@ -12,12 +13,12 @@ const TimeAndPriceForTwoComponent = () => {
                     {/* Time Section */}
                     <div className='flex ai-c mr-20'>
                         <IoTime className='h-20 w-a mr-10 fw-700'/>
-                        <p className='fs-r fw-700'>25 Mins</p>
+                        <p className='fs-r fw-700'>{deliveryTime}</p>
                     </div>
                     {/* Price Section */}
                     <div className='flex ai-c ml-20'>   
                         <HiCurrencyRupee className='h-20 w-a mr-10 fw-700'/>
-                        <p className='fs-r fw-700'>350 for two</p>
+                        <p className='fs-r fw-700'>{priceForTwo} for two</p>
                     </div>
                 </div>
             </>

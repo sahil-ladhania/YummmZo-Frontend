@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { MdFavorite } from "react-icons/md";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 
-const LinkFavSearchComponent = () => {
+const LinkFavSearchComponent = ({restaurantDetails}) => {
+    const {restaurantName} = restaurantDetails  || {};
     // State Variables.
     const [favourites, setFavorites] = useState(false);
 
@@ -22,7 +23,7 @@ const LinkFavSearchComponent = () => {
                     <div className='flex'>
                         <Link className='mr-10 fs-xxs fs-r' to="/">Home</Link>
                         <span className='fs-xxs'>/</span>
-                        <a className='ml-10 fs-xxs fs-r' href="#">Subway</a>
+                        <a className='ml-10 fs-xxs fs-r' href="#">{restaurantName}</a>
                     </div>
                     {/* Icon's Section */}
                     <div>
