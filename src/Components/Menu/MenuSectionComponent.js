@@ -3,7 +3,7 @@ import ItemDescriptionComponent from './ItemDescriptionComponent';
 import ItemAddComponent from './ItemAddComponent';
 import '../../Styles/Main.css'
 
-const MenuSectionComponent = () => {
+const MenuSectionComponent = ({menuItems}) => {
     return (
         <div>
             <>
@@ -13,6 +13,16 @@ const MenuSectionComponent = () => {
                     <ItemDescriptionComponent/>
                     {/* Add Item Component */}
                     <ItemAddComponent/>
+                    {
+                        menuItems && menuItems.map((item) => (
+                            <div key={item.itemId}>
+                                {/* Item Description Component */}
+                                <ItemDescriptionComponent menuItems={item}/>
+                                {/* Add Item Component */}
+                                <ItemAddComponent itemId = {item.itemId}/>
+                            </div>
+                        ))
+                    }
                 </div>
                 {/* Item Diivder */}
                 <div className='mt-10'>

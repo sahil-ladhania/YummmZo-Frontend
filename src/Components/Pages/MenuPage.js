@@ -2,6 +2,7 @@
 import React, {useContext} from 'react';
 import { useParams } from 'react-router-dom';
 import { RestaurantDetailsContext } from '../../Contexts/RestaurantDetailsContext';
+import { MenuItemsContext } from '../../Contexts/MenuContext';
 import NavbarComponent from '../Common/NavbarComponent';
 import LinkFavSearchComponent from '../Menu/LinkFavSearchComponent';
 import RestaurantNameAddressCuisineRatingComponent from '../Menu/RestaurantNameAddressCuisineRatingComponent';
@@ -28,6 +29,7 @@ import '../../Styles/Main.css'
 
 const MenuPage = () => {
     const restaurantDetails = useContext(RestaurantDetailsContext);
+    const menuItems = useContext(MenuItemsContext)
     console.log('Restaurant Details:', restaurantDetails);
     const { id } = useParams();
     console.log('ID from URL:', id);
@@ -51,11 +53,7 @@ const MenuPage = () => {
                     {/* Heading Section */}
                     <ItemCategoryHeadingComponent/>
                     {/* Menu Section Component */}
-                    <MenuSectionComponent/>
-                    <MenuSectionComponent/>
-                    <MenuSectionComponent/>
-                    <MenuSectionComponent/>
-                    <MenuSectionComponent/>
+                    <MenuSectionComponent menuItems={menuItems}/>
                     {/* Restaurant Lisence Section */}
                     <RestaurantLisenceComponent/>
                     {/* Footer Component */}

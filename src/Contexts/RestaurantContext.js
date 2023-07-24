@@ -26,4 +26,3 @@ const RestaurantProvider = ({children}) => {
 }
 
 export {RestaurantContext , RestaurantProvider};
-
