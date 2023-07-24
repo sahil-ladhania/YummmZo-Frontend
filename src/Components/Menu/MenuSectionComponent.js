@@ -10,21 +10,9 @@ const MenuSectionComponent = ({menuItems}) => {
                 {/* Main Component */}
                 <div className='h-150 flex jc-sb ai-c'>
                     {/* Item Description Component */}
-                    {/* <ItemDescriptionComponent/> */}
+                    <ItemDescriptionComponent menuItems={menuItems}/>
                     {/* Add Item Component */}
-                    {/* <ItemAddComponent/> */}
-                    {menuItems && menuItems.length > 0 ? (
-                        menuItems.map((item) => (
-                            <div key={item.itemId}>
-                                {/* Item Description Component */}
-                                <ItemDescriptionComponent menuItems={item} />
-                                {/* Add Item Component */}
-                                <ItemAddComponent itemId={item.itemId} />
-                            </div>
-                        ))
-                    ) : (
-                        <p>No menu items available.</p>
-                    )}
+                    <ItemAddComponent/>
                 </div>
                 {/* Item Diivder */}
                 <div className='mt-10'>
