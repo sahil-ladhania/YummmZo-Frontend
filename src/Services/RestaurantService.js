@@ -25,14 +25,11 @@ export const registerRestaurant = (restaurantData) => {
 };
 export const fetchRestaurantDetails = (id) => {
     const endpoint = `http://localhost:81/restaurants/${id}`;
-    console.log('Fetching restaurant details from:', endpoint);
     return axios.get(endpoint)
         .then((response) => {
-            console.log('Response from API:', response.data);
             return response.data;
         })
         .catch((error) => {
-            console.error(`Error Fetching The Restaurant Data : ${error}`);
             throw new Error(`Error Fetching The Restaurant Data : ${error}`);
         })
 };

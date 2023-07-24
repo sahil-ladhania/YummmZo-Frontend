@@ -5,18 +5,18 @@ import { fetchMenuItems } from '../Services/MenuService';
 const MenuItemsContext = createContext();
 
 // Defining Context Provider Component.
-const MenuItemsProvider = ({children}) => {
+const MenuItemsProvider = ({children , restaurantId}) => {
     const [menuItems , setMenuItems] = useState(null);
     // Fetching Menu Items From Database.
     useEffect(() => {
-        fetchMenuItems()
+        fetchMenuItems(restaurantId)
             .then((data) => {
                 setMenuItems(data);
             })
             .catch((error) => {
                 console.error(`Error Fetching Menu Items : ${error}`);
             })
-    }, [])
+    }, [restaurantId]);
     return(
         <MenuItemsContext.Provider value={menuItems}>
             { children }

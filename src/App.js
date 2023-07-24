@@ -16,6 +16,7 @@ import SearchInRestaurantPage from './Components/Pages/SearchInRestaurantPage';
 import FourZeroFourPage from './Components/Pages/FourZeroFourPage';
 import { RestaurantProvider } from './Contexts/RestaurantContext';
 import { RestaurantDetailsProvider } from './Contexts/RestaurantDetailsContext';
+import { MenuItemsProvider } from './Contexts/MenuContext';
 
 function App() {
   return (
@@ -24,21 +25,23 @@ function App() {
         {/* Routes */}
         <RestaurantProvider>
           <RestaurantDetailsProvider>
-            <Routes>
-              <Route exact path="/" element={<LandingPage/>}/>
-              <Route path="/home" element={<HomePage/>}/>
-              <Route path="/restaurants" element={<RestaurantsPage/>}/>
-              <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>
-              <Route path="/registerRestaurant" element={<RegisterRestaurantPage/>}/>
-              <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
-              <Route path="/login" element={<LogInPage/>}/>
-              <Route path="/cart" element={<EmptyCartPage/>}/>
-              <Route path="/signup" element={<SignUpPage/>}/>
-              <Route path="/landing" element={<LandingPage/>}/>
-              <Route path="/menu/:id" element={<MenuPage/>}/>
-              <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
-              <Route path="*" element={<FourZeroFourPage/>}/>
-            </Routes>
+            <MenuItemsProvider>
+              <Routes>
+                <Route exact path="/" element={<LandingPage/>}/>
+                <Route path="/home" element={<HomePage/>}/>
+                <Route path="/restaurants" element={<RestaurantsPage/>}/>
+                <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>
+                <Route path="/registerRestaurant" element={<RegisterRestaurantPage/>}/>
+                <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
+                <Route path="/login" element={<LogInPage/>}/>
+                <Route path="/cart" element={<EmptyCartPage/>}/>
+                <Route path="/signup" element={<SignUpPage/>}/>
+                <Route path="/landing" element={<LandingPage/>}/>
+                <Route path="/menu/:id" element={<MenuPage/>}/>
+                <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
+                <Route path="*" element={<FourZeroFourPage/>}/>
+              </Routes>
+            </MenuItemsProvider>
           </RestaurantDetailsProvider>
         </RestaurantProvider>
         <ToastContainer/>
