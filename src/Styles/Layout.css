@@ -59,3 +59,12 @@
     width: 80px; /* Set a fixed width for the image container */
     height: 80px; /* Set a fixed height for the image container */
 }
+.profile-dropdown-container{
+    background-color: #fff; /* Add a background color to make the component opaque */
+    position: absolute; /* Position the component absolutely to overlap the cart link */
+    top: 50px; /* Adjust the top value based on your layout */
+    right: 0; /* Position the component to the right */
+    z-index: 999; /* Ensure the component appears on top of other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle elevation effect */
+    padding: 10px 20px; /* Add padding to the component */
+}

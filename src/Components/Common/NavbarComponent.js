@@ -7,13 +7,18 @@ import { IoHelpBuoySharp } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import CartComponent from '../Cart/CartComponent';
+import ProfileDropdownComponent from './ProfileDropdownComponent';
 
 const NavbarComponent = () => {
     // State Management.
     const [isCartVisible , setIsCartVisible] = useState(false);
+    const [isProfileDropdownVisible , setIsProfileDropdownVisible] = useState(false);
     // Handler Function.
     const handleCartLinkHover = () => {
         setIsCartVisible(!isCartVisible);
+    }
+    const handleProfileLinkHover = () => {
+        setIsProfileDropdownVisible(!isProfileDropdownVisible);
     }
     return (
         <div>
@@ -56,9 +61,13 @@ const NavbarComponent = () => {
                                 </NavLink>
                             </li>
                             <li className='ml-20 ls-n'>
-                                <NavLink to="/login" className="mr-20 td-n c-b flex ai-c fs-r">
+                                <NavLink 
+                                to="/login" 
+                                className="mr-20 td-n c-b flex ai-c fs-r"
+                                onMouseEnter={handleProfileLinkHover}
+                                >
                                     <FaUserCircle className='h-20 w-a'/>
-                                    <span>Login</span>
+                                    <span>Profile</span>
                                 </NavLink>
                             </li>
                             <li className='ml-20 ls-n'>
@@ -72,6 +81,16 @@ const NavbarComponent = () => {
                                 </NavLink>
                             </li>
                         </ul>
+                        {/* Conditionally Rendering Profile Dropdown Component */}
+                        {
+                            isProfileDropdownVisible ? 
+                                <div className='absolute right-0 top-10'>
+                                    <ProfileDropdownComponent/>
+                                </div>
+                                :
+                                null
+                        }
+                        {/* Conditionally Rendering Cart Dropdown Component */}
                         {
                                 isCartVisible ? 
                                     <div className='absolute right-0 top-10'>

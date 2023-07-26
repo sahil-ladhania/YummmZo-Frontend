@@ -8,7 +8,7 @@ const ProfileDropdownComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='w-400 p-10-20 b-1-b-s bc-w'>
+                <div className='w-400 p-10-20 b-1-b-s bc-w profile-dropdown-container'>
                     {/* Profile Title */}
                     <div className='h-50 fs-r'>
                         Hello, Sahil!
