@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../Styles/Buttons.css'
+import { Link } from 'react-router-dom'
 // CSS Files
 import '../../Styles/Links.css'
 
@@ -8,10 +9,10 @@ const CartComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='w-300 ml-500 p-10-20 b-1-b-s'>
+                <div className='w-300 ml-500 p-10-20 b-1-b-s cart-container'>
                     {/* Image and Restaurant Name Section */}
                     <div className='flex ai-c mb-20'>
-                        <div className='mr-10'>
+                        <div className='mr-10 cart-image'>
                             <img className='h-80 w-a' src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_132,h_132,c_fill/0bf19a82b109b40c2f5c56d00f071a33" alt="Restaurant-Image" />
                         </div>
                         <div>
@@ -63,8 +64,8 @@ const CartComponent = () => {
                         </div>
                     </div>
                     {/* Checkout Section */}
-                    <div>
-                        <button className='h-40 w-260 b-1-t-s br-5 fs-r'>CHECKOUT</button>
+                    <div className='flex'> 
+                        <Link className='h-40 w-260 fs-r fs-r td-n c-3d3d3d p-10 b-1-d8d8d8-s br-5 shadow' to="/checkout">CHECKOUT</Link>
                     </div>
                 </div>
             </>

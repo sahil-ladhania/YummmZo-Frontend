@@ -17,6 +17,8 @@ import FourZeroFourPage from './Components/Pages/FourZeroFourPage';
 import { RestaurantProvider } from './Contexts/RestaurantContext';
 import { RestaurantDetailsProvider } from './Contexts/RestaurantDetailsContext';
 import { MenuItemsProvider } from './Contexts/MenuContext';
+import CheckoutPage from './Components/Pages/CheckoutPage';
+import CartComponent from '../src/Components/Cart/CartComponent';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
                 <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
                 <Route path="/login" element={<LogInPage/>}/>
                 <Route path="/cart" element={<EmptyCartPage/>}/>
+                <Route path="/checkout" element={<CheckoutPage/>}/>
+                <Route path="/cartComponent" element={<CartComponent/>}/>
                 <Route path="/signup" element={<SignUpPage/>}/>
                 <Route path="/landing" element={<LandingPage/>}/>
                 <Route path="/menu/:id" element={<MenuPage/>}/>

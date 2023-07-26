@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ProfileDropdownComponent from './ProfileDropdownComponent';
 import { NavLink } from 'react-router-dom';
 import { FaAngleDown } from "react-icons/fa";
 import { IoRestaurant } from "react-icons/io5";
@@ -7,18 +6,14 @@ import { IoAddCircle } from "react-icons/io5";
 import { IoHelpBuoySharp } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
+import CartComponent from '../Cart/CartComponent';
 
 const NavbarComponent = () => {
-    // State Variables
-    const [isDropdownVisible , setIsDropdownVisible] = useState(false);
-    // Handler Functions
-    const handleMouseEnter = () => {
-        console.log("You Just Hovered on the Link...");
-        setIsDropdownVisible(!isDropdownVisible)
-    }
-    const handleMouseLeave = () => {
-        console.log("You Just Left Hovering on the Link...");
-        setIsDropdownVisible(false);
+    // State Management.
+    const [isCartVisible , setIsCartVisible] = useState(false);
+    // Handler Function.
+    const handleCartLinkHover = () => {
+        setIsCartVisible(!isCartVisible);
     }
     return (
         <div>
@@ -39,7 +34,7 @@ const NavbarComponent = () => {
                         </div>
                     </div>
                     {/* Right Part */}
-                    <div>
+                    <div className='relative'>
                         <ul className='flex fd-r'>
                             <li className='ml-20 ls-n'>
                                 <NavLink to="/restaurants" className="mr-20 td-n c-b flex ai-c fs-r">
@@ -61,27 +56,30 @@ const NavbarComponent = () => {
                                 </NavLink>
                             </li>
                             <li className='ml-20 ls-n'>
-                                <NavLink to="/login" className="mr-20 td-n c-b flex ai-c fs-r"
-                                onMouseEnter={handleMouseEnter}
-                                onMouseLeave={handleMouseLeave}
-                                >
+                                <NavLink to="/login" className="mr-20 td-n c-b flex ai-c fs-r">
                                     <FaUserCircle className='h-20 w-a'/>
                                     <span>Login</span>
                                 </NavLink>
-                                {
-                                    isDropdownVisible ? 
-                                        <ProfileDropdownComponent/>
-                                        :
-                                        null
-                                }
                             </li>
                             <li className='ml-20 ls-n'>
-                                <NavLink to="/cart" className="mr-20 td-n c-b flex ai-c fs-r">
+                                <NavLink 
+                                to="/cart" 
+                                className="mr-20 td-n c-b flex ai-c fs-r"
+                                onMouseEnter={handleCartLinkHover}
+                                >
                                     <FaCartShopping className='h-20 w-a'/>
                                     <span>Cart</span>
                                 </NavLink>
                             </li>
                         </ul>
+                        {
+                                isCartVisible ? 
+                                    <div className='absolute right-0 top-10'>
+                                        <CartComponent/>
+                                    </div>
+                                    :
+                                    null
+                            }
                     </div>
                 </div>
             </>
