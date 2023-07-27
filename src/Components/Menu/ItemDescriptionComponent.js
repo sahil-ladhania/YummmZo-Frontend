@@ -1,6 +1,11 @@
 import React from 'react'
 
 const ItemDescriptionComponent = ({menuItems}) => {
+    if(!menuItems){
+        return <div>
+            Loading...
+        </div>
+    }
     const {itemName , itemPrice , itemDescription} = menuItems;
     return (
         <div>

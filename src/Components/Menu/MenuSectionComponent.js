@@ -4,6 +4,9 @@ import ItemAddComponent from './ItemAddComponent';
 import '../../Styles/Main.css'
 
 const MenuSectionComponent = ({menuItems}) => {
+    if (!menuItems || menuItems.length === 0) {
+        return <div>Loading...</div>;
+    }
     return (
         <div>
             <>

@@ -144,3 +144,19 @@ select {
 .fw-500{
     font-weight: 500;
 }
+flex ai-c fs-r bc-277227 p-1-5 br-5 c-w fs-s
+.bc-277227{
+    background-color: #277227;
+}
+.p-1-5{
+    padding: 1px 5px;
+}
+.br-5{
+    border-radius: 5px;
+}
+.c-w{
+    color: white;
+}
+.fs-s{
+    font-size: small;
+}
