@@ -62,7 +62,6 @@ const NavbarComponent = () => {
                             </li>
                             <li className='ml-20 ls-n'>
                                 <NavLink 
-                                to="/login" 
                                 className="mr-20 td-n c-b flex ai-c fs-r"
                                 onMouseEnter={handleProfileLinkHover}
                                 >
