@@ -1,8 +1,7 @@
 import React from 'react'
 import StarAndRatingComponent from './StarAndRatingComponent';
 
-const RestaurantNameAddressCuisineRatingComponent = ({restaurantDetails}) => {
-    const {restaurantName , cuisine , restaurantCompleteAddress} = restaurantDetails  || {};
+const RestaurantNameAddressCuisineRatingComponent = () => {
     return (
         <div>
             <>
@@ -12,13 +11,13 @@ const RestaurantNameAddressCuisineRatingComponent = ({restaurantDetails}) => {
                     <div>
                         <div>
                             <p className='fs-xl mb-5 fs-r fw-500 ls-1'>
-                                {restaurantName}
+                                Subway
                             </p>
                             <p className='fs-s mb-5 fs-r c-g'>
-                                {cuisine}
+                                Biryani
                             </p>
                             <p className='fs-s fs-r c-g'>
-                                {restaurantCompleteAddress}
+                                Raj Nagar , Ghaziabad
                             </p>
                         </div>
                     </div>

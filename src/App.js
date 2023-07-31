@@ -15,8 +15,6 @@ import RegisterRestaurantPage from './Components/Pages/RegisterRestaurantPage';
 import SearchInRestaurantPage from './Components/Pages/SearchInRestaurantPage';
 import FourZeroFourPage from './Components/Pages/FourZeroFourPage';
 import { RestaurantProvider } from './Contexts/RestaurantContext';
-import { RestaurantDetailsProvider } from './Contexts/RestaurantDetailsContext';
-import { MenuItemsProvider } from './Contexts/MenuContext';
 import CheckoutPage from './Components/Pages/CheckoutPage';
 import CartComponent from '../src/Components/Cart/CartComponent';
 
@@ -26,8 +24,6 @@ function App() {
       <>
         {/* Routes */}
         <RestaurantProvider>
-          <RestaurantDetailsProvider>
-            <MenuItemsProvider>
               <Routes>
                 <Route exact path="/" element={<LandingPage/>}/>
                 <Route path="/home" element={<HomePage/>}/>
@@ -45,8 +41,6 @@ function App() {
                 <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
                 <Route path="*" element={<FourZeroFourPage/>}/>
               </Routes>
-            </MenuItemsProvider>
-          </RestaurantDetailsProvider>
         </RestaurantProvider>
         <ToastContainer/>
       </>
