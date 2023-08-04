@@ -32,5 +32,5 @@ export const getRestaurantById = (restaurantId) => {
         })
         .catch((error) => {
             throw new Error(`Error Fetching Restaurant Details : ${error}`);
-        })
-}
+        });
+};

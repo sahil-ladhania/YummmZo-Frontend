@@ -18,6 +18,7 @@ import { RestaurantProvider } from './Contexts/RestaurantContext';
 import CheckoutPage from './Components/Pages/CheckoutPage';
 import CartComponent from '../src/Components/Cart/CartComponent';
 import { RestaurantDetailsProvider } from './Contexts/RestaurantDetailsContext';
+import { MenuItemsProvider } from './Contexts/MenuContext';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         {/* Routes */}
         <RestaurantProvider>
           <RestaurantDetailsProvider>
+            <MenuItemsProvider>
               <Routes>
                 <Route exact path="/" element={<LandingPage/>}/>
                 <Route path="/home" element={<HomePage/>}/>
@@ -43,6 +45,7 @@ function App() {
                 <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
                 <Route path="*" element={<FourZeroFourPage/>}/>
               </Routes>
+            </MenuItemsProvider>
           </RestaurantDetailsProvider>
         </RestaurantProvider>
         <ToastContainer/>

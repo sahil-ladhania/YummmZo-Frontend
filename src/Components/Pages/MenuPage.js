@@ -12,6 +12,7 @@ import RestaurantLisenceComponent from '../Menu/RestaurantLisenceComponent';
 import FooterComponent from '../Common/FooterComponent';
 import ItemCategoryHeadingComponent from '../Menu/ItemCategoryHeadingComponent';
 import { RestaurantDetailsContext } from '../../Contexts/RestaurantDetailsContext';
+import { MenuItemsContext } from '../../Contexts/MenuContext';
 // Importing CSS Files
 import '../../Styles/Links.css'
 import '../../Styles/Buttons.css'
@@ -30,6 +31,8 @@ const MenuPage = () => {
     const { restaurantId } = useParams(); 
     const restaurantDetails = useContext(RestaurantDetailsContext);
     console.log("Restaurant details from context:", restaurantDetails); 
+    const menuItems = useContext(MenuItemsContext);
+    console.log("MenuItems from context:", menuItems); 
     return (
         <div>
             <>
@@ -50,7 +53,7 @@ const MenuPage = () => {
                     {/* Heading Section */}
                     <ItemCategoryHeadingComponent/>
                     {/* Menu Section Component */}
-                    <MenuSectionComponent/>
+                    <MenuSectionComponent {...menuItems}/>
                     {/* Restaurant Lisence Section */}
                     <RestaurantLisenceComponent/>
                     {/* Footer Component */}
