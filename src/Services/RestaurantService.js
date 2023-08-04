@@ -23,3 +23,14 @@ export const registerRestaurant = (restaurantData) => {
             throw new Error(`Error Registering Restaurant: ${error}`);
     });
 };
+export const getRestaurantById = (restaurantId) => {
+    const endpoint = `http://localhost:81/restaurants/${restaurantId}`;
+    console.log("Restaurant ID received:", restaurantId);
+    return axios.get(endpoint)
+        .then((response) => {
+            return response.data;
+        })
+        .catch((error) => {
+            throw new Error(`Error Fetching Restaurant Details : ${error}`);
+        })
+}

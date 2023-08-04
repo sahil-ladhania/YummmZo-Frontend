@@ -1,5 +1,5 @@
 // Importing Components | Modules | Libraries
-import React, {useContext} from 'react'
+import React, {useContext} from 'react';
 import NavbarComponent from '../Common/NavbarComponent';
 import FooterComponent from '../Common/FooterComponent';
 import RestaurantSearchComponent from '../Restaurant/RestaurantSearchComponent';

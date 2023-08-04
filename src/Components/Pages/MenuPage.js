@@ -1,4 +1,6 @@
 // Importing Components | Modules | Libraries
+import React, {useContext} from 'react';
+import { useParams } from 'react-router-dom';
 import NavbarComponent from '../Common/NavbarComponent';
 import LinkFavSearchComponent from '../Menu/LinkFavSearchComponent';
 import RestaurantNameAddressCuisineRatingComponent from '../Menu/RestaurantNameAddressCuisineRatingComponent';
@@ -9,6 +11,7 @@ import MenuSectionComponent from '../Menu/MenuSectionComponent';
 import RestaurantLisenceComponent from '../Menu/RestaurantLisenceComponent';
 import FooterComponent from '../Common/FooterComponent';
 import ItemCategoryHeadingComponent from '../Menu/ItemCategoryHeadingComponent';
+import { RestaurantDetailsContext } from '../../Contexts/RestaurantDetailsContext';
 // Importing CSS Files
 import '../../Styles/Links.css'
 import '../../Styles/Buttons.css'
@@ -24,6 +27,9 @@ import '../../Styles/Footer.css'
 import '../../Styles/Main.css'
 
 const MenuPage = () => {
+    const { restaurantId } = useParams(); 
+    const restaurantDetails = useContext(RestaurantDetailsContext);
+    console.log("Restaurant details from context:", restaurantDetails); 
     return (
         <div>
             <>
@@ -31,11 +37,11 @@ const MenuPage = () => {
                     {/* Navbar Section */}
                     <NavbarComponent/>
                     {/* Links | Favourites | Search in Menu Section */}
-                    <LinkFavSearchComponent/>
+                    <LinkFavSearchComponent {...restaurantDetails}/>
                     {/* Restaurant Name | Address | Cuisine | Rating Section */}
-                    <RestaurantNameAddressCuisineRatingComponent/>
+                    <RestaurantNameAddressCuisineRatingComponent {...restaurantDetails}/>
                     {/* Time and Price for two Section */}
-                    <TimeAndPriceForTwoComponent/>
+                    <TimeAndPriceForTwoComponent {...restaurantDetails}/>
                     {/* Coupons Section */}
                     <CouponsSectionComponent/>
                     {/* Veg Only Section */}

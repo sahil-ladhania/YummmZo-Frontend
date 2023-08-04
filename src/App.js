@@ -17,6 +17,7 @@ import FourZeroFourPage from './Components/Pages/FourZeroFourPage';
 import { RestaurantProvider } from './Contexts/RestaurantContext';
 import CheckoutPage from './Components/Pages/CheckoutPage';
 import CartComponent from '../src/Components/Cart/CartComponent';
+import { RestaurantDetailsProvider } from './Contexts/RestaurantDetailsContext';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <>
         {/* Routes */}
         <RestaurantProvider>
+          <RestaurantDetailsProvider>
               <Routes>
                 <Route exact path="/" element={<LandingPage/>}/>
                 <Route path="/home" element={<HomePage/>}/>
@@ -37,10 +39,11 @@ function App() {
                 <Route path="/cartComponent" element={<CartComponent/>}/>
                 <Route path="/signup" element={<SignUpPage/>}/>
                 <Route path="/landing" element={<LandingPage/>}/>
-                <Route path="/menu/:id" element={<MenuPage/>}/>
+                <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
                 <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
                 <Route path="*" element={<FourZeroFourPage/>}/>
               </Routes>
+          </RestaurantDetailsProvider>
         </RestaurantProvider>
         <ToastContainer/>
       </>
