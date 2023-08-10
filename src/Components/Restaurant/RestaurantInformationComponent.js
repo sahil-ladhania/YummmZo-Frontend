@@ -172,7 +172,7 @@ const RestaurantInformationComponent = () => {
                             </div>
                         </div>
                         <div>
-                            <button>Submit</button>
+                            <button className='h-40 w-80 b-1-t-s br-5 mb-10 shadow bc-w'>Submit</button>
                         </div>
                     </form>
                     {/* Note Section */}

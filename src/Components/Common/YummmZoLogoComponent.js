@@ -8,7 +8,7 @@ const YummmZoLogoComponent = () => {
             <>
                 {/* YummmZo Logo */}
                 <div className='h-100 flex ai-c'>
-                    <Link to="/">YummmZo</Link>
+                    <Link className='td-n c-b' to="/">YummmZo</Link>
                 </div>
             </>
         </div>

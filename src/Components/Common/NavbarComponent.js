@@ -43,7 +43,6 @@ const NavbarComponent = () => {
                         <ul className='flex fd-r'>
                             <li className='ml-20 ls-n'>
                                 <NavLink to="/restaurants" className="mr-20 td-n c-b flex ai-c fs-r">
-                                    {/* <UilRestaurant className='h-20 w-a'/> */}
                                     <IoRestaurant className='h-20 w-a'/>
                                     <span>Restaurants</span>
                                 </NavLink>

@@ -19,6 +19,7 @@ import CheckoutPage from './Components/Pages/CheckoutPage';
 import CartComponent from '../src/Components/Cart/CartComponent';
 import { RestaurantDetailsProvider } from './Contexts/RestaurantDetailsContext';
 import { MenuItemsProvider } from './Contexts/MenuContext';
+import ProfileDropdownComponent from './Components/Common/ProfileDropdownComponent';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
                 <Route path="/landing" element={<LandingPage/>}/>
                 <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
                 <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
+                <Route path="/profile" element={<ProfileDropdownComponent/>}/>
                 <Route path="*" element={<FourZeroFourPage/>}/>
               </Routes>
             </MenuItemsProvider>

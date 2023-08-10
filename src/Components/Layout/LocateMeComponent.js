@@ -16,11 +16,11 @@ const LocateMeComponent = () => {
                     {/* Landing Page Mini Navbar */}
                     <div className='flex jc-sb ai-c fd-r h-100'>
                         <div>
-                            <Link to="/home">YummmZo</Link>
+                            <Link className='td-n c-b' to="/home">YummmZo</Link>
                         </div>
                         <div>
-                            <Link className='mr-10 h-40 p-0-30 b-1-t-s br-5 fs-r fs-s fw-500' to="/login">Login</Link>
-                            <Link className='mr-10 h-40 p-0-30 b-1-t-s br-5 fs-r fs-s fw-500' to="/signup">Sign Up</Link>
+                            <Link className='mr-10 h-40 p-0-30 b-1-t-s br-5 fw-500 td-n c-b' to="/login">Login</Link>
+                            <Link className='mr-10 h-40 p-0-30 b-1-t-s br-5 fw-500 td-n c-b' to="/signup">Sign Up</Link>
                         </div>
                     </div>
                     {/* Changing Heading & Description */}
@@ -31,8 +31,8 @@ const LocateMeComponent = () => {
                     {/* Locate Me Section */}
                     <div className='h-80 flex fd-r jc-fs ai-c'>
                         <input className="h-40 w-300 p-0-10 b-1-t-s br-5 bc-ws mr-5" type="text" placeholder='Enter your delivery location'/>
-                        <button className='flex ai-c h-40 p-0-30 b-1-t-s br-5 mr-5 fs-r fs-s fw-500'><UilLocationPoint className='h-20 w-a'/>Locate Me</button>
-                        <button className='h-40 p-0-30 b-1-t-s br-5 fs-r fs-s fw-500'>FIND FOOD</button>
+                        <button className='flex ai-c h-40 p-0-30 b-1-t-s br-5 mr-5 fs-r fs-s fw-500 shadow pointer'><UilLocationPoint className='h-20 w-a'/>Locate Me</button>
+                        <button className='h-40 p-0-30 b-1-t-s br-5 fs-r fs-s fw-500 shadow pointer'>FIND FOOD</button>
                     </div>
                     {/* Popular Cities Heading */}
                     <div className='lh-2'>
