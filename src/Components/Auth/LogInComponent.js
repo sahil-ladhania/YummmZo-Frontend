@@ -33,7 +33,7 @@ const LogInComponent = () => {
             email : '',
             password : ''
         });
-    }
+    };
     return (
         <div>
             <>
