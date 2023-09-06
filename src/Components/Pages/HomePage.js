@@ -1,5 +1,7 @@
 // Importing Components | Modules | Libraries
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
 import NavbarComponent from '../Common/NavbarComponent'
 import PopularCuisinesComponent from '../Layout/PopularCuisinesComponent'
 import AnythingDeliveredComponent from '../Layout/AnythingDeliveredComponent'
@@ -19,6 +21,20 @@ import '../../Styles/Footer.css'
 import '../../Styles/Main.css'
 
 const HomePage = () => {
+    const [user , setUser] = useState(null);
+    const [isAuthenticated , setIsAuthenticated] = useState(false);
+    const location = useLocation();
+    const handleToken = () => {
+        const token = new URLSearchParams(location.search).get('token');
+        if(token){
+            const decoded = jwt_decode(token);
+            setUser(decoded);
+            setIsAuthenticated(true);
+        }
+    }
+    useEffect(() => {
+        handleToken();
+    },[]);
     return (
         <div>
             <>

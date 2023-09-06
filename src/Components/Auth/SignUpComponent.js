@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UilGoogle } from '@iconscout/react-unicons'
 import { toast } from 'react-toastify';
+import jwt_decode from 'jwt-decode';
 // CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
@@ -35,6 +36,12 @@ const SignUpComponent = () => {
         toast.success("Successfully Registered...");
         setTimeout(()=>navigate('/login'), 2000);
     }
+    const handleGoogleAuth = () => {
+        const googleAuthUrl  = "http://localhost:81/auth/google/callback";
+        window.open(
+            googleAuthUrl , '_self'
+        );
+    }
     return (
         <div>
             <>
@@ -46,7 +53,7 @@ const SignUpComponent = () => {
                         <div className='flex fd-c ai-c'>
                             <h1 className='mb-10 fs-r c-3d3d3d'>Create Account</h1>
                             <div className='mb-10 fs-r c-3d3d3d'>Already have an account ? <Link className='fs-r td-n c-3d3d3d' to="/login">Log in</Link></div>
-                            <button className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'><UilGoogle className='h-20 w-a mr-10 c-3d3d3d'/>Sign up with Google</button>
+                            <button onClick={handleGoogleAuth} className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'><UilGoogle className='h-20 w-a mr-10 c-3d3d3d'/>Sign up with Google</button>
                         </div>
                         {/* ----- or ----- Section */}
                         <div>
