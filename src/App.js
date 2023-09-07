@@ -43,7 +43,6 @@ function App() {
                   <Route path="/checkout" element={<CheckoutPage/>}/>
                   <Route path="/cartComponent" element={<CartComponent/>}/>
                   <Route path="/signup" element={<SignUpPage/>}/>
-                  <Route path="/auth/google/success" element={<HomePage/>}/>
                   <Route path="/landing" element={<LandingPage/>}/>
                   <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
                   <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
