@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LandingPage from './Components/Pages/LandingPage';
@@ -26,32 +27,34 @@ function App() {
     <div className="App">
       <>
         {/* Routes */}
-        <RestaurantProvider>
-          <RestaurantDetailsProvider>
-            <MenuItemsProvider>
-              <Routes>
-                <Route exact path="/" element={<LandingPage/>}/>
-                <Route path="/home" element={<HomePage/>}/>
-                <Route path="/restaurants" element={<RestaurantsPage/>}/>
-                <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>
-                <Route path="/registerRestaurant" element={<RegisterRestaurantPage/>}/>
-                <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
-                <Route path="/login" element={<LogInPage/>}/>
-                <Route path="/cart" element={<EmptyCartPage/>}/>
-                <Route path="/checkout" element={<CheckoutPage/>}/>
-                <Route path="/cartComponent" element={<CartComponent/>}/>
-                <Route path="/signup" element={<SignUpPage/>}/>
-                <Route path="/auth/google/success" element={<HomePage/>}/>
-                <Route path="/landing" element={<LandingPage/>}/>
-                <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
-                <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
-                <Route path="/profile" element={<ProfileDropdownComponent/>}/>
-                <Route path="*" element={<FourZeroFourPage/>}/>
-              </Routes>
-            </MenuItemsProvider>
-          </RestaurantDetailsProvider>
-        </RestaurantProvider>
-        <ToastContainer/>
+        <GoogleOAuthProvider clientId="543341460612-70gi1og43hsv6b1pjtfkh828a9tp7rn1.apps.googleusercontent.com">
+          <RestaurantProvider>
+            <RestaurantDetailsProvider>
+              <MenuItemsProvider>
+                <Routes>
+                  <Route exact path="/" element={<LandingPage/>}/>
+                  <Route path="/home" element={<HomePage/>}/>
+                  <Route path="/restaurants" element={<RestaurantsPage/>}/>
+                  <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>
+                  <Route path="/registerRestaurant" element={<RegisterRestaurantPage/>}/>
+                  <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
+                  <Route path="/login" element={<LogInPage/>}/>
+                  <Route path="/cart" element={<EmptyCartPage/>}/>
+                  <Route path="/checkout" element={<CheckoutPage/>}/>
+                  <Route path="/cartComponent" element={<CartComponent/>}/>
+                  <Route path="/signup" element={<SignUpPage/>}/>
+                  <Route path="/auth/google/success" element={<HomePage/>}/>
+                  <Route path="/landing" element={<LandingPage/>}/>
+                  <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
+                  <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
+                  <Route path="/profile" element={<ProfileDropdownComponent/>}/>
+                  <Route path="*" element={<FourZeroFourPage/>}/>
+                </Routes>
+              </MenuItemsProvider>
+            </RestaurantDetailsProvider>
+          </RestaurantProvider>
+          <ToastContainer/>
+        </GoogleOAuthProvider>;
       </>
     </div>
   );

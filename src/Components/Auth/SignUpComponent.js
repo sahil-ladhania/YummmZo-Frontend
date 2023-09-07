@@ -8,6 +8,8 @@ import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
 import '../../Styles/Links.css'
 import registerUser from '../../Services/RegistrationService';
+import { GoogleLogin } from '@react-oauth/google';
+import GoogleOAuth from './GoogleOAuth';
 
 
 const SignUpComponent = () => {
@@ -36,12 +38,6 @@ const SignUpComponent = () => {
         toast.success("Successfully Registered...");
         setTimeout(()=>navigate('/login'), 2000);
     }
-    const handleGoogleAuth = () => {
-        const googleAuthUrl  = "http://localhost:81/auth/google/callback";
-        window.open(
-            googleAuthUrl , '_self'
-        );
-    }
     return (
         <div>
             <>
@@ -53,7 +49,8 @@ const SignUpComponent = () => {
                         <div className='flex fd-c ai-c'>
                             <h1 className='mb-10 fs-r c-3d3d3d'>Create Account</h1>
                             <div className='mb-10 fs-r c-3d3d3d'>Already have an account ? <Link className='fs-r td-n c-3d3d3d' to="/login">Log in</Link></div>
-                            <button onClick={handleGoogleAuth} className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'><UilGoogle className='h-20 w-a mr-10 c-3d3d3d'/>Sign up with Google</button>
+                            {/* <button className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'><UilGoogle className='h-20 w-a mr-10 c-3d3d3d'/>Sign up with Google</button> */}
+                            <GoogleOAuth/>
                         </div>
                         {/* ----- or ----- Section */}
                         <div>

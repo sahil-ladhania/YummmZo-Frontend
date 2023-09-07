@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { UilGoogle } from '@iconscout/react-unicons';
 import { toast } from 'react-toastify';
 // CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
 import '../../Styles/Links.css'
 import loginUser from '../../Services/LoginService';
+import GoogleOAuth from './GoogleOAuth';
 
 const LogInComponent = () => {
     // Defining State Variables.
@@ -34,12 +34,6 @@ const LogInComponent = () => {
             password : ''
         });
     };
-    const handleGoogleAuth = () => {
-        const googleAuthUrl  = "http://localhost:81/auth/google/callback";
-        window.open(
-            googleAuthUrl , '_self'
-        );
-    }
     return (
         <div>
             <>
@@ -51,7 +45,7 @@ const LogInComponent = () => {
                         <div className='flex fd-c ai-c'>
                             <h1 className='mb-10 fs-r'>Log in to YummmZo</h1>
                             <div className='mb-10 fs-r'>Dont have an account yet ? <Link className='fs-r td-n c-b' to="/signup">Sign up for free</Link></div>
-                            <button onClick={handleGoogleAuth} className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r'><UilGoogle className='h-20 w-a mr-10'/>Log in with Google</button>
+                            <GoogleOAuth/>
                         </div>
                         {/* ----- or ----- Section */}
                         <div>
