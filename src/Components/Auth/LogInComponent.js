@@ -42,16 +42,11 @@ const LogInComponent = () => {
                 {/* Main Component */}
                 <div className='flex fd-r jc-sb ai-c h-800'>
                     {/* Log In Form */}
-                    <form className='flex fd-c jc-sa ai-c b-1-black-solid h-700 w-500' onSubmit={handleSubmit}>
+                    <div className='flex fd-c jc-sa ai-c b-1-black-solid h-700 w-500' onSubmit={handleSubmit}>
                         {/* Log In with Google Section */}
                         <div className='flex fd-c ai-c'>
-                            <h1 className='mb-10 fs-r'>Log in to YummmZo</h1>
-                            <div className='mb-10 fs-r'>Dont have an account yet ? <Link className='fs-r td-n c-b' to="/signup">Sign up for free</Link></div>
-                            <GoogleOAuth/>
-                        </div>
-                        {/* ----- or ----- Section */}
-                        <div>
-                            <p>--------------------------Or--------------------------</p>
+                            <h1 className='text-3xl mb-10 fs-r'>Login</h1>
+                            <div className='text-xl mb-10 fs-r'>Dont have an account yet ? <Link className='fs-r td-n c-b' to="/signup">Sign up for free</Link></div>
                         </div>
                         {/* Login With Number */}
                         <div className='flex flex-col justify-center items-center'>
@@ -68,32 +63,40 @@ const LogInComponent = () => {
                         <div>
                             <p className='c-3d3d3d'>--------------------------Or--------------------------</p>
                         </div>
-                        {/* Log In with Email & Password Section */}
-                        <div className='flex fd-c'>
-                            <input 
-                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
-                            onChange={handleChange}
-                            type="email" 
-                            name="email" 
-                            value={formData.email}
-                            required
-                            placeholder='name@gmail.com'/>
-                            <input 
-                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
-                            onChange={handleChange}
-                            type="password" 
-                            name="password" 
-                            value={formData.password}
-                            required
-                            placeholder='Password'/>
-                            <a className='ml-180 fs-r td-n c-b' href="#">Forgot Password ?</a>
-                        </div>
-                        {/* Log In */}
+                        <form className='flex fd-c jc-sa ai-c h-auto w-500' onSubmit={handleSubmit}>
+                            {/* Log In with Email & Password Section */}
+                            <div className='flex fd-c'>
+                                <input 
+                                className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
+                                onChange={handleChange}
+                                type="email" 
+                                name="email" 
+                                value={formData.email}
+                                required
+                                placeholder='name@gmail.com'/>
+                                <input 
+                                className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
+                                onChange={handleChange}
+                                type="password" 
+                                name="password" 
+                                value={formData.password}
+                                required
+                                placeholder='Password'/>
+                                <a className='ml-180 fs-r td-n c-b' href="#">Forgot Password ?</a>
+                            </div>
+                            {/* Log In */}
+                            <div>
+                                <button type='submit' className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300'>Login</button>
+                                {/* <button className='h-40 w-300 b-1-t-s br-5 fs-r' type='submit'>Log in</button> */}
+                            </div>
+                        </form>
+                        {/* ----- or ----- Section */}
                         <div>
-                            <button type='submit' className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300'>Login</button>
-                            {/* <button className='h-40 w-300 b-1-t-s br-5 fs-r' type='submit'>Log in</button> */}
+                            <p className='c-3d3d3d'>--------------------------Or--------------------------</p>
                         </div>
-                    </form>
+                        {/* Sign Up With Google Section */}
+                        <GoogleOAuth/>
+                    </div>
                     {/* Image */}
                     <div className='h-300 w-400'>
                         <img src="" alt="Image" />

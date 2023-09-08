@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { UilGoogle } from '@iconscout/react-unicons'
 import { toast } from 'react-toastify';
 import jwt_decode from 'jwt-decode';
-import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/material.css'
 // CSS Files
 import '../../Styles/Buttons.css'
@@ -47,31 +45,10 @@ const SignUpComponent = () => {
                 <div className='flex fd-r jc-sb ai-c h-800'>
                     {/* Sign up Form */}
                     <form className='flex fd-c jc-sa ai-c b-1-black-solid h-700 w-500 br-5' onSubmit={handleSubmit}>
-                        {/* Sign up with Google Section */}
+                        {/* Form Heading Section */}
                         <div className='flex fd-c ai-c'>
-                            <h1 className='mb-10 fs-r c-3d3d3d'>Create Account</h1>
-                            <div className='mb-10 fs-r c-3d3d3d'>Already have an account ? <Link className='fs-r td-n c-3d3d3d' to="/login">Log in</Link></div>
-                            {/* <button className='flex ai-c jc-c h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d'><UilGoogle className='h-20 w-a mr-10 c-3d3d3d'/>Sign up with Google</button> */}
-                            <GoogleOAuth/>
-                        </div>
-                        {/* ----- or ----- Section */}
-                        <div>
-                            <p className='c-3d3d3d'>--------------------------Or--------------------------</p>
-                        </div>
-                        {/* Login With Number */}
-                        <div className='flex flex-col justify-center items-center'>
-                            <PhoneInput
-                                className="mb-10"
-                                country={'in'}
-                                preferredCountries={['in','us']}
-                                onlyCountries={[ 'in','cu','cw','kz','fr','it','pt','id']}
-                                placeholder='Phone'
-                            />
-                            <button className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300'>Send One Time Password</button>
-                        </div>
-                        {/* ----- or ----- Section */}
-                        <div>
-                            <p className='c-3d3d3d'>--------------------------Or--------------------------</p>
+                            <h1 className='text-3xl mb-10 fs-r c-3d3d3d'>Sign Up</h1>
+                            <div className='text-xl mb-10 fs-r c-3d3d3d'>Already have an account ? <Link className='fs-r td-n c-3d3d3d' to="/login">Log in</Link></div>
                         </div>
                         {/* Sign up with Number / Email Section */}
                         <div className='flex fd-c'>
@@ -112,6 +89,12 @@ const SignUpComponent = () => {
                         <div>
                             <button type='submit' className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300'>Register</button>
                         </div>
+                        {/* ----- or ----- Section */}
+                        <div>
+                            <p className='c-3d3d3d'>--------------------------Or--------------------------</p>
+                        </div>
+                        {/* Sign Up With Google Section */}
+                        <GoogleOAuth/>
                         {/* Privacy Policy | Terms & Condition Section */}
                         <div>
                             <p className='fs-r c-3d3d3d'>
