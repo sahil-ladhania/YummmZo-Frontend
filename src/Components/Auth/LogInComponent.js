@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/material.css'
+import PhoneInput from 'react-phone-input-2';
+import OtpInput from 'react-otp-input';
+import 'react-phone-input-2/lib/material.css';
+import { CgSpinner } from "react-icons/cg";
 // CSS Files
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
@@ -16,6 +18,7 @@ const LogInComponent = () => {
         email : '',
         password : ''
     });
+    const [otp , setOtp] = useState('');
     const navigate = useNavigate();
     // Handler Functions.
     const handleChange = (e) => {
@@ -43,7 +46,7 @@ const LogInComponent = () => {
                 <div className='flex fd-r jc-sb ai-c h-800'>
                     {/* Log In Form */}
                     <div className='flex fd-c jc-sa ai-c b-1-black-solid h-700 w-500' onSubmit={handleSubmit}>
-                        {/* Log In with Google Section */}
+                        {/* Form Haeding Section */}
                         <div className='flex fd-c ai-c'>
                             <h1 className='text-3xl mb-10 fs-r'>Login</h1>
                             <div className='text-xl mb-10 fs-r'>Dont have an account yet ? <Link className='fs-r td-n c-b' to="/signup">Sign up for free</Link></div>
@@ -58,6 +61,23 @@ const LogInComponent = () => {
                                 placeholder='Phone'
                             />
                             <button className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300'>Send One Time Password</button>
+                        </div>
+                        {/* Enter Otp Section */}
+                        <div className='flex flex-col justify-center items-center'>
+                            <OtpInput
+                                value={otp}
+                                onChange={setOtp}
+                                numInputs={6}
+                                shouldAutoFocus='true'
+                                disabled={false}
+                                renderInput={(props) => <input {...props} />}
+                                containerStyle="flex justify-between items-center mb-10"
+                                inputStyle="w-80 h-40 p-5 text-center border border-slate-400 rounded-md text-black m-2"
+                            />
+                            <button className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300 flex items-center justify-center'>
+                            <CgSpinner size={30} className='animate-spin mr-3'/>
+                            <span>Verify OTP</span>
+                            </button>
                         </div>
                         {/* ----- or ----- Section */}
                         <div>
