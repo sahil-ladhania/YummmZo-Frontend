@@ -13,17 +13,29 @@ import loginUser from '../../Services/LoginService';
 import GoogleOAuth from './GoogleOAuth';
 
 const LogInComponent = () => {
-    // Defining State Variables.
+    // -----Defining State Variables.-----
+    // Form State Variable
     const [formData , setFormData] = useState({
         email : '',
         password : ''
     });
+    // Phone Number State Variable
+    const [phoneNumber , setPhoneNumber] = useState('');
+    // Phone Number Visiblity State Variable
+    const [isPhoneNumberVisible , setIsPhoneNumberVisible] = useState(true);
+    // OTP State Variable
     const [otp , setOtp] = useState('');
+    // OTP Visiblity State Variable
+    const [isOtpVisible , setIsOtpVisible] = useState(false);
+    // Verification State Variable
+    const [isVerifying , setIsVerifying] = useState(false);
     const navigate = useNavigate();
-    // Handler Functions.
+    // -----Handler Functions.-----
+    // HandleChange Function For Form
     const handleChange = (e) => {
         setFormData({...formData , [e.target.name] : e.target.value});
     }
+    // HandleSubmit Function For Form
     const handleSubmit = (e) => {
         e.preventDefault();
         loginUser(formData)
@@ -39,6 +51,21 @@ const LogInComponent = () => {
             password : ''
         });
     };
+    // Handler Function For Sending OTP
+    const handleSendOTP = () => {
+        setIsPhoneNumberVisible(false);
+    }
+    // // Handler Function For Verifying OTP
+    const handleVerifyOTP = () => {
+        if(otp === ''){
+            toast.error("Enter OTP To Verify !!!");
+        }
+        else{
+            setTimeout(() => {
+            navigate('/home')
+        }, 1000);
+        }
+    }
     return (
         <div>
             <>
@@ -51,34 +78,44 @@ const LogInComponent = () => {
                             <h1 className='text-3xl mb-10 fs-r'>Login</h1>
                             <div className='text-xl mb-10 fs-r'>Dont have an account yet ? <Link className='fs-r td-n c-b' to="/signup">Sign up for free</Link></div>
                         </div>
-                        {/* Login With Number */}
-                        <div className='flex flex-col justify-center items-center'>
-                            <PhoneInput
-                                className="mb-10"
-                                country={'in'}
-                                preferredCountries={['in','us']}
-                                onlyCountries={[ 'in','cu','cw','kz','fr','it','pt','id']}
-                                placeholder='Phone'
-                            />
-                            <button className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300'>Send One Time Password</button>
-                        </div>
-                        {/* Enter Otp Section */}
-                        <div className='flex flex-col justify-center items-center'>
-                            <OtpInput
-                                value={otp}
-                                onChange={setOtp}
-                                numInputs={6}
-                                shouldAutoFocus='true'
-                                disabled={false}
-                                renderInput={(props) => <input {...props} />}
-                                containerStyle="flex justify-between items-center mb-10"
-                                inputStyle="w-80 h-40 p-5 text-center border border-slate-400 rounded-md text-black m-2"
-                            />
-                            <button className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300 flex items-center justify-center'>
-                            <CgSpinner size={30} className='animate-spin mr-3'/>
-                            <span>Verify OTP</span>
-                            </button>
-                        </div>
+                        {/* Conditionally Rendering Phone Number Input and OTP Input */}
+                        {
+                            isPhoneNumberVisible ?
+                            <>
+                                {/* Login With Number */}
+                                <div className='flex flex-col justify-center items-center'>
+                                    <PhoneInput
+                                        value={phoneNumber}
+                                        className="mb-10"
+                                        country={'in'}
+                                        preferredCountries={['in','us']}
+                                        onlyCountries={[ 'in','cu','cw','kz','fr','it','pt','id']}
+                                        placeholder='Phone'
+                                    />
+                                    <button onClick={handleSendOTP} className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300'>Send One Time Password</button>
+                                </div>
+                            </>
+                            :
+                            <>
+                                {/* Enter Otp Section */}
+                                <div className='flex flex-col justify-center items-center'>
+                                    <OtpInput
+                                        value={otp}
+                                        onChange={setOtp}
+                                        numInputs={6}
+                                        shouldAutoFocus='true'
+                                        disabled={false}
+                                        renderInput={(props) => <input {...props} />}
+                                        containerStyle="flex justify-between items-center mb-10"
+                                        inputStyle="w-80 h-40 p-5 text-center border border-slate-400 rounded-md text-black m-2"
+                                    />
+                                    <button onClick={handleVerifyOTP} className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300 flex items-center justify-center'>
+                                    <CgSpinner size={30} className='animate-spin mr-3'/>
+                                    <span>Verify OTP</span>
+                                    </button>
+                                </div>
+                            </>
+                        }
                         {/* ----- or ----- Section */}
                         <div>
                             <p className='c-3d3d3d'>--------------------------Or--------------------------</p>
