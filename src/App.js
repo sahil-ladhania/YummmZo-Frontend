@@ -18,8 +18,6 @@ import FourZeroFourPage from './Components/Pages/FourZeroFourPage';
 import { RestaurantProvider } from './Contexts/RestaurantContext';
 import CheckoutPage from './Components/Pages/CheckoutPage';
 import CartComponent from '../src/Components/Cart/CartComponent';
-import { RestaurantDetailsProvider } from './Contexts/RestaurantDetailsContext';
-import { MenuItemsProvider } from './Contexts/MenuContext';
 import ProfileDropdownComponent from './Components/Common/ProfileDropdownComponent';
 
 function App() {
@@ -29,8 +27,6 @@ function App() {
         {/* Routes */}
         <GoogleOAuthProvider clientId="543341460612-70gi1og43hsv6b1pjtfkh828a9tp7rn1.apps.googleusercontent.com">
           <RestaurantProvider>
-            <RestaurantDetailsProvider>
-              <MenuItemsProvider>
                 <Routes>
                   <Route exact path="/" element={<LandingPage/>}/>
                   <Route path="/home" element={<HomePage/>}/>
@@ -49,8 +45,6 @@ function App() {
                   <Route path="/profile" element={<ProfileDropdownComponent/>}/>
                   <Route path="*" element={<FourZeroFourPage/>}/>
                 </Routes>
-              </MenuItemsProvider>
-            </RestaurantDetailsProvider>
           </RestaurantProvider>
           <ToastContainer/>
         </GoogleOAuthProvider>;
