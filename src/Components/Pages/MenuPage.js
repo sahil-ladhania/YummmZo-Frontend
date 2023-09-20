@@ -1,6 +1,5 @@
 // Importing Components | Modules | Libraries
-import React, {useContext} from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import NavbarComponent from '../Common/NavbarComponent';
 import LinkFavSearchComponent from '../Menu/LinkFavSearchComponent';
 import RestaurantNameAddressCuisineRatingComponent from '../Menu/RestaurantNameAddressCuisineRatingComponent';
@@ -11,8 +10,6 @@ import MenuSectionComponent from '../Menu/MenuSectionComponent';
 import RestaurantLisenceComponent from '../Menu/RestaurantLisenceComponent';
 import FooterComponent from '../Common/FooterComponent';
 import ItemCategoryHeadingComponent from '../Menu/ItemCategoryHeadingComponent';
-import { RestaurantDetailsContext } from '../../Contexts/RestaurantDetailsContext';
-import { MenuItemsContext } from '../../Contexts/MenuContext';
 // Importing CSS Files
 import '../../Styles/Links.css'
 import '../../Styles/Buttons.css'
@@ -28,11 +25,6 @@ import '../../Styles/Footer.css'
 import '../../Styles/Main.css'
 
 const MenuPage = () => {
-    const { restaurantId } = useParams(); 
-    const restaurantDetails = useContext(RestaurantDetailsContext);
-    console.log("Restaurant details from context:", restaurantDetails); 
-    const menuItems = useContext(MenuItemsContext);
-    console.log("MenuItems from context:", menuItems); 
     return (
         <div>
             <>
@@ -40,11 +32,11 @@ const MenuPage = () => {
                     {/* Navbar Section */}
                     <NavbarComponent/>
                     {/* Links | Favourites | Search in Menu Section */}
-                    <LinkFavSearchComponent {...restaurantDetails}/>
+                    <LinkFavSearchComponent/>
                     {/* Restaurant Name | Address | Cuisine | Rating Section */}
-                    <RestaurantNameAddressCuisineRatingComponent {...restaurantDetails}/>
+                    <RestaurantNameAddressCuisineRatingComponent/>
                     {/* Time and Price for two Section */}
-                    <TimeAndPriceForTwoComponent {...restaurantDetails}/>
+                    <TimeAndPriceForTwoComponent/>
                     {/* Coupons Section */}
                     <CouponsSectionComponent/>
                     {/* Veg Only Section */}
@@ -53,7 +45,7 @@ const MenuPage = () => {
                     {/* Heading Section */}
                     <ItemCategoryHeadingComponent/>
                     {/* Menu Section Component */}
-                    <MenuSectionComponent {...menuItems}/>
+                    <MenuSectionComponent/>
                     {/* Restaurant Lisence Section */}
                     <RestaurantLisenceComponent/>
                     {/* Footer Component */}
