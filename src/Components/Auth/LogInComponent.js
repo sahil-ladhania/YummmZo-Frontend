@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
+import { auth } from '../../firebase.config';
+import loginUser from '../../Services/LoginService';
+import GoogleOAuth from './GoogleOAuth';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import PhoneInput from 'react-phone-input-2';
@@ -9,8 +12,6 @@ import { CgSpinner } from "react-icons/cg";
 import '../../Styles/Buttons.css'
 import '../../Styles/Input.css'
 import '../../Styles/Links.css'
-import loginUser from '../../Services/LoginService';
-import GoogleOAuth from './GoogleOAuth';
 
 const LogInComponent = () => {
     // -----Defining State Variables.-----
