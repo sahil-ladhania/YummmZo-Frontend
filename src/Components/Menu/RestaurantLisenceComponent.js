@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RestaurantLisenceComponent = () => {
+const RestaurantLisenceComponent = ({ restaurantDetails }) => {
     return (
         <div>
             <>
@@ -24,10 +24,10 @@ const RestaurantLisenceComponent = () => {
                     {/* Restaurant Name and Outlet Section */}
                     <div>
                         <p className='mb-10 fs-r c-g'>
-                            Subway
+                            {restaurantDetails.restaurantName}
                         </p>
                         <p className='fs-s fs-r c-g'>
-                            (Outlet:Vasundhara)
+                            ({restaurantDetails.restaurantCompleteAddress})
                         </p>
                     </div>
                 </div>

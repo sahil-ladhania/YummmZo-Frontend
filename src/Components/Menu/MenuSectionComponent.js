@@ -11,10 +11,10 @@ const MenuSectionComponent = ({ menuItems }) => {
                 <div className='h-auto flex-col flex jc-sb ai-c'>
                     {/* Map over the menuItems array */}
                     {menuItems.map((menuItem) => (
-                        <div className='flex' key={menuItem._id}>
-                            <ItemDescriptionComponent className="w-9/12" menuItem={menuItem} />
+                        <div className='flex items-center justify-between' key={menuItem._id}>
+                            <ItemDescriptionComponent className="custom-width-80" menuItem={menuItem} />
                             {/* Add Item Component */}
-                            <ItemAddComponent className="w-3/12"/>
+                            <ItemAddComponent className="custom-width-20"/>
                         </div>
                     ))}
                 </div>

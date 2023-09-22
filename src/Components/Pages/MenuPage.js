@@ -84,7 +84,7 @@ const MenuPage = () => {
                     {/* Menu Section Component */}
                     <MenuSectionComponent menuItems={menuItems}/>
                     {/* Restaurant Lisence Section */}
-                    <RestaurantLisenceComponent/>
+                    <RestaurantLisenceComponent restaurantDetails={restaurantDetails}/>
                     {/* Footer Component */}
                     <FooterComponent/>
                 </div>

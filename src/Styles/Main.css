@@ -160,3 +160,11 @@ flex ai-c fs-r bc-277227 p-1-5 br-5 c-w fs-s
 .fs-s{
     font-size: small;
 }
+/* In your CSS file */
+.custom-width-80 {
+    width: 80%;
+}
+
+.custom-width-20 {
+    width: 20%;
+}
