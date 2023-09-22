@@ -13,6 +13,10 @@ import FooterComponent from '../Common/FooterComponent';
 import ItemCategoryHeadingComponent from '../Menu/ItemCategoryHeadingComponent';
 import { RestaurantDetailsContext } from '../../Contexts/RestaurantDetailsContext';
 import { getRestaurantById } from "../../Services/RestaurantService";
+import { MenuContext } from '../../Contexts/MenuContext';
+import { getAllMenuItemsForRestaurant } from '../../Services/MenuService';
+import { CartContext } from '../../Contexts/CartContext';
+import { getCartDetailsForUser } from '../../Services/CartService';
 // Importing CSS Files
 import '../../Styles/Links.css'
 import '../../Styles/Buttons.css'
@@ -26,16 +30,17 @@ import '../../Styles/Input.css'
 import '../../Styles/Navbar.css'
 import '../../Styles/Footer.css'
 import '../../Styles/Main.css'
-import { MenuContext } from '../../Contexts/MenuContext';
-import { getAllMenuItemsForRestaurant } from '../../Services/MenuService';
 
 const MenuPage = () => {
     // Accessing restaurantDetails From The Context.
     const { restaurantDetails , setRestaurantDetails } = useContext(RestaurantDetailsContext);
     // Accessing MenuItems From The Context.
     const { menuItems , setMenuItems } = useContext(MenuContext);
+    // Accessing Cart Details From The Context.
+    const { state , dispatch } = useContext(CartContext);
     // Getting ID.
     const { restaurantId } = useParams();
+    const { userId } = useParams();
     // Fetching Restaurant Details From Database.
     useEffect(() => {
         if(restaurantId){
@@ -61,7 +66,20 @@ const MenuPage = () => {
                     console.log(`Error Fetching Menu Items : ${error}`);
                 })
         }
-    }, [restaurantId , setMenuItems])
+    }, [restaurantId , setMenuItems]);
+    // Fetching Cart Details From Database.
+    useEffect(() => {
+        if(userId){
+            // Fetch Cart Details Only If userId Is Available.
+            getCartDetailsForUser(userId)
+                .then((cartDetails) => {
+                    console.log(`Cart Details : ${cartDetails}`);
+                })
+                .catch((error) => {
+                    console.log(`Error Fetching Cart Details : ${error}`);
+                })
+        }
+    }, [userId]);
     return (
         <div>
             <>
