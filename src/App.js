@@ -22,6 +22,8 @@ import ProfileDropdownComponent from './Components/Common/ProfileDropdownCompone
 import { RestaurantDetailsProvider } from './Contexts/RestaurantDetailsContext';
 import { MenuContextProvider } from './Contexts/MenuContext';
 import { CartContextProvider } from './Contexts/CartContext';
+import CuisineResults from './Components/Restaurant/CuisineResults';
+import RestaurantResults from './Components/Restaurant/RestaurantResults';
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function App() {
                         <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
                         <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
                         <Route path="/profile" element={<ProfileDropdownComponent/>}/>
+                        <Route path="/cuisineResult" element={<CuisineResults/>}/>
+                        <Route path="/restaurantResult" element={<RestaurantResults/>}/>
                         <Route path="*" element={<FourZeroFourPage/>}/>
                       </Routes>
                 </RestaurantProvider>
@@ -56,7 +60,7 @@ function App() {
               </RestaurantDetailsProvider>
             </MenuContextProvider>
           </CartContextProvider>
-        </GoogleOAuthProvider>;
+        </GoogleOAuthProvider>
       </>
     </div>
   );

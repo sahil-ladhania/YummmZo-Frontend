@@ -11,7 +11,7 @@ const SearchInRestaurantComponent = () => {
                 <div className='h-680'>
                     <div className='flex ai-c jc-sb'>
                         <Link className='td-n c-b' to="/menu"><FaAngleLeft className="h-20 w-a pointer"/></Link>
-                        <input className='h-40 w-800 p-0-10 b-1-t-s br-5 bc-ws' type="search" name="" id="" placeholder='Search in Restaurant'/>
+                        <input className='h-40 w-800 p-0-10 b-1-t-s br-5 bc-ws' type="search" name="" id="" placeholder='Search within menu'/>
                         <span><BsSearch className="h-20 w-a pointer"/></span>
                     </div>
                 </div>
