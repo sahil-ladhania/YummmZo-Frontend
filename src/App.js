@@ -24,6 +24,7 @@ import { MenuContextProvider } from './Contexts/MenuContext';
 import { CartContextProvider } from './Contexts/CartContext';
 import CuisineResults from './Components/Restaurant/CuisineResults';
 import RestaurantResults from './Components/Restaurant/RestaurantResults';
+import { CuisineContextProvider } from './Contexts/CuisineContext';
 
 function App() {
   return (
@@ -31,35 +32,37 @@ function App() {
       <>
         {/* Routes */}
         <GoogleOAuthProvider clientId="543341460612-70gi1og43hsv6b1pjtfkh828a9tp7rn1.apps.googleusercontent.com">
-          <CartContextProvider>
-            <MenuContextProvider>
-              <RestaurantDetailsProvider>
-                <RestaurantProvider>
-                      <Routes>
-                        <Route exact path="/" element={<LandingPage/>}/>
-                        <Route path="/home" element={<HomePage/>}/>
-                        <Route path="/restaurants" element={<RestaurantsPage/>}/>
-                        <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>
-                        <Route path="/registerRestaurant" element={<RegisterRestaurantPage/>}/>
-                        <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
-                        <Route path="/login" element={<LogInPage/>}/>
-                        <Route path="/cart" element={<EmptyCartPage/>}/>
-                        <Route path="/checkout" element={<CheckoutPage/>}/>
-                        <Route path="/cartComponent" element={<CartComponent/>}/>
-                        <Route path="/signup" element={<SignUpPage/>}/>
-                        <Route path="/landing" element={<LandingPage/>}/>
-                        <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
-                        <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
-                        <Route path="/profile" element={<ProfileDropdownComponent/>}/>
-                        <Route path="/cuisineResult" element={<CuisineResults/>}/>
-                        <Route path="/restaurantResult" element={<RestaurantResults/>}/>
-                        <Route path="*" element={<FourZeroFourPage/>}/>
-                      </Routes>
-                </RestaurantProvider>
-                <ToastContainer/>
-              </RestaurantDetailsProvider>
-            </MenuContextProvider>
-          </CartContextProvider>
+          <CuisineContextProvider>
+            <CartContextProvider>
+              <MenuContextProvider>
+                <RestaurantDetailsProvider>
+                  <RestaurantProvider>
+                        <Routes>
+                          <Route exact path="/" element={<LandingPage/>}/>
+                          <Route path="/home" element={<HomePage/>}/>
+                          <Route path="/restaurants" element={<RestaurantsPage/>}/>
+                          <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>
+                          <Route path="/registerRestaurant" element={<RegisterRestaurantPage/>}/>
+                          <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
+                          <Route path="/login" element={<LogInPage/>}/>
+                          <Route path="/cart" element={<EmptyCartPage/>}/>
+                          <Route path="/checkout" element={<CheckoutPage/>}/>
+                          <Route path="/cartComponent" element={<CartComponent/>}/>
+                          <Route path="/signup" element={<SignUpPage/>}/>
+                          <Route path="/landing" element={<LandingPage/>}/>
+                          <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
+                          <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
+                          <Route path="/profile" element={<ProfileDropdownComponent/>}/>
+                          <Route path="/cuisineResult" element={<CuisineResults/>}/>
+                          <Route path="/restaurantResult" element={<RestaurantResults/>}/>
+                          <Route path="*" element={<FourZeroFourPage/>}/>
+                        </Routes>
+                  </RestaurantProvider>
+                  <ToastContainer/>
+                </RestaurantDetailsProvider>
+              </MenuContextProvider>
+            </CartContextProvider>
+          </CuisineContextProvider>
         </GoogleOAuthProvider>
       </>
     </div>

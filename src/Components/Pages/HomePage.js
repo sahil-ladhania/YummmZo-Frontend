@@ -1,11 +1,12 @@
 // Importing Components | Modules | Libraries
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import NavbarComponent from '../Common/NavbarComponent'
 import PopularCuisinesComponent from '../Layout/PopularCuisinesComponent'
 import AnythingDeliveredComponent from '../Layout/AnythingDeliveredComponent'
 import FooterComponent from '../Common/FooterComponent';
+import { CuisineContext } from '../../Contexts/CuisineContext';
 // Importing CSS Files
 import '../../Styles/Links.css'
 import '../../Styles/Buttons.css'
@@ -19,8 +20,11 @@ import '../../Styles/Input.css'
 import '../../Styles/Navbar.css'
 import '../../Styles/Footer.css'
 import '../../Styles/Main.css'
+import { getAllCuisines } from '../../Services/CuisineServices';
 
 const HomePage = () => {
+    // Accessing Cuisines From The Context.
+    const {cuisines , setCuisines} = useContext(CuisineContext);
     const [user , setUser] = useState(null);
     const [isAuthenticated , setIsAuthenticated] = useState(false);
     const location = useLocation();
@@ -35,6 +39,16 @@ const HomePage = () => {
     useEffect(() => {
         handleToken();
     },[]);
+    // Fetching Cuisines From Database.
+    useEffect(() => {
+        getAllCuisines()
+            .then((cuisineList) => {
+                setCuisines(cuisineList);
+            })
+            .catch((error) => {
+                console.log(`Error Fetching Cuisines : ${error}`);
+            });
+    }, []);
     return (
         <div>
             <>
@@ -42,7 +56,7 @@ const HomePage = () => {
                     {/* Navbar Component */}
                     <NavbarComponent/>
                     {/* Popular Cuisines Component */}
-                    <PopularCuisinesComponent/>
+                    <PopularCuisinesComponent cuisines={cuisines}/>
                     {/* Anything Delivered Component */}
                     <AnythingDeliveredComponent/>
                     {/* Footer Component */}

@@ -4,7 +4,7 @@ import {getAllRestaurants} from '../Services/RestaurantService';
 // Creating Context.
 const RestaurantContext = createContext();
 
-// Defining Context Provider Component.
+// Defining Context Provider.
 const RestaurantProvider = ({children}) => {
     // Defining States.
     const [restaurants , setRestaurants] = useState([]);
