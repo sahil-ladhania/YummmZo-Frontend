@@ -14,8 +14,8 @@ const SearchInRestaurantComponent = () => {
     }
     // useEffect
     useEffect(() => {
-        if(searchQuery === ''){
-            searchInRestaurant()
+        if(searchQuery !== ''){
+            searchInRestaurant(searchQuery)
                 .then((menuItemsResult) => {
                     console.log(menuItemsResult);
                 })

@@ -1,6 +1,7 @@
 import React, {useState , useEffect} from 'react'
 import { BsSearch } from "react-icons/bs";
 import { searchCuisines, searchRestaurants } from '../../Services/SearchService';
+import SearchResults from './SearchResults';
 
 const RestaurantSearchComponent = () => {
     // Defining State Variables.
@@ -12,15 +13,15 @@ const RestaurantSearchComponent = () => {
     }
     // useEffect
     useEffect(() => {
-        if(searchQuery === ''){
-            searchRestaurants()
+        if(searchQuery !== ''){
+            searchRestaurants(searchQuery)
                 .then((restaurantResult) => {
                     console.log(restaurantResult);
                 })
                 .catch((error) => {
                     console.error(error);
                 })
-            searchCuisines()
+            searchCuisines(searchQuery)
                 .then((cuisineResult) => {
                     console.log(cuisineResult);
                 })
