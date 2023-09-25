@@ -10,7 +10,7 @@ const RestaurantResults = ({ data }) => {
                 <div className='h-auto w-780 hover:bg-slate-50 rounded-sm p-2 flex items-start justify-start cursor-pointer'>
                     {/* Restaurant Image Container */}
                     <div className='mr-10'>
-                        <img className='rounded-md h-60 mt-1' src={data.imageURL} alt="" />
+                        <img className='rounded-md h-60 w-20 mt-1' src={data.imageURL} alt="" />
                     </div>
                     {/* Restaurant Details Container */}
                     <div>
