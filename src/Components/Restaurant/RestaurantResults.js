@@ -2,56 +2,56 @@ import React from 'react'
 import { AiFillStar } from "react-icons/ai";
 import { BiChevronRight } from "react-icons/bi";
 
-const RestaurantResults = () => {
+const RestaurantResults = ({ data }) => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='h-auto w-780 hover:bg-slate-50 rounded-sm p-2 flex items-start justify-start cursor-pointer'>
                     {/* Restaurant Image Container */}
-                    <div>
-                        <img src="https://b.zmtcdn.com/data/pictures/chains/8/310078/6352f382ab83cd6c458c3ad6c6fd1d60_featured_v2.jpg?fit=around%7C108%3A108&crop=108%3A108%3B%2A%2C%2A" alt="" />
+                    <div className='mr-10'>
+                        <img className='rounded-md h-60 mt-1' src={data.imageURL} alt="" />
                     </div>
                     {/* Restaurant Details Container */}
                     <div>
                         {/* Restaurant Heading Container */}
-                        <div>
-                            <p>
-                                Burger King
+                        <div className='mb-1'>
+                            <p className='font-medium'>
+                                {data.restaurantName}
                             </p>
                         </div>
                         {/* Restaurant Rating Container */}
-                        <div>
-                            <div>
-                                <span>
-                                    4.1
+                        <div className='flex items-center'>
+                            <div className='flex items-center pr-2 pl-2 pt-1 pb-1 bg-green-800 rounded-md mr-2'>
+                                <span className='text-white text-xs mr-1'>
+                                    {data.rating}
                                 </span>
-                                <span>
+                                <span className='text-white text-xs'>
                                     <AiFillStar/>
                                 </span>
                             </div>
                             <div>
-                                <span>Dining</span>
+                                <span className='uppercase text-sm'>Dining</span>
                             </div>
                         </div>
                         {/* Restaurant Address Container */}
                         <div>
-                            <p>
-                                Rajendar Nagar, Ghaziabad
+                            <p className='text-md'>
+                                {data.restaurantCompleteAddress}
                             </p>
                         </div>
                         {/* Order Now Button */}
-                        <div>
-                            <span>
+                        <div className='flex items-center cursor-pointer'>
+                            <span className='text-red-500 text-sm'>
                                 Order Now
                             </span>
-                            <span>
+                            <span className='text-red-500 text-sm'>
                                 <BiChevronRight/>
                             </span>
                         </div>
                         {/* Restaurant Delivery Time Container */}
                         <div>
-                            <span>Order in 36 min</span>
+                            <span className='text-sm text-slate-600'>Order in {data.deliveryTime} min</span>
                         </div>
                     </div>
                 </div>

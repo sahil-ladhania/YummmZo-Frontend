@@ -1,21 +1,21 @@
 import React from 'react'
 
-const CuisineResults = () => {
+const CuisineResults = ({ data }) => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className='h-auto w-780 hover:bg-slate-50 rounded-sm p-2 flex items-start justify-start cursor-pointer'>
                     {/* Cuisine Image Container */}
                     <div>
-                        <img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png" alt="" />
+                        <img className='h-60 mr-2 rounded-full' src={data.imageURL} alt="" />
                     </div>
                     {/* Cuisine Heading Container */}
                     <div>
-                        <p>
-                            Burger - Delivery
+                        <p className='font-medium'>
+                            {data.cuisineName} - Delivery
                         </p>
-                        <span>Dish</span>
+                        <span className='text-slate-500'>Dish</span>
                     </div>
                 </div>
             </>
