@@ -24,6 +24,7 @@ import { MenuContextProvider } from './Contexts/MenuContext';
 import { CartContextProvider } from './Contexts/CartContext';
 import CuisineResults from './Components/Restaurant/CuisineResults';
 import RestaurantResults from './Components/Restaurant/RestaurantResults';
+import MenuItemsResultComponent from './Components/Menu/MenuItemsResultComponent';
 import { CuisineContextProvider } from './Contexts/CuisineContext';
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
                           <Route path="/profile" element={<ProfileDropdownComponent/>}/>
                           <Route path="/cuisineResult" element={<CuisineResults/>}/>
                           <Route path="/restaurantResult" element={<RestaurantResults/>}/>
+                          <Route path="/menuItemResult" element={<MenuItemsResultComponent/>}/>
                           <Route path="*" element={<FourZeroFourPage/>}/>
                         </Routes>
                   </RestaurantProvider>
