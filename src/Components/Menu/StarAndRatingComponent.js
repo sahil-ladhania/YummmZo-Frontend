@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillStar } from "react-icons/ai";
 
-const StarAndRatingComponent = () => {
+const StarAndRatingComponent = ({ restaurantDetails }) => {
     return (
         <div>
             <>
@@ -11,7 +11,7 @@ const StarAndRatingComponent = () => {
                     <div className='flex jc-c ai-c mb-5'>
                         <span><AiFillStar className='h-20 w-a mr-5 c-3d9b6d fw-700'/></span>
                         <p className='fs-r c-3d9b6d fw-700'>
-                            3.5
+                            {restaurantDetails.rating}
                         </p>
                     </div>
                     {/* Divider Section */}

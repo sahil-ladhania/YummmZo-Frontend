@@ -23,7 +23,7 @@ const RestaurantNameAddressCuisineRatingComponent = ({ restaurantDetails }) => {
                     </div>
                     {/* Rating Section */}
                     <div>
-                        <StarAndRatingComponent/>
+                        <StarAndRatingComponent restaurantDetails={restaurantDetails}/>
                     </div>
                 </div>
                 {/* Divider Section */}
