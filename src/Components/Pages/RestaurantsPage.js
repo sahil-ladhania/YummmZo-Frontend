@@ -34,7 +34,7 @@ const RestaurantsPage = () => {
                     {/* Top Brands Component */}
                     <TopBrandsComponent/>
                     {/* Filters Component */}
-                    <RestaurantFilterComponent/>
+                    <RestaurantFilterComponent restaurants={restaurants}/>
                     {/* Restaurant Lists Component */}
                     <RestaurantListComponent restaurants={restaurants}/>
                     {/* Footer Component */}
