@@ -18,7 +18,7 @@ const LinkFavSearchComponent = ({ restaurantDetails }) => {
                 <div className='h-80 flex jc-sb ai-c'>
                     {/* Link's Section */}
                     <div className='flex'>
-                        <Link className='mr-10 fs-xxs fs-r' to="/">Home</Link>
+                        <Link className='mr-10 fs-xxs fs-r' to="/home">Home</Link>
                         <span className='fs-xxs'>/</span>
                         <a className='ml-10 fs-xxs fs-r' href="#">{restaurantDetails.restaurantName}</a>
                     </div>
