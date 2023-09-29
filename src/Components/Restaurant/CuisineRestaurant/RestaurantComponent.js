@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { HiCurrencyRupee } from "react-icons/hi2";
 import { AiFillStar } from "react-icons/ai";
 
-const BiryaniRestaurantsComponent = ({restaurant}) => {
+const RestaurantComponent = ({restaurant}) => {
     const { imageURL , restaurantName , cuisine , rating , deliveryTime , priceForTwo } = restaurant;
     return (
         <div>
@@ -30,4 +30,4 @@ const BiryaniRestaurantsComponent = ({restaurant}) => {
     )
 }
 
-export default BiryaniRestaurantsComponent
+export default RestaurantComponent

@@ -1,14 +1,16 @@
-import React from 'react'
-import BiryaniRestaurantsComponent from './CuisineRestaurant/BiryaniRestaurantsComponent';
+import React, {useContext} from 'react'
+import RestaurantComponent from './CuisineRestaurant/RestaurantComponent';
+import { RestaurantContext } from '../../Contexts/RestaurantContext';
 
-const RestaurantListComponent = ({restaurants}) => {
+const RestaurantListComponent = ({ restaurants }) => {
+    const { filteredRestaurants } = useContext(RestaurantContext);
     return (
         <div>
             <>
                 <div className='flex fw-w jc-sb'> 
                     {
-                        restaurants.map((restaurant , index) => (
-                            <BiryaniRestaurantsComponent
+                        filteredRestaurants.map((restaurant , index) => (
+                            <RestaurantComponent
                                 key={restaurant.id}
                                 restaurant={restaurant}
                             />

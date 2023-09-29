@@ -26,7 +26,6 @@ import CuisineResults from './Components/Restaurant/CuisineResults';
 import RestaurantResults from './Components/Restaurant/RestaurantResults';
 import MenuItemsResultComponent from './Components/Menu/MenuItemsResultComponent';
 import { CuisineContextProvider } from './Contexts/CuisineContext';
-import { FilteredRestaurantsProvider } from './Contexts/FilteredRestaurantsContext'
 
 function App() {
   return (
@@ -34,7 +33,6 @@ function App() {
       <>
         {/* Routes */}
         <GoogleOAuthProvider clientId="543341460612-70gi1og43hsv6b1pjtfkh828a9tp7rn1.apps.googleusercontent.com">
-          <FilteredRestaurantsProvider>
             <CuisineContextProvider>
               <CartContextProvider>
                 <MenuContextProvider>
@@ -67,7 +65,6 @@ function App() {
                 </MenuContextProvider>
               </CartContextProvider>
             </CuisineContextProvider>
-          </FilteredRestaurantsProvider>
         </GoogleOAuthProvider>
       </>
     </div>

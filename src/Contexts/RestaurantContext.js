@@ -1,5 +1,4 @@
-import React, {createContext , useEffect , useState} from 'react'
-import {getAllRestaurants} from '../Services/RestaurantService';
+import React, {createContext , useState} from 'react'
 
 // Creating Context.
 const RestaurantContext = createContext();
@@ -8,18 +7,26 @@ const RestaurantContext = createContext();
 const RestaurantProvider = ({children}) => {
     // Defining States.
     const [restaurants , setRestaurants] = useState([]);
-    // Fetching All Restaurants From Database.
-    useEffect(() => {
-        getAllRestaurants()
-            .then((data) => {
-                setRestaurants(data);
-            })
-            .catch((error) => {
-                console.log(`Error Fetching Restaurants : ${error}`);
-            })
-    },[]);
+    const [filteredRestaurants , setFilteredRestaurants] = useState(restaurants);
+    const [isFastDeliveryActive, setIsFastDeliveryActive] = useState(false);
+    const [isRatingActive, setIsRatingActive] = useState(false);
+    const [isCostLTHActive, setIsCostLTHActive] = useState(false);
+    const [isCostHTLActive, setIsCostHTLActive] = useState(false);
     return(
-        <RestaurantContext.Provider value={restaurants}>
+        <RestaurantContext.Provider value={{
+                restaurants, 
+                setRestaurants,
+                filteredRestaurants,
+                setFilteredRestaurants,
+                isFastDeliveryActive,
+                setIsFastDeliveryActive,
+                isRatingActive,
+                setIsRatingActive,
+                isCostLTHActive,
+                setIsCostLTHActive,
+                isCostHTLActive,
+                setIsCostHTLActive
+            }}>
             {children}
         </RestaurantContext.Provider>
     )

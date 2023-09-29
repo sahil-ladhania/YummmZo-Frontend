@@ -1,5 +1,5 @@
 // Importing Components | Modules | Libraries
-import React, {useContext} from 'react';
+import React, {useContext , useEffect} from 'react';
 import NavbarComponent from '../Common/NavbarComponent';
 import FooterComponent from '../Common/FooterComponent';
 import RestaurantSearchComponent from '../Restaurant/RestaurantSearchComponent';
@@ -7,6 +7,7 @@ import TopBrandsComponent from '../Restaurant/TopBrandsComponent';
 import RestaurantFilterComponent from '../Restaurant/RestaurantFilterComponent';
 import RestaurantListComponent from '../Restaurant/RestaurantListComponent';
 import { RestaurantContext } from '../../Contexts/RestaurantContext';
+import { getAllRestaurants } from '../../Services/RestaurantService';
 // Importing CSS Files
 import '../../Styles/Links.css'
 import '../../Styles/Buttons.css'
@@ -22,7 +23,18 @@ import '../../Styles/Footer.css'
 import '../../Styles/Main.css'
 
 const RestaurantsPage = () => {
-    const restaurants = useContext(RestaurantContext);
+    const { restaurants , setRestaurants , filteredRestaurants , setFilteredRestaurants , isFastDeliveryActive , setIsFastDeliveryActive , isRatingActive , setIsRatingActive , isCostLTHActive , setIsCostLTHActive , isCostHTLActive , setIsCostHTLActive  } = useContext(RestaurantContext);
+    // Fetching All Restaurants From Database.
+    useEffect(() => {
+        getAllRestaurants()
+            .then((restaurantsList) => {
+                setRestaurants(restaurantsList);
+                setFilteredRestaurants(restaurantsList);
+            })
+            .catch((error) => {
+                console.log(`Error Fetching Restaurants : ${error}`);
+            });
+    }, []);
     return (
         <div>
             <>
@@ -34,9 +46,9 @@ const RestaurantsPage = () => {
                     {/* Top Brands Component */}
                     <TopBrandsComponent/>
                     {/* Filters Component */}
-                    <RestaurantFilterComponent restaurants={restaurants}/>
+                    <RestaurantFilterComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive}/>
                     {/* Restaurant Lists Component */}
-                    <RestaurantListComponent restaurants={restaurants}/>
+                    <RestaurantListComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive}/>
                     {/* Footer Component */}
                     <FooterComponent/>
                 </div>

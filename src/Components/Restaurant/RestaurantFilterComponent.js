@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { IoTime } from "react-icons/io5";
 import { AiFillStar } from "react-icons/ai";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
@@ -11,24 +11,8 @@ import { getFastDeliveryRestaurants } from '../../Services/FilterRestaurantsServ
 import { getHighRatedRestaurants } from '../../Services/FilterRestaurantsService';
 import { getCostLTHRestaurants } from '../../Services/FilterRestaurantsService';
 import { getCostHTLRestaurants } from '../../Services/FilterRestaurantsService';
-import { FilteredRestaurantsContext } from '../../Contexts/FilteredRestaurantsContext';
 
-const RestaurantFilterComponent = ({ restaurants }) => {
-    // Accessing Filtered Restaurants From The Context.
-    const {
-        isFastDeliveryActive,
-        setIsFastDeliveryActive,
-        isRatingActive,
-        setIsRatingActive,
-        isCostLTHActive,
-        setIsCostLTHActive,
-        isCostHTLActive,
-        setIsCostHTLActive,
-        setFastDeliveryRestaurants,
-        setHighRatedRestaurants,
-        setCostLTHRestaurants,
-        setCostHTLRestaurants
-    } = useContext(FilteredRestaurantsContext);
+const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRestaurants , setFilteredRestaurants , isFastDeliveryActive , setIsFastDeliveryActive , isRatingActive , setIsRatingActive , isCostLTHActive , setIsCostLTHActive , isCostHTLActive , setIsCostHTLActive }) => {
     // Handler Functions.
     const handleFastDelivery = () => {
         setIsFastDeliveryActive(!isFastDeliveryActive);
@@ -44,54 +28,64 @@ const RestaurantFilterComponent = ({ restaurants }) => {
     }
     // Calling getFastDeliveryRestaurants API.
     useEffect(() => {
-        // Fetching Data And Updating The Filtered Restaurants Here.
-        if (isFastDeliveryActive) {
+        if(isFastDeliveryActive){
             getFastDeliveryRestaurants()
                 .then((filteredFDRestaurants) => {
-                    setFastDeliveryRestaurants(filteredFDRestaurants);
+                    setFilteredRestaurants(filteredFDRestaurants);
                 })
                 .catch((error) => {
                     console.log(error);
                 });
+            } 
+        else{
+            setFilteredRestaurants(restaurants);
         }
-    }, [isFastDeliveryActive]);
+    }, [isFastDeliveryActive, restaurants]);
     // Calling getHighRatedRestaurants API.
     useEffect(() => {
-        // Fetching Data And Updating The Filtered Restaurants Here.
         if(isRatingActive){
             getHighRatedRestaurants()
                 .then((filteredHRRestaurants) => {
-                    setHighRatedRestaurants(filteredHRRestaurants);
+                    setFilteredRestaurants(filteredHRRestaurants)
                 })
                 .catch((error) => {
                     console.log(error);
                 })
+            }
+        else {
+            setFilteredRestaurants(restaurants);
         }
-    }, [isRatingActive]);
+    }, [isRatingActive , restaurants]);
     // Calling getCostLTHRestaurants API.
     useEffect(() => {
         if(isCostLTHActive){
             getCostLTHRestaurants()
                 .then((filteredCostLTHRestaurants) => {
-                    setCostLTHRestaurants(filteredCostLTHRestaurants);
+                    setFilteredRestaurants(filteredCostLTHRestaurants);
                 })
                 .catch((error) =>{
                     console.log(error);
                 })
+            }
+        else{
+            setFilteredRestaurants(restaurants);
         }
-    }, [isCostLTHActive]);
+    }, [isCostLTHActive , restaurants]);
     // Calling getCostHTLRestaurants API.
     useEffect(() => {
         if(isCostHTLActive){
             getCostHTLRestaurants()
                 .then((filteredCostHTLRestaurants) => {
-                    setCostHTLRestaurants(filteredCostHTLRestaurants);
+                    setFilteredRestaurants(filteredCostHTLRestaurants);
                 })
                 .catch((error) =>{
                     console.log(error);
                 })
+            }
+        else{
+            setFilteredRestaurants(restaurants);
         }
-    }, [isCostHTLActive]);
+    }, [isCostHTLActive , restaurants]);
     return (
         <div>
             <>
