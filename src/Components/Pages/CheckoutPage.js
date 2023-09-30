@@ -1,14 +1,11 @@
 // Importing Components | Modules | Libraries
 import React, { useContext, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import NavbarComponent from '../Common/NavbarComponent';
 import FooterComponent from '../Common/FooterComponent';
 import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
 import BillComponent from '../Checkout/BillComponent';
 import PaymentComponent from '../Checkout/PaymentComponent';
 import CancellationPolicyComponent from '../Checkout/CancellationPolicyComponent';
-import { CartContext } from '../../Contexts/CartContext';
-import { getCartDetailsForUser } from '../../Services/CartService';
 // Importing CSS Files
 import '../../Styles/Links.css'
 import '../../Styles/Buttons.css'
@@ -24,23 +21,6 @@ import '../../Styles/Footer.css'
 import '../../Styles/Main.css'
 
 const CheckoutPage = () => {
-    // Accessing Cart Details From The Context.
-    const { state , dispatch } = useContext(CartContext);
-    // Getting ID.
-    const { userId } = useParams();
-    // Fetching Cart Details From Database.
-    useEffect(() => {
-        if(userId){
-            // Fetch Cart Details Only If userId Is Available.
-            getCartDetailsForUser(userId)
-                .then((cartDetails) => {
-                    console.log(`Cart Details : ${cartDetails}`);
-                })
-                .catch((error) => {
-                    console.log(`Error Fetching Cart Details : ${error}`);
-                })
-        }
-    }, [userId]);
     return (
         <div>
             <>

@@ -21,7 +21,6 @@ import CartComponent from '../src/Components/Cart/CartComponent';
 import ProfileDropdownComponent from './Components/Common/ProfileDropdownComponent';
 import { RestaurantDetailsProvider } from './Contexts/RestaurantDetailsContext';
 import { MenuContextProvider } from './Contexts/MenuContext';
-import { CartContextProvider } from './Contexts/CartContext';
 import CuisineResults from './Components/Restaurant/CuisineResults';
 import RestaurantResults from './Components/Restaurant/RestaurantResults';
 import MenuItemsResultComponent from './Components/Menu/MenuItemsResultComponent';
@@ -34,7 +33,6 @@ function App() {
         {/* Routes */}
         <GoogleOAuthProvider clientId="543341460612-70gi1og43hsv6b1pjtfkh828a9tp7rn1.apps.googleusercontent.com">
             <CuisineContextProvider>
-              <CartContextProvider>
                 <MenuContextProvider>
                   <RestaurantDetailsProvider>
                     <RestaurantProvider>
@@ -63,7 +61,6 @@ function App() {
                     <ToastContainer/>
                   </RestaurantDetailsProvider>
                 </MenuContextProvider>
-              </CartContextProvider>
             </CuisineContextProvider>
         </GoogleOAuthProvider>
       </>

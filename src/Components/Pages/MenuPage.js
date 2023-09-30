@@ -36,11 +36,8 @@ const MenuPage = () => {
     const { restaurantDetails , setRestaurantDetails } = useContext(RestaurantDetailsContext);
     // Accessing MenuItems From The Context.
     const { menuItems , setMenuItems } = useContext(MenuContext);
-    // Accessing Cart Details From The Context.
-    const { state , dispatch } = useContext(CartContext);
     // Getting ID.
     const { restaurantId } = useParams();
-    const { userId } = useParams();
     // Fetching Restaurant Details From Database.
     useEffect(() => {
         if(restaurantId){
@@ -67,19 +64,6 @@ const MenuPage = () => {
                 })
         }
     }, [restaurantId , setMenuItems]);
-    // Fetching Cart Details From Database.
-    useEffect(() => {
-        if(userId){
-            // Fetch Cart Details Only If userId Is Available.
-            getCartDetailsForUser(userId)
-                .then((cartDetails) => {
-                    console.log(`Cart Details : ${cartDetails}`);
-                })
-                .catch((error) => {
-                    console.log(`Error Fetching Cart Details : ${error}`);
-                })
-        }
-    }, [userId]);
     return (
         <div>
             <>
