@@ -1,7 +1,4 @@
 import React from 'react'
-import '../../Styles/Main.css'
-// CSS Files
-import '../../Styles/Links.css'
 
 const ProfileDropdownComponent = () => {
     return (

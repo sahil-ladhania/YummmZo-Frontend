@@ -1,7 +1,5 @@
 import React from 'react'
-import '../../Styles/Main.css'
 import { UilMapMarkerPlus } from '@iconscout/react-unicons'
-import '../../Styles/Buttons.css'
 
 const DeliveryAddressComponent = () => {
     return (

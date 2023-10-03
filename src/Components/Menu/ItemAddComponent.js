@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-import '../../Styles/Main.css'
-import '../../Styles/Buttons.css'
 
 const ItemAddComponent = () => {
     const [quantity , setQuantity] = useState(1);

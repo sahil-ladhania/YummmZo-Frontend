@@ -1,7 +1,5 @@
 import React from 'react'
 import { UilInfoCircle } from '@iconscout/react-unicons'
-// CSS Files
-import '../../Styles/Input.css'
 
 const BillComponent = () => {
     return (

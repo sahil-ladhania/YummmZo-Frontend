@@ -3,10 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import jwt_decode from 'jwt-decode';
 import 'react-phone-input-2/lib/material.css'
-// CSS Files
-import '../../Styles/Buttons.css'
-import '../../Styles/Input.css'
-import '../../Styles/Links.css'
 import registerUser from '../../Services/RegistrationService';
 import { GoogleLogin } from '@react-oauth/google';
 import GoogleOAuth from './GoogleOAuth';

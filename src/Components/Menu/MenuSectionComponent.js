@@ -1,7 +1,6 @@
 import React from 'react'
 import ItemDescriptionComponent from './ItemDescriptionComponent';
 import ItemAddComponent from './ItemAddComponent';
-import '../../Styles/Main.css'
 
 const MenuSectionComponent = ({ menuItems }) => {
     return (

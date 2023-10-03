@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../Styles/Main.css'
 import { IoTime } from "react-icons/io5";
 import { HiCurrencyRupee } from "react-icons/hi2";
 

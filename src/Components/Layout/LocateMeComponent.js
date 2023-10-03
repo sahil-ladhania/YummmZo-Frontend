@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../Styles/LocateMeComponent.css';
 import { UilLocationPoint } from '@iconscout/react-unicons'
-// CSS Files
-import '../../Styles/Buttons.css'
-import '../../Styles/Input.css'
-import '../../Styles/Links.css'
 
 const LocateMeComponent = () => {
     return (

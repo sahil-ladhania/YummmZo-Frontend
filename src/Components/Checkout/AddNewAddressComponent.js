@@ -1,9 +1,5 @@
 import React from 'react'
-import '../../Styles/Main.css'
 import { UilTimes } from '@iconscout/react-unicons'
-// CSS Files
-import '../../Styles/Buttons.css'
-import '../../Styles/Input.css'
 
 const AddNewAddressComponent = () => {
     return (

@@ -1,6 +1,4 @@
 import React from 'react'
-import '../../Styles/Buttons.css'
-import '../../Styles/Main.css'
 import { Link } from 'react-router-dom'
 
 const ImageContentButtonComponent = () => {

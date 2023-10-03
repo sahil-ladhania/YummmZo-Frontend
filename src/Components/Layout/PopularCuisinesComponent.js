@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../Styles/Main.css'
 
 const PopularCuisinesComponent = ({ cuisines }) => {
     return (

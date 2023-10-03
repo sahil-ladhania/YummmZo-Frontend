@@ -1,34 +1,3 @@
-/* Layout Styles */
-.flex{
-    display: flex;
-}
-.fd-c{
-    flex-direction: column;
-}
-.fd-r{
-    flex-direction: row;
-}
-.jc-fs  {
-    justify-content: flex-start;
-}
-.jc-c{
-    justify-content: center;
-}
-.jc-sb{
-    justify-content: space-between;
-}
-.jc-se{
-    justify-content: space-evenly;
-}
-.ai-c{
-    align-items: center;
-}
-.ai-fs{
-    align-items: flex-start;
-}
-.fw-w{
-    flex-wrap: wrap;
-}
 /* Positioning related styles */
 .relative {
     position: relative;

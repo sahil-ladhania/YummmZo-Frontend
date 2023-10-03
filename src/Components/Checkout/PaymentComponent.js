@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../Styles/Main.css'
 import { UilWallet } from '@iconscout/react-unicons'
 
 const PaymentComponent = () => {

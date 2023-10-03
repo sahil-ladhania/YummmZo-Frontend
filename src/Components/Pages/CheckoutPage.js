@@ -6,19 +6,6 @@ import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
 import BillComponent from '../Checkout/BillComponent';
 import PaymentComponent from '../Checkout/PaymentComponent';
 import CancellationPolicyComponent from '../Checkout/CancellationPolicyComponent';
-// Importing CSS Files
-import '../../Styles/Links.css'
-import '../../Styles/Buttons.css'
-import '../../Styles/Card.css'
-import '../../Styles/Colors.css'
-import '../../Styles/Layout.css'
-import '../../Styles/Spacing.css'
-import '../../Styles/AnimationAndTransition.css'
-import '../../Styles/Text.css'
-import '../../Styles/Input.css'
-import '../../Styles/Navbar.css'
-import '../../Styles/Footer.css'
-import '../../Styles/Main.css'
 
 const CheckoutPage = () => {
     return (

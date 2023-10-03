@@ -1,8 +1,5 @@
 import React from 'react'
-import '../../Styles/Buttons.css'
 import { Link } from 'react-router-dom'
-// CSS Files
-import '../../Styles/Links.css'
 
 const CartComponent = () => {
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../Styles/LocateMeComponent.css';
 
 const BannerUSPComponent = () => {
     return (

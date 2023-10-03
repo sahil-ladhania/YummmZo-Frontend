@@ -17,19 +17,6 @@ import { MenuContext } from '../../Contexts/MenuContext';
 import { getAllMenuItemsForRestaurant } from '../../Services/MenuService';
 import { CartContext } from '../../Contexts/CartContext';
 import { getCartDetailsForUser } from '../../Services/CartService';
-// Importing CSS Files
-import '../../Styles/Links.css'
-import '../../Styles/Buttons.css'
-import '../../Styles/Card.css'
-import '../../Styles/Colors.css'
-import '../../Styles/Layout.css'
-import '../../Styles/Spacing.css'
-import '../../Styles/AnimationAndTransition.css'
-import '../../Styles/Text.css'
-import '../../Styles/Input.css'
-import '../../Styles/Navbar.css'
-import '../../Styles/Footer.css'
-import '../../Styles/Main.css'
 
 const MenuPage = () => {
     // Accessing restaurantDetails From The Context.

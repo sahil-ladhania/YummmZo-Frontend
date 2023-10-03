@@ -8,10 +8,6 @@ import PhoneInput from 'react-phone-input-2';
 import OtpInput from 'react-otp-input';
 import 'react-phone-input-2/lib/material.css';
 import { CgSpinner } from "react-icons/cg";
-// CSS Files
-import '../../Styles/Buttons.css'
-import '../../Styles/Input.css'
-import '../../Styles/Links.css'
 
 const LogInComponent = () => {
     // -----Defining State Variables.-----

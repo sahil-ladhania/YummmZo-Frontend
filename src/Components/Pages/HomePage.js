@@ -7,19 +7,6 @@ import PopularCuisinesComponent from '../Layout/PopularCuisinesComponent'
 import AnythingDeliveredComponent from '../Layout/AnythingDeliveredComponent'
 import FooterComponent from '../Common/FooterComponent';
 import { CuisineContext } from '../../Contexts/CuisineContext';
-// Importing CSS Files
-import '../../Styles/Links.css'
-import '../../Styles/Buttons.css'
-import '../../Styles/Card.css'
-import '../../Styles/Colors.css'
-import '../../Styles/Layout.css'
-import '../../Styles/Spacing.css'
-import '../../Styles/AnimationAndTransition.css'
-import '../../Styles/Text.css'
-import '../../Styles/Input.css'
-import '../../Styles/Navbar.css'
-import '../../Styles/Footer.css'
-import '../../Styles/Main.css'
 import { getAllCuisines } from '../../Services/CuisineServices';
 
 const HomePage = () => {

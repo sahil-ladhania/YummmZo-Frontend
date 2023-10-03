@@ -1,39 +1,3 @@
-/* For whole Page */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.ta-c{
-    text-align: center;
-}
-.ta-j{
-    text-align: justify;
-}
-.fw-b{
-    font-weight: bolder;
-}
-.fs-l{
-    font-size: larger;
-}
-.fs-xxs{
-    font-size: xx-small;
-}
-.pointer{
-    cursor: pointer;
-}
-.fs-xl{
-    font-size: x-large;
-}
-.shadow{
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-.ls-1{
-    letter-spacing: 1px;
-}
-.fw-700{
-    font-weight: 700;
-}
 hr.dashed {
     border: none;
     border-top: 1px dashed #000; /* Adjust color as needed */
