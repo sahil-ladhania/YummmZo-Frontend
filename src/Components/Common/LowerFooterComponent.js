@@ -20,11 +20,11 @@ const LowerFooterComponent = () => {
                     <span>2023 YummmZo</span>
                 </div>
                 {/* Social Media Handles Container */}
-                <div className=''>
-                    <a href="#"><UilFacebookF className="c-blue mr-10"/></a>
-                    <a href="#"><UilInstagram className="c-purple mr-10"/></a>
-                    <a href="#"><UilTwitter className="c-0ac3ff mr-10"/></a>
-                    <a href="#"><UilLinkedin className="c-4343ff mr-10"/></a>
+                <div className='flex '>
+                    <a href="#"><UilFacebookF className="mr-10"/></a>
+                    <a href="#"><UilInstagram className="mr-10"/></a>
+                    <a href="#"><UilTwitter className="mr-10"/></a>
+                    <a href="#"><UilLinkedin className="mr-10"/></a>
                 </div>
             </div>
         </>
