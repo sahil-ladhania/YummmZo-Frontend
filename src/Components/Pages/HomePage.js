@@ -8,6 +8,9 @@ import AnythingDeliveredComponent from '../Layout/AnythingDeliveredComponent'
 import FooterComponent from '../Common/FooterComponent';
 import { CuisineContext } from '../../Contexts/CuisineContext';
 import { getAllCuisines } from '../../Services/CuisineServices';
+import MobileBottomNavbar from '../Common/MobileBottomNavbar';
+import MobileTopNavbar from '../Common/MobileTopNavbar';
+import ViewRestaurantsCardComponent from '../Common/ViewRestaurantsCardComponent';
 
 const HomePage = () => {
     // Accessing Cuisines From The Context.
@@ -39,18 +42,35 @@ const HomePage = () => {
     return (
         <div>
             <>
-                <div className='maxw-1000 minw-1000 ml-a mr-a'>
-                    {/* Navbar Component */}
-                    <NavbarComponent/>
-                    {/* Popular Cuisines Component */}
-                    <PopularCuisinesComponent cuisines={cuisines}/>
-                    {/* Anything Delivered Component */}
-                    <AnythingDeliveredComponent/>
-                    {/* Footer Component */}
-                    <FooterComponent/>
+                <div className='max-w-5xl ml-auto mr-auto'>
+                    <div className='hidden sm:block'>
+                        {/* Navbar Component */}
+                        <NavbarComponent/>
+                        {/* Popular Cuisines Component */}
+                        <PopularCuisinesComponent cuisines={cuisines}/>
+                        {/* Anything Delivered Component */}
+                        <AnythingDeliveredComponent/>
+                        {/* Footer Component */}
+                        <FooterComponent/>
+                    </div>
+                    <div className='block sm:hidden'>
+                        <div> 
+                            <MobileTopNavbar/>
+                        </div>
+                        <div className='overflow-y-scroll'>
+                            <ViewRestaurantsCardComponent/>
+                            <ViewRestaurantsCardComponent/>
+                            <ViewRestaurantsCardComponent/>
+                            <ViewRestaurantsCardComponent/>
+                            <ViewRestaurantsCardComponent/>
+                        </div>
+                        <div>
+                            <MobileBottomNavbar/>
+                        </div>
+                    </div>
                 </div>
             </>
-        </div>
+        </div> 
     )
 }
 
