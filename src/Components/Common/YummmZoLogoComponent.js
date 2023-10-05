@@ -6,8 +6,8 @@ const YummmZoLogoComponent = () => {
         <div>
             <>
                 {/* YummmZo Logo */}
-                <div className='h-100 flex ai-c'>
-                    <Link className='td-n c-b' to="/">YummmZo</Link>
+                <div className='h-40 flex items-center'>
+                    <Link className='text-2xl font-semibold' to="/">YummmZo</Link>
                 </div>
             </>
         </div>

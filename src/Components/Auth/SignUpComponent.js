@@ -38,70 +38,74 @@ const SignUpComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex fd-r jc-sb ai-c h-800'>
+                <div className='flex items-center justify-between'>
                     {/* Sign up Form */}
-                    <form className='flex fd-c jc-sa ai-c b-1-black-solid h-700 w-500 br-5' onSubmit={handleSubmit}>
+                    <form className='w-5/12 flex flex-col justify-between items-center border-2 border-black p-5 rounded-sm mr-24' onSubmit={handleSubmit}>
                         {/* Form Heading Section */}
-                        <div className='flex fd-c ai-c'>
-                            <h1 className='text-3xl mb-10 fs-r c-3d3d3d'>Sign Up</h1>
-                            <div className='text-xl mb-10 fs-r c-3d3d3d'>Already have an account ? <Link className='fs-r td-n c-3d3d3d' to="/login">Log in</Link></div>
+                        <div className='h-16 flex flex-col items-center justify-between'>
+                            <h1 className='text-2xl font-semibold'>Sign Up</h1>
+                            <div className='text-sm font-medium'>Already have an account ? <Link className='' to="/login">Log in</Link></div>
                         </div>
                         {/* Sign up with Number / Email Section */}
-                        <div className='flex fd-c'>
+                        <div className='flex flex-col h-52 justify-evenly'>
+                            {/* First name and Last name */}
                             <input 
-                            value={formData.firstName}
-                            onChange={handleChange}
-                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
-                            type="text" 
-                            name="firstName" 
-                            required
-                            placeholder='First Name'/>
+                                value={formData.firstName}
+                                onChange={handleChange}
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                type="text" 
+                                name="firstName" 
+                                required
+                                placeholder='First Name'/>
                             <input 
-                            value={formData.lastName}
-                            onChange={handleChange}
-                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
-                            type="text" 
-                            name="lastName" 
-                            required
-                            placeholder='Last Name'/>
+                                value={formData.lastName}
+                                onChange={handleChange}
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                type="text" 
+                                name="lastName" 
+                                required
+                                placeholder='Last Name'/>
+                            {/* Email and Password */}
                             <input 
-                            value={formData.email}
-                            onChange={handleChange}
-                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
-                            type="email" 
-                            name="email" 
-                            required
-                            placeholder='Email Address'/>
+                                value={formData.email}
+                                onChange={handleChange}
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                type="email" 
+                                name="email" 
+                                required
+                                placeholder='Email Address'/>
                             <input 
-                            value={formData.password}
-                            onChange={handleChange}
-                            className='h-40 w-300 p-0-10 mb-5 b-1-t-s br-5 bc-ws' 
-                            type="password" 
-                            name="password" 
-                            required
-                            placeholder='Password'/>
+                                value={formData.password}
+                                onChange={handleChange}
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                type="password" 
+                                name="password" 
+                                required
+                                placeholder='Password'/>
                         </div>
                         {/* Create Account */}
                         <div>
-                            <button type='submit' className='h-40 w-300 b-1-t-s br-5 fs-r c-3d3d3d shadow-md bg-slate-300'>Register</button>
+                            <button type='submit' className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5'>Register</button>
                         </div>
                         {/* ----- or ----- Section */}
-                        <div>
-                            <p className='c-3d3d3d'>--------------------------Or--------------------------</p>
+                        <div className='mb-5'>
+                            <p className=''>-------------------Or-------------------</p>
                         </div>
                         {/* Sign Up With Google Section */}
-                        <GoogleOAuth/>
+                        <div className='mb-5'>
+                            <GoogleOAuth/>
+                        </div>
                         {/* Privacy Policy | Terms & Condition Section */}
                         <div>
-                            <p className='fs-r c-3d3d3d'>
+                            <p className='text-sm text-center'>
                                 By creating an account, I agree with YummmZo's <br /> 
-                                <a className='ml-30 fs-r td-n c-b c-3d3d3d' href="#">Privacy Policy</a> and <a className='fs-r td-n c-b' href="#">Terms and Condition</a>
+                                <a className='font-semibold' href="#">Privacy Policy</a> and <a className='font-semibold' href="#">Terms and Condition</a>
                             </p>
                         </div>
                     </form>
                     {/* Image */}
-                    <div className='h-300 w-400'>
-                            <img src="" alt="Image" />
+                    <div className='w-7/12'>
+                            <img className='h-96' src="https://assets.materialup.com/uploads/7d01cb77-d023-499b-b583-e5c17b57ca00/preview.jpg" alt="Image" />
                     </div>
                 </div>
             </>
