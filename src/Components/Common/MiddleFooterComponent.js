@@ -5,71 +5,71 @@ const MiddleFooterComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex fd-c mb-20'>
+                <div className='flex flex-col h-72 justify-between'>
                     {/* Heading Container */}
-                    <div className='mb-10 fs-r c-g ls-1 fw-500'>
-                        WE DELIVER TO
+                    <div className='font-semibold uppercase'>
+                        we deliver to
                     </div>
                     {/* Delivery Location's Container */}
-                    <div className='flex jc-sb fd-r ai-fs'>
+                    <div className='flex justify-between items-start'>
                         {/* First Column */}
-                        <div className='w-150px'>
-                            <ul>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Azamgarh</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Aurangabad</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Bagdogra</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Ballia</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Chennai</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Churu</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Darjeeling</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Delhi</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Eluru</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Etawah</a></li>
+                        <div className=''>
+                            <ul className='leading-6'>
+                                <li className=''><a className='' href="#">Azamgarh</a></li>
+                                <li className=''><a className='' href="#">Aurangabad</a></li>
+                                <li className=''><a className='' href="#">Bagdogra</a></li>
+                                <li className=''><a className='' href="#">Ballia</a></li>
+                                <li className=''><a className='' href="#">Chennai</a></li>
+                                <li className=''><a className='' href="#">Churu</a></li>
+                                <li className=''><a className='' href="#">Darjeeling</a></li>
+                                <li className=''><a className='' href="#">Delhi</a></li>
+                                <li className=''><a className='' href="#">Eluru</a></li>
+                                <li className=''><a className='' href="#">Etawah</a></li>
                             </ul>
                         </div>
                         {/* Second Column */}
-                        <div className='w-150px'>
-                            <ul>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Etah</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Faridabad</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Firozpur</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Gaya</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Gwalior</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Haridwar</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Hisar</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Jaipur</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Jammu</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Jhansi</a></li>
+                        <div className=''>
+                            <ul className='leading-6'>
+                                <li className=''><a className='' href="#">Etah</a></li>
+                                <li className=''><a className='' href="#">Faridabad</a></li>
+                                <li className=''><a className='' href="#">Firozpur</a></li>
+                                <li className=''><a className='' href="#">Gaya</a></li>
+                                <li className=''><a className='' href="#">Gwalior</a></li>
+                                <li className=''><a className='' href="#">Haridwar</a></li>
+                                <li className=''><a className='' href="#">Hisar</a></li>
+                                <li className=''><a className='' href="#">Jaipur</a></li>
+                                <li className=''><a className='' href="#">Jammu</a></li>
+                                <li className=''><a className='' href="#">Jhansi</a></li>
                             </ul>
                         </div>
                         {/* Third Column */}
-                        <div className='w-150px'>
-                            <ul>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Kanpur</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Kolkata</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Lucknow</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Lonavala</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Manali</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Manipal</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Nagpur</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Nashik</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Patna</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Puri</a></li>
+                        <div className=''>
+                            <ul className='leading-6'>
+                                <li className=''><a className='' href="#">Kanpur</a></li>
+                                <li className=''><a className='' href="#">Kolkata</a></li>
+                                <li className=''><a className='' href="#">Lucknow</a></li>
+                                <li className=''><a className='' href="#">Lonavala</a></li>
+                                <li className=''><a className='' href="#">Manali</a></li>
+                                <li className=''><a className='' href="#">Manipal</a></li>
+                                <li className=''><a className='' href="#">Nagpur</a></li>
+                                <li className=''><a className='' href="#">Nashik</a></li>
+                                <li className=''><a className='' href="#">Patna</a></li>
+                                <li className=''><a className='' href="#">Puri</a></li>
                             </ul>
                         </div>
                         {/* Fourth Column */}
-                        <div className='w-150px'>
-                            <ul>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Pune</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Raipur</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Rajkot</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Shimla</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Sikar</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Trichy</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Tirupati</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Udaipur</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Ujjain</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Vellore</a></li>
+                        <div className=''>
+                            <ul className='leading-6'>
+                                <li className=''><a className='' href="#">Pune</a></li>
+                                <li className=''><a className='' href="#">Raipur</a></li>
+                                <li className=''><a className='' href="#">Rajkot</a></li>
+                                <li className=''><a className='' href="#">Shimla</a></li>
+                                <li className=''><a className='' href="#">Sikar</a></li>
+                                <li className=''><a className='' href="#">Trichy</a></li>
+                                <li className=''><a className='' href="#">Tirupati</a></li>
+                                <li className=''><a className='' href="#">Udaipur</a></li>
+                                <li className=''><a className='' href="#">Ujjain</a></li>
+                                <li className=''><a className='' href="#">Vellore</a></li>
                             </ul>
                         </div>
                     </div>

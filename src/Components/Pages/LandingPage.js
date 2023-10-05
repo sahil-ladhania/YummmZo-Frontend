@@ -1,8 +1,8 @@
 // Importing Components | Modules | Libraries
 import React from 'react'
 import FooterComponent from '../Common/FooterComponent';
-import BannerUSPComponent from '../Layout/BannerUSPComponent';
 import LocateMeComponent from '../Layout/LocateMeComponent';
+import BannerComponent from '../Layout/BannerComponent';
 
 const LandingPage = () => {
     return (
@@ -11,8 +11,8 @@ const LandingPage = () => {
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Locate Me | Login | Signup Section */}
                     <LocateMeComponent/>
-                    {/* Banner and USP's Section */}
-                    <BannerUSPComponent/>
+                    {/* Banner Section */}
+                    <BannerComponent/>
                     {/* Footer Section */}
                     <FooterComponent/>
                 </div>

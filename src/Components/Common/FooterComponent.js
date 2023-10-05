@@ -7,7 +7,7 @@ const FooterComponent = () => {
     return (
         <div>
             <>
-                <div>
+                <div className='h-auto'>
                     {/* Upper Footer Section */}
                     <UpperFooterComponent/>
                     {/* Middle Footer Section */}

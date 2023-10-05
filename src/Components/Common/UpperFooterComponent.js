@@ -5,68 +5,68 @@ const UpperFooterComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex fd-r ai-fs jc-sb mb-20'>
+                <div className='flex justify-between items-start h-72 mt-10'>
                     {/* First Column */}
-                    <div className='flex fd-c ai-fs'>
+                    <div className=''>
                         {/* Heading */}
-                        <div className='mb-10 fs-r c-g ls-1 fw-500'>
-                            COMPANY
+                        <div className='mb-5 font-semibold uppercase'>
+                            company
                         </div>
                         <div className=''>
-                            <ul className=''>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">About us</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Team</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Careers</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo Blog</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Bug Bounty</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo One</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo Corporate</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo Instamart</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">YummmZo Genie</a></li>
+                            <ul className='leading-6'>
+                                <li className=''><a className='text-base' href="#">About us</a></li>
+                                <li className=''><a className='text-base' href="#">Team</a></li>
+                                <li className=''><a className='text-base' href="#">Careers</a></li>
+                                <li className=''><a className='text-base' href="#">YummmZo Blog</a></li>
+                                <li className=''><a className='text-base' href="#">Bug Bounty</a></li>
+                                <li className=''><a className='text-base' href="#">YummmZo One</a></li>
+                                <li className=''><a className='text-base' href="#">YummmZo Corporate</a></li>
+                                <li className=''><a className='text-base' href="#">YummmZo Instamart</a></li>
+                                <li className=''><a className='text-base' href="#">YummmZo Genie</a></li>
                             </ul>
                         </div>
                     </div>
                     {/* Second Column */}
-                    <div className='flex fd-c ai-fs'>
+                    <div className=''>
                         {/* Heading */}
-                        <div className='mb-10 fs-r c-g ls-1 fw-500'>
-                            CONTACT
+                        <div className='mb-5 font-semibold uppercase'>
+                            contact
                         </div>
                         <div className=''>
-                            <ul className=''>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Help and Support</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Partner with us</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Ride with us</a></li>
+                            <ul className='leading-6'>
+                                <li className=''><a className='text-base' href="#">Help and Support</a></li>
+                                <li className=''><a className='text-base' href="#">Partner with us</a></li>
+                                <li className=''><a className='text-base' href="#">Ride with us</a></li>
                             </ul>
                         </div>
                     </div>
                     {/* Third Column */}
-                    <div className='flex fd-c ai-fs'>
+                    <div className=''>
                         {/* Heading */}
-                        <div className='mb-10 fs-r c-g ls-1 fw-500'>
-                            LEGAL
+                        <div className='mb-5 font-semibold uppercase'>
+                            legal
                         </div>
                         <div className=''>
-                            <ul className=''>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Terms & Condition</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Refund & Cancellation</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Privacy Policy</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Cookie Policy</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Offer Terms</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Phishing & Fraud</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Corporate - YummmZo Money Codes Terms and <br /> Conditions</a></li>
-                                <li className='ls-n lh-1 fs-r'><a className='td-n c-b' href="#">Corporate - YummmZo Discount Voucher Terms and <br /> Conditions</a></li>
+                            <ul className='leading-6'>
+                                <li className=''><a className='text-base' href="#">Terms & Condition</a></li>
+                                <li className=''><a className='text-base' href="#">Refund & Cancellation</a></li>
+                                <li className=''><a className='text-base' href="#">Privacy Policy</a></li>
+                                <li className=''><a className='text-base' href="#">Cookie Policy</a></li>
+                                <li className=''><a className='text-base' href="#">Offer Terms</a></li>
+                                <li className=''><a className='text-base' href="#">Phishing & Fraud</a></li>
+                                <li className=''><a className='text-base' href="#">Corporate - YummmZo Money Codes Terms and <br /> Conditions</a></li>
+                                <li className=''><a className='text-base' href="#">Corporate - YummmZo Discount Voucher Terms and <br /> Conditions</a></li>
                             </ul>
                         </div>
                     </div>
                     {/* Fourth Column */}
-                    <div className='flex fd-c'>
+                    <div className='leading-6'>
                         {/* Image 1 fs-r */}
-                        <div className='mb-20'>
+                        <div className='cursor-pointer mb-3'>
                             <img className='' src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-AppStore_lg30tv" alt="Download-on-App-Store" />
                         </div>
                         {/* Image 2 */}
-                        <div className='mt-20'>
+                        <div className='cursor-pointer mt-3'>
                             <img className='' src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-GooglePlay_1_zixjxl" alt="Download-on-Play-Store" />
                         </div>
                     </div>
