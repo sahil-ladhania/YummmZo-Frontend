@@ -76,9 +76,6 @@ select {
     border-radius: 4px;
     width: 100%;
 }
-.active{
-    color: orange;
-}
 /* CSS code */
 .custom-file-upload {
     display: inline-block;

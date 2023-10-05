@@ -1,102 +1,58 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaAngleDown } from "react-icons/fa";
-import { IoRestaurant } from "react-icons/io5";
-import { IoAddCircle } from "react-icons/io5";
-import { IoHelpBuoySharp } from "react-icons/io5";
-import { FaUserCircle } from "react-icons/fa";
-import { FaCartShopping } from "react-icons/fa6";
-import CartComponent from '../Cart/CartComponent';
-import ProfileDropdownComponent from './ProfileDropdownComponent';
+import { CiForkAndKnife } from "react-icons/ci";
+import { CiCirclePlus } from "react-icons/ci";
+import { CiUser } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
+import { CiCircleChevDown } from "react-icons/ci";
 
 const NavbarComponent = () => {
-    // State Management.
-    const [isCartVisible , setIsCartVisible] = useState(false);
-    const [isProfileDropdownVisible , setIsProfileDropdownVisible] = useState(false);
-    // Handler Function.
-    const handleCartLinkHover = () => {
-        setIsCartVisible(!isCartVisible);
-    }
-    const handleProfileLinkHover = () => {
-        setIsProfileDropdownVisible(!isProfileDropdownVisible);
-    }
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex fd-r jc-sb ai-c h-100 mb-20'>
+                <div className='h-20 flex items-center justify-between'>
                     {/* Left Part */}
-                    <div className='flex ai-c'>
+                    <div className='flex items-center w-5/12'>
                         <div>
-                            <NavLink exact to= "/home" className="mr-20 td-n c-b">YummmZo</NavLink>
+                            <NavLink exact to= "/home" className="mr-5 text-2xl font-semibold">YummmZo</NavLink>
                         </div>
                         <div className=''>
-                            <a className='flex ai-c td-n c-b' href="#">
-                                <span className='mr-5 fs-r'>HOME</span>
-                                <span className='mr-5 fs-r'>G.T.Road, Kailash Park</span>
-                                <FaAngleDown/>
+                            <a className='flex items-center' href="#">
+                                <span className='text-sm font-medium mr-2'>Home</span>
+                                <span className='text-sm'>Kailash Park...</span>
+                                <CiCircleChevDown className='text-md'/>
                             </a>
                         </div>
                     </div>
                     {/* Right Part */}
-                    <div className='relative'>
-                        <ul className='flex fd-r'>
-                            <li className='ml-20 ls-n'>
-                                <NavLink to="/restaurants" className="mr-20 td-n c-b flex ai-c fs-r">
-                                    <IoRestaurant className='h-20 w-a'/>
-                                    <span>Restaurants</span>
+                    <div className='w-7/12'>
+                        <ul className='flex justify-between'>
+                            <li className=''>
+                                <NavLink to="/restaurants" className="flex items-center">
+                                    <CiForkAndKnife className='text-3xl'/>
+                                    <span className='text-sm pr-2 pl-2'>Restaurants</span>
                                 </NavLink>
                             </li>
-                            <li className='ml-20 ls-n'>
-                                <NavLink to="/addRestaurant" className="mr-20 td-n c-b flex ai-c fs-r">
-                                    <IoAddCircle className='h-20 w-a'/>
-                                    <span>Add Restaurant</span>
+                            <li className=''>
+                                <NavLink to="/addRestaurant" className="flex items-center">
+                                    <CiCirclePlus className='text-3xl'/>
+                                    <span className='text-sm pr-2 pl-2'>Add Restaurant</span>
                                 </NavLink>
                             </li>
-                            <li className='ml-20 ls-n'>
-                                <NavLink to="/helpandsupport" className="mr-20 td-n c-b flex ai-c fs-r">
-                                    <IoHelpBuoySharp className='h-20 w-a'/>
-                                    <span>Help</span>
+                            <li className=''>
+                                <NavLink className="flex items-center">
+                                    <CiUser className='text-3xl'/>
+                                    <span className='text-sm pr-2 pl-2'>Login</span>
                                 </NavLink>
                             </li>
-                            <li className='ml-20 ls-n'>
-                                <NavLink 
-                                className="mr-20 td-n c-b flex ai-c fs-r"
-                                onMouseEnter={handleProfileLinkHover}
-                                >
-                                    <FaUserCircle className='h-20 w-a'/>
-                                    <span>Profile</span>
-                                </NavLink>
-                            </li>
-                            <li className='ml-20 ls-n'>
-                                <NavLink 
-                                to="/cart" 
-                                className="mr-20 td-n c-b flex ai-c fs-r"
-                                onMouseEnter={handleCartLinkHover}
-                                >
-                                    <FaCartShopping className='h-20 w-a'/>
-                                    <span>Cart</span>
+                            <li className=''>
+                                <NavLink to="/cart" className="flex items-center">
+                                    <CiShoppingCart className='text-3xl'/>
+                                    <span className='text-sm pr-2 pl-2'>Cart</span>
                                 </NavLink>
                             </li>
                         </ul>
-                        {/* Conditionally Rendering Profile Dropdown Component */}
-                        {
-                            isProfileDropdownVisible ? 
-                                <div className='absolute right-0 top-10'>
-                                    <ProfileDropdownComponent/>
-                                </div>
-                                :
-                                null
-                        }
-                        {/* Conditionally Rendering Cart Dropdown Component */}
-                        {
-                                isCartVisible ? 
-                                    <div className='absolute right-0 top-10'>
-                                        <CartComponent/>
-                                    </div>
-                                    :
-                                    null
-                            }
                     </div>
                 </div>
             </>

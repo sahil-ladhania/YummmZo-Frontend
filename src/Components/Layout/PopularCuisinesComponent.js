@@ -5,18 +5,18 @@ const PopularCuisinesComponent = ({ cuisines }) => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex fd-c ai-c mb-20 h-auto'>
+                <div className='flex flex-col items-center justify-center h-auto'>
                     {/* Heading Section */}
-                    <div className='mb-40'>
-                        <h2 className='fs-r c-3d3d3d ls-1'>Popular Cuisines</h2>
+                    <div className='mb-10 mt-10'>
+                        <h2 className='text-3xl'>Popular Cuisines</h2>
                     </div>
                     {/* Cuisines Section */}
                     <div>
-                        <div className='flex justify-center fd-r fw-w mb-20'>
+                        <div className='flex justify-center fw-w flex-wrap cursor-pointer'>
                             {cuisines.map((cuisine, index) => (
-                                <div key={index} className='flex mb-20 fd-c ai-c m-0-30'>
-                                    <img className='h-100 mb-10 w-a shadow br-50' src={cuisine.imageURL} alt="" />
-                                    <a className='fs-r td-n c-b' href="#">{cuisine.cuisineName}</a>
+                                <div key={index} className='flex mb-5 mt-5 flex-col items-center mr-8 ml-8'>
+                                    <img className='h-24 mb-5 rounded-full' src={cuisine.imageURL} alt="" />
+                                    <a className='text-sm font-medium' href="#">{cuisine.cuisineName}</a>
                                 </div>
                             ))}
                         </div>
