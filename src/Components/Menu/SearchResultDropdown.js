@@ -6,7 +6,7 @@ const SearchResultDropdown = ({ menuItemsResults }) => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-400 w-800  p-2 rounded-md overflow-y-auto'>
+                <div className='h-screen w-full  p-2 rounded-md overflow-y-auto'>
                     {menuItemsResults.map((result, index) => (
                         <MenuItemsResultComponent key={index} data={result} />
                     ))}

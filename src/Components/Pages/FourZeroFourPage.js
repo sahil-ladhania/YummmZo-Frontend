@@ -1,7 +1,7 @@
 // Importing Components | Modules | Libraries
 import React from 'react'
 import '../../Styles/Main.css'
-import { UilArrowLeft } from '@iconscout/react-unicons'
+import { CiCircleChevLeft } from "react-icons/ci";
 import { Link } from 'react-router-dom'
 
 const FourZeroFourPage = () => {
@@ -10,10 +10,10 @@ const FourZeroFourPage = () => {
             <>
                 {/* Main Component */}
                 <div>
-                    <div className='flex fd-c jc-c ai-c'>
-                        <img className='h-600 w-a' src="https://static.vecteezy.com/system/resources/previews/022/752/919/original/delivery-guy-taking-break-empty-state-illustration-editable-404-not-found-for-ux-ui-design-fast-food-restaurant-isolated-flat-cartoon-character-on-white-error-flash-message-for-website-app-vector.jpg" alt="404-Page" />
-                        <Link to="/home" className='td-n c-b flex ai-c jc-c b-1-t-s br-5 shadow p-0-10 h-40 w-a'>
-                            <UilArrowLeft/>
+                    <div className='flex flex-col justify-center items-center h-screen'>
+                        <img className='h-96 w-auto mb-10' src="https://static.vecteezy.com/system/resources/previews/022/752/919/original/delivery-guy-taking-break-empty-state-illustration-editable-404-not-found-for-ux-ui-design-fast-food-restaurant-isolated-flat-cartoon-character-on-white-error-flash-message-for-website-app-vector.jpg" alt="404-Page" />
+                        <Link to="/home" className='flex items-center justify-center h-10 border-2 border-black pr-3 pl-3 pt-2 pb-2 rounded-sm bg-slate-300'>
+                            <span><CiCircleChevLeft className='text-2xl mr-2'/></span>
                             <span className='fs-r fs-m'>Back to Home</span>
                         </Link>
                     </div>

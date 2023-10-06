@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { FaAngleLeft } from "react-icons/fa";
 import { Link  } from 'react-router-dom'
-import { BsSearch } from "react-icons/bs";
+import { CiCircleChevLeft } from "react-icons/ci";
+import { CiSearch } from "react-icons/ci";
 import { searchInRestaurant } from '../../Services/SearchService';
 import SearchResultDropdown from './SearchResultDropdown';
 
@@ -35,14 +35,14 @@ const SearchInRestaurantComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-680 flex flex-col items-center'>
-                    <div className='flex ai-c jc-sb mb-10'>
-                        <Link className='td-n c-b mr-20' to="/menu"><FaAngleLeft className="h-20 w-a pointer"/></Link>
-                        <input onClick={handleShowResults} onChange={handleSearch} value={searchQuery} className='h-40 w-800 p-0-10 b-1-t-s br-5 bc-ws' type="search" name="" id="" placeholder='Search within menu'/>
-                        <span className='ml-10'><BsSearch className="h-20 w-a pointer"/></span>
+                <div className='h-screen flex flex-col items-center w-full mt-10'>
+                    <div className='flex items-center justify-between mb-5 w-full'>
+                        <Link className='mr-5' to="/home"><CiCircleChevLeft className="text-2xl cursor-pointer"/></Link>
+                        <input onClick={handleShowResults} onChange={handleSearch} value={searchQuery} className='h-10 w-full rounded-sm border-b-2 border-black pl-10 outline-none' type="search" name="" id="" placeholder='Search within menu'/>
+                        <span className='ml-5'><CiSearch className="text-2xl cursor-pointer"/></span>
                     </div>
                     {/* Search Results Component */}
-                    <div>
+                    <div className=''>
                         {
                             showSearchResults ? 
                                 <SearchResultDropdown
