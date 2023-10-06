@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import { BsSearch } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { MdFavorite } from "react-icons/md";
+import { CiHeart } from "react-icons/ci";
+import { CiSearch } from "react-icons/ci";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 const LinkFavSearchComponent = ({ restaurantDetails }) => {
@@ -15,25 +16,25 @@ const LinkFavSearchComponent = ({ restaurantDetails }) => {
         <div>
             <>      
                 {/* Main Component */}
-                <div className='h-80 flex jc-sb ai-c'>
+                <div className='flex items-center justify-between h-16'>
                     {/* Link's Section */}
-                    <div className='flex'>
-                        <Link className='mr-10 fs-xxs fs-r' to="/home">Home</Link>
-                        <span className='fs-xxs'>/</span>
-                        <a className='ml-10 fs-xxs fs-r' href="#">{restaurantDetails.restaurantName}</a>
+                    <div className='w-auto flex item-center justify-between'>
+                        <Link className='text-xs font-semibold mr-2' to="/home">Home</Link>
+                        <span className='text-xs font-semibold'>/</span>
+                        <a className='text-xs font-semibold ml-2' href="#">{restaurantDetails.restaurantName}</a>
                     </div>
                     {/* Icon's Section */}
                     <div>
-                        <span className='flex ai-c'>
+                        <span className='flex w-16 justify-between'>
                             <p onClick={handleFavourite}>
                                 {
                                     favourites ? 
-                                        <p className='h-20 w-a mr-10 pointer'><MdFavorite/></p>
+                                        <p className='text-2xl cursor-pointer'><MdFavorite/></p>
                                         :
-                                        <MdOutlineFavoriteBorder className='h-20 w-a mr-10 pointer'/>
+                                        <CiHeart className='text-2xl cursor-pointer'/>
                                 }
                             </p>
-                            <Link className='td-n c-b' to="/searchInRestaurant"><BsSearch className='h-20 w-a ml-10 pointer'/></Link>
+                            <Link className='' to="/searchInRestaurant"><CiSearch className='text-2xl cursor-pointer'/></Link>
                         </span>
                     </div>
                 </div>

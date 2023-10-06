@@ -9,7 +9,6 @@ import CouponsSectionComponent from '../Menu/CouponsSectionComponent';
 import VegOnlyToggleComponent from '../Menu/VegOnlyToggleComponent';
 import MenuSectionComponent from '../Menu/MenuSectionComponent';
 import RestaurantLisenceComponent from '../Menu/RestaurantLisenceComponent';
-import FooterComponent from '../Common/FooterComponent';
 import ItemCategoryHeadingComponent from '../Menu/ItemCategoryHeadingComponent';
 import { RestaurantDetailsContext } from '../../Contexts/RestaurantDetailsContext';
 import { getRestaurantById } from "../../Services/RestaurantService";
@@ -54,9 +53,11 @@ const MenuPage = () => {
     return (
         <div>
             <>
-                <div className='maxw-1000 minw-1000 ml-a mr-a'>
+                <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Section */}
                     <NavbarComponent/>
+                </div>
+                <div className='max-w-4xl ml-auto mr-auto'>
                     {/* Links | Favourites | Search in Menu Section */}
                     <LinkFavSearchComponent restaurantDetails={restaurantDetails}/>
                     {/* Restaurant Name | Address | Cuisine | Rating Section */}
@@ -74,8 +75,6 @@ const MenuPage = () => {
                     <MenuSectionComponent menuItems={menuItems}/>
                     {/* Restaurant Lisence Section */}
                     <RestaurantLisenceComponent restaurantDetails={restaurantDetails}/>
-                    {/* Footer Component */}
-                    <FooterComponent/>
                 </div>
             </>
         </div>

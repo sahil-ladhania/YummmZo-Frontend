@@ -39,13 +39,17 @@ const HomePage = () => {
     return (
         <div>
             <>
-                <div className='max-w-5xl ml-auto mr-auto'>
+                <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
                     <NavbarComponent/>
+                </div>
+                <div className='max-w-5xl ml-auto mr-auto'>
                     {/* Popular Cuisines Component */}
                     <PopularCuisinesComponent cuisines={cuisines}/>
                     {/* Top Brands Component */}
                     <TopBrandsComponent/>
+                </div>
+                <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Footer Component */}
                     <FooterComponent/>
                 </div>

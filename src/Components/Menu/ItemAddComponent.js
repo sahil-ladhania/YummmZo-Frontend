@@ -28,13 +28,13 @@ const ItemAddComponent = () => {
                         <div>
                             {
                                 isAddedToCart ? 
-                                <div className='h-40 w-100 flex ai-c jc-sb'>
-                                    <button className='h-40 w-30 b-1-t-s br-5 fs-r pointer' onClick={handleLess}>-</button>
-                                    <input className='h-40 w-30 b-1-t-s br-5 fs-r shadow' type="button" value={quantity} />
-                                    <button className='h-40 w-30 b-1-t-s br-5 fs-r pointer' onClick={handleAdd}>+</button>
+                                <div className='h-10 w-100 flex ai-c jc-sb'>
+                                    <button className='h-10 pr-5 pl-5 bg-slate-200 rounded-sm' onClick={handleLess}>-</button>
+                                    <input className='h-10 pr-5 pl-5 ' type="button" value={quantity} />
+                                    <button className='h-10 pr-5 pl-5 bg-slate-200 rounded-sm' onClick={handleAdd}>+</button>
                                 </div>
                                 :
-                                <button onClick={handleQuantity} className='h-40 w-100 b-1-t-s br-5 fs-r pointer'>Add to Cart</button>
+                                <button onClick={handleQuantity} className='h-10 pr-5 pl-5 bg-slate-200 rounded-sm'>Add to Cart</button>
                             }
                         </div>
                 </div>

@@ -8,10 +8,10 @@ import { CiCircleChevDown } from "react-icons/ci";
 
 const NavbarComponent = () => {
     return (
-        <div>
+        <div className=''>
             <>
                 {/* Main Component */}
-                <div className='h-20 flex items-center justify-between'>
+                <div className='h-20 flex items-center justify-between '>
                     {/* Left Part */}
                     <div className='flex items-center w-5/12'>
                         <div>

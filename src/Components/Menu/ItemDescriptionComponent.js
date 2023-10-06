@@ -5,16 +5,16 @@ const ItemDescriptionComponent = ({ menuItem }) => {
         <div>
             <>
                 {/* Main Component */}
-                <div>
+                <div className=''>
                     {/* Item Name and Price Section */}
-                    <div>
-                        <img className='h-15 w-a mb-5' src="https://www.clipartmax.com/png/full/299-2998556_vegetarian-food-symbol-icon-non-veg-symbol-png.png" alt="Veg-NonVeg-Icon" />
-                        <h3 className='mb-5 fs-r ls-1'>{menuItem.itemName}</h3>
-                        <p className='mb-5 fs-s fs-r ls-1 fw-500'>Rs.{menuItem.itemPrice}</p>
+                    <div className='flex flex-col'>
+                        <img className='h-4 w-4 mb-2' src="https://www.clipartmax.com/png/full/299-2998556_vegetarian-food-symbol-icon-non-veg-symbol-png.png" alt="Veg-NonVeg-Icon" />
+                        <h3 className='text-md font-medium'>{menuItem.itemName}</h3>
+                        <p className='text-sm font-medium mb-2'>Rs.{menuItem.itemPrice}</p>
                     </div>
                     {/* Item Description Section */}
                     <div>
-                        <p className='fs-s fs-r c-g'>
+                        <p className='text-sm font-light'>
                             {menuItem.itemDescription}
                         </p>
                     </div>

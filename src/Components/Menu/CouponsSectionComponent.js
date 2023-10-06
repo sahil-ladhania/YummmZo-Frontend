@@ -6,7 +6,7 @@ const CouponsSectionComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex jc-sb mb-20'>
+                <div className='h-40 flex items-center justify-between'>
                     {/* Coupen's Section */}
                     <CouponComponent/>
                     <CouponComponent/>

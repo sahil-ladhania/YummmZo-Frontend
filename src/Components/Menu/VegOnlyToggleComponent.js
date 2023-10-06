@@ -5,10 +5,10 @@ const VegOnlyToggleComponent = () => {
         <div>
             <>  
                 {/* Main Component */}
-                <div className='flex ai-c mb-20'>
+                <div className='h-20 flex items-center'>
                     {/* Title Section */}
                     <div>
-                        <p className='mr-10 fs-m fs-r fw-500 ls-1'>Veg Only</p>
+                        <p className='mr-5 text-sm font-semibold'>Veg Only</p>
                     </div>
                     {/* Toggle Button Section */}
                     <label className="toggle">

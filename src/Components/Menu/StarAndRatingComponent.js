@@ -1,26 +1,27 @@
 import React from 'react'
 import { AiFillStar } from "react-icons/ai";
+import { CiStar } from "react-icons/ci";
 
 const StarAndRatingComponent = ({ restaurantDetails }) => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div className='p-10 b-1-dcd8d8-s br-5 shadow'>
+                <div className='h-20 border-2 border-black p-1 rounded-sm flex flex-col justify-center'>
                     {/* Icon Section */}
-                    <div className='flex jc-c ai-c mb-5'>
-                        <span><AiFillStar className='h-20 w-a mr-5 c-3d9b6d fw-700'/></span>
-                        <p className='fs-r c-3d9b6d fw-700'>
+                    <div className='flex items-center ml-3 mb-1'>
+                        <span><CiStar className='text-xl mr-1'/></span>
+                        <p className='text-xs font-semibold'>
                             {restaurantDetails.rating}
                         </p>
                     </div>
                     {/* Divider Section */}
-                    <div>
+                    <div className=''>
                         <hr />
                     </div>
                     {/* Rating Content Section */}
-                    <div className='mt-5'>
-                        <p className='fs-s fs-r c-g fw-700'>
+                    <div className='mt-1'>
+                        <p className='text-xs'>
                             100+ ratings
                         </p>
                     </div>

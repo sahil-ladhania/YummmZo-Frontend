@@ -10,6 +10,7 @@ import { getAllRestaurants } from '../../Services/RestaurantService';
 import { CuisineContext } from '../../Contexts/CuisineContext';
 import InspirationForFirstOrderComponent from '../Restaurant/InspirationForFirstOrderComponent';
 import { getAllCuisines } from '../../Services/CuisineServices';
+import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
 
 const RestaurantsPage = () => {
     // Accessing Cuisines From The Context.
@@ -39,9 +40,11 @@ const RestaurantsPage = () => {
     return (
         <div>
             <>
-                <div className='max-w-5xl ml-auto mr-auto'>
+                <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
                     <NavbarComponent/>
+                </div>
+                <div className='max-w-5xl ml-auto mr-auto'>
                     {/* Restaurant Search Bar Component */}
                     <RestaurantSearchComponent/>
                     {/* Inspiration Component */}
@@ -50,6 +53,8 @@ const RestaurantsPage = () => {
                     <RestaurantFilterComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive}/>
                     {/* Restaurant Lists Component */}
                     <RestaurantListComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive}/>
+                </div>
+                <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Footer Component */}
                     <FooterComponent/>
                 </div>

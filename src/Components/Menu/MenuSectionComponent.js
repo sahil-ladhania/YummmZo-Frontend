@@ -7,13 +7,13 @@ const MenuSectionComponent = ({ menuItems }) => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-auto flex-col flex jc-sb ai-c'>
+                <div className='h-auto flex-col flex jc-sb ai-c pt-2 pb-2'>
                     {/* Map over the menuItems array */}
                     {menuItems.map((menuItem) => (
                         <div className='flex items-center justify-between' key={menuItem._id}>
-                            <ItemDescriptionComponent className="custom-width-80" menuItem={menuItem} />
+                            <ItemDescriptionComponent className="w-9/12" menuItem={menuItem} />
                             {/* Add Item Component */}
-                            <ItemAddComponent className="custom-width-20"/>
+                            <ItemAddComponent className="w-3/12"/>
                         </div>
                     ))}
                 </div>

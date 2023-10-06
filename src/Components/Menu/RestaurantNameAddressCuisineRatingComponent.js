@@ -6,17 +6,17 @@ const RestaurantNameAddressCuisineRatingComponent = ({ restaurantDetails }) => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-100 flex jc-sb ai-c'>
+                <div className='flex items-center justify-between mb-5'>
                     {/* Name | Cuisine | Address Section */}
                     <div>
                         <div>
-                            <p className='fs-xl mb-5 fs-r fw-500 ls-1'>
+                            <p className='text-xl font-semibold'>
                                 {restaurantDetails.restaurantName}
                             </p>
-                            <p className='fs-s mb-5 fs-r c-g'>
+                            <p className='text-xs'>
                                 {restaurantDetails.cuisine}
                             </p>
-                            <p className='fs-s fs-r c-g'>
+                            <p className='text-xs'>
                                 {restaurantDetails.restaurantCompleteAddress}
                             </p>
                         </div>
@@ -27,7 +27,7 @@ const RestaurantNameAddressCuisineRatingComponent = ({ restaurantDetails }) => {
                     </div>
                 </div>
                 {/* Divider Section */}
-                <div className='mb-20'>
+                <div className=''>
                         <hr className='dashed'/>
                 </div>
             </>
