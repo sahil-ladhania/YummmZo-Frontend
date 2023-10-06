@@ -8,7 +8,7 @@ const RegisterRestaurantPage = () => {
     return (
         <div>
             <>
-                <div className='maxw-1000 minw-1000 ml-a mr-a'>
+                <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
                     <YummmZoBusinessNavbarComponent/>
                     {/* Go Back and Next Button Component */}

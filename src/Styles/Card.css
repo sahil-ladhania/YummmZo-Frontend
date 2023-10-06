@@ -16,14 +16,9 @@
     object-fit: cover;
     border-radius: 8px;
 }
-.card-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .card {
-    height: 300px;
-    width: 280px;
+    height: 320px;
+    width: 285px;
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -33,20 +28,4 @@
 .card-image {
     width: 100px;
     height: 100px;
-}
-.card-heading {
-    font-size: large;
-    font-weight: 500;
-    margin-top: 10px;
-}
-.card-sub-heading{
-    font-size: medium;
-    font-weight: 500;
-    margin-top: 10px;
-}
-.card-paragraph {
-    margin-top: 10px;
-    font-size: small;
-    color: #3d3d3d;
-    line-height: 1.5;
 }

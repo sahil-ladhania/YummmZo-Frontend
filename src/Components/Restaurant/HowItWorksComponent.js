@@ -5,11 +5,11 @@ const HowItWorksComponent = () => {
     return (
         <div>
             <>
-                <div className='flex fd-c ai-c mb-20'>
-                    <div className='fs-r fs-xxl fw-600 mb-20'>
+                <div className='flex flex-col items-center mb-10'>
+                    <div className='text-4xl font-medium mb-10'>
                         How it works ? 
                     </div>
-                    <div>
+                    <div className='w-full'>
                         <HowItWorksCardComponent/>
                     </div>
                 </div>

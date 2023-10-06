@@ -1,7 +1,6 @@
 // Importing Components | Modules | Libraries
 import React, { useContext, useEffect } from 'react';
 import NavbarComponent from '../Common/NavbarComponent';
-import FooterComponent from '../Common/FooterComponent';
 import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
 import BillComponent from '../Checkout/BillComponent';
 import PaymentComponent from '../Checkout/PaymentComponent';
@@ -11,23 +10,23 @@ const CheckoutPage = () => {
     return (
         <div>
             <>
-                <div className='maxw-1000 minw-1000 ml-a mr-a'>
+                <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
                     <NavbarComponent/>
+                </div>
+                <div className='max-w-4xl ml-auto mr-auto'>
                     <div className='flex jc-sb mb-20 h-350'>
                         {/* Delivery Option Component */}
                         <DeliveryAddressComponent/>
                         {/* Bill Component */}
-                        <BillComponent/>
+                        {/* <BillComponent/> */}
                     </div>
                     <div className='flex jc-sb mb-20 h-350'>
                         {/* Payment Component */}
-                        <PaymentComponent/>
+                        {/* <PaymentComponent/> */}
                         {/* Cancellation Policy Component */}
-                        <CancellationPolicyComponent/>
+                        {/* <CancellationPolicyComponent/> */}
                     </div>
-                    {/* Footer Component */}
-                    <FooterComponent/>
                 </div>
             </>
         </div>
