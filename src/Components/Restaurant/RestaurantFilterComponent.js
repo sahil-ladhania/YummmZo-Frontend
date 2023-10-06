@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import { IoTime } from "react-icons/io5";
-import { AiFillStar } from "react-icons/ai";
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
+import { CiClock2 } from "react-icons/ci";
+import { CiStar } from "react-icons/ci";
+import { CiCircleChevDown } from "react-icons/ci";
+import { CiCircleChevUp } from "react-icons/ci";
 import FastDeliveryAndCrossComponent from './FastDeliveryAndCrossComponent';
 import RatingAndCrossComponent from './RatingAndCrossComponent';
 import CostLowToHighAndCrossComponent from './CostLowToHighAndCrossComponent';
@@ -90,23 +90,23 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-50 flex jc-sb ai-c'>
+                <div className='h-20 flex justify-between items-center'>
                     {/* Left Section */}
-                    <div>
+                    <div className='w-3/12'>
                         {/* No of Restaurants */}
-                        <span className='fs-r fs-xl fw-500'>{restaurants.length} Restaurants</span>
+                        <span className='text-xl'>{restaurants.length} Restaurants Online</span>
                     </div>
                     {/* Right Section */}
-                    <div className='flex'>
+                    <div className='w-9/12 flex justify-between'>
                         {
                             isFastDeliveryActive ? 
                                 <FastDeliveryAndCrossComponent/>
                                 :
                                 <>
                                     {/* Filter Options Section */}
-                                    <div onClick={handleFastDelivery} className='cursor-pointer flex ai-c ml-10 p-10 b-1-d8d8d8-s br-5'>
-                                        <IoTime className='h-15 w-a c-3d3d3d'/>
-                                        <a className='fs-r td-n c-3d3d3d fs-s ml-5' href="#">Fast Delivery</a>
+                                    <div onClick={handleFastDelivery} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
+                                        <CiClock2 className='text-xl mr-1 ml-1'/>
+                                        <a className='text-sm' href="#">Fast Delivery</a>
                                     </div>
                                 </>
                         }
@@ -115,9 +115,9 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 <RatingAndCrossComponent/>
                                 :
                                 <>
-                                    <div onClick={handleRating} className='flex ai-c ml-10 p-10 b-1-d8d8d8-s br-5'>
-                                        <AiFillStar className='h-15 w-a c-3d3d3d'/>
-                                        <a className='fs-r td-n c-3d3d3d fs-s ml-5' href="#">Rating</a>
+                                    <div onClick={handleRating} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
+                                        <CiStar className='text-xl mr-1 ml-1'/>
+                                        <a className='text-sm' href="#">Rating</a>
                                     </div>
                                 </>
                         }
@@ -126,9 +126,9 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 <CostLowToHighAndCrossComponent/>
                                 :
                                 <>
-                                    <div onClick={handleCostLTH} className='flex ai-c ml-10 p-10 b-1-d8d8d8-s br-5'>
-                                        <BsFillArrowDownCircleFill className='h-15 w-a c-3d3d3d'/>
-                                        <a className='fs-r td-n c-3d3d3d fs-s ml-5' href="#">Cost : Low to High</a>
+                                    <div onClick={handleCostLTH} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
+                                        <CiCircleChevUp className='text-xl mr-1 ml-1'/>
+                                        <a className='text-sm' href="#">Cost : Low to High</a>
                                     </div>
                                 </>
                         }
@@ -137,9 +137,9 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 <CostHighToLowAndCrossComponent/>
                                 :
                                 <>
-                                    <div onClick={handleCostHTL} className='flex ai-c ml-10 p-10 b-1-d8d8d8-s br-5'>
-                                        <BsFillArrowUpCircleFill className='h-15 w-a c-3d3d3d'/>
-                                        <a className='fs-r td-n c-3d3d3d fs-s ml-5' href="#">Cost : High to Low</a>
+                                    <div onClick={handleCostHTL} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
+                                        <CiCircleChevDown className='text-xl mr-1 ml-1'/>
+                                        <a className='text-sm' href="#">Cost : High to Low</a>
                                     </div>
                                 </>
                         }

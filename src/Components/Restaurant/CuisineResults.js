@@ -5,10 +5,10 @@ const CuisineResults = ({ data }) => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-auto w-780 hover:bg-slate-50 rounded-sm p-2 flex items-start justify-start cursor-pointer'>
+                <div className='h-auto w-full hover:bg-slate-50 rounded-sm p-2 flex items-start justify-start cursor-pointer'>
                     {/* Cuisine Image Container */}
                     <div>
-                        <img className='h-60 mr-2 rounded-full' src={data.imageURL} alt="" />
+                        <img className='h-20 mr-2 rounded-full' src={data.imageURL} alt="" />
                     </div>
                     {/* Cuisine Heading Container */}
                     <div>

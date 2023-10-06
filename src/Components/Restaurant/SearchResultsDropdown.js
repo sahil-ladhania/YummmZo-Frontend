@@ -7,7 +7,7 @@ const SearchResultsDropdown = ({ restaurantResults , cuisineResults }) => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-400 w-800  p-2 rounded-md overflow-y-auto'>
+                <div className='h-80 w-full p-2 rounded-md overflow-y-auto'>
                 {restaurantResults.map((result, index) => (
                     <RestaurantResults key={index} data={result} />
                 ))}

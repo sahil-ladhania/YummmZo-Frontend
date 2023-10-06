@@ -1,8 +1,8 @@
 import React from 'react'
-import { UilFacebookF } from '@iconscout/react-unicons'
-import { UilInstagram } from '@iconscout/react-unicons'
-import { UilTwitter } from '@iconscout/react-unicons'
-import { UilLinkedin } from '@iconscout/react-unicons'
+import { CiFacebook } from "react-icons/ci";
+import { CiInstagram } from "react-icons/ci";
+import { CiTwitter } from "react-icons/ci";
+import { CiLinkedin } from "react-icons/ci";
 
 const LowerFooterComponent = () => {
     return (
@@ -22,16 +22,16 @@ const LowerFooterComponent = () => {
                 {/* Social Media Handles Container */}
                 <div className='flex items-center w-52 justify-between'>
                     <span className='cursor-pointer'>
-                        <UilFacebookF className=""/>
+                        <CiFacebook className="text-3xl"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <UilInstagram className=""/>
+                        <CiInstagram className="text-3xl"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <UilTwitter className=""/>
+                        <CiTwitter className="text-3xl"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <UilLinkedin className=""/>
+                        <CiLinkedin className="text-3xl"/>
                     </span>
                 </div>
             </div>

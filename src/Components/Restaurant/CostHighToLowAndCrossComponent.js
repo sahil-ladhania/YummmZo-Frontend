@@ -1,18 +1,18 @@
 import React from 'react'
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
+import { CiCircleChevUp } from "react-icons/ci";
 
 const CostHighToLowAndCrossComponent = () => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div className='p-10 b-1-d8d8d8-s br-5 flex items-center bg-orange-300 ml-10 animate-pulse'>
-                    <div className='flex ai-c ml-10'>
-                        <BsFillArrowUpCircleFill className='h-15 w-a c-3d3d3d'/>
-                        <a className='fs-r td-n c-3d3d3d fs-s ml-5' href="#">Cost : High to Low</a>
+                <div className='flex items-center h-10 border-2 border-black pr-3 pl-3 pt-2 pb-2 rounded-sm animate-pulse cursor-pointer'>
+                    <div className='flex items-center'>
+                        <CiCircleChevUp className='text-xl mr-1 ml-1'/>
+                        <a className='text-sm' href="#">Cost : High to Low</a>
                     </div>
-                    <span className='ml-10 cursor-pointer'><RxCross2/></span>
+                    <span className='text-xl mr-1 ml-1'><RxCross2/></span>
                 </div>
             </>
         </div>

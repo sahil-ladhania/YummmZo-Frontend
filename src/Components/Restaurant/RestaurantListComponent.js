@@ -7,7 +7,7 @@ const RestaurantListComponent = ({ restaurants }) => {
     return (
         <div>
             <>
-                <div className='flex fw-w jc-sb'> 
+                <div className='flex flex-wrap justify-between'> 
                     {
                         filteredRestaurants.map((restaurant , index) => (
                             <RestaurantComponent

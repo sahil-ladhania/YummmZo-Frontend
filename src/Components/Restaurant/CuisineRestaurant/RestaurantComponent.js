@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { HiCurrencyRupee } from "react-icons/hi2";
-import { AiFillStar } from "react-icons/ai";
+import { CiStar } from "react-icons/ci";
+import '../../../Styles/Card.css'
 
 const RestaurantComponent = ({restaurant}) => {
     const { imageURL , restaurantName , cuisine , rating , deliveryTime , priceForTwo } = restaurant;
@@ -9,18 +10,18 @@ const RestaurantComponent = ({restaurant}) => {
         <div>
             <>
                 {/* Main Component */}
-                <Link className='td-n c-3d3d3d' to={`/menu/${restaurant._id}`}>
+                <Link className='' to={`/menu/${restaurant._id}`}>
                     <div className='restaurant-card'>
                         <img src={imageURL} alt={restaurantName} />
                         <div className='restaurant-info'>
-                            <div className='fs-r c-3d3d3d mb-5 ls-1 fs-m fw-500'>{restaurantName}</div>
-                            <div className='fs-r c-525252 mb-5'>{cuisine}</div>
-                            <div className='flex jc-sb ai-c'>
-                                <span className='flex ai-c fs-r bc-277227 p-1-5 br-5 c-w fs-s'><AiFillStar className='h-15 w-a c-w fs-s'/>{rating}</span>
-                                <span className='fs-r'>.</span>
-                                <span className='fs-r c-3d3d3d fs-s'>{deliveryTime} MINS</span>
-                                <span className='fs-r'>.</span>
-                                <span className='flex ai-c fs-r fs-s'><HiCurrencyRupee className='h-15 w-a c-3d3d3d fs-s'/>{priceForTwo} FOR TWO</span>
+                            <div className='mb-5 pt-1 font-semibold'>{restaurantName}</div>
+                            <div className='mb-5 text-sm'>{cuisine}</div>
+                            <div className='flex justify-between items-center'>
+                                <span className='flex items-center text-sm'><CiStar className='text-xl mr-1 text-green-700'/>{rating}</span>
+                                <span className=''>.</span>
+                                <span className='text-sm'>{deliveryTime} MINS</span>
+                                <span className=''>.</span>
+                                <span className='flex items-center text-sm'><HiCurrencyRupee className='text-xl mr-1'/>{priceForTwo} FOR TWO</span>
                             </div>
                         </div>
                     </div>
