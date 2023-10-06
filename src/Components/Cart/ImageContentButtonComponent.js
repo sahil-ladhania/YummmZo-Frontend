@@ -6,24 +6,23 @@ const ImageContentButtonComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-800 flex fd-c ai-c'>
+                <div className='flex flex-col items-center h-screen justify-center'>
                     {/* Image Section */}
                     <div>
-                        <img className='h-550 w-a' src="https://media.istockphoto.com/id/861576608/vector/empty-shopping-bag-icon-online-business-vector-icon-template.jpg?s=612x612&w=0&k=20&c=I7MbHHcjhRH4Dy0NVpf4ZN4gn8FVDnwn99YdRW2x5k0=" alt="Empty-Cart-Image" />
+                        <img className='h-96' src="https://cdni.iconscout.com/illustration/premium/thumb/confusing-woman-due-to-empty-cart-4558760-3780056.png" alt="Empty-Cart-Image" />
                     </div>
                     {/* Content Section */}
-                    <div className='flex fd-c ai-c mb-20'>
-                        <div className='fs-xxl fs-r'>
+                    <div className='flex flex-col items-center h-36 justify-center'>
+                        <div className='text-2xl font-semibold h-10'>
                             Your cart is empty
                         </div>
-                        <div className='fs-r'>
+                        <div className='text-sm h-10'>
                             You can go to home page to view more restaurants
                         </div>
                     </div>
                     {/* Button Section */}
                     <div>
-                        <Link className='fs-r td-n c-3d3d3d p-10 b-1-d8d8d8-s br-5 shadow' to="/restaurants">See Restaurants near you</Link>
-                        {/* <button className='h-40 w-300 b-1-t-s br-5 fs-r'>See Restaurants near you</button> */}
+                        <Link className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm' to="/restaurants">See Restaurants near you</Link>
                     </div>
                 </div>
             </>
