@@ -1,29 +1,35 @@
 import React from 'react'
 import { UilMapMarkerPlus } from '@iconscout/react-unicons'
+import { CiLocationOn } from "react-icons/ci";
+import UserAddressComponent from './UserAddressComponent';
 
 const DeliveryAddressComponent = () => {
     return (
-        <div className='b-1-b-s'>
+        <div className='border-2 border-black p-5 mt-10 w-full rounded-sm'>
             <>
                 {/* Main Component */}
-                <div className='w-600 p-10-20'>
+                <div className='w-auto'>
                     {/* Heading Component */}
-                    <div className=''>
-                        <p className='fs-r'> 
+                    <div className='h-20 mb-5 flex flex-col justify-center'>
+                        <p className='text-2xl font-medium'> 
                             Choose a delivery address
                         </p>
-                        <p className='fs-r'> 
+                        <p className='text-md font-medium'> 
                             Multiple addresses in this location
                         </p>
                     </div>
+                    {/* User Address Component */}
+                    <div>
+                        <UserAddressComponent/>
+                    </div>
                     {/* Address Component */}
-                    <div className='h-100 w-200 mt-100 p-10-20 b-1-b-d'>
-                        <a className='td-n c-b' href="#">
-                            <div className='mb-20 flex ai-c'>
-                                <UilMapMarkerPlus className='h-20 w-a'/>
-                                <span className='fs-r'>Add New Address</span>
+                    <div className='h-auto p-2 w-96 outline-1 outline-dashed'>
+                        <a className='flex flex-col justify-center' href="#">
+                            <div className='mb-5 flex items-center justify-center'>
+                                <CiLocationOn className='text-xl mr-2'/>
+                                <span className='text-md font-medium'>Add New Address</span>
                             </div>
-                            <button className='h-40 p-0-30 b-1-t-s br-5 fs-r'>Add New</button>
+                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm'>Add New</button>
                         </a>
                     </div>
                 </div>

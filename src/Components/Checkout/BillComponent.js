@@ -1,94 +1,102 @@
 import React from 'react'
-import { UilInfoCircle } from '@iconscout/react-unicons'
+import { CiCircleAlert } from "react-icons/ci";
 
 const BillComponent = () => {
     return (
-        <div className='b-1-b-d'>
+        <div className='border-2 border-black mt-10 p-5 w-full rounded-sm'>
             <>
                 {/* Main Component */}
-                <div className='w-300 p-10-20'>
+                <div className='w- full'>
                     {/* Image and Restaurant Name Section */}
-                    <div className='flex ai-c mb-20'>
+                    <div className='flex items-center mb-5'>
                         <div>
-                            <img className='h-60 mr-10' src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/0bf19a82b109b40c2f5c56d00f071a33" alt="Restaurant-Image" />
+                            <img className='h-20 mr-5' src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf" alt="Restaurant-Image" />
                         </div>
                         <div>
-                            <a className='td-n c-b' href="#">
-                                <p className='fs-r'>
-                                    Subway
+                            <a className='' href="#">
+                                <p className='text-lg font-semibold'>
+                                    Burger King
                                 </p>
-                                <p className='fs-r'>
-                                    Vasundhra
+                                <p className='text-sm'>
+                                    Raj Nagar
                                 </p>
                             </a>
                         </div>
                     </div>
                     {/* Item Section */}
-                    <div className='flex fd-r ai-c jc-sb mb-20'>
+                    <div className='flex items-center justify-between mb-5'>
                         <div>
-                            <img className='h-10' src="https://i.pinimg.com/originals/e4/1f/f3/e41ff3b10a26b097602560180fb91a62.png" alt="Veg-Nonveg-Image" />
+                            <img className='h-3' src="https://i.pinimg.com/originals/e4/1f/f3/e41ff3b10a26b097602560180fb91a62.png" alt="Veg-Nonveg-Image" />
                         </div>
                         <div>
-                            <p className='fs-r'>
-                                Paneer Achari
+                            <p className='text-sm font-medium'>
+                                Veg Woopher
                             </p>
                         </div>
-                        <div>
-                            <button className='fs-r p-0-10'> - | + </button>
+                        <div className='h-10 flex items-center justify-between'>
+                            <button className='h-8 pr-3 pl-3 bg-slate-200 rounded-sm'>-</button>
+                            <input className='h-8 pr-3 pl-3' type="button" placeholder='1'/>
+                            <button className='h-8 pr-3 pl-3 bg-slate-200 rounded-sm'>+</button>
                         </div>
                         <div>
-                            <p className='fs-r'>
+                            <p className='text-sm'>
                                 Rs.269
                             </p>
                         </div>
                     </div>
                     {/* Suggestion Textfeild */}
-                    <div className='mb-20'>
-                        <input className='h-40 w-260 p-0-10 b-1-t-s br-5 bc-ws' type="text" name="" id="" placeholder='" Any Suggestion? "'/>
+                    <div className='mb-5'>
+                        <input className='text-sm border-2 w-full h-10 outline-none rounded-sm p-2' type="text" name="" id="" placeholder=' Any Suggestion? We will pass it on...'/>
                     </div>
                     {/* Bill Details */}
-                    <div className='flex fd-c'>
-                        <div className='mb-10'>
-                            <p className='fs-r'>
+                    <div className='flex flex-col'>
+                        <div className=''>
+                            <p className='text-sm font-bold'>
                                 Bill Details
                             </p>
                         </div>
-                        <div className='flex jc-sb'>
-                            <p className='fs-r'>
+                        <div className='flex justify-between'>
+                            <p className='text-sm font-medium'>
                                 Item Total
                             </p>
-                            <p className='fs-r'>
+                            <p className='text-sm'>
                                 Rs.269
                             </p>
                         </div>
-                        <div className='flex jc-sb mb-10'>
-                            <p className='fs-r'>
-                                Delivery Fee
-                            </p>
-                            <p className='fs-r'>
+                        <div className='flex justify-between mb-2'>
+                            <div className='flex items-center'>
+                                <span className='text-sm font-medium'>Delivery Fee</span>
+                                <CiCircleAlert className='text-lg ml-1'/>
+                            </div>
+                            <p className='text-sm'>
                                 Free
                             </p>
                         </div>
-                        <div className='flex jc-sb'>
-                            <div className='flex ai-c'>
-                                <span className='fs-r'>Platform Fee</span>
-                                <UilInfoCircle className='h-15 w-a'/>
-                            </div>
-                            <span className='fs-r'>Rs.2</span>
+                        <div className='mb-2'>
+                            <hr />  
                         </div>
-                        <div className='flex jc-sb mb-10'>
-                            <div className='flex ai-c'> 
-                                <span className='fs-r'>GST & Restaurant Charges</span>
-                                <UilInfoCircle className='h-15 w-a'/>
+                        <div className='flex justify-between'>
+                            <div className='flex items-center'>
+                                <span className='text-sm font-medium'>Platform Fee</span>
+                                <CiCircleAlert className='text-lg ml-1'/>
                             </div>
-                            <span className='fs-r'>Rs. 20</span>
+                            <span className='text-sm'>Rs.2</span>
                         </div>
-                        <hr />
-                        <div className='flex jc-sb'>
-                            <p className='fs-r'>
+                        <div className='flex justify-between mb-10'>
+                            <div className='flex items-center'> 
+                                <span className='text-sm font-medium'>GST & Restaurant Charges</span>
+                                <CiCircleAlert className='text-lg ml-1'/>
+                            </div>
+                            <span className='text-sm'>Rs. 20</span>
+                        </div>
+                        <div className='mb-4'>
+                            <hr />  
+                        </div>
+                        <div className='flex justify-between'>
+                            <p className='text-lg font-bold'>
                                 To Pay
                             </p>
-                            <p className='fs-r'>
+                            <p className='text-xl font-bold'>
                                 Rs.294
                             </p>
                         </div>

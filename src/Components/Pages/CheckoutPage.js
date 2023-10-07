@@ -13,19 +13,25 @@ const CheckoutPage = () => {
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
                     <NavbarComponent/>
-                </div>
-                <div className='max-w-4xl ml-auto mr-auto'>
-                    <div className='flex jc-sb mb-20 h-350'>
-                        {/* Delivery Option Component */}
-                        <DeliveryAddressComponent/>
-                        {/* Bill Component */}
-                        {/* <BillComponent/> */}
+                    <div className='flex jc-sb'>
+                        <div className='w-8/12 mr-10 mb-10'>
+                            {/* Delivery Option Component */}
+                            <DeliveryAddressComponent/>
+                        </div>
+                        <div className='w-4/12 ml-10 mb-10'>
+                            {/* Bill Component */}
+                            <BillComponent/>
+                        </div>
                     </div>
-                    <div className='flex jc-sb mb-20 h-350'>
-                        {/* Payment Component */}
-                        {/* <PaymentComponent/> */}
-                        {/* Cancellation Policy Component */}
-                        {/* <CancellationPolicyComponent/> */}
+                    <div className='flex jc-sb mb-20'>
+                        <div className='w-8/12 mr-10 mb-10'>
+                            {/* Payment Component */}
+                            <PaymentComponent/>
+                        </div>
+                        <div className='w-4/12 ml-10 mb-10'>
+                            {/* Cancellation Policy Component */}
+                            <CancellationPolicyComponent/>
+                        </div>
                     </div>
                 </div>
             </>

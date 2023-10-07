@@ -1,16 +1,16 @@
 import React from 'react'
-import { UilWallet } from '@iconscout/react-unicons'
+import { CiWallet } from "react-icons/ci";
 
 const PaymentComponent = () => {
     return (
         <div className=''>
             <>
                 {/* Main Component */}
-                <div className='w-600 p-10-20 b-1-b-s'>
+                <div className='w-full p-5 border-2 border-black rounded-sm'>
                     {/* Text Component */}
-                    <div className='flex ai-c'>
-                        <UilWallet className='h-20 w-a mr-10'/>
-                        <span className='fs-r'>Payment</span>
+                    <div className='flex items-center'>
+                        <CiWallet className='text-xl mr-2'/>
+                        <span className='text-lg font-medium'>Payment</span>
                     </div>
                 </div>
             </>
