@@ -8,6 +8,7 @@ import FooterComponent from '../Common/FooterComponent';
 import { CuisineContext } from '../../Contexts/CuisineContext';
 import { getAllCuisines } from '../../Services/CuisineServices';
 import TopBrandsComponent from '../Restaurant/TopBrandsComponent';
+import GetYummmZoAppComponent from '../Layout/GetYummmZoAppComponent';
 
 const HomePage = () => {
     // Accessing Cuisines From The Context.
@@ -48,6 +49,8 @@ const HomePage = () => {
                     <PopularCuisinesComponent cuisines={cuisines}/>
                     {/* Top Brands Component */}
                     <TopBrandsComponent/>
+                    {/* Get YummmZo Banner Component */}
+                    <GetYummmZoAppComponent/>
                 </div>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Footer Component */}
