@@ -1,6 +1,6 @@
 import React from 'react'
-import { FaUserCircle } from "react-icons/fa";
-import { FaAngleDown } from "react-icons/fa";
+import { CiCircleChevDown } from "react-icons/ci";
+import { CiUser } from "react-icons/ci";
 
 const YummmZoBusinessNavbarComponent = () => {
     return (
@@ -9,20 +9,20 @@ const YummmZoBusinessNavbarComponent = () => {
                 {/* Main Component */}
                 <div>
                     {/* Navbar Section */}
-                    <nav className='flex jc-sb ai-c h-80'>
+                    <nav className='flex justify-between items-center h-20'>
                         {/* Logo Section */}
                         <div>
-                            <a className='flex fd-c td-n c-b' href="#">
-                                <span className='fs-xl'>YummmZo</span>
-                                <span className='fs-s ml-10'>for business</span>
+                            <a className='flex flex-col' href="#">
+                                <span className='text-2xl font-semibold'>YummmZo</span>
+                                <span className='ml-1 text-md font-semibold'>for business</span>
                             </a>
                         </div>
                         {/* Profile Dropdown Section */}
                         <div>
-                            <a className='flex fd-r ai-c td-n c-b' href="#">
-                                <FaUserCircle className='mr-10 h-20 w-a'/>
+                            <a className='flex items-center' href="#">
+                                <CiUser className='mr-2 text-2xl w-auto'/>
                                 <span>Profile</span>
-                                <FaAngleDown className='ml-10 h-20 w-a'/>
+                                <CiCircleChevDown className='ml-2 text-2xl w-auto'/>
                             </a>
                         </div>
                     </nav>

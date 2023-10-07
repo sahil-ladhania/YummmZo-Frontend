@@ -8,9 +8,13 @@ const AddRestaurantFormComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex fd-r'>
-                    <RestaurantPageSidebarComponent/>
-                    <RestaurantInformationComponent/>
+                <div className='flex justify-between items-start'>
+                    <div className='w-5/12'>
+                        <RestaurantPageSidebarComponent/>
+                    </div>
+                    <div className='w-7/12'>
+                        <RestaurantInformationComponent/>
+                    </div>
                     {/* <UploadMenuComponent/> */}
                 </div>
             </>

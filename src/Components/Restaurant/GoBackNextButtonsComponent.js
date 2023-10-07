@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaAngleRight } from "react-icons/fa";
-import { FaAngleLeft } from "react-icons/fa";
+import { CiCircleChevRight } from "react-icons/ci";
+import { CiCircleChevLeft } from "react-icons/ci";
 
 const GoBackNextButtonsComponent = () => {
     return (
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex jc-sb ai-c h-80'>
+                <div className='flex justify-between items-center h-20'>
                     {/* Go Back Button */}
                     <div>
-                        <Link to="/addRestaurant" className='flex ai-c fd-r td-n c-b h-40 p-10 b-1-d8d8d8-s shadow br-5'>
-                            <FaAngleLeft/>
+                        <Link to="/addRestaurant" className='flex items-center pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm'>
+                            <CiCircleChevLeft className='mr-2 text-xl'/>
                             <span>Go back</span>
                         </Link>
                     </div>
                     {/* Next Button */}
                     <div>
-                        <Link to="" className='flex ai-c fd-r td-n c-b h-40 p-10 b-1-d8d8d8-s shadow br-5'>
+                        <Link to="" className='flex items-center pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm'>
                             <span>Next</span>
-                            <FaAngleRight/>
+                            <CiCircleChevRight className='ml-2 text-xl'/>
                         </Link>
                     </div>
                 </div>

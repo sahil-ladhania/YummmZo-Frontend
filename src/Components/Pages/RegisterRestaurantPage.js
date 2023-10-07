@@ -11,6 +11,8 @@ const RegisterRestaurantPage = () => {
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
                     <YummmZoBusinessNavbarComponent/>
+                </div>
+                <div className='max-w-4xl ml-auto mr-auto'>
                     {/* Go Back and Next Button Component */}
                     <GoBackNextButtonsComponent/>
                     {/* Restaurant Form Component */}
