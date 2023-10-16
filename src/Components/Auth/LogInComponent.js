@@ -3,19 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/material.css';
 
-const LogInComponent = () => {
-    // -----Defining State Variables.-----
-    // Form State Variable
-    // Phone Number State Variable
-    // Phone Number Visiblity State Variable
-    // OTP State Variable
-    // OTP Visiblity State Variable
-    // Verification State Variable
-    // -----Handler Functions.-----
-    // HandleChange Function For Form
-    // HandleSubmit Function For Form
-    // Handler Function For Sending OTP
-    // // Handler Function For Verifying OTP
+const LogInComponent = ({email , setEmail , password , setPassword}) => {
+    // Handler Functions.
     return (
         <div>
             <>
@@ -63,12 +52,16 @@ const LogInComponent = () => {
                             {/* Log In with Email & Password Section */}
                             <div className='flex flex-col items-center h-28 justify-evenly'>
                                 <input 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
                                 type="email" 
                                 name="email" 
                                 required
                                 placeholder='Email'/>
                                 <input 
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
                                 type="password" 
                                 name="password" 

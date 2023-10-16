@@ -1,9 +1,12 @@
 // Importing Components | Modules | Libraries
-import React from 'react'
+import React, {useContext} from 'react'
 import YummmZoLogoComponent from '../Common/YummmZoLogoComponent'
 import LogInComponent from '../Auth/LogInComponent'
+import { UserContext } from '../../Contexts/UserContext';
 
 const LogInPage = () => {
+    // Accessing Input States From The Context.
+    const {email , setEmail , password , setPassword} = useContext(UserContext);
     return (
         <div>
             <>
@@ -11,7 +14,7 @@ const LogInPage = () => {
                     {/* YummmZo Logo */}
                     <YummmZoLogoComponent/>
                     {/* Log In Form */}
-                    <LogInComponent/>
+                    <LogInComponent email={email} setEmail={setEmail} password={password} setPassword={setPassword}/>
                 </div>
             </>
         </div>

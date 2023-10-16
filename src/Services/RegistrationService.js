@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const registerUser = (formData) => {
+const registerUser = (userData) => {
     // Defining API Endpoint.
     const endpoint = "http://localhost:81/api/users/register";
-    return axios.post(endpoint , formData)
+    return axios.post(endpoint , userData)
         .then((response) => {
             console.log(response.data);
             return response.data;

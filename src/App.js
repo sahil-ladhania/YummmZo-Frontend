@@ -24,12 +24,14 @@ import CuisineResults from './Components/Restaurant/CuisineResults';
 import RestaurantResults from './Components/Restaurant/RestaurantResults';
 import MenuItemsResultComponent from './Components/Menu/MenuItemsResultComponent';
 import { CuisineContextProvider } from './Contexts/CuisineContext';
+import { UserContextProvider } from './Contexts/UserContext';
 
 function App() {
   return (
     <div className="App">
       <>
         {/* Routes */}
+          <UserContextProvider>
             <CuisineContextProvider>
                 <MenuContextProvider>
                   <RestaurantDetailsProvider>
@@ -60,6 +62,7 @@ function App() {
                   </RestaurantDetailsProvider>
                 </MenuContextProvider>
             </CuisineContextProvider>
+          </UserContextProvider>
       </>
     </div>
   );

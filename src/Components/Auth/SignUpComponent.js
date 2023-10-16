@@ -4,9 +4,7 @@ import { toast } from 'react-toastify';
 import 'react-phone-input-2/lib/material.css'
 
 
-const SignUpComponent = () => {
-    // Defining State Variables.
-    // Handler Functions.
+const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , email , setEmail , password , setPassword}) => {
     return (
         <div>
             <>
@@ -23,12 +21,16 @@ const SignUpComponent = () => {
                         <div className='flex flex-col h-52 justify-evenly'>
                             {/* First name and Last name */}
                             <input 
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
                                 className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
                                 type="text" 
                                 name="firstName" 
                                 required
                                 placeholder='First Name'/>
                             <input 
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
                                 className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
                                 type="text" 
                                 name="lastName" 
@@ -36,12 +38,16 @@ const SignUpComponent = () => {
                                 placeholder='Last Name'/>
                             {/* Email and Password */}
                             <input 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
                                 type="email" 
                                 name="email" 
                                 required
                                 placeholder='Email Address'/>
                             <input 
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
                                 type="password" 
                                 name="password" 
@@ -50,7 +56,7 @@ const SignUpComponent = () => {
                         </div>
                         {/* Create Account */}
                         <div>
-                            <button type='submit' className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5'>Register</button>
+                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5'>Register</button>
                         </div>
                         {/* ----- or ----- Section */}
                         <div className='mb-5'>
