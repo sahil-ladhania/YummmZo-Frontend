@@ -1,7 +1,5 @@
 // Importing Components | Modules | Libraries
 import React, { useContext, useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
 import NavbarComponent from '../Common/NavbarComponent'
 import PopularCuisinesComponent from '../Layout/PopularCuisinesComponent'
 import FooterComponent from '../Common/FooterComponent';
@@ -9,24 +7,13 @@ import { CuisineContext } from '../../Contexts/CuisineContext';
 import { getAllCuisines } from '../../Services/CuisineServices';
 import TopBrandsComponent from '../Restaurant/TopBrandsComponent';
 import GetYummmZoAppComponent from '../Layout/GetYummmZoAppComponent';
+import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 
 const HomePage = () => {
+    // Accessing Current Location From The Context.
+    const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     // Accessing Cuisines From The Context.
     const {cuisines , setCuisines} = useContext(CuisineContext);
-    const [user , setUser] = useState(null);
-    const [isAuthenticated , setIsAuthenticated] = useState(false);
-    const location = useLocation();
-    const handleToken = () => {
-        const token = new URLSearchParams(location.search).get('token');
-        if(token){
-            const decoded = jwt_decode(token);
-            setUser(decoded);
-            setIsAuthenticated(true);
-        }
-    }
-    useEffect(() => {
-        handleToken();
-    },[]);
     // Fetching Cuisines From Database.
     useEffect(() => {
         getAllCuisines()
@@ -42,7 +29,7 @@ const HomePage = () => {
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
-                    <NavbarComponent/>
+                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation}/>
                 </div>
                 <div className='max-w-5xl ml-auto mr-auto'>
                     {/* Popular Cuisines Component */}

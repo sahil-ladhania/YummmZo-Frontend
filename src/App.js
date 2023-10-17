@@ -25,12 +25,14 @@ import RestaurantResults from './Components/Restaurant/RestaurantResults';
 import MenuItemsResultComponent from './Components/Menu/MenuItemsResultComponent';
 import { CuisineContextProvider } from './Contexts/CuisineContext';
 import { UserContextProvider } from './Contexts/UserContext';
+import { UserCurrentLocationContextProvider } from './Contexts/UserCurrentLocationContext';
 
 function App() {
   return (
     <div className="App">
       <>
         {/* Routes */}
+        <UserCurrentLocationContextProvider>
           <UserContextProvider>
             <CuisineContextProvider>
                 <MenuContextProvider>
@@ -63,6 +65,7 @@ function App() {
                 </MenuContextProvider>
             </CuisineContextProvider>
           </UserContextProvider>
+        </UserCurrentLocationContextProvider>
       </>
     </div>
   );

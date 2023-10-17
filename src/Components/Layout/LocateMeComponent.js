@@ -1,8 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CiLocationOn } from "react-icons/ci";
+import { getLocation } from 'current-location-geo';
 
-const LocateMeComponent = () => {
+const LocateMeComponent = ({currentLocation , setCurrentLocation}) => {
+    // Handler Function
+    const handleCurrentLocation = () => {
+        getLocation((error , position) => {
+            if(error){
+                console.log(error);
+            }
+            else{
+                console.log(position.address);
+                setCurrentLocation(position.address);
+            }
+        })
+    }
     return (
         <div>
             <>
@@ -26,7 +39,7 @@ const LocateMeComponent = () => {
                     {/* Locate Me Section */}
                     <div className='h-20 flex justify-start items-center'>
                         <input className="border-2 w-80 h-10 outline-none rounded-l-sm p-2" type="text" placeholder='Enter your delivery location'/>
-                        <div className='flex items-center bg-slate-200 rounded-r-sm h-10 cursor-pointer'>
+                        <div onClick={handleCurrentLocation} className='flex items-center bg-slate-200 rounded-r-sm h-10 cursor-pointer'>
                             <span className='pr-1 pl-1 text-xl'><CiLocationOn/></span>
                             <span className='pr-3 pl-3 text-sm'>Locate Me</span>
                         </div>

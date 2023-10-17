@@ -6,7 +6,7 @@ import { CiUser } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiCircleChevDown } from "react-icons/ci";
 
-const NavbarComponent = () => {
+const NavbarComponent = ({currentLocation , setCurrentLocation}) => {
     return (
         <div className=''>
             <>
@@ -20,7 +20,7 @@ const NavbarComponent = () => {
                         <div className=''>
                             <a className='flex items-center' href="#">
                                 <span className='text-sm font-medium mr-2'>Home</span>
-                                <span className='text-sm'>Kailash Park...</span>
+                                <span className='text-sm'>{currentLocation.slice(0,25)}</span>
                                 <CiCircleChevDown className='text-md'/>
                             </a>
                         </div>
