@@ -2,9 +2,26 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/material.css';
+import loginUser from '../../Services/LoginService.js';
 
 const LogInComponent = ({email , setEmail , password , setPassword}) => {
     // Handler Functions.
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const userData = {
+            email,
+            password
+        };
+        loginUser(userData)
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        console.log(email);
+        console.log(password);
+    }
     return (
         <div>
             <>
@@ -74,7 +91,7 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                             </div>
                             {/* Log In */}
                             <div>
-                                <button type='submit' className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5'>Login</button>
+                                <button onClick={handleLogin} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5'>Login</button>
                                 {/* <button className='h-40 w-300 b-1-t-s br-5 fs-r' type='submit'>Log in</button> */}
                             </div>
                         </form>

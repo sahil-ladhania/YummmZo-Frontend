@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const loginUser = () => {
+const loginUser = (userData) => {
     const endpoint = "http://localhost:81/api/users/login";
-    return axios.post(endpoint)
+    return axios.post(endpoint , userData)
         .then((response) => {
             console.log(response.data);
             return response.data;

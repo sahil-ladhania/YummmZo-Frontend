@@ -2,9 +2,28 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-phone-input-2/lib/material.css'
+import registerUser from '../../Services/RegistrationService.js';
 
 
 const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , email , setEmail , password , setPassword}) => {
+    const handleRegister = (e) => {
+        e.preventDefault();
+        const userData = {
+            firstName,
+            lastName,
+            email,
+            password
+        };
+        registerUser(userData)
+            .then((response) => {
+                console.log(response);
+                console.log(email);
+                console.log(password);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
     return (
         <div>
             <>
@@ -56,7 +75,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                         </div>
                         {/* Create Account */}
                         <div>
-                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5'>Register</button>
+                            <button onClick={handleRegister} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5'>Register</button>
                         </div>
                         {/* ----- or ----- Section */}
                         <div className='mb-5'>
