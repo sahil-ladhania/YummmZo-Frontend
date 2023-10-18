@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const FourZeroFourPage = () => {
     return (
-        <div>
+        <div className='bg-slate-800'>
             <>
                 {/* Main Component */}
                 <div>

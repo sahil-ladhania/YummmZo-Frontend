@@ -41,7 +41,7 @@ const NavbarComponent = ({currentLocation , setCurrentLocation}) => {
                                 </NavLink>
                             </li>
                             <li className=''>
-                                <NavLink className="flex items-center">
+                                <NavLink className="flex items-center" to="/login">
                                     <CiUser className='text-3xl'/>
                                     <span className='text-sm pr-2 pl-2'>Login</span>
                                 </NavLink>

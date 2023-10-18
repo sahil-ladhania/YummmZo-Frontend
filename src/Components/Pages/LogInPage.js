@@ -8,7 +8,7 @@ const LogInPage = () => {
     // Accessing Input States From The Context.
     const {email , setEmail , password , setPassword} = useContext(UserContext);
     return (
-        <div>
+        <div className='bg-slate-800 h-screen'>
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* YummmZo Logo */}

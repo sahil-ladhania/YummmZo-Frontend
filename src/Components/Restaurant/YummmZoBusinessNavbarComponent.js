@@ -1,6 +1,7 @@
 import React from 'react'
 import { CiCircleChevDown } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const YummmZoBusinessNavbarComponent = () => {
     return (
@@ -19,11 +20,11 @@ const YummmZoBusinessNavbarComponent = () => {
                         </div>
                         {/* Profile Dropdown Section */}
                         <div>
-                            <a className='flex items-center' href="#">
+                            <Link className='flex items-center' to="/login">
                                 <CiUser className='mr-2 text-2xl w-auto'/>
                                 <span>Profile</span>
                                 <CiCircleChevDown className='ml-2 text-2xl w-auto'/>
-                            </a>
+                            </Link>
                         </div>
                     </nav>
                 </div>

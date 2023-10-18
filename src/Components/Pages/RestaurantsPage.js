@@ -11,8 +11,11 @@ import { CuisineContext } from '../../Contexts/CuisineContext';
 import InspirationForFirstOrderComponent from '../Restaurant/InspirationForFirstOrderComponent';
 import { getAllCuisines } from '../../Services/CuisineServices';
 import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
+import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 
 const RestaurantsPage = () => {
+    // Accessing Current Location From The Context.
+    const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     // Accessing Cuisines From The Context.
     const {cuisines , setCuisines} = useContext(CuisineContext);
     const { restaurants , setRestaurants , filteredRestaurants , setFilteredRestaurants , isFastDeliveryActive , setIsFastDeliveryActive , isRatingActive , setIsRatingActive , isCostLTHActive , setIsCostLTHActive , isCostHTLActive , setIsCostHTLActive  } = useContext(RestaurantContext);
@@ -38,11 +41,11 @@ const RestaurantsPage = () => {
             });
     }, []);
     return (
-        <div>
+        <div className='bg-slate-800'>
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
-                    <NavbarComponent/>
+                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation}/>
                 </div>
                 <div className='max-w-5xl ml-auto mr-auto'>
                     {/* Restaurant Search Bar Component */}

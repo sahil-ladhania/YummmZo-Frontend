@@ -5,14 +5,17 @@ import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
 import BillComponent from '../Checkout/BillComponent';
 import PaymentComponent from '../Checkout/PaymentComponent';
 import CancellationPolicyComponent from '../Checkout/CancellationPolicyComponent';
+import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 
 const CheckoutPage = () => {
+    // Accessing Current Location From The Context.
+    const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     return (
-        <div>
+        <div className='bg-slate-800'>
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
-                    <NavbarComponent/>
+                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation}/>
                     <div className='flex jc-sb'>
                         <div className='w-8/12 mr-10 mb-10'>
                             {/* Delivery Option Component */}

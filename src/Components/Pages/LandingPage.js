@@ -9,7 +9,7 @@ const LandingPage = () => {
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     return (
-        <div>
+        <div className='bg-neutral-900'>
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Locate Me | Login | Signup Section */}

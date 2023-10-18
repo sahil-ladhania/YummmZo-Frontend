@@ -16,8 +16,11 @@ import { MenuContext } from '../../Contexts/MenuContext';
 import { getAllMenuItemsForRestaurant } from '../../Services/MenuService';
 import { CartContext } from '../../Contexts/CartContext';
 import { getCartDetailsForUser } from '../../Services/CartService';
+import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 
 const MenuPage = () => {
+    // Accessing Current Location From The Context.
+    const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     // Accessing restaurantDetails From The Context.
     const { restaurantDetails , setRestaurantDetails } = useContext(RestaurantDetailsContext);
     // Accessing MenuItems From The Context.
@@ -51,11 +54,11 @@ const MenuPage = () => {
         }
     }, [restaurantId , setMenuItems]);
     return (
-        <div>
+        <div className='bg-slate-800'>
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Section */}
-                    <NavbarComponent/>
+                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation}/>
                 </div>
                 <div className='max-w-4xl ml-auto mr-auto'>
                     {/* Links | Favourites | Search in Menu Section */}
