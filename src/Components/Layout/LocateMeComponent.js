@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { getLocation } from 'current-location-geo';
 
 const LocateMeComponent = ({currentLocation , setCurrentLocation}) => {
+    const navigate = useNavigate();
     // Handler Function
     const handleCurrentLocation = () => {
         getLocation((error , position) => {
@@ -13,6 +15,9 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation}) => {
             else{
                 console.log(position.address);
                 setCurrentLocation(position.address);
+                setTimeout(() => {
+                    navigate("/home");
+                },1000);
             }
         })
     }
