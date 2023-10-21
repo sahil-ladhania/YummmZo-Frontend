@@ -19,9 +19,9 @@ const LinkFavSearchComponent = ({ restaurantDetails }) => {
                 <div className='flex items-center justify-between h-16'>
                     {/* Link's Section */}
                     <div className='w-auto flex item-center justify-between'>
-                        <Link className='text-xs font-semibold mr-2' to="/home">Home</Link>
-                        <span className='text-xs font-semibold'>/</span>
-                        <a className='text-xs font-semibold ml-2' href="#">{restaurantDetails.restaurantName}</a>
+                        <Link className='text-xs font-semibold mr-2 font-roboto text-yummmzo-color' to="/home">Home</Link>
+                        <span className='text-xs font-semibold font-roboto text-yummmzo-color'>/</span>
+                        <a className='text-xs font-semibold ml-2 font-roboto text-yummmzo-color' href="#">{restaurantDetails.restaurantName}</a>
                     </div>
                     {/* Icon's Section */}
                     <div>
@@ -29,12 +29,12 @@ const LinkFavSearchComponent = ({ restaurantDetails }) => {
                             <p onClick={handleFavourite}>
                                 {
                                     favourites ? 
-                                        <p className='text-2xl cursor-pointer'><MdFavorite/></p>
+                                        <p className='text-2xl cursor-pointer text-yummmzo-color'><MdFavorite/></p>
                                         :
-                                        <CiHeart className='text-2xl cursor-pointer'/>
+                                        <CiHeart className='text-2xl cursor-pointer text-yummmzo-color'/>
                                 }
                             </p>
-                            <Link className='' to="/searchInRestaurant"><CiSearch className='text-2xl cursor-pointer'/></Link>
+                            <Link className='' to="/searchInRestaurant"><CiSearch className='text-2xl cursor-pointer text-yummmzo-color'/></Link>
                         </span>
                     </div>
                 </div>

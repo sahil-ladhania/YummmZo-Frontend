@@ -31,8 +31,8 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                     <div className='w-5/12 flex flex-col justify-between items-center border-2 border-black p-5 rounded-sm mr-24'>
                         {/* Form Haeding Section */}
                         <div className='h-16 flex flex-col items-center justify-between mb-5'>
-                            <h1 className='text-2xl font-semibold'>Login</h1>
-                            <div className='text-sm font-medium'>Dont have an account yet ? <Link className='' to="/signup">Sign up for free</Link></div>
+                            <h1 className='text-2xl font-semibold font-roboto text-yummmzo-color'>Login</h1>
+                            <div className='text-sm font-medium font-roboto text-yummmzo-color'>Dont have an account yet ? <Link className='' to="/signup">Sign up for free</Link></div>
                         </div>
                         {/* Conditionally Rendering Phone Number Input and OTP Input */}
                         {/* Login With Number */}
@@ -44,7 +44,7 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                                 onlyCountries={[ 'in','cu','cw','kz','fr','it','pt','id']}
                                 placeholder='Phone'
                             />
-                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72'>Send One Time Password</button>
+                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 font-roboto'>Send One Time Password</button>
                         </div>
                                 {/* Enter Otp Section
                                 <div className='flex flex-col items-center'>
@@ -63,7 +63,7 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                                 </div> */}
                         {/* ----- or ----- Section */}
                         <div>
-                            <p className=''>-------------------Or-------------------</p>
+                            <p className='font-roboto text-yummmzo-color'>-------------------Or-------------------</p>
                         </div>
                         <form className=''>
                             {/* Log In with Email & Password Section */}
@@ -71,7 +71,7 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                                 <input 
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
                                 type="email" 
                                 name="email" 
                                 required
@@ -79,7 +79,7 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                                 <input 
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
                                 type="password" 
                                 name="password" 
                                 required
@@ -87,17 +87,17 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                             </div>
                             {/* Forgot Password */}
                             <div className='mb-3'>
-                                <a className='text-sm ml-44' href="#">Forgot Password ?</a>
+                                <a className='text-sm ml-44 font-roboto text-yummmzo-color' href="#">Forgot Password ?</a>
                             </div>
                             {/* Log In */}
                             <div>
-                                <button onClick={handleLogin} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5'>Login</button>
+                                <button onClick={handleLogin} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5 font-roboto'>Login</button>
                                 {/* <button className='h-40 w-300 b-1-t-s br-5 fs-r' type='submit'>Log in</button> */}
                             </div>
                         </form>
                         {/* ----- or ----- Section */}
                         <div>
-                            <p className='mb-5'>-------------------Or-------------------</p>
+                            <p className='mb-5 font-roboto text-yummmzo-color'>-------------------Or-------------------</p>
                         </div>
                         {/* Sign Up With Google Section */}
                     </div>

@@ -33,8 +33,8 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                     <form className='w-5/12 flex flex-col justify-between items-center border-2 border-black p-5 rounded-sm mr-24'>
                         {/* Form Heading Section */}
                         <div className='h-16 flex flex-col items-center justify-between'>
-                            <h1 className='text-2xl font-semibold'>Sign Up</h1>
-                            <div className='text-sm font-medium'>Already have an account ? <Link className='' to="/login">Log in</Link></div>
+                            <h1 className='text-2xl font-semibold font-roboto text-yummmzo-color'>Sign Up</h1>
+                            <div className='text-sm font-medium font-roboto text-yummmzo-color'>Already have an account ? <Link className='font-roboto text-yummmzo-color' to="/login">Log in</Link></div>
                         </div>
                         {/* Sign up with Number / Email Section */}
                         <div className='flex flex-col h-52 justify-evenly'>
@@ -42,7 +42,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                             <input 
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
                                 type="text" 
                                 name="firstName" 
                                 required
@@ -50,7 +50,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                             <input 
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
                                 type="text" 
                                 name="lastName" 
                                 required
@@ -59,7 +59,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                             <input 
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
                                 type="email" 
                                 name="email" 
                                 required
@@ -67,7 +67,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                             <input 
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 ' 
+                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
                                 type="password" 
                                 name="password" 
                                 required
@@ -75,18 +75,18 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                         </div>
                         {/* Create Account */}
                         <div>
-                            <button onClick={handleRegister} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5'>Register</button>
+                            <button onClick={handleRegister} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5 font-roboto '>Register</button>
                         </div>
                         {/* ----- or ----- Section */}
                         <div className='mb-5'>
-                            <p className=''>-------------------Or-------------------</p>
+                            <p className='font-roboto text-yummmzo-color'>-------------------Or-------------------</p>
                         </div>
                         {/* Sign Up With Google Section */}
                         {/* Privacy Policy | Terms & Condition Section */}
                         <div>
-                            <p className='text-sm text-center'>
+                            <p className='text-sm text-center font-roboto text-yummmzo-color'>
                                 By creating an account, I agree with YummmZo's <br /> 
-                                <a className='font-semibold' href="#">Privacy Policy</a> and <a className='font-semibold' href="#">Terms and Condition</a>
+                                <a className='font-semibold font-roboto text-yummmzo-color' href="#">Privacy Policy</a> and <a className='font-semibold font-roboto text-yummmzo-color' href="#">Terms and Condition</a>
                             </p>
                         </div>
                     </form>

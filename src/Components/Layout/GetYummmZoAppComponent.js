@@ -12,8 +12,8 @@ const GetYummmZoAppComponent = () => {
                     </div>
                     {/* Content Section */}
                     <div className='flex flex-col'>
-                        <span className='text-4xl font-semibold mb-5'>Get the YummmZo App</span>
-                        <span className='text-sm mb-2 font-medium'>Download app from</span>
+                        <span className='text-4xl font-semibold mb-5 font-roboto text-yummmzo-color'>Get the YummmZo App</span>
+                        <span className='text-sm mb-2 font-medium font-roboto text-yummmzo-color'>Download app from</span>
                         <div className='flex'>
                             <img className='h-10 mr-2 cursor-pointer' src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="" />
                             <img className='h-10 ml-2 cursor-pointer' src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="" />

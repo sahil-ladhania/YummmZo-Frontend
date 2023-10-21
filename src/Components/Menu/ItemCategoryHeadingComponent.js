@@ -6,7 +6,7 @@ const ItemCategoryHeadingComponent = () => {
             <>
                 {/* Main Component */}
                 <div>
-                    <div className='text-lg font-medium h-10 flex items-center'>
+                    <div className='text-lg font-medium h-10 flex items-center font-roboto text-yummmzo-color'>
                         Recommended (6)
                     </div>
                 </div>

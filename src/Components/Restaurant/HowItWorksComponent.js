@@ -6,7 +6,7 @@ const HowItWorksComponent = () => {
         <div>
             <>
                 <div className='flex flex-col items-center mb-10'>
-                    <div className='text-4xl font-medium mb-10'>
+                    <div className='text-4xl font-medium mb-10 font-roboto text-yummmzo-color'>
                         How it works ? 
                     </div>
                     <div className='w-full'>

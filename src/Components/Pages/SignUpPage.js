@@ -8,7 +8,7 @@ const SignUpPage = () => {
     // Accessing Input States From The Context.
     const {firstName , setFirstName ,lastName , setLastName ,email , setEmail , password , setPassword} = useContext(UserContext);
     return (
-        <div className='bg-slate-800 h-screen'>
+        <div className='bg-page-background h-screen'>
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* YummmZo Logo */}

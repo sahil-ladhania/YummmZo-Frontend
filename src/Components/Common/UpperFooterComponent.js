@@ -9,53 +9,53 @@ const UpperFooterComponent = () => {
                     {/* First Column */}
                     <div className=''>
                         {/* Heading */}
-                        <div className='mb-5 font-semibold uppercase'>
+                        <div className='mb-5 font-semibold uppercase font-roboto text-yummmzo-color'>
                             company
                         </div>
                         <div className=''>
                             <ul className='leading-6'>
-                                <li className=''><a className='text-base' href="#">About us</a></li>
-                                <li className=''><a className='text-base' href="#">Team</a></li>
-                                <li className=''><a className='text-base' href="#">Careers</a></li>
-                                <li className=''><a className='text-base' href="#">YummmZo Blog</a></li>
-                                <li className=''><a className='text-base' href="#">Bug Bounty</a></li>
-                                <li className=''><a className='text-base' href="#">YummmZo One</a></li>
-                                <li className=''><a className='text-base' href="#">YummmZo Corporate</a></li>
-                                <li className=''><a className='text-base' href="#">YummmZo Instamart</a></li>
-                                <li className=''><a className='text-base' href="#">YummmZo Genie</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">About us</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Team</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Careers</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">YummmZo Blog</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Bug Bounty</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">YummmZo One</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">YummmZo Corporate</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">YummmZo Instamart</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">YummmZo Genie</a></li>
                             </ul>
                         </div>
                     </div>
                     {/* Second Column */}
                     <div className=''>
                         {/* Heading */}
-                        <div className='mb-5 font-semibold uppercase'>
+                        <div className='mb-5 font-semibold uppercase font-roboto text-yummmzo-color'>
                             contact
                         </div>
                         <div className=''>
                             <ul className='leading-6'>
-                                <li className=''><a className='text-base' href="#">Help and Support</a></li>
-                                <li className=''><a className='text-base' href="#">Partner with us</a></li>
-                                <li className=''><a className='text-base' href="#">Ride with us</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Help and Support</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Partner with us</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Ride with us</a></li>
                             </ul>
                         </div>
                     </div>
                     {/* Third Column */}
                     <div className=''>
                         {/* Heading */}
-                        <div className='mb-5 font-semibold uppercase'>
+                        <div className='mb-5 font-semibold uppercase font-roboto text-yummmzo-color'>
                             legal
                         </div>
                         <div className=''>
                             <ul className='leading-6'>
-                                <li className=''><a className='text-base' href="#">Terms & Condition</a></li>
-                                <li className=''><a className='text-base' href="#">Refund & Cancellation</a></li>
-                                <li className=''><a className='text-base' href="#">Privacy Policy</a></li>
-                                <li className=''><a className='text-base' href="#">Cookie Policy</a></li>
-                                <li className=''><a className='text-base' href="#">Offer Terms</a></li>
-                                <li className=''><a className='text-base' href="#">Phishing & Fraud</a></li>
-                                <li className=''><a className='text-base' href="#">Corporate - YummmZo Money Codes Terms and <br /> Conditions</a></li>
-                                <li className=''><a className='text-base' href="#">Corporate - YummmZo Discount Voucher Terms and <br /> Conditions</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Terms & Condition</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Refund & Cancellation</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Privacy Policy</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Cookie Policy</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Offer Terms</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Phishing & Fraud</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Corporate - YummmZo Money Codes Terms and <br /> Conditions</a></li>
+                                <li className=''><a className='text-base font-roboto text-yummmzo-color' href="#">Corporate - YummmZo Discount Voucher Terms and <br /> Conditions</a></li>
                             </ul>
                         </div>
                     </div>

@@ -12,26 +12,26 @@ const LowerFooterComponent = () => {
             <div className='flex justify-between items-center h-20'>
                 {/* Logo Container */}
                 <div className=''>
-                    <img src="" alt="YummmZo-Logo" />
+                    <img className='text-yummmzo-color' src="" alt="YummmZo-Logo" />
                 </div>
                 {/* Trademark Container */}
                 <div className=''>
-                    <span>©</span>
-                    <span>2023 YummmZo</span>
+                    <span className='font-roboto text-yummmzo-color'>©</span>
+                    <span className='font-roboto text-yummmzo-color'>2023 YummmZo</span>
                 </div>
                 {/* Social Media Handles Container */}
                 <div className='flex items-center w-52 justify-between'>
                     <span className='cursor-pointer'>
-                        <CiFacebook className="text-3xl"/>
+                        <CiFacebook className="text-3xl text-yummmzo-color"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <CiInstagram className="text-3xl"/>
+                        <CiInstagram className="text-3xl text-yummmzo-color"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <CiTwitter className="text-3xl"/>
+                        <CiTwitter className="text-3xl text-yummmzo-color"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <CiLinkedin className="text-3xl"/>
+                        <CiLinkedin className="text-3xl text-yummmzo-color"/>
                     </span>
                 </div>
             </div>

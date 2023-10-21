@@ -10,13 +10,13 @@ const RestaurantNameAddressCuisineRatingComponent = ({ restaurantDetails }) => {
                     {/* Name | Cuisine | Address Section */}
                     <div>
                         <div>
-                            <p className='text-xl font-semibold'>
+                            <p className='text-xl font-semibold font-roboto text-yummmzo-color'>
                                 {restaurantDetails.restaurantName}
                             </p>
-                            <p className='text-xs'>
+                            <p className='text-xs font-roboto text-yummmzo-color'>
                                 {restaurantDetails.cuisine}
                             </p>
-                            <p className='text-xs'>
+                            <p className='text-xs font-roboto text-yummmzo-color'>
                                 {restaurantDetails.restaurantCompleteAddress}
                             </p>
                         </div>
@@ -27,7 +27,7 @@ const RestaurantNameAddressCuisineRatingComponent = ({ restaurantDetails }) => {
                     </div>
                 </div>
                 {/* Divider Section */}
-                <div className=''>
+                <div className='font-roboto text-yummmzo-color'>
                         <hr className='dashed'/>
                 </div>
             </>

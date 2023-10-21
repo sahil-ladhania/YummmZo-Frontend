@@ -13,16 +13,16 @@ const ImageContentButtonComponent = () => {
                     </div>
                     {/* Content Section */}
                     <div className='flex flex-col items-center h-36 justify-center'>
-                        <div className='text-2xl font-semibold h-10'>
+                        <div className='text-2xl font-semibold h-10 font-roboto text-yummmzo-color'>
                             Your cart is empty
                         </div>
-                        <div className='text-sm h-10'>
+                        <div className='text-sm h-10 font-roboto text-yummmzo-color'>
                             You can go to home page to view more restaurants
                         </div>
                     </div>
                     {/* Button Section */}
                     <div>
-                        <Link className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm' to="/restaurants">See Restaurants near you</Link>
+                        <Link className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto' to="/restaurants">See Restaurants near you</Link>
                     </div>
                 </div>
             </>

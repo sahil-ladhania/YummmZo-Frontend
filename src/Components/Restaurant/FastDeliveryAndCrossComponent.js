@@ -9,10 +9,10 @@ const FastDeliveryAndCrossComponent = () => {
                 {/* Main Component */}
                 <div className='flex items-center h-10 border-2 border-black pr-3 pl-3 pt-2 pb-2 rounded-sm animate-pulse cursor-pointer'>
                     <div className='flex items-center'>
-                        <CiClock2 className='text-xl mr-1 ml-1'/>
-                        <a className='text-sm' href="#">Fast Delivery</a>
+                        <CiClock2 className='text-xl mr-1 ml-1 text-yummmzo-color'/>
+                        <a className='text-sm font-roboto text-yummmzo-color' href="#">Fast Delivery</a>
                     </div>
-                    <span className='text-xl mr-1 ml-1'><RxCross2/></span>
+                    <span className='text-xl mr-1 ml-1 text-yummmzo-color'><RxCross2/></span>
                 </div>
             </>
         </div>

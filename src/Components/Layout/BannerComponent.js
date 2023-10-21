@@ -8,8 +8,8 @@ const BannerComponent = () => {
                 <div className='flex items-center justify-between'>
                     {/* Content Section */}
                     <div className=''>
-                        <p className='text-4xl font-bold h-24 w-64'>Restaurants in your pocket</p>
-                        <p className='h-24 w-96 text-lg'>
+                        <p className='text-4xl font-bold h-24 w-64 font-roboto text-yummmzo-color'>Restaurants in your pocket</p>
+                        <p className='h-24 w-96 text-lg font-roboto text-yummmzo-color'>
                             Order from your favorite restaurants & track on the go, with the all-new YummmZo app.
                         </p>
                         <div className='flex items-center justify-between'>

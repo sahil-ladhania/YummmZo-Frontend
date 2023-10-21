@@ -5,8 +5,21 @@ import { CiCirclePlus } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiCircleChevDown } from "react-icons/ci";
+import { getLocation } from 'current-location-geo';
 
 const NavbarComponent = ({currentLocation , setCurrentLocation}) => {
+    // Handler Function
+    const handleCurrentLocation = () => {
+        getLocation((error , position) => {
+            if(error){
+                console.log(error);
+            }
+            else{
+                console.log(position.address);
+                setCurrentLocation(position.address);
+            }
+        })
+    }
     return (
         <div className=''>
             <>
@@ -15,13 +28,13 @@ const NavbarComponent = ({currentLocation , setCurrentLocation}) => {
                     {/* Left Part */}
                     <div className='flex items-center w-5/12'>
                         <div>
-                            <NavLink exact to= "/home" className="mr-5 text-2xl font-semibold">YummmZo</NavLink>
+                            <NavLink exact to= "/home" className="mr-5 text-2xl font-semibold font-roboto text-yummmzo-color">YummmZo</NavLink>
                         </div>
                         <div className=''>
-                            <a className='flex items-center' href="#">
-                                <span className='text-sm font-medium mr-2'>Home</span>
-                                <span className='text-sm'>{currentLocation.slice(0,25)}</span>
-                                <CiCircleChevDown className='text-md'/>
+                            <a onClick={handleCurrentLocation} className='flex items-center' href="#">
+                                <span className='text-sm font-medium mr-2 font-roboto text-yummmzo-color'>Home</span>
+                                <span className='text-sm font-roboto text-yummmzo-color'>{currentLocation.slice(0,25)}</span>
+                                <span><CiCircleChevDown className='text-md text-yummmzo-color'/></span>
                             </a>
                         </div>
                     </div>
@@ -30,26 +43,26 @@ const NavbarComponent = ({currentLocation , setCurrentLocation}) => {
                         <ul className='flex justify-between'>
                             <li className=''>
                                 <NavLink to="/restaurants" className="flex items-center">
-                                    <CiForkAndKnife className='text-3xl'/>
-                                    <span className='text-sm pr-2 pl-2'>Restaurants</span>
+                                    <CiForkAndKnife className='text-3xl text-yummmzo-color'/>
+                                    <span className='text-sm pr-2 pl-2 font-roboto text-yummmzo-color'>Restaurants</span>
                                 </NavLink>
                             </li>
                             <li className=''>
                                 <NavLink to="/addRestaurant" className="flex items-center">
-                                    <CiCirclePlus className='text-3xl'/>
-                                    <span className='text-sm pr-2 pl-2'>Add Restaurant</span>
+                                    <CiCirclePlus className='text-3xl text-yummmzo-color'/>
+                                    <span className='text-sm pr-2 pl-2 font-roboto text-yummmzo-color'>Add Restaurant</span>
                                 </NavLink>
                             </li>
                             <li className=''>
                                 <NavLink className="flex items-center" to="/login">
-                                    <CiUser className='text-3xl'/>
-                                    <span className='text-sm pr-2 pl-2'>Login</span>
+                                    <CiUser className='text-3xl text-yummmzo-color'/>
+                                    <span className='text-sm pr-2 pl-2 font-roboto text-yummmzo-color'>Login</span>
                                 </NavLink>
                             </li>
                             <li className=''>
                                 <NavLink to="/cart" className="flex items-center">
-                                    <CiShoppingCart className='text-3xl'/>
-                                    <span className='text-sm pr-2 pl-2'>Cart</span>
+                                    <CiShoppingCart className='text-3xl  text-yummmzo-color'/>
+                                    <span className='text-sm pr-2 pl-2 font-roboto text-yummmzo-color'>Cart</span>
                                 </NavLink>
                             </li>
                         </ul>

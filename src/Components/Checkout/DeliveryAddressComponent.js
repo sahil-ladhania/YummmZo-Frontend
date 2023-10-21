@@ -11,10 +11,10 @@ const DeliveryAddressComponent = () => {
                 <div className='w-auto'>
                     {/* Heading Component */}
                     <div className='h-20 mb-5 flex flex-col justify-center'>
-                        <p className='text-2xl font-medium'> 
+                        <p className='text-2xl font-medium font-roboto text-yummmzo-color'> 
                             Choose a delivery address
                         </p>
-                        <p className='text-md font-medium'> 
+                        <p className='text-md font-medium font-roboto text-yummmzo-color'> 
                             Multiple addresses in this location
                         </p>
                     </div>
@@ -26,10 +26,10 @@ const DeliveryAddressComponent = () => {
                     <div className='h-auto p-2 w-96 outline-1 outline-dashed'>
                         <a className='flex flex-col justify-center' href="#">
                             <div className='mb-5 flex items-center justify-center'>
-                                <CiLocationOn className='text-xl mr-2'/>
-                                <span className='text-md font-medium'>Add New Address</span>
+                                <CiLocationOn className='text-xl mr-2 text-yummmzo-color'/>
+                                <span className='text-md font-medium font-roboto text-yummmzo-color'>Add New Address</span>
                             </div>
-                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm'>Add New</button>
+                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto'>Add New</button>
                         </a>
                     </div>
                 </div>

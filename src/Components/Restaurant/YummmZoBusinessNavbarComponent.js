@@ -14,16 +14,16 @@ const YummmZoBusinessNavbarComponent = () => {
                         {/* Logo Section */}
                         <div>
                             <a className='flex flex-col' href="#">
-                                <span className='text-2xl font-semibold'>YummmZo</span>
-                                <span className='ml-1 text-md font-semibold'>for business</span>
+                                <span className='text-2xl font-semibold font-roboto text-yummmzo-color'>YummmZo</span>
+                                <span className='ml-1 text-md font-semibold font-roboto text-yummmzo-color'>for business</span>
                             </a>
                         </div>
                         {/* Profile Dropdown Section */}
                         <div>
                             <Link className='flex items-center' to="/login">
-                                <CiUser className='mr-2 text-2xl w-auto'/>
-                                <span>Profile</span>
-                                <CiCircleChevDown className='ml-2 text-2xl w-auto'/>
+                                <CiUser className='mr-2 text-2xl w-auto text-yummmzo-color'/>
+                                <span className='font-roboto text-yummmzo-color'>Profile</span>
+                                <CiCircleChevDown className='ml-2 text-2xl w-auto text-yummmzo-color'/>
                             </Link>
                         </div>
                     </nav>

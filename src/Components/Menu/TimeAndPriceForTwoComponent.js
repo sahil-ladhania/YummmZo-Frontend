@@ -12,13 +12,13 @@ const TimeAndPriceForTwoComponent = ({ restaurantDetails }) => {
                 <div className='flex h-10 w-44 items-center justify-between'>
                     {/* Time Section */}
                     <div className='flex items-center'>
-                        <CiClock2 className='text-xl mr-1'/>
-                        <p className='text-sm font-bold'>{restaurantDetails.deliveryTime} MINS</p>
+                        <CiClock2 className='text-xl mr-1 text-yummmzo-color'/>
+                        <p className='text-sm font-bold font-roboto text-yummmzo-color'>{restaurantDetails.deliveryTime} MINS</p>
                     </div>
                     {/* Price Section */}
                     <div className='flex items-center'>   
-                        <CiMoneyBill className='text-xl mr-1'/>
-                        <p className='text-sm font-bold'>{restaurantDetails.priceForTwo}RS</p>
+                        <CiMoneyBill className='text-xl mr-1 text-yummmzo-color'/>
+                        <p className='text-sm font-bold font-roboto text-yummmzo-color'>{restaurantDetails.priceForTwo}RS</p>
                     </div>
                 </div>
             </>

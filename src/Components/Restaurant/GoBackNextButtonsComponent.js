@@ -13,13 +13,13 @@ const GoBackNextButtonsComponent = () => {
                     <div>
                         <Link to="/addRestaurant" className='flex items-center pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm'>
                             <CiCircleChevLeft className='mr-2 text-xl'/>
-                            <span>Go back</span>
+                            <span className='font-roboto'>Go back</span>
                         </Link>
                     </div>
                     {/* Next Button */}
                     <div>
                         <Link to="" className='flex items-center pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm'>
-                            <span>Next</span>
+                            <span className='font-roboto'>Next</span>
                             <CiCircleChevRight className='ml-2 text-xl'/>
                         </Link>
                     </div>

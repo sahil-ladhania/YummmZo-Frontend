@@ -11,7 +11,7 @@ const CheckoutPage = () => {
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     return (
-        <div className='bg-slate-800'>
+        <div className='bg-page-background'>
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
@@ -26,7 +26,7 @@ const CheckoutPage = () => {
                             <BillComponent/>
                         </div>
                     </div>
-                    <div className='flex jc-sb mb-20'>
+                    <div className='flex jc-sb'>
                         <div className='w-8/12 mr-10 mb-10'>
                             {/* Payment Component */}
                             <PaymentComponent/>

@@ -25,7 +25,7 @@ const HomePage = () => {
             });
     }, []);
     return (
-        <div className='bg-slate-800'>
+        <div className='bg-page-background'>
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}

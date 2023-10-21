@@ -12,7 +12,7 @@ const CustomersCarouselsComponent = () => {
             </div>
             {/* Heading Section */}
             <div>
-                <h1 className='text-3xl mb-10'>Our Happy Partners</h1>
+                <h1 className='text-3xl mb-10 font-roboto'>Our Happy Partners</h1>
             </div>
             {/* Carousel Section */}
             <div className='flex max-w-2xl items-center'>
@@ -23,12 +23,12 @@ const CustomersCarouselsComponent = () => {
 
                 {/* Content Section */}
                 <div className='ml-5'>
-                    <p className='mb-5'>
+                    <p className='mb-5 font-roboto'>
                         We are immensely satisfied with the marketing push Zomato has provided us. We are now exclusive with Zomato and look forward to more growth in our delivery business through online orders.
                     </p>
                     <div className='flex flex-col'>
-                        <span className='text-md font-medium'>Aditi Kumari</span>
-                        <span className='text-sm font-medium'>Owner - Baigan</span>
+                        <span className='text-md font-medium font-roboto'>Aditi Kumari</span>
+                        <span className='text-sm font-medium font-roboto'>Owner - Baigan</span>
                     </div>
                 </div>
             </div>

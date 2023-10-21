@@ -94,7 +94,7 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                     {/* Left Section */}
                     <div className='w-3/12'>
                         {/* No of Restaurants */}
-                        <span className='text-xl'>{restaurants.length} Restaurants Online</span>
+                        <span className='text-xl font-roboto text-yummmzo-color'>{restaurants.length} Restaurants Online</span>
                     </div>
                     {/* Right Section */}
                     <div className='w-9/12 flex justify-between'>
@@ -105,8 +105,8 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 <>
                                     {/* Filter Options Section */}
                                     <div onClick={handleFastDelivery} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
-                                        <CiClock2 className='text-xl mr-1 ml-1'/>
-                                        <a className='text-sm' href="#">Fast Delivery</a>
+                                        <CiClock2 className='text-xl mr-1 ml-1 text-yummmzo-color'/>
+                                        <a className='text-sm font-roboto text-yummmzo-color' href="#">Fast Delivery</a>
                                     </div>
                                 </>
                         }
@@ -116,8 +116,8 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 :
                                 <>
                                     <div onClick={handleRating} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
-                                        <CiStar className='text-xl mr-1 ml-1'/>
-                                        <a className='text-sm' href="#">Rating</a>
+                                        <CiStar className='text-xl mr-1 ml-1 text-yummmzo-color'/>
+                                        <a className='text-sm font-roboto text-yummmzo-color' href="#">Rating</a>
                                     </div>
                                 </>
                         }
@@ -127,8 +127,8 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 :
                                 <>
                                     <div onClick={handleCostLTH} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
-                                        <CiCircleChevUp className='text-xl mr-1 ml-1'/>
-                                        <a className='text-sm' href="#">Cost : Low to High</a>
+                                        <CiCircleChevUp className='text-xl mr-1 ml-1 text-yummmzo-color'/>
+                                        <a className='text-sm font-roboto text-yummmzo-color' href="#">Cost : Low to High</a>
                                     </div>
                                 </>
                         }
@@ -138,8 +138,8 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 :
                                 <>
                                     <div onClick={handleCostHTL} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
-                                        <CiCircleChevDown className='text-xl mr-1 ml-1'/>
-                                        <a className='text-sm' href="#">Cost : High to Low</a>
+                                        <CiCircleChevDown className='text-xl mr-1 ml-1 text-yummmzo-color'/>
+                                        <a className='text-sm font-roboto text-yummmzo-color' href="#">Cost : High to Low</a>
                                     </div>
                                 </>
                         }

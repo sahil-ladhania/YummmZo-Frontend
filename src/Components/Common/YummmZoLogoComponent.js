@@ -7,7 +7,7 @@ const YummmZoLogoComponent = () => {
             <>
                 {/* YummmZo Logo */}
                 <div className='h-40 flex items-center'>
-                    <Link className='text-2xl font-semibold' to="/">YummmZo</Link>
+                    <Link className='text-2xl font-semibold font-roboto text-yummmzo-color' to="/">YummmZo</Link>
                 </div>
             </>
         </div>

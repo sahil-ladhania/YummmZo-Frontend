@@ -5,8 +5,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      width: {
-        'w-300': '300px',
+      backgroundColor : {
+        "page-background" : "#202020",
+        "primary" : "#FFEE33",
+        "secondary" : "#333634"
+      },
+      fontFamily : {
+        roboto: ['Roboto', 'sans'],
+      },
+      textColor : {
+        "yummmzo-color" : "#D9D9D9",
+        "secondary" : "#333634"
       },
     },
   },
