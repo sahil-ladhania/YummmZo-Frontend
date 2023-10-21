@@ -8,15 +8,20 @@ module.exports = {
       backgroundColor : {
         "page-background" : "#202020",
         "primary" : "#FFEE33",
-        "secondary" : "#333634"
+        "secondary" : "#333634",
+        "yummmzo-color" : "#D9D9D9",
       },
       fontFamily : {
         roboto: ['Roboto', 'sans'],
       },
       textColor : {
         "yummmzo-color" : "#D9D9D9",
+        "primary" : "#FFEE33",
         "secondary" : "#333634"
       },
+      borderColor : {
+        "primary" : "#FFEE33",
+      }
     },
   },
   plugins: [],

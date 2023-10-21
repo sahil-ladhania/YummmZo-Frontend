@@ -4,7 +4,7 @@ import { CiCircleChevRight } from "react-icons/ci";
 
 const AddRestaurantBannerComponent = () => {
     return (
-        <div className="relative mb-5">
+        <div className="relative pb-10">
             {/* Image */}
             <img
                 src="https://www.zomato.com/partner-with-us/static/media/StartJourney.7cfaaf0a.jpg"

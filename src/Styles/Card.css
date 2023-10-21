@@ -20,9 +20,9 @@
     height: 320px;
     width: 285px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #FFEE33;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px #FFEE33;
     cursor: pointer;
 }
 .card-image {

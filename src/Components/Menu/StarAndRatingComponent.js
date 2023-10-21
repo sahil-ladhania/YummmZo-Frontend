@@ -7,7 +7,7 @@ const StarAndRatingComponent = ({ restaurantDetails }) => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-20 border-2 border-black p-1 rounded-sm flex flex-col justify-center'>
+                <div className='h-20 border-2 border-yummmzo-color p-1 rounded-sm flex flex-col justify-center'>
                     {/* Icon Section */}
                     <div className='flex items-center ml-3 mb-1'>
                         <span><CiStar className='text-xl mr-1 text-yummmzo-color'/></span>

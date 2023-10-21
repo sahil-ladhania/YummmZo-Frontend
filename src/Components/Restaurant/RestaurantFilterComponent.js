@@ -104,7 +104,7 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 :
                                 <>
                                     {/* Filter Options Section */}
-                                    <div onClick={handleFastDelivery} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
+                                    <div onClick={handleFastDelivery} className='flex items-center bg-secondary  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
                                         <CiClock2 className='text-xl mr-1 ml-1 text-yummmzo-color'/>
                                         <a className='text-sm font-roboto text-yummmzo-color' href="#">Fast Delivery</a>
                                     </div>
@@ -115,7 +115,7 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 <RatingAndCrossComponent/>
                                 :
                                 <>
-                                    <div onClick={handleRating} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
+                                    <div onClick={handleRating} className='flex items-center bg-secondary pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
                                         <CiStar className='text-xl mr-1 ml-1 text-yummmzo-color'/>
                                         <a className='text-sm font-roboto text-yummmzo-color' href="#">Rating</a>
                                     </div>
@@ -126,7 +126,7 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 <CostLowToHighAndCrossComponent/>
                                 :
                                 <>
-                                    <div onClick={handleCostLTH} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
+                                    <div onClick={handleCostLTH} className='flex items-center bg-secondary pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
                                         <CiCircleChevUp className='text-xl mr-1 ml-1 text-yummmzo-color'/>
                                         <a className='text-sm font-roboto text-yummmzo-color' href="#">Cost : Low to High</a>
                                     </div>
@@ -137,7 +137,7 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                                 <CostHighToLowAndCrossComponent/>
                                 :
                                 <>
-                                    <div onClick={handleCostHTL} className='flex items-center border-2 border-black  pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
+                                    <div onClick={handleCostHTL} className='flex items-center bg-secondary pr-3 pl-3 pt-2 pb-2 rounded-sm cursor-pointer'>
                                         <CiCircleChevDown className='text-xl mr-1 ml-1 text-yummmzo-color'/>
                                         <a className='text-sm font-roboto text-yummmzo-color' href="#">Cost : High to Low</a>
                                     </div>

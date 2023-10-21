@@ -28,7 +28,7 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                 {/* Main Component */}
                 <div className='flex items-center justify-between'>
                     {/* Log In Form */}
-                    <div className='w-5/12 flex flex-col justify-between items-center border-2 border-black p-5 rounded-sm mr-24'>
+                    <div className='w-5/12 flex flex-col justify-between items-center bg-secondary p-5 rounded-sm mr-24'>
                         {/* Form Haeding Section */}
                         <div className='h-16 flex flex-col items-center justify-between mb-5'>
                             <h1 className='text-2xl font-semibold font-roboto text-yummmzo-color'>Login</h1>
@@ -71,7 +71,7 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                                 <input 
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
+                                className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="email" 
                                 name="email" 
                                 required
@@ -79,7 +79,7 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                                 <input 
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
+                                className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="password" 
                                 name="password" 
                                 required

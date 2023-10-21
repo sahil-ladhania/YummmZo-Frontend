@@ -30,7 +30,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                 {/* Main Component */}
                 <div className='flex items-center justify-between'>
                     {/* Sign up Form */}
-                    <form className='w-5/12 flex flex-col justify-between items-center border-2 border-black p-5 rounded-sm mr-24'>
+                    <form className='w-5/12 flex flex-col justify-between bg-secondary items-center  p-5 rounded-sm mr-24'>
                         {/* Form Heading Section */}
                         <div className='h-16 flex flex-col items-center justify-between'>
                             <h1 className='text-2xl font-semibold font-roboto text-yummmzo-color'>Sign Up</h1>
@@ -42,7 +42,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                             <input 
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
+                                className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="text" 
                                 name="firstName" 
                                 required
@@ -50,7 +50,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                             <input 
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
+                                className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="text" 
                                 name="lastName" 
                                 required
@@ -59,7 +59,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                             <input 
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
+                                className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="email" 
                                 name="email" 
                                 required
@@ -67,7 +67,7 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                             <input 
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className='border-2 h-10 outline-none rounded-sm p-2 w-72 font-roboto text-yummmzo-color' 
+                                className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="password" 
                                 name="password" 
                                 required

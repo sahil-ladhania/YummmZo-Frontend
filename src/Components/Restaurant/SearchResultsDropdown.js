@@ -4,7 +4,7 @@ import CuisineResults from './CuisineResults';
 
 const SearchResultsDropdown = ({ restaurantResults , cuisineResults }) => {
     return (
-        <div>
+        <div className='bg-secondary'>
             <>
                 {/* Main Component */}
                 <div className='h-80 w-full p-2 rounded-md overflow-y-auto'>

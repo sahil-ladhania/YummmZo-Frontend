@@ -29,7 +29,7 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation}) => {
                     {/* Landing Page Mini Navbar */}
                     <div className='h-40 flex items-center justify-between'>
                         <div>
-                            <Link className='text-2xl font-roboto text-yummmzo-color' to="/home">YummmZo</Link>
+                            <Link className='text-4xl font-semibold font-roboto text-primary' to="/home">YummmZo</Link>
                         </div>
                         <div className='w-52 flex justify-between items-center'>
                             <Link className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto' to="/login">Login</Link>
@@ -43,7 +43,7 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation}) => {
                     </div>
                     {/* Locate Me Section */}
                     <div className='h-20 flex justify-start items-center'>
-                        <input className="border-2 w-80 h-10 outline-none rounded-l-sm p-2 font-roboto" type="text" placeholder='Enter your delivery location'/>
+                        <input className="w-80 h-10 outline-none rounded-l-sm p-2 font-roboto text-secondary" type="text" placeholder='Enter your delivery location'/>
                         <div onClick={handleCurrentLocation} className='flex items-center bg-slate-200 rounded-r-sm h-10 cursor-pointer'>
                             <span className='pr-1 pl-1 text-xl'><CiLocationOn/></span>
                             <span className='pr-3 pl-3 text-sm font-roboto '>Locate Me</span>
