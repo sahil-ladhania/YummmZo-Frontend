@@ -3,10 +3,13 @@ import React, {useContext} from 'react'
 import YummmZoLogoComponent from '../Common/YummmZoLogoComponent'
 import LogInComponent from '../Auth/LogInComponent'
 import { UserContext } from '../../Contexts/UserContext';
+import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 
 const LogInPage = () => {
+    // Accessing Current Location From The Context.
+    const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     // Accessing Input States From The Context.
-    const {email , setEmail , password , setPassword} = useContext(UserContext);
+    const {formData , setFormData} = useContext(UserContext);
     return (
         <div className='bg-page-background h-screen'>
             <>
@@ -14,7 +17,7 @@ const LogInPage = () => {
                     {/* YummmZo Logo */}
                     <YummmZoLogoComponent/>
                     {/* Log In Form */}
-                    <LogInComponent email={email} setEmail={setEmail} password={password} setPassword={setPassword}/>
+                    <LogInComponent formData={formData} setFormData={setFormData} currentLocation={currentLocation} setCurrentLocation={setCurrentLocation}/>
                 </div>
             </>
         </div>

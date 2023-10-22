@@ -5,24 +5,33 @@ import 'react-phone-input-2/lib/material.css'
 import registerUser from '../../Services/RegistrationService.js';
 
 
-const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , email , setEmail , password , setPassword}) => {
+const SignUpComponent = ({formData , setFormData}) => {
+    const navigate = useNavigate();
+    // Handler Functions.
     const handleRegister = (e) => {
         e.preventDefault();
-        const userData = {
-            firstName,
-            lastName,
-            email,
-            password
-        };
-        registerUser(userData)
-            .then((response) => {
-                console.log(response);
-                console.log(email);
-                console.log(password);
+        registerUser(formData)
+            .then((userData) => {
+                if(userData){
+                    console.log(userData);
+                    setTimeout(() => {
+                        toast.success("Registration Successfull ...");
+                        navigate('/login');
+                    },1000);
+                    setFormData({
+                        firstName: '',
+                        lastName: '',
+                        email: '',
+                        password: '',
+                    });
+                }
+                else{
+                    toast.error("Invalid Credentials !!!");
+                }
             })
             .catch((error) => {
                 console.log(error);
-            });
+            })
     }
     return (
         <div>
@@ -40,16 +49,16 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                         <div className='flex flex-col h-52 justify-evenly'>
                             {/* First name and Last name */}
                             <input 
-                                value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)}
+                                value={formData.firstName}
+                                onChange={(e) => setFormData({...formData , firstName : e.target.value})}
                                 className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="text" 
                                 name="firstName" 
                                 required
                                 placeholder='First Name'/>
                             <input 
-                                value={lastName}
-                                onChange={(e) => setLastName(e.target.value)}
+                                value={formData.lastName}  
+                                onChange={(e) => setFormData({...formData , lastName : e.target.value})}
                                 className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="text" 
                                 name="lastName" 
@@ -57,16 +66,16 @@ const SignUpComponent = ({firstName , setFirstName , lastName , setLastName , em
                                 placeholder='Last Name'/>
                             {/* Email and Password */}
                             <input 
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                value={formData.email}
+                                onChange={(e) => setFormData({...formData , email : e.target.value})}
                                 className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="email" 
                                 name="email" 
                                 required
                                 placeholder='Email Address'/>
                             <input 
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
+                                value={formData.password}
+                                onChange={(e) => setFormData({...formData , password : e.target.value})}
                                 className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="password" 
                                 name="password" 

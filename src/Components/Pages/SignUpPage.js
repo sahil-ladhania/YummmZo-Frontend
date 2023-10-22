@@ -6,7 +6,7 @@ import { UserContext } from '../../Contexts/UserContext';
 
 const SignUpPage = () => {
     // Accessing Input States From The Context.
-    const {firstName , setFirstName ,lastName , setLastName ,email , setEmail , password , setPassword} = useContext(UserContext);
+    const {formData , setFormData} = useContext(UserContext);
     return (
         <div className='bg-page-background h-screen'>
             <>
@@ -14,7 +14,7 @@ const SignUpPage = () => {
                     {/* YummmZo Logo */}
                     <YummmZoLogoComponent/>
                     {/* Sign Up Form */}
-                    <SignUpComponent firstName={firstName} setFirstName={setFirstName} lastName={lastName} setLastName={setLastName} email={email} setEmail={setEmail} password={password} setPassword={setPassword}/>
+                    <SignUpComponent formData={formData} setFormData={setFormData}/>
                 </div>
             </>
         </div>

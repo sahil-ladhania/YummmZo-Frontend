@@ -6,17 +6,14 @@ const UserContext = createContext();
 // Defining Context Provider.
 const UserContextProvider = ({children}) => {
     // Defining States.
-    const [firstName , setFirstName] = useState('');
-    const [lastName , setLastName] = useState('');
-    const [email , setEmail] = useState('');
-    const [password , setPassword] = useState('');
+    const [formData , setFormData] = useState({
+        firstName : '',
+        lastName : '',
+        email : '',
+        password : ''
+    });
     return(
-        <UserContext.Provider value={{
-            firstName , setFirstName,
-            lastName , setLastName,
-            email , setEmail,
-            password , setPassword
-        }}>
+        <UserContext.Provider value={{formData , setFormData}}>
             {children}
         </UserContext.Provider>
     )

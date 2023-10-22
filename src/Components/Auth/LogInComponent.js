@@ -1,26 +1,44 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/material.css';
 import loginUser from '../../Services/LoginService.js';
+import { getLocation } from 'current-location-geo';
 
-const LogInComponent = ({email , setEmail , password , setPassword}) => {
+const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLocation}) => {
+    const navigate = useNavigate();
     // Handler Functions.
     const handleLogin = (e) => {
         e.preventDefault();
-        const userData = {
-            email,
-            password
-        };
-        loginUser(userData)
-            .then((response) => {
-                console.log(response);
+        loginUser(formData)
+            .then((userData) => {
+                if(userData){
+                    setTimeout(() => {
+                        toast.success("Login Successfull ...");
+                        getLocation((error , position) => {
+                            if(error){
+                                console.log(error);
+                            }
+                            else{
+                                console.log(position.address);
+                                setCurrentLocation(position.address);
+                            }
+                        })
+                        navigate('/home');
+                    },1000);
+                    setFormData({
+                        email: '',
+                        password: ''
+                    });
+                }
+                else{
+                    toast.error("Invalid Credentials !!!");
+                }
             })
             .catch((error) => {
                 console.log(error);
-            });
-        console.log(email);
-        console.log(password);
+            })
     }
     return (
         <div>
@@ -69,16 +87,16 @@ const LogInComponent = ({email , setEmail , password , setPassword}) => {
                             {/* Log In with Email & Password Section */}
                             <div className='flex flex-col items-center h-28 justify-evenly'>
                                 <input 
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                value={formData.email}
+                                onChange={(e) => setFormData({...formData, email : e.target.value})}
                                 className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="email" 
                                 name="email" 
                                 required
                                 placeholder='Email'/>
                                 <input 
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
+                                value={formData.password}
+                                onChange={(e) => setFormData({...formData, password : e.target.value})}
                                 className='h-10 outline-none rounded-sm p-2 w-72 font-roboto text-secondary' 
                                 type="password" 
                                 name="password" 
