@@ -5,7 +5,7 @@ const CancellationPolicyComponent = () => {
         <div className=''>
             <>
                 {/* Main Component */}
-                <div className='w-full border-2 border-black p-5 rounded-sm'>
+                <div className='bg-secondary w-full border-2 border-yummmzo-color p-5 rounded-sm'>
                     {/* Heading Section */}
                     <div className='mb-5'>
                         <p className='text-md font-bold font-roboto text-yummmzo-color'>

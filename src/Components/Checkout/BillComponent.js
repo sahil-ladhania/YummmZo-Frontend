@@ -3,7 +3,7 @@ import { CiCircleAlert } from "react-icons/ci";
 
 const BillComponent = () => {
     return (
-        <div className='border-2 border-black mt-10 p-5 w-full rounded-sm'>
+        <div className='bg-secondary border-2 border-yummmzo-color mt-10 p-5 w-full rounded-sm'>
             <>
                 {/* Main Component */}
                 <div className='w- full'>
@@ -46,7 +46,7 @@ const BillComponent = () => {
                     </div>
                     {/* Suggestion Textfeild */}
                     <div className='mb-5'>
-                        <input className='text-sm border-2 w-full h-10 outline-none rounded-sm p-2' type="text" name="" id="" placeholder=' Any Suggestion? We will pass it on...'/>
+                        <input className='text-sm w-full h-10 outline-none rounded-sm p-2' type="text" name="" id="" placeholder=' Any Suggestion? We will pass it on...'/>
                     </div>
                     {/* Bill Details */}
                     <div className='flex flex-col'>

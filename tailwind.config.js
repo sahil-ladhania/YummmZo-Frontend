@@ -21,6 +21,10 @@ module.exports = {
       },
       borderColor : {
         "primary" : "#FFEE33",
+        "yummmzo-color" : "#D9D9D9",
+      },
+      outlineColor : {
+        "yummmzo-color" : "#D9D9D9",
       }
     },
   },

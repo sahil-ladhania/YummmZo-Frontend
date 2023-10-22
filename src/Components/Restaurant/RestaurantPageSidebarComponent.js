@@ -5,7 +5,7 @@ const RestaurantPageSidebarComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-auto w-72 p-2 border-2 border-black flex justify-evenly flex-col rounded-sm'>
+                <div className='bg-secondary h-auto w-72 p-2 border-2 border-yummmzo-color flex justify-evenly flex-col rounded-sm'>
                     {/* Heading Section */}
                     <div className='flex flex-col items-start h-16 justify-center mb-2'>
                         <span className='text-lg font-medium font-roboto text-yummmzo-color'>1. Create your</span>

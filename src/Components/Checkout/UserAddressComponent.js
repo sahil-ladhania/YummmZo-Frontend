@@ -6,7 +6,7 @@ const UserAddressComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex items-start border-2 border-black rounded-sm w-96 mb-10 p-5'>
+                <div className='flex items-start border-2 border-yummmzo-color rounded-sm w-96 mb-10 p-5'>
                     {/* Icon Section */}
                     <div className='mr-5'>
                         <span><CiHome className='text-xl mt-1 text-yummmzo-color'/></span>

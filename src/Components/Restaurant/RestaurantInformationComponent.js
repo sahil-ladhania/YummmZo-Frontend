@@ -7,7 +7,7 @@ const RestaurantInformationComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='border-2 border-black rounded-sm p-2 flex flex-col items-center'>
+                <div className='bg-secondary rounded-sm p-2 flex flex-col items-center'>
                     {/* Form Heading Section */}
                     <div className='text-3xl mt-5 mb-5 font-roboto text-yummmzo-color'>
                         Restaurant Information
@@ -24,44 +24,44 @@ const RestaurantInformationComponent = () => {
                             </div>
                             <div className='flex flex-col'>
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="text"
                                 name="restaurantName" 
                                 id="" 
                                 placeholder='Resturant Name'
                                 />
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="text" 
                                 name="restaurantCuisine" 
                                 id="" 
                                 placeholder='Restaurant Cuisine'/>
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="text" 
                                 name="deliveryTime" 
                                 id="" 
                                 placeholder='Delivery Time'/>
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="text" 
                                 name="priceForTwo" 
                                 id="" 
                                 placeholder='Price For Two'/>
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="text" 
                                 name="imageUrl" 
                                 id="" 
                                 placeholder='Enter Image URL'/>
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="text" 
                                 name="restaurantCompleteAddress" 
                                 id="" 
                                 placeholder='Restaurant Complete Address'/>
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="text" 
                                 name="rating" 
                                 id="" 
@@ -78,7 +78,7 @@ const RestaurantInformationComponent = () => {
                             </div>
                             <div className=''>
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="number" 
                                 name="mobileNumberAtRestaurant" 
                                 id="" 
@@ -95,19 +95,19 @@ const RestaurantInformationComponent = () => {
                             </div>
                             <div className='flex flex-col'>
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="number" 
                                 name="mobileNumberOfOwner" 
                                 id="" 
                                 placeholder='Mobile Number Of Owner'/>
                                 <input  
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="text" 
                                 name="restaurantOwnerName" 
                                 id="" 
                                 placeholder='Restaurant Owner Full Name'/>
                                 <input 
-                                className='border-2 w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-yummmzo-color' 
+                                className='w-full h-10 outline-none rounded-sm p-2 mb-5 font-roboto text-secondary' 
                                 type="email" 
                                 name="restaurantOwnerEmailAddress" 
                                 id="" 

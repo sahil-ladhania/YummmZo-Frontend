@@ -14,8 +14,8 @@ const YummmZoBusinessNavbarComponent = () => {
                         {/* Logo Section */}
                         <div>
                             <a className='flex flex-col' href="#">
-                                <span className='text-2xl font-semibold font-roboto text-yummmzo-color'>YummmZo</span>
-                                <span className='ml-1 text-md font-semibold font-roboto text-yummmzo-color'>for business</span>
+                                <span className='text-2xl font-semibold font-roboto text-primary'>YummmZo</span>
+                                <span className='ml-1 text-md font-semibold font-roboto text-primary'>for business</span>
                             </a>
                         </div>
                         {/* Profile Dropdown Section */}

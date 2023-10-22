@@ -5,7 +5,7 @@ import UserAddressComponent from './UserAddressComponent';
 
 const DeliveryAddressComponent = () => {
     return (
-        <div className='border-2 border-black p-5 mt-10 w-full rounded-sm'>
+        <div className='bg-secondary border-2 border-yummmzo-color p-5 mt-10 w-full rounded-sm'>
             <>
                 {/* Main Component */}
                 <div className='w-auto'>
@@ -23,7 +23,7 @@ const DeliveryAddressComponent = () => {
                         <UserAddressComponent/>
                     </div>
                     {/* Address Component */}
-                    <div className='h-auto p-2 w-96 outline-1 outline-dashed'>
+                    <div className='h-auto p-2 w-96 outline-1 outline-dashed outline-yummmzo-color'>
                         <a className='flex flex-col justify-center' href="#">
                             <div className='mb-5 flex items-center justify-center'>
                                 <CiLocationOn className='text-xl mr-2 text-yummmzo-color'/>
