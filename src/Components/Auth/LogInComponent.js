@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import PhoneInput from 'react-phone-input-2';
@@ -6,7 +6,7 @@ import 'react-phone-input-2/lib/material.css';
 import loginUser from '../../Services/LoginService.js';
 import { getLocation } from 'current-location-geo';
 
-const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLocation}) => {
+const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLocation , auth , setAuth}) => {
     const navigate = useNavigate();
     // Handler Functions.
     const handleLogin = (e) => {
@@ -14,6 +14,16 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
         loginUser(formData)
             .then((userData) => {
                 if(userData){
+                    const {user ,jwt_token} = userData;
+                    console.log('Default auth State :- ' , auth);
+                    setAuth({
+                        ...auth,
+                        user : user,
+                        token : jwt_token
+                    });
+                    localStorage.setItem('user_data', JSON.stringify(user));
+                    localStorage.setItem('jwt_token', JSON.stringify(jwt_token));
+                    // console.log(auth);
                     setTimeout(() => {
                         toast.success("Login Successfull ...");
                         getLocation((error , position) => {
@@ -40,6 +50,9 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
                 console.log(error);
             })
     }
+    useEffect(() => {
+        console.log('auth After State:', auth);
+    }, [auth]);
     return (
         <div>
             <>

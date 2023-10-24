@@ -8,8 +8,11 @@ import { getAllCuisines } from '../../Services/CuisineServices';
 import TopBrandsComponent from '../Restaurant/TopBrandsComponent';
 import GetYummmZoAppComponent from '../Layout/GetYummmZoAppComponent';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
+import { UserContext } from '../../Contexts/UserContext';
 
 const HomePage = () => {
+    // Accessing Input States From The Context.
+    const {formData , setFormData , auth , setAuth} = useContext(UserContext);
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     // Accessing Cuisines From The Context.
@@ -29,7 +32,7 @@ const HomePage = () => {
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
-                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation}/>
+                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth}/>
                 </div>
                 <div className='max-w-5xl ml-auto mr-auto'>
                     {/* Popular Cuisines Component */}

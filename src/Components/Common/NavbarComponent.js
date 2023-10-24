@@ -7,7 +7,7 @@ import { CiShoppingCart } from "react-icons/ci";
 import { CiCircleChevDown } from "react-icons/ci";
 import { getLocation } from 'current-location-geo';
 
-const NavbarComponent = ({currentLocation , setCurrentLocation}) => {
+const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}) => {
     // Handler Function
     const handleCurrentLocation = () => {
         getLocation((error , position) => {
@@ -54,10 +54,18 @@ const NavbarComponent = ({currentLocation , setCurrentLocation}) => {
                                 </NavLink>
                             </li>
                             <li className=''>
-                                <NavLink className="flex items-center" to="/login">
-                                    <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                    <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Login</span>
-                                </NavLink>
+                                {
+                                    auth.user ?
+                                        <NavLink className="flex items-center" to="/login">
+                                            <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
+                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>{auth.user.firstName}</span>
+                                        </NavLink>
+                                        :
+                                        <NavLink className="flex items-center" to="/login">
+                                            <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
+                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Profile</span>
+                                        </NavLink>
+                                }
                             </li>
                             <li className=''>
                                 <NavLink to="/cart" className="flex items-center">

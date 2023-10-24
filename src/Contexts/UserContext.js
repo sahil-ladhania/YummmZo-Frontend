@@ -1,4 +1,4 @@
-import React, {createContext , useState} from 'react'
+import React, {createContext , useEffect, useState} from 'react'
 
 // Creating Context.
 const UserContext = createContext();
@@ -12,8 +12,12 @@ const UserContextProvider = ({children}) => {
         email : '',
         password : ''
     });
+    const [auth , setAuth] = useState({
+        user : null,
+        token : ""
+    });
     return(
-        <UserContext.Provider value={{formData , setFormData}}>
+        <UserContext.Provider value={{formData , setFormData , auth , setAuth}}>
             {children}
         </UserContext.Provider>
     )
