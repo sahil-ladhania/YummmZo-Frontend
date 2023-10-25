@@ -27,6 +27,7 @@ import { CuisineContextProvider } from './Contexts/CuisineContext';
 import { UserContextProvider } from './Contexts/UserContext';
 import { UserCurrentLocationContextProvider } from './Contexts/UserCurrentLocationContext';
 import { AuthContextProvider } from './Contexts/AuthContext';
+import EmptyCartComponent from './Components/Cart/EmptyCartComponent';
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
                       <RestaurantProvider>
                             <Routes>
                               <Route exact path="/" element={<LandingPage/>}/>
+                              <Route exact path="/profile" element={<ProfileDropdownComponent/>}/>
+                              <Route exact path="/cartComponent" element={<CartComponent/>}/>
+                              <Route exact path="/emptyCartComponent" element={<EmptyCartComponent/>}/>
                               <Route path="/home" element={<HomePage/>}/>
                               <Route path="/restaurants" element={<RestaurantsPage/>}/>
                               <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>

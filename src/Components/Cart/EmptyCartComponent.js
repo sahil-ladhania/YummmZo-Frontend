@@ -5,13 +5,13 @@ const EmptyCartComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='w-300 ml-500 b-1-b-s p-10-20'>
+                <div className='w-3/12 h-auto p-5 bg-secondary rounded-md fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                     {/* Heading Section */}
-                    <div className='h-50 flex ai-c fs-xxl fw-b fs-r'>
+                    <div className='font-roboto text-yummmzo-color text-3xl font-bold py-5 '>
                         Cart Empty
                     </div>
                     {/* Content Section */}
-                    <div className='h-80 flex ai-c ta-j fs-r'>
+                    <div className='font-roboto text-yummmzo-color text-md py-5'>
                         Good food is always cooking! <br /> Go ahead, order some yummy <br /> items from the menu.
                     </div>
                 </div>

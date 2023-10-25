@@ -6,8 +6,13 @@ import { CiUser } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiCircleChevDown } from "react-icons/ci";
 import { getLocation } from 'current-location-geo';
+import ProfileDropdownComponent from './ProfileDropdownComponent';
+import EmptyCartComponent from '../Cart/EmptyCartComponent';
 
 const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}) => {
+    // State Variables.
+    const [isProfileDropdownVisible , setIsProfileDropdownVisible] = useState(false);
+    const [isEmptyCartDropdownVisible , setIsEmptyCartDropdownVisible] = useState(false);
     // Handler Function
     const handleCurrentLocation = () => {
         getLocation((error , position) => {
@@ -20,12 +25,21 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}
             }
         })
     };
-    const handleLogout = () => {
-        setAuth({
-            user : null
-        })
-        localStorage.clear("user_data");
-        localStorage.clear("jwt_token");
+    const handleProfileDropdownEnter = () => {
+        setIsProfileDropdownVisible(!isProfileDropdownVisible);
+        console.log("Mouse Enter");
+    }
+    const handleProfileDropdownLeave = () => {
+        setIsProfileDropdownVisible(isProfileDropdownVisible);
+        console.log("Mouse Leave");
+    }
+    const handleCartDropdownEnter = () => {
+        setIsEmptyCartDropdownVisible(!isEmptyCartDropdownVisible);
+        console.log("Mouse Enter");
+    }
+    const handleCartDropdownLeave = () => {
+        setIsEmptyCartDropdownVisible(isEmptyCartDropdownVisible);
+        console.log("Mouse Leave");
     }
     return (
         <div className=''>
@@ -49,13 +63,13 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}
                     <div className='w-7/12'>
                         <ul className='flex justify-between'>
                             <li className=''>
-                                <NavLink to="/restaurants" className="flex items-center">
+                                <NavLink to="/restaurants" className="flex items-center py-5 px-2">
                                     <CiForkAndKnife className='text-4xl text-yummmzo-color hover:text-primary'/>
                                     <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Restaurants</span>
                                 </NavLink>
                             </li>
                             <li className=''>
-                                <NavLink to="/addRestaurant" className="flex items-center">
+                                <NavLink to="/addRestaurant" className="flex items-center py-5 px-2">
                                     <CiCirclePlus className='text-4xl text-yummmzo-color hover:text-primary'/>
                                     <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Add Restaurant</span>
                                 </NavLink>
@@ -63,24 +77,36 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}
                             <li className=''>
                                 {
                                     auth.user ?
-                                        <NavLink onClick={handleLogout} className="flex items-center">
+                                        <NavLink onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-center py-5 px-2">
                                             <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Logout {auth.user.firstName}</span>
+                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'> {auth.user.firstName}</span>
                                         </NavLink>
                                         :
-                                        <NavLink className="flex items-center" to="/login">
+                                        <NavLink onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-cente py-5 px-2" to="/login">
                                             <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
                                             <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Login</span>
                                         </NavLink>
                                 }
                             </li>
                             <li className=''>
-                                <NavLink to="/cart" className="flex items-center">
+                                <NavLink onMouseEnter={handleCartDropdownEnter} onMouseLeave={handleCartDropdownLeave} to="/cart" className="flex items-center py-5 px-2">
                                     <CiShoppingCart className='text-4xl  text-yummmzo-color hover:text-primary'/>
                                     <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Cart</span>
                                 </NavLink>
                             </li>
                         </ul>
+                        {
+                            isProfileDropdownVisible ?
+                                <ProfileDropdownComponent auth={auth} setAuth={setAuth}/>
+                                :
+                                null
+                        }
+                        {
+                            isEmptyCartDropdownVisible ? 
+                                <EmptyCartComponent/>
+                                :
+                                null
+                        }
                     </div>
                 </div>
             </>

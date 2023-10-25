@@ -25,6 +25,9 @@ module.exports = {
       },
       outlineColor : {
         "yummmzo-color" : "#D9D9D9",
+      },
+      height : {
+        "profile-dropdown" : "700px"
       }
     },
   },
