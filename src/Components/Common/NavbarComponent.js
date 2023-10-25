@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CiForkAndKnife } from "react-icons/ci";
 import { CiCirclePlus } from "react-icons/ci";
@@ -19,6 +19,13 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}
                 setCurrentLocation(position.address);
             }
         })
+    };
+    const handleLogout = () => {
+        setAuth({
+            user : null
+        })
+        localStorage.clear("user_data");
+        localStorage.clear("jwt_token");
     }
     return (
         <div className=''>
@@ -56,14 +63,14 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}
                             <li className=''>
                                 {
                                     auth.user ?
-                                        <NavLink className="flex items-center" to="/login">
+                                        <NavLink onClick={handleLogout} className="flex items-center">
                                             <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>{auth.user.firstName}</span>
+                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Logout {auth.user.firstName}</span>
                                         </NavLink>
                                         :
                                         <NavLink className="flex items-center" to="/login">
                                             <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Profile</span>
+                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Login</span>
                                         </NavLink>
                                 }
                             </li>

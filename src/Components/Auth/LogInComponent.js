@@ -21,9 +21,6 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
                         user : user,
                         token : jwt_token
                     });
-                    localStorage.setItem('user_data', JSON.stringify(user));
-                    localStorage.setItem('jwt_token', JSON.stringify(jwt_token));
-                    // console.log(auth);
                     setTimeout(() => {
                         toast.success("Login Successfull ...");
                         getLocation((error , position) => {

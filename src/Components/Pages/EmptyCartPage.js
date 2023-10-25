@@ -3,8 +3,11 @@ import React, {useContext} from 'react'
 import NavbarComponent from '../Common/NavbarComponent';
 import ImageContentButtonComponent from '../Cart/ImageContentButtonComponent';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
+import { UserContext } from '../../Contexts/UserContext';
 
 const EmptyCartPage = () => {
+    // Accessing Input States From The Context.
+    const {formData , setFormData , auth , setAuth} = useContext(UserContext);
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     return (
@@ -12,7 +15,7 @@ const EmptyCartPage = () => {
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Customised Navbar for this page Section */}
-                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation}/>
+                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth}/>
                 </div>
                 <div className='max-w-4xl ml-auto mr-auto'>
                     {/* Image | Content | Button Section */}
