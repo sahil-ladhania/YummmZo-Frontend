@@ -3,9 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-phone-input-2/lib/material.css'
 import registerUser from '../../Services/RegistrationService.js';
+import LoaderComponent from '../../Utils/LoaderComponent';
 
 
-const SignUpComponent = ({formData , setFormData}) => {
+const SignUpComponent = ({formData , setFormData , loading , setLoading}) => {
     const navigate = useNavigate();
     // Handler Functions.
     const handleRegister = (e) => {
@@ -33,6 +34,15 @@ const SignUpComponent = ({formData , setFormData}) => {
                 console.log(error);
             })
     }
+    const handleLoginLoader = () => {
+        setLoading(true);
+        document.body.classList.add('blur-background');
+        setTimeout(() => {
+            navigate("/login");
+            setLoading(false);
+            document.body.classList.remove('blur-background')
+        }, 2000);
+    }
     return (
         <div>
             <>
@@ -43,7 +53,14 @@ const SignUpComponent = ({formData , setFormData}) => {
                         {/* Form Heading Section */}
                         <div className='h-16 flex flex-col items-center justify-between'>
                             <h1 className='text-2xl font-semibold font-roboto text-yummmzo-color'>Sign Up</h1>
-                            <div className='text-sm font-medium font-roboto text-yummmzo-color'>Already have an account ? <Link className='font-roboto text-yummmzo-color' to="/login">Log in</Link></div>
+                            {
+                                loading ? 
+                                    <LoaderComponent/>
+                                    :
+                                    <>
+                                        <div className='text-sm font-medium font-roboto text-yummmzo-color'>Already have an account ? <Link onClick={handleLoginLoader}className='font-roboto text-yummmzo-color'>Log in</Link></div>
+                                    </>
+                            }
                         </div>
                         {/* Sign up with Number / Email Section */}
                         <div className='flex flex-col h-52 justify-evenly'>

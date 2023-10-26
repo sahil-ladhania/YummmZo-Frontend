@@ -5,8 +5,9 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/material.css';
 import loginUser from '../../Services/LoginService.js';
 import { getLocation } from 'current-location-geo';
+import LoaderComponent from '../../Utils/LoaderComponent.js';
 
-const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLocation , auth , setAuth}) => {
+const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLocation , auth , setAuth , loading , setLoading}) => {
     const navigate = useNavigate();
     // Handler Functions.
     const handleLogin = (e) => {
@@ -47,6 +48,15 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
                 console.log(error);
             })
     }
+    const handleSignupLoader = () => {
+        setLoading(true);
+        document.body.classList.add('blur-background');
+        setTimeout(() => {
+            navigate("/signup");
+            setLoading(false);
+            document.body.classList.remove('blur-background')
+        }, 2000);
+    }
     useEffect(() => {
         console.log('auth After State:', auth);
     }, [auth]);
@@ -60,7 +70,14 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
                         {/* Form Haeding Section */}
                         <div className='h-16 flex flex-col items-center justify-between mb-5'>
                             <h1 className='text-2xl font-semibold font-roboto text-yummmzo-color'>Login</h1>
-                            <div className='text-sm font-medium font-roboto text-yummmzo-color'>Dont have an account yet ? <Link className='' to="/signup">Sign up for free</Link></div>
+                            {
+                                loading ? 
+                                    <LoaderComponent/>
+                                    :
+                                    <>
+                                        <div className='text-sm font-medium font-roboto text-yummmzo-color'>Dont have an account yet ? <Link onClick={handleSignupLoader}className=''>Sign up for free</Link></div>
+                                    </>
+                            }
                         </div>
                         {/* Conditionally Rendering Phone Number Input and OTP Input */}
                         {/* Login With Number */}

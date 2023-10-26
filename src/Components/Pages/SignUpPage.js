@@ -3,8 +3,11 @@ import React, {useContext} from 'react'
 import SignUpComponent from '../Auth/SignUpComponent'
 import YummmZoLogoComponent from '../Common/YummmZoLogoComponent';
 import { UserContext } from '../../Contexts/UserContext';
+import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 
 const SignUpPage = () => {
+    // Accessing Loading State From The Context.
+    const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Input States From The Context.
     const {formData , setFormData} = useContext(UserContext);
     return (
@@ -14,7 +17,7 @@ const SignUpPage = () => {
                     {/* YummmZo Logo */}
                     <YummmZoLogoComponent/>
                     {/* Sign Up Form */}
-                    <SignUpComponent formData={formData} setFormData={setFormData}/>
+                    <SignUpComponent formData={formData} setFormData={setFormData} loading={loading} setLoading={setLoading}/>
                 </div>
             </>
         </div>

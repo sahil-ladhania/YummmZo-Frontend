@@ -4,8 +4,11 @@ import YummmZoLogoComponent from '../Common/YummmZoLogoComponent'
 import LogInComponent from '../Auth/LogInComponent'
 import { UserContext } from '../../Contexts/UserContext';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
+import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 
 const LogInPage = () => {
+    // Accessing Loading State From The Context.
+    const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     // Accessing Input States From The Context.
@@ -17,7 +20,7 @@ const LogInPage = () => {
                     {/* YummmZo Logo */}
                     <YummmZoLogoComponent/>
                     {/* Log In Form */}
-                    <LogInComponent formData={formData} setFormData={setFormData} currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth}/>
+                    <LogInComponent formData={formData} setFormData={setFormData} currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                 </div>
             </>
         </div>

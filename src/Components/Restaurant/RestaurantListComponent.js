@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import RestaurantComponent from './CuisineRestaurant/RestaurantComponent';
 import { RestaurantContext } from '../../Contexts/RestaurantContext';
 
-const RestaurantListComponent = ({ restaurants }) => {
+const RestaurantListComponent = ({ restaurants , loading , setLoading }) => {
     const { filteredRestaurants } = useContext(RestaurantContext);
     return (
         <div>
@@ -13,6 +13,8 @@ const RestaurantListComponent = ({ restaurants }) => {
                             <RestaurantComponent
                                 key={restaurant.id}
                                 restaurant={restaurant}
+                                loading={loading} 
+                                setLoading={setLoading}
                             />
                         ))
                     }

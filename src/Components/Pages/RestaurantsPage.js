@@ -13,8 +13,11 @@ import { getAllCuisines } from '../../Services/CuisineServices';
 import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 import { UserContext } from '../../Contexts/UserContext';
+import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 
 const RestaurantsPage = () => {
+    // Accessing Loading State From The Context.
+    const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Input States From The Context.
     const {formData , setFormData , auth , setAuth} = useContext(UserContext);
     // Accessing Current Location From The Context.
@@ -48,7 +51,7 @@ const RestaurantsPage = () => {
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
-                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth}/>
+                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                 </div>
                 <div className='max-w-5xl ml-auto mr-auto'>
                     {/* Restaurant Search Bar Component */}
@@ -58,7 +61,7 @@ const RestaurantsPage = () => {
                     {/* Filters Component */}
                     <RestaurantFilterComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive}/>
                     {/* Restaurant Lists Component */}
-                    <RestaurantListComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive}/>
+                    <RestaurantListComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive} loading={loading} setLoading={setLoading}/>
                 </div>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Footer Component */}

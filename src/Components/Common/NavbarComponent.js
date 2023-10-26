@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { CiForkAndKnife } from "react-icons/ci";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
@@ -8,8 +9,10 @@ import { CiCircleChevDown } from "react-icons/ci";
 import { getLocation } from 'current-location-geo';
 import ProfileDropdownComponent from './ProfileDropdownComponent';
 import EmptyCartComponent from '../Cart/EmptyCartComponent';
+import LoaderComponent from '../../Utils/LoaderComponent';
 
-const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}) => {
+const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth , loading , setLoading}) => {
+    const navigate = useNavigate();
     // State Variables.
     const [isProfileDropdownVisible , setIsProfileDropdownVisible] = useState(false);
     const [isEmptyCartDropdownVisible , setIsEmptyCartDropdownVisible] = useState(false);
@@ -41,6 +44,56 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}
         setIsEmptyCartDropdownVisible(isEmptyCartDropdownVisible);
         console.log("Mouse Leave");
     }
+    const handleHomeLoader = () => {
+        console.log("Loader Clicked")
+        setLoading(true);
+        document.body.classList.add('blur-background');
+        setTimeout(() => {
+            navigate("/home");
+            setLoading(false);
+            document.body.classList.remove('blur-background')
+        }, 2000);
+    }
+    const handleRestaurantLoader = () => {
+        console.log("Loader Clicked")
+        setLoading(true);
+        document.body.classList.add('blur-background');
+        setTimeout(() => {
+            navigate("/restaurants");
+            setLoading(false);
+            document.body.classList.remove('blur-background')
+        }, 2000);
+    }
+    const handleAddRestaurantLoader = () => {
+        console.log("Loader Clicked")
+        setLoading(true);
+        document.body.classList.add('blur-background');
+        setTimeout(() => {
+            navigate("/addRestaurant");
+            setLoading(false);
+            document.body.classList.remove('blur-background')
+        }, 2000);
+    }
+    const handleLoginLoader = () => {
+        console.log("Loader Clicked")
+        setLoading(true);
+        document.body.classList.add('blur-background');
+        setTimeout(() => {
+            navigate("/login");
+            setLoading(false);
+            document.body.classList.remove('blur-background')
+        }, 2000);
+    }
+    const handleCartLoader = () => {
+        console.log("Loader Clicked")
+        setLoading(true);
+        document.body.classList.add('blur-background');
+        setTimeout(() => {
+            navigate("/cart");
+            setLoading(false);
+            document.body.classList.remove('blur-background')
+        }, 2000);
+    }
     return (
         <div className=''>
             <>
@@ -49,7 +102,14 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}
                     {/* Left Part */}
                     <div className='flex items-center w-5/12'>
                         <div>
-                            <NavLink exact to= "/home" className="mr-5 text-4xl font-semibold font-roboto text-primary">YummmZo</NavLink>
+                            {
+                                loading ? 
+                                    <LoaderComponent/>
+                                    :
+                                    <>
+                                        <NavLink onClick={handleHomeLoader} className="mr-5 text-4xl font-semibold font-roboto text-primary">YummmZo</NavLink>
+                                    </>
+                            }
                         </div>
                         <div className=''>
                             <a onClick={handleCurrentLocation} className='flex items-center' href="#">
@@ -63,16 +123,30 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}
                     <div className='w-7/12'>
                         <ul className='flex justify-between'>
                             <li className=''>
-                                <NavLink to="/restaurants" className="flex items-center py-5 px-2">
-                                    <CiForkAndKnife className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                    <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Restaurants</span>
-                                </NavLink>
+                                {
+                                loading ? 
+                                    <LoaderComponent/>
+                                    :
+                                    <>
+                                        <NavLink onClick={handleRestaurantLoader}  className="flex items-center py-5 px-2">
+                                            <CiForkAndKnife className='text-4xl text-yummmzo-color hover:text-primary'/>
+                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Restaurants</span>
+                                        </NavLink>
+                                    </>
+                                }
                             </li>
                             <li className=''>
-                                <NavLink to="/addRestaurant" className="flex items-center py-5 px-2">
-                                    <CiCirclePlus className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                    <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Add Restaurant</span>
-                                </NavLink>
+                                {
+                                    loading ? 
+                                        <LoaderComponent/>
+                                        :
+                                        <>
+                                            <NavLink onClick={handleAddRestaurantLoader} className="flex items-center py-5 px-2">
+                                                <CiCirclePlus className='text-4xl text-yummmzo-color hover:text-primary'/>
+                                                <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Add Restaurant</span>
+                                            </NavLink>
+                                        </>
+                                }
                             </li>
                             <li className=''>
                                 {
@@ -82,17 +156,33 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth}
                                             <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'> {auth.user.firstName}</span>
                                         </NavLink>
                                         :
-                                        <NavLink onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-cente py-5 px-2" to="/login">
-                                            <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Login</span>
-                                        </NavLink>
+                                        <>
+                                            {
+                                                loading ? 
+                                                    <LoaderComponent/>
+                                                    :
+                                                    <>
+                                                        <NavLink onClick={handleLoginLoader} onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-cente py-5 px-2" to="/login">
+                                                            <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
+                                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Login</span>
+                                                        </NavLink>
+                                                    </>
+                                            }
+                                        </>
                                 }
                             </li>
                             <li className=''>
-                                <NavLink onMouseEnter={handleCartDropdownEnter} onMouseLeave={handleCartDropdownLeave} to="/cart" className="flex items-center py-5 px-2">
-                                    <CiShoppingCart className='text-4xl  text-yummmzo-color hover:text-primary'/>
-                                    <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Cart</span>
-                                </NavLink>
+                                {
+                                    loading ? 
+                                        <LoaderComponent/>
+                                        :
+                                        <>
+                                            <NavLink onClick={handleCartLoader} onMouseEnter={handleCartDropdownEnter} onMouseLeave={handleCartDropdownLeave} className="flex items-center py-5 px-2">
+                                                <CiShoppingCart className='text-4xl  text-yummmzo-color hover:text-primary'/>
+                                                <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Cart</span>
+                                            </NavLink>
+                                        </>
+                                }
                             </li>
                         </ul>
                         {

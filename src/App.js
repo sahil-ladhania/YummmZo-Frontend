@@ -26,15 +26,15 @@ import MenuItemsResultComponent from './Components/Menu/MenuItemsResultComponent
 import { CuisineContextProvider } from './Contexts/CuisineContext';
 import { UserContextProvider } from './Contexts/UserContext';
 import { UserCurrentLocationContextProvider } from './Contexts/UserCurrentLocationContext';
-import { AuthContextProvider } from './Contexts/AuthContext';
 import EmptyCartComponent from './Components/Cart/EmptyCartComponent';
+import { PageLoaderContextProvider } from './Contexts/PageLoaderContext';
 
 function App() {
   return (
     <div className="App">
       <>
         {/* Routes */}
-        <AuthContextProvider>
+        <PageLoaderContextProvider>
           <UserCurrentLocationContextProvider>
             <UserContextProvider>
               <CuisineContextProvider>
@@ -72,7 +72,7 @@ function App() {
               </CuisineContextProvider>
             </UserContextProvider>
           </UserCurrentLocationContextProvider>
-        </AuthContextProvider>
+        </PageLoaderContextProvider>
       </>
     </div>
   );

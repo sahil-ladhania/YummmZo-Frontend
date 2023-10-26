@@ -1,7 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate } from 'react-router-dom'
+import LoaderComponent from '../../Utils/LoaderComponent';
 
-const ImageContentButtonComponent = () => {
+const ImageContentButtonComponent = ({loading , setLoading}) => {
+    const navigate = useNavigate();
+    // Handler Functions.
+    const handleRestaurantLoader = () => {
+        console.log("Loader Clicked")
+        setLoading(true);
+        document.body.classList.add('blur-background');
+        setTimeout(() => {
+            navigate("/restaurants");
+            setLoading(false);
+            document.body.classList.remove('blur-background')
+        }, 2000);
+    }
     return (
         <div>
             <>
@@ -22,7 +35,14 @@ const ImageContentButtonComponent = () => {
                     </div>
                     {/* Button Section */}
                     <div>
-                        <Link className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto' to="/restaurants">See Restaurants near you</Link>
+                        {
+                            loading ? 
+                                <LoaderComponent/>
+                                :
+                                <>
+                                    <Link onClick={handleRestaurantLoader} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto'>See Restaurants near you</Link>
+                                </>
+                        }
                     </div>
                 </div>
             </>

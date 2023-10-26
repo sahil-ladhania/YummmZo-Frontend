@@ -4,8 +4,11 @@ import NavbarComponent from '../Common/NavbarComponent';
 import ImageContentButtonComponent from '../Cart/ImageContentButtonComponent';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 import { UserContext } from '../../Contexts/UserContext';
+import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 
 const EmptyCartPage = () => {
+    // Accessing Loading State From The Context.
+    const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Input States From The Context.
     const {formData , setFormData , auth , setAuth} = useContext(UserContext);
     // Accessing Current Location From The Context.
@@ -15,11 +18,11 @@ const EmptyCartPage = () => {
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Customised Navbar for this page Section */}
-                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth}/>
+                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                 </div>
                 <div className='max-w-4xl ml-auto mr-auto'>
                     {/* Image | Content | Button Section */}
-                    <ImageContentButtonComponent/>
+                    <ImageContentButtonComponent loading={loading} setLoading={setLoading}/>
                 </div>
             </>
         </div>

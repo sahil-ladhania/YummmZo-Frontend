@@ -7,8 +7,11 @@ import PaymentComponent from '../Checkout/PaymentComponent';
 import CancellationPolicyComponent from '../Checkout/CancellationPolicyComponent';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 import { UserContext } from '../../Contexts/UserContext';
+import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 
 const CheckoutPage = () => {
+    // Accessing Loading State From The Context.
+    const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Input States From The Context.
     const {formData , setFormData , auth , setAuth} = useContext(UserContext);
     // Accessing Current Location From The Context.
@@ -18,7 +21,7 @@ const CheckoutPage = () => {
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* Navbar Component */}
-                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth}/>
+                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                     <div className='flex jc-sb'>
                         <div className='w-8/12 mr-10 mb-10'>
                             {/* Delivery Option Component */}
