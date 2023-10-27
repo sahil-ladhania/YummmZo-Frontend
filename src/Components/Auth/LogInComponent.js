@@ -89,7 +89,7 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
                                 onlyCountries={[ 'in','cu','cw','kz','fr','it','pt','id']}
                                 placeholder='Phone'
                             />
-                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 font-roboto'>Send One Time Password</button>
+                            <button className='pr-5 pl-5 pt-3 pb-3 bg-button-color rounded-sm w-72 font-roboto hover:animate-glow-light'>Send One Time Password</button>
                         </div>
                                 {/* Enter Otp Section
                                 <div className='flex flex-col items-center'>
@@ -136,7 +136,7 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
                             </div>
                             {/* Log In */}
                             <div>
-                                <button onClick={handleLogin} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5 font-roboto'>Login</button>
+                                <button onClick={handleLogin} className='pr-5 pl-5 pt-3 pb-3 bg-button-color rounded-sm w-72 mb-5 font-roboto hover:animate-glow-light'>Login</button>
                                 {/* <button className='h-40 w-300 b-1-t-s br-5 fs-r' type='submit'>Log in</button> */}
                             </div>
                         </form>

@@ -101,7 +101,7 @@ const SignUpComponent = ({formData , setFormData , loading , setLoading}) => {
                         </div>
                         {/* Create Account */}
                         <div>
-                            <button onClick={handleRegister} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm w-72 mb-5 font-roboto '>Register</button>
+                            <button onClick={handleRegister} className='pr-5 pl-5 pt-3 pb-3 bg-button-color rounded-sm w-72 mb-5 font-roboto hover:animate-glow-light'>Register</button>
                         </div>
                         {/* ----- or ----- Section */}
                         <div className='mb-5'>

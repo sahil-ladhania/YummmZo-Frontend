@@ -1,13 +1,17 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { getLocation } from 'current-location-geo';
 import LoaderComponent from '../../Utils/LoaderComponent';
 import CostLowToHighAndCrossComponent from '../Restaurant/CostLowToHighAndCrossComponent';
+import { headings } from '../../Utils/HeadingsData';
 
 const LocateMeComponent = ({currentLocation , setCurrentLocation , loading , setLoading}) => {
     const navigate = useNavigate();
+    const animatingHeadings = headings;
+    // State Variables
+    const [currentHeadingIndex , setCurrentHeadingIndex] = useState(0);
     // Handler Function
     const handleCurrentLocation = () => {
         setLoading(true);
@@ -58,6 +62,14 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation , loading , set
             document.body.classList.remove('blur-background')
         }, 2000);
     }
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentHeadingIndex((prevIndex) => (prevIndex + 1) % animatingHeadings.length);
+        }, 3000);
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
     return (
         <div>
             <>  
@@ -76,7 +88,7 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation , loading , set
                                                 <LoaderComponent/>
                                                 :
                                                 <>
-                                                    <Link onClick={handleHomeLoader} className='text-4xl font-semibold font-roboto text-primary' >YummmZo</Link>
+                                                    <Link onClick={handleHomeLoader} className='text-4xl font-semibold font-roboto text-primary tracking-wider' >YummmZo</Link>
                                                 </>
                                         }
                                     </div>
@@ -86,7 +98,7 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation , loading , set
                                                 <LoaderComponent/>
                                                 :
                                                 <>
-                                                    <Link onClick={handleLoginLoader} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto'>Login</Link>
+                                                    <Link onClick={handleLoginLoader} className='pr-5 pl-5 pt-3 pb-3 bg-button-color rounded-sm font-roboto hover:animate-glow-light'>Login</Link>
                                                 </>
                                         }
                                         {
@@ -94,30 +106,30 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation , loading , set
                                                 <LoaderComponent/>
                                                 :
                                                 <>
-                                                    <Link onClick={handleSignupLoader} className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto'>Sign Up</Link>
+                                                    <Link onClick={handleSignupLoader} className='pr-5 pl-5 pt-3 pb-3 bg-button-color rounded-sm font-roboto hover:animate-glow-light'>Sign Up</Link>
                                                 </>
                                         }
                                     </div>
                                 </div>
                                 {/* Changing Heading & Description */}
                                 <div className='h-40 flex flex-col justify-center'>
-                                    <h1 className='text-4xl font-bold pt-3 pb-3 font-roboto text-yummmzo-color'>Late night at office ?</h1>
-                                    <h2 className='text-2xl pt-1 pb-1 font-roboto text-yummmzo-color'>Order food from favourite restaurants near you.</h2>
+                                    <h1 className={`text-4xl font-bold pt-3 pb-3 font-roboto text-yummmzo-color tracking-wider heading-animation`}>{animatingHeadings[currentHeadingIndex]}</h1>
+                                    <h2 className='text-2xl pt-1 pb-1 font-roboto text-yummmzo-color tracking-wider'>Order food from favourite restaurants near you.</h2>
                                 </div>
                                 {/* Locate Me Section */}
                                 <div className='h-20 flex justify-start items-center'>
                                     <input className="w-80 h-10 outline-none rounded-l-sm p-2 font-roboto text-secondary" type="text" placeholder='Enter your delivery location'/>
-                                    <div onClick={handleCurrentLocation} className='flex items-center bg-slate-200 rounded-r-sm h-10 cursor-pointer'>
+                                    <div onClick={handleCurrentLocation} className='flex items-center bg-button-color rounded-r-sm h-10 cursor-pointer hover:animate-glow-light'>
                                         <span className='pr-1 pl-1 text-xl'><CiLocationOn/></span>
-                                        <span className='pr-3 pl-3 text-sm font-roboto '>Locate Me</span>
+                                        <span className='pr-3 pl-3 text-sm font-roboto'>Locate Me</span>
                                     </div>
                                 </div>
                                 {/* Popular Cities Heading */}
                                 <div className='h-10 flex items-center'>
-                                    <h3 className='uppercase text-md font-roboto text-yummmzo-color'>popular cities in india</h3>
+                                    <h3 className='uppercase text-md font-roboto text-yummmzo-color tracking-wider'>popular cities in india</h3>
                                 </div>
                                 {/* Popular Cities List */}
-                                <div className='h-20 flex items-center mb-14'>
+                                <div className='h-20 flex items-center py-2'>
                                     <div>
                                         <span className='pr-2 text-sm cursor-pointer font-roboto text-yummmzo-color'>Ahmedabad</span>
                                         <span className='pr-2 text-sm cursor-pointer font-roboto text-yummmzo-color'>Bangalore</span>

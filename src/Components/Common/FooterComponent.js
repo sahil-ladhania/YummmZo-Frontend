@@ -5,7 +5,7 @@ import LowerFooterComponent from './LowerFooterComponent';
 
 const FooterComponent = () => {
     return (
-        <div>
+        <div className='max-w-6xl ml-auto mr-auto'>
             <>
                 <div className='h-auto'>
                     {/* Upper Footer Section */}

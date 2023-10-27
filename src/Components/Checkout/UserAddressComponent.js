@@ -25,7 +25,7 @@ const UserAddressComponent = () => {
                             <span className='text-sm font-semibold font-roboto text-yummmzo-color'>32 MINS</span>
                         </div>
                         <div>
-                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto'>Deliver Here</button>
+                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto hover:animate-glow-light'>Deliver Here</button>
                         </div>
                     </div>
                 </div>

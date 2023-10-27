@@ -11,7 +11,7 @@ const SignUpPage = () => {
     // Accessing Input States From The Context.
     const {formData , setFormData} = useContext(UserContext);
     return (
-        <div className='bg-page-background h-screen'>
+        <div className='bg-gradient-tl-br h-screen'>
             <>
                 <div className='max-w-6xl ml-auto mr-auto'>
                     {/* YummmZo Logo */}

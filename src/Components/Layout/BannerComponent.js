@@ -2,14 +2,14 @@ import React from 'react'
 
 const BannerComponent = () => {
     return (
-        <div>
+        <div className='max-w-6xl ml-auto mr-auto'>
             <>
                 {/* Main Component */}
-                <div className='flex items-center justify-between'>
+                <div className='h-auto flex items-center justify-between py-10'>
                     {/* Content Section */}
                     <div className=''>
                         <p className='text-4xl font-bold h-24 w-64 font-roboto text-yummmzo-color'>Restaurants in your pocket</p>
-                        <p className='h-24 w-96 text-lg font-roboto text-yummmzo-color'>
+                        <p className='h-24 w-96 text-lg font-medium font-roboto text-secondary'>
                             Order from your favorite restaurants & track on the go, with the all-new YummmZo app.
                         </p>
                         <div className='flex items-center justify-between'>

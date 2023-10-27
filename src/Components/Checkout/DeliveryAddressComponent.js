@@ -29,7 +29,7 @@ const DeliveryAddressComponent = () => {
                                 <CiLocationOn className='text-xl mr-2 text-yummmzo-color'/>
                                 <span className='text-md font-medium font-roboto text-yummmzo-color'>Add New Address</span>
                             </div>
-                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto'>Add New</button>
+                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto hover:animate-glow-light'>Add New</button>
                         </a>
                     </div>
                 </div>

@@ -24,15 +24,21 @@ const LandingPage = () => {
         }, 2000);
     }, [navigate])
     return (
-        <div className='bg-page-background'>
+        <div className='bg-gradient-tl-br'>
             <>
-                <div className='max-w-6xl ml-auto mr-auto'>
-                    {/* Locate Me | Login | Signup Section */}
-                    <LocateMeComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} loading={loading} setLoading={setLoading}/>
-                    {/* Banner Section */}
-                    <BannerComponent/>
-                    {/* Footer Section */}
-                    <FooterComponent/>
+                <div>
+                    <div className='max-w-6xl ml-auto mr-auto'>
+                        {/* Locate Me | Login | Signup Section */}
+                        <LocateMeComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} loading={loading} setLoading={setLoading}/>
+                    </div>
+                    <div className='bg-banner-gradient'>
+                        {/* Banner Section */}
+                        <BannerComponent/>
+                    </div>
+                    <div className='bg-footer-black'>
+                        {/* Footer Section */}
+                        <FooterComponent/>
+                    </div>
                 </div>
             </>
         </div>

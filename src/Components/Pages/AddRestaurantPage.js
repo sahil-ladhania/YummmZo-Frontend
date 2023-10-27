@@ -17,9 +17,9 @@ const AddRestaurantPage = () => {
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     return (
-        <div className='bg-page-background'>
+        <div className='bg-gradient-tl-br'>
             <>
-                <div className='max-w-6xl ml-auto mr-auto'>
+                <div className='bg-navbar-gradient'>
                     {/* Navabar Component */}
                     <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                 </div>

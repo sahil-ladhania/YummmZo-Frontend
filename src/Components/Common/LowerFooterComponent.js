@@ -9,7 +9,7 @@ const LowerFooterComponent = () => {
         <div>
         <>
             {/* Main Component */}
-            <div className='flex justify-between items-center h-20'>
+            <div className='flex justify-between items-center h-auto py-5'>
                 {/* Logo Container */}
                 <div className=''>
                     <img className='text-yummmzo-color' src="" alt="YummmZo-Logo" />

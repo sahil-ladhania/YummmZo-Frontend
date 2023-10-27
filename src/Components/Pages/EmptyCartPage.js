@@ -14,9 +14,9 @@ const EmptyCartPage = () => {
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     return (
-        <div className='bg-page-background'>
+        <div className='bg-gradient-tl-br'>
             <>
-                <div className='max-w-6xl ml-auto mr-auto'>
+                <div className='bg-navbar-gradient'>
                     {/* Customised Navbar for this page Section */}
                     <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                 </div>

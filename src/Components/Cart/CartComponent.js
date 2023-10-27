@@ -62,7 +62,7 @@ const CartComponent = () => {
                     </div>
                     {/* Checkout Section */}
                     <div className='py-5 flex items-center justify-center'> 
-                        <Link className='pr-28 pl-28 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto' to="/checkout">CHECKOUT</Link>
+                        <Link className='pr-28 pl-28 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto hover:animate-glow-light' to="/checkout">CHECKOUT</Link>
                     </div>
                 </div>
             </>

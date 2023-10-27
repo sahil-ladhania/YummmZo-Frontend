@@ -1,6 +1,47 @@
-.blur-background {
-    filter: blur(2px); /* Adjust the blur intensity as needed */
+/* CSS classes for the animation */
+@keyframes headingUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
 }
+
+.heading-animation {
+    animation: headingUp 3s linear infinite;
+}
+
+
+/* Glowing Light Animation */
+@keyframes glow-light {
+    0% {
+        box-shadow: 0 0 2px 0 #D9D9D9;
+    }
+
+    50% {
+        box-shadow: 0 0 10px 5px #D9D9D9;
+    }
+
+    100% {
+        box-shadow: 0 0 2px 0 #D9D9D9;
+    }
+}
+
+
+.blur-background {
+    filter: blur(2px);
+    /* Adjust the blur intensity as needed */
+}
+
 .loader-container {
     position: fixed;
     top: 0;
@@ -21,7 +62,7 @@
 .loader-line {
     width: 0;
     height: 100%;
-    background-image: linear-gradient(to right , #FFEE33 , orange);
+    background-image: linear-gradient(to right, #FFEE33, orange);
     /* Loader bar color */
     animation: loading 2s linear infinite;
 }

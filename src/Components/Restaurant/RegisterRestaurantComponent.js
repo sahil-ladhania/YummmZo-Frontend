@@ -14,7 +14,7 @@ const RegisterRestaurantComponent = () => {
                         And get ads worth INR 1500. Valid for new restaurant partners in select cities.
                     </div>
                     <div>
-                        <Link className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto' to="/registerRestaurant">Register Your Restaurant</Link>
+                        <Link className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto hover:animate-glow-light' to="/registerRestaurant">Register Your Restaurant</Link>
                     </div>
                     <div>
                         <span className='text-sm font-roboto text-yummmzo-color'>Need help? Please email us at </span>

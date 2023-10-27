@@ -34,9 +34,9 @@ const BillComponent = () => {
                             </p>
                         </div>
                         <div className='h-10 flex items-center justify-between'>
-                            <button className='h-8 pr-3 pl-3 bg-slate-200 rounded-sm font-roboto'>-</button>
+                            <button className='h-8 pr-3 pl-3 bg-slate-200 rounded-sm font-roboto hover:animate-glow-light'>-</button>
                             <input className='h-8 pr-3 pl-3 font-roboto ' type="button" placeholder='1'/>
-                            <button className='h-8 pr-3 pl-3 bg-slate-200 rounded-sm font-roboto'>+</button>
+                            <button className='h-8 pr-3 pl-3 bg-slate-200 rounded-sm font-roboto hover:animate-glow-light'>+</button>
                         </div>
                         <div>
                             <p className='text-sm font-roboto text-yummmzo-color'>

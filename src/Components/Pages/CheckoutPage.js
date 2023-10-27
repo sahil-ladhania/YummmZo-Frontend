@@ -17,12 +17,14 @@ const CheckoutPage = () => {
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     return (
-        <div className='bg-page-background'>
+        <div className='bg-gradient-tl-br'>
             <>
-                <div className='max-w-6xl ml-auto mr-auto'>
-                    {/* Navbar Component */}
-                    <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
-                    <div className='flex jc-sb'>
+                <div>
+                    <div className='bg-navbar-gradient'>
+                        {/* Navbar Component */}
+                        <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
+                    </div>
+                    <div className='flex jc-sb max-w-6xl ml-auto mr-auto'>
                         <div className='w-8/12 mr-10 mb-10'>
                             {/* Delivery Option Component */}
                             <DeliveryAddressComponent/>
@@ -32,7 +34,7 @@ const CheckoutPage = () => {
                             <BillComponent/>
                         </div>
                     </div>
-                    <div className='flex jc-sb'>
+                    <div className='flex jc-sb max-w-6xl ml-auto mr-auto'>
                         <div className='w-8/12 mr-10 mb-10'>
                             {/* Payment Component */}
                             <PaymentComponent/>

@@ -31,21 +31,27 @@ const HomePage = () => {
             });
     }, []);
     return (
-        <div className='bg-page-background'>
+        <div className='bg-gradient-tl-br'>
             <>
-                <div className='max-w-6xl ml-auto mr-auto'>
+                <div className='bg-navbar-gradient'>
                     {/* Navbar Component */}
                     <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                 </div>
-                <div className='max-w-5xl ml-auto mr-auto'>
-                    {/* Popular Cuisines Component */}
-                    <PopularCuisinesComponent cuisines={cuisines}/>
-                    {/* Top Brands Component */}
-                    <TopBrandsComponent/>
-                    {/* Get YummmZo Banner Component */}
-                    <GetYummmZoAppComponent/>
+                <div>
+                    <div className='max-w-5xl ml-auto mr-auto'>
+                        {/* Popular Cuisines Component */}
+                        <PopularCuisinesComponent cuisines={cuisines}/>
+                    </div>
+                    <div className='max-w-5xl ml-auto mr-auto'>
+                        {/* Top Brands Component */}
+                        <TopBrandsComponent/>
+                    </div>
+                    <div className='bg-banner-gradient'>
+                        {/* Get YummmZo Banner Component */}
+                        <GetYummmZoAppComponent/>
+                    </div>
                 </div>
-                <div className='max-w-6xl ml-auto mr-auto'>
+                <div className='bg-footer-black'>
                     {/* Footer Component */}
                     <FooterComponent/>
                 </div>

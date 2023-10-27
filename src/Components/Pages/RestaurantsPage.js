@@ -47,9 +47,9 @@ const RestaurantsPage = () => {
             });
     }, []);
     return (
-        <div className='bg-page-background'>
+        <div className='bg-gradient-tl-br'>
             <>
-                <div className='max-w-6xl ml-auto mr-auto'>
+                <div className='bg-navbar-gradient'>
                     {/* Navbar Component */}
                     <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                 </div>
@@ -63,7 +63,7 @@ const RestaurantsPage = () => {
                     {/* Restaurant Lists Component */}
                     <RestaurantListComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive} loading={loading} setLoading={setLoading}/>
                 </div>
-                <div className='max-w-6xl ml-auto mr-auto'>
+                <div className='bg-footer-black'>
                     {/* Footer Component */}
                     <FooterComponent/>
                 </div>
