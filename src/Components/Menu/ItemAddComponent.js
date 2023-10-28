@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import {addToCartAPI} from '../../Services/CartService'
 
 const ItemAddComponent = ({ cartState , cartDispatch }) => {
     // Defining States.

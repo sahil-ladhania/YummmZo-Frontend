@@ -1,4 +1,6 @@
 import './App.css';
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -32,52 +34,54 @@ import { CartContextProvider } from './Contexts/CartContext';
 
 function App() {
   return (
-    <div className="App">
-      <>
-        {/* Routes */}
-        <PageLoaderContextProvider>
-          <UserCurrentLocationContextProvider>
-            <UserContextProvider>
-              <CuisineContextProvider>
-                  <MenuContextProvider>
-                    <RestaurantDetailsProvider>
-                      <RestaurantProvider>
-                        <CartContextProvider>
-                            <Routes>
-                              <Route exact path="/" element={<LandingPage/>}/>
-                              <Route exact path="/profile" element={<ProfileDropdownComponent/>}/>
-                              <Route exact path="/cartComponent" element={<CartComponent/>}/>
-                              <Route exact path="/emptyCartComponent" element={<EmptyCartComponent/>}/>
-                              <Route path="/home" element={<HomePage/>}/>
-                              <Route path="/restaurants" element={<RestaurantsPage/>}/>
-                              <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>
-                              <Route path="/registerRestaurant" element={<RegisterRestaurantPage/>}/>
-                              <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
-                              <Route path="/login" element={<LogInPage/>}/>
-                              <Route path="/cart" element={<EmptyCartPage/>}/>
-                              <Route path="/checkout" element={<CheckoutPage/>}/>
-                              <Route path="/cartComponent" element={<CartComponent/>}/>
-                              <Route path="/signup" element={<SignUpPage/>}/>
-                              <Route path="/landing" element={<LandingPage/>}/>
-                              <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
-                              <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
-                              <Route path="/profile" element={<ProfileDropdownComponent/>}/>
-                              <Route path="/cuisineResult" element={<CuisineResults/>}/>
-                              <Route path="/restaurantResult" element={<RestaurantResults/>}/>
-                              <Route path="/menuItemResult" element={<MenuItemsResultComponent/>}/>
-                              <Route path="*" element={<FourZeroFourPage/>}/>
-                            </Routes>
-                          </CartContextProvider>
-                      </RestaurantProvider>
-                      <ToastContainer/>
-                    </RestaurantDetailsProvider>
-                  </MenuContextProvider>
-              </CuisineContextProvider>
-            </UserContextProvider>
-          </UserCurrentLocationContextProvider>
-        </PageLoaderContextProvider>
-      </>
-    </div>
+    <Theme>
+      <div className="App">
+        <>
+          {/* Routes */}
+          <PageLoaderContextProvider>
+            <UserCurrentLocationContextProvider>
+              <UserContextProvider>
+                <CuisineContextProvider>
+                    <MenuContextProvider>
+                      <RestaurantDetailsProvider>
+                        <RestaurantProvider>
+                          <CartContextProvider>
+                              <Routes>
+                                <Route exact path="/" element={<LandingPage/>}/>
+                                <Route exact path="/profile" element={<ProfileDropdownComponent/>}/>
+                                <Route exact path="/cartComponent" element={<CartComponent/>}/>
+                                <Route exact path="/emptyCartComponent" element={<EmptyCartComponent/>}/>
+                                <Route path="/home" element={<HomePage/>}/>
+                                <Route path="/restaurants" element={<RestaurantsPage/>}/>
+                                <Route path="/addRestaurant" element={<AddRestaurantPage/>}/>
+                                <Route path="/registerRestaurant" element={<RegisterRestaurantPage/>}/>
+                                <Route path="/helpandsupport" element={<HelpAndSupportPage/>}/>
+                                <Route path="/login" element={<LogInPage/>}/>
+                                <Route path="/cart" element={<EmptyCartPage/>}/>
+                                <Route path="/checkout" element={<CheckoutPage/>}/>
+                                <Route path="/cartComponent" element={<CartComponent/>}/>
+                                <Route path="/signup" element={<SignUpPage/>}/>
+                                <Route path="/landing" element={<LandingPage/>}/>
+                                <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
+                                <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
+                                <Route path="/profile" element={<ProfileDropdownComponent/>}/>
+                                <Route path="/cuisineResult" element={<CuisineResults/>}/>
+                                <Route path="/restaurantResult" element={<RestaurantResults/>}/>
+                                <Route path="/menuItemResult" element={<MenuItemsResultComponent/>}/>
+                                <Route path="*" element={<FourZeroFourPage/>}/>
+                              </Routes>
+                            </CartContextProvider>
+                        </RestaurantProvider>
+                        <ToastContainer/>
+                      </RestaurantDetailsProvider>
+                    </MenuContextProvider>
+                </CuisineContextProvider>
+              </UserContextProvider>
+            </UserCurrentLocationContextProvider>
+          </PageLoaderContextProvider>
+        </>
+      </div>
+    </Theme>
   );
 }
 

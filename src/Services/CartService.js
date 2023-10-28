@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const addItem = (userId , restaurantId , menuItemId) => {
     const endpoint = `http://localhost:81/api/cart/addItem/${userId}/${restaurantId}/${menuItemId}`;
-    return axios.post(endpoint)
+    return axios.post(endpoint , userId , restaurantId , menuItemId)
         .then((response) => {
             console.log(response.data);
             return response.data;

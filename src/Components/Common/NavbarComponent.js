@@ -10,6 +10,7 @@ import { getLocation } from 'current-location-geo';
 import ProfileDropdownComponent from './ProfileDropdownComponent';
 import EmptyCartComponent from '../Cart/EmptyCartComponent';
 import LoaderComponent from '../../Utils/LoaderComponent';
+import CartBadgeComponent from '../Cart/CartBadgeComponent';
 
 const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth , loading , setLoading}) => {
     const navigate = useNavigate();
@@ -179,8 +180,10 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
                                         <>
                                             <NavLink onClick={handleCartLoader} onMouseEnter={handleCartDropdownEnter} onMouseLeave={handleCartDropdownLeave} className="flex items-center py-5 px-2">
                                                 <CiShoppingCart className='text-4xl  text-yummmzo-color hover:text-primary'/>
+                                                <CartBadgeComponent/>
                                                 <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Cart</span>
                                             </NavLink>
+                                            
                                         </>
                                 }
                             </li>
