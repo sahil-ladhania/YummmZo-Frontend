@@ -28,6 +28,7 @@ import { UserContextProvider } from './Contexts/UserContext';
 import { UserCurrentLocationContextProvider } from './Contexts/UserCurrentLocationContext';
 import EmptyCartComponent from './Components/Cart/EmptyCartComponent';
 import { PageLoaderContextProvider } from './Contexts/PageLoaderContext';
+import { CartContextProvider } from './Contexts/CartContext';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
                   <MenuContextProvider>
                     <RestaurantDetailsProvider>
                       <RestaurantProvider>
+                        <CartContextProvider>
                             <Routes>
                               <Route exact path="/" element={<LandingPage/>}/>
                               <Route exact path="/profile" element={<ProfileDropdownComponent/>}/>
@@ -65,6 +67,7 @@ function App() {
                               <Route path="/menuItemResult" element={<MenuItemsResultComponent/>}/>
                               <Route path="*" element={<FourZeroFourPage/>}/>
                             </Routes>
+                          </CartContextProvider>
                       </RestaurantProvider>
                       <ToastContainer/>
                     </RestaurantDetailsProvider>

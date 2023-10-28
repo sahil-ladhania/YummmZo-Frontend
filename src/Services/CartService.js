@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const addItem = (userId , restaurantId , menuItemId) => {
     const endpoint = `http://localhost:81/api/cart/addItem/${userId}/${restaurantId}/${menuItemId}`;
-    return axios.post(endpoint , userId , restaurantId , menuItemId)
+    return axios.post(endpoint)
         .then((response) => {
             console.log(response.data);
             return response.data;
@@ -37,7 +37,7 @@ export const decrementItem = (userId , restaurantId , menuItemId) => {
 };
 
 export const fetchCartItems = (userId) => {
-    const endpoint = `localhost:81/api/cart/${userId}`;
+    const endpoint = `http://localhost:81/api/cart/${userId}`;
     return axios.get(endpoint , userId)
         .then((response) => {
             console.log(response.data);

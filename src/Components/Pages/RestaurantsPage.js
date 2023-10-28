@@ -14,8 +14,11 @@ import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 import { UserContext } from '../../Contexts/UserContext';
 import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
+import { CartContext } from '../../Contexts/CartContext';
 
 const RestaurantsPage = () => {
+    // Accessing Cart State From The Context.
+    const {cartState , cartDispatch} = useContext(CartContext);
     // Accessing Loading State From The Context.
     const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Input States From The Context.
@@ -61,7 +64,7 @@ const RestaurantsPage = () => {
                     {/* Filters Component */}
                     <RestaurantFilterComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive}/>
                     {/* Restaurant Lists Component */}
-                    <RestaurantListComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive} loading={loading} setLoading={setLoading}/>
+                    <RestaurantListComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive} loading={loading} setLoading={setLoading} cartState={cartState} cartDispatch={cartDispatch}/>
                 </div>
                 <div className='bg-footer-black'>
                     {/* Footer Component */}

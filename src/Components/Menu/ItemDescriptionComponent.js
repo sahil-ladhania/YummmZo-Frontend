@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ItemDescriptionComponent = ({ menuItem }) => {
+const ItemDescriptionComponent = ({ menuItem , cartState , cartDispatch }) => {
     return (
         <div>
             <>

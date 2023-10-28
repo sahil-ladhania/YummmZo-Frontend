@@ -14,13 +14,14 @@ import { RestaurantDetailsContext } from '../../Contexts/RestaurantDetailsContex
 import { getRestaurantById } from "../../Services/RestaurantService";
 import { MenuContext } from '../../Contexts/MenuContext';
 import { getAllMenuItemsForRestaurant } from '../../Services/MenuService';
-import { CartContext } from '../../Contexts/CartContext';
-import { getCartDetailsForUser } from '../../Services/CartService';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 import { UserContext } from '../../Contexts/UserContext';
 import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
+import { CartContext } from '../../Contexts/CartContext';
 
 const MenuPage = () => {
+    // Accessing Cart State From The Context.
+    const {cartState , cartDispatch} = useContext(CartContext);
     // Accessing Loading State From The Context.
     const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Input States From The Context.
@@ -81,7 +82,7 @@ const MenuPage = () => {
                     {/* Heading Section */}
                     <ItemCategoryHeadingComponent/>
                     {/* Menu Section Component */}
-                    <MenuSectionComponent menuItems={menuItems}/>
+                    <MenuSectionComponent menuItems={menuItems} cartState={cartState} cartDispatch={cartDispatch}/>
                     {/* Restaurant Lisence Section */}
                     <RestaurantLisenceComponent restaurantDetails={restaurantDetails}/>
                 </div>

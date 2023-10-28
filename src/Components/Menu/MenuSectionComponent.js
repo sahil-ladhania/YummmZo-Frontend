@@ -2,7 +2,7 @@ import React from 'react'
 import ItemDescriptionComponent from './ItemDescriptionComponent';
 import ItemAddComponent from './ItemAddComponent';
 
-const MenuSectionComponent = ({ menuItems }) => {
+const MenuSectionComponent = ({ menuItems , cartState , cartDispatch }) => {
     return (
         <div>
             <>
@@ -11,9 +11,9 @@ const MenuSectionComponent = ({ menuItems }) => {
                     {/* Map over the menuItems array */}
                     {menuItems.map((menuItem) => (
                         <div className='flex items-center justify-between mb-10' key={menuItem._id}>
-                            <ItemDescriptionComponent className="w-9/12" menuItem={menuItem} />
+                            <ItemDescriptionComponent className="w-9/12" menuItem={menuItem} cartState={cartState} cartDispatch={cartDispatch}/>
                             {/* Add Item Component */}
-                            <ItemAddComponent className="w-3/12"/>
+                            <ItemAddComponent className="w-3/12" cartState={cartState} cartDispatch={cartDispatch}/>
                         </div>
                     ))}
                 </div>

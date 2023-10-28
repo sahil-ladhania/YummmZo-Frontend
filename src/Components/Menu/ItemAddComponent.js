@@ -1,15 +1,22 @@
 import React, {useState} from 'react'
-import { addItem } from '../../Services/CartService';
+import {addToCartAPI} from '../../Services/CartService'
 
-const ItemAddComponent = () => {
+const ItemAddComponent = ({ cartState , cartDispatch }) => {
+    // Defining States.
     const [quantity , setQuantity] = useState(1);
     const [isAddedToCart , setIsAddedToCart] = useState(false);
-
+    // Defining Handler Functions.
     const handleAddToCart = () => {
         setIsAddedToCart(true);
-    }
+        cartDispatch({
+            type : "ADD_TO_CART"
+        });
+    };
     const handleIncrement = () => {
         setQuantity(quantity + 1);
+        cartDispatch({
+            type : "INCREMENT_ITEM"
+        });
     }
     const handleDecrement = () => {
         if (quantity > 1){
@@ -19,6 +26,9 @@ const ItemAddComponent = () => {
             setQuantity(1);
             setIsAddedToCart(false);
         }
+        cartDispatch({
+            type : "DECREMENT_ITEM"
+        });
     }
     return (
         <div>
@@ -35,7 +45,7 @@ const ItemAddComponent = () => {
                                     <button className='h-10 pr-5 pl-5 bg-slate-200 rounded-sm hover:animate-glow-light' onClick={handleIncrement}>+</button>
                                 </div>
                                 :
-                                <button onClick={handleAddToCart} className='h-10 pr-5 pl-5 bg-slate-200 rounded-sm hover:animate-glow-light'>Add to Cart</button>
+                                <button onClick={handleAddToCart} className='h-10 pr-5 pl-5 bg-slate-200 rounded-sm hover:animate-glow-light'>Add To Cart</button>
                             }
                         </div>
                 </div>
