@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
+import LoaderComponent from '../../Utils/LoaderComponent';
 
-const ProfileDropdownComponent = ({auth , setAuth}) => {
+const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
+    const navigate = useNavigate();
     // Handler Functions.
     const handleLogout = () => {
         setAuth({
@@ -8,6 +11,13 @@ const ProfileDropdownComponent = ({auth , setAuth}) => {
         })
         localStorage.clear("user_data");
         localStorage.clear("jwt_token");
+        console.log("Loader Clicked")
+        setLoading(true);
+        setTimeout(() => {
+            navigate("/");
+            setLoading(false);
+            document.body.classList.remove('blur-background')
+        }, 2000);
     };
     return (
         <div>
@@ -280,9 +290,16 @@ const ProfileDropdownComponent = ({auth , setAuth}) => {
                                 </div>
                                 {/* Logout Section */}
                                 <div className='py-5'>
-                                    <div className='flex items-center justify-end'>
-                                        <a onClick={handleLogout} className='font-roboto text-primary' href="#">Log out</a>
-                                    </div>
+                                    {
+                                        loading ?
+                                            <LoaderComponent/>
+                                            :
+                                            <>
+                                                <div className='flex items-center justify-end'>
+                                                    <a onClick={handleLogout} className='font-roboto text-primary' href="#">Log out</a>
+                                                </div>
+                                            </>
+                                    }
                                 </div>
                             </div>
                         </div>

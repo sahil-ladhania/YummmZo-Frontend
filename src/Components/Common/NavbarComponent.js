@@ -187,7 +187,7 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
                         </ul>
                         {
                             isProfileDropdownVisible ?
-                                <ProfileDropdownComponent auth={auth} setAuth={setAuth}/>
+                                <ProfileDropdownComponent auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                                 :
                                 null
                         }
