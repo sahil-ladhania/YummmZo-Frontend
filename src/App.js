@@ -1,6 +1,5 @@
 import './App.css';
 import '@radix-ui/themes/styles.css';
-import { Theme } from '@radix-ui/themes';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -34,7 +33,6 @@ import { CartContextProvider } from './Contexts/CartContext';
 
 function App() {
   return (
-    <Theme>
       <div className="App">
         <>
           {/* Routes */}
@@ -81,7 +79,6 @@ function App() {
           </PageLoaderContextProvider>
         </>
       </div>
-    </Theme>
   );
 }
 
