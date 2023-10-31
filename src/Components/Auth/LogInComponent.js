@@ -137,7 +137,6 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
                             {/* Log In */}
                             <div>
                                 <button onClick={handleLogin} className='pr-5 pl-5 pt-3 pb-3 bg-button-color rounded-sm w-72 mb-5 font-roboto hover:animate-glow-light'>Login</button>
-                                {/* <button className='h-40 w-300 b-1-t-s br-5 fs-r' type='submit'>Log in</button> */}
                             </div>
                         </form>
                         {/* ----- or ----- Section */}
