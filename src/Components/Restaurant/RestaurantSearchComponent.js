@@ -38,18 +38,18 @@ const RestaurantSearchComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='h-auto flex flex-col items-center justify-center mb-10 mt-5'>
-                    <div className='flex items-center justify-center mb-10 w-full'>
+                <div className='h-auto flex flex-col items-center justify-center mt-5'>
+                    <div className='flex items-center justify-center mb-5 w-full border border-gray-600 rounded-sm'>
                         <input 
                             onClick={handleShowResults}  
                             onChange={handleSearch} 
                             value={searchQuery} 
-                            className='w-full h-10 outline-none rounded-sm p-2 font-roboto text-secondary' 
+                            className='w-full h-10 bg-white outline-none rounded-sm p-2 font-roboto text-secondary' 
                             type="search" 
                             placeholder='Search for restaurant and cuisine' 
                             />
                             <span className='pr-3 pl-3 cursor-pointer'>
-                                <CiSearch className='h-10 text-xl text-yummmzo-color'/>
+                                <CiSearch className='h-10 text-xl text-secondary'/>
                             </span>
                     </div>
                     {/* Search Results Component */}

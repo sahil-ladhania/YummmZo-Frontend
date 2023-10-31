@@ -94,7 +94,7 @@ const RestaurantFilterComponent = ({ restaurants , setRestaurants , filteredRest
                     {/* Left Section */}
                     <div className='w-3/12'>
                         {/* No of Restaurants */}
-                        <span className='text-xl font-roboto text-yummmzo-color'>{restaurants.length} Restaurants Online</span>
+                        <span className='text-xl font-medium font-roboto text-secondary'>{restaurants.length} Restaurants Online</span>
                     </div>
                     {/* Right Section */}
                     <div className='w-9/12 flex justify-between'>

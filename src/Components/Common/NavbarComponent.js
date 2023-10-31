@@ -108,15 +108,15 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
                                     <LoaderComponent/>
                                     :
                                     <>
-                                        <NavLink onClick={handleHomeLoader} className="mr-5 text-4xl font-semibold font-roboto text-primary">YummmZo</NavLink>
+                                        <NavLink onClick={handleHomeLoader} className="mr-5 text-4xl font-semibold font-roboto text-logo">YUMMMZO</NavLink>
                                     </>
                             }
                         </div>
                         <div className=''>
                             <a onClick={handleCurrentLocation} className='flex items-center' href="#">
-                                <span className='text-sm font-medium mr-2 font-roboto text-yummmzo-color'>Home</span>
-                                <span className='text-sm font-roboto mr-2 text-primary'>{currentLocation.slice(0,25)}</span>
-                                <span><CiCircleChevDown className='text-md  text-primary'/></span>
+                                <span className='text-sm font-medium mr-2 font-roboto text-secondary'>Home</span>
+                                <span className='text-sm font-roboto mr-2 text-logo'>{currentLocation.slice(0,25)}</span>
+                                <span><CiCircleChevDown className='text-md  text-logo'/></span>
                             </a>
                         </div>
                     </div>
@@ -130,8 +130,8 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
                                     :
                                     <>
                                         <NavLink onClick={handleRestaurantLoader}  className="flex items-center py-5 px-2">
-                                            <CiForkAndKnife className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Restaurants</span>
+                                            <CiForkAndKnife className='text-4xl fill-red-400'/>
+                                            <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Restaurants</span>
                                         </NavLink>
                                     </>
                                 }
@@ -143,8 +143,8 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
                                         :
                                         <>
                                             <NavLink onClick={handleAddRestaurantLoader} className="flex items-center py-5 px-2">
-                                                <CiCirclePlus className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                                <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Add Restaurant</span>
+                                                <CiCirclePlus className='text-4xl fill-red-400'/>
+                                                <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Add Restaurant</span>
                                             </NavLink>
                                         </>
                                 }
@@ -153,8 +153,8 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
                                 {
                                     auth.user ?
                                         <NavLink onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-center py-5 px-2">
-                                            <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'> {auth.user.firstName}</span>
+                                            <CiUser className='text-4xl fill-red-400'/>
+                                            <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'> {auth.user.firstName}</span>
                                         </NavLink>
                                         :
                                         <>
@@ -164,8 +164,8 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
                                                     :
                                                     <>
                                                         <NavLink onClick={handleLoginLoader} onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-cente py-5 px-2" to="/login">
-                                                            <CiUser className='text-4xl text-yummmzo-color hover:text-primary'/>
-                                                            <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Login</span>
+                                                            <CiUser className='text-4xl fill-red-400'/>
+                                                            <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Login</span>
                                                         </NavLink>
                                                     </>
                                             }
@@ -179,9 +179,9 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
                                         :
                                         <>
                                             <NavLink onClick={handleCartLoader} onMouseEnter={handleCartDropdownEnter} onMouseLeave={handleCartDropdownLeave} className="flex items-center py-5 px-2">
-                                                <CiShoppingCart className='text-4xl  text-yummmzo-color hover:text-primary'/>
+                                                <CiShoppingCart className='text-4xl  fill-red-400'/>
                                                 <CartBadgeComponent/>
-                                                <span className='text-lg pr-2 pl-2 font-roboto text-yummmzo-color hover:text-primary'>Cart</span>
+                                                <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Cart</span>
                                             </NavLink>
                                             
                                         </>

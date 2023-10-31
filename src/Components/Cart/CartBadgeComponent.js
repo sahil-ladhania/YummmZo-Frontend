@@ -5,7 +5,7 @@ const CartBadgeComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='w-6 h-auto text-center p-1 bg-primary text-secondary font-roboto text-sm rounded-full'>
+                <div className='w-6 h-auto text-center p-1 bg-banner-gradient text-yummmzo-color font-roboto text-sm rounded-full'>
                     0
                 </div>
             </>

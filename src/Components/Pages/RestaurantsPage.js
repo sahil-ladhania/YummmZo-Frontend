@@ -50,7 +50,7 @@ const RestaurantsPage = () => {
             });
     }, []);
     return (
-        <div className='bg-gradient-tl-br'>
+        <div className=''>
             <>
                 <div className='bg-navbar-gradient'>
                     {/* Navbar Component */}

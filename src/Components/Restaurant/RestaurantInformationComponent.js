@@ -121,7 +121,7 @@ const RestaurantInformationComponent = () => {
                 </div>
                 {/* Note Section */}
                 <div className='mt-5 mb-5'>
-                    <p className='text-xs text-justify leading-4 font-roboto text-yummmzo-color'>
+                    <p className='text-xs text-justify leading-4 font-roboto text-secondary'>
                         YummmZo may disclose the information provided by you, including but not limited to the contact number and email address of the authorised persons, with third party service providers for provision of YummmZo services.
                     </p>
                 </div>

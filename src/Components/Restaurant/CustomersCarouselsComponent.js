@@ -5,7 +5,7 @@ import { PiDotOutlineLight } from "react-icons/pi";
 
 const CustomersCarouselsComponent = () => {
     return (
-        <div className='h-80 flex flex-col items-center justify-center  relative bg-yummmzo-color mb-5 rounded-sm'>
+        <div className='h-80 flex flex-col items-center justify-center  relative bg-card-gradient mb-5 rounded-sm'>
             {/* Left Button */}
             <div className='absolute left-0 top-1/2 transform -translate-y-1/2'>
                 <span className='cursor-pointer'><CiCircleChevLeft className='text-4xl'/></span>

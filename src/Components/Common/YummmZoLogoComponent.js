@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const YummmZoLogoComponent = () => {
     return (
-        <div>
+        <div className='max-w-6xl ml-auto mr-auto'>
             <>
                 {/* YummmZo Logo */}
-                <div className='h-40 flex items-center'>
-                    <Link className='text-2xl font-semibold font-roboto text-yummmzo-color' to="/">YummmZo</Link>
+                <div className='h-28 flex items-center mb-5'>
+                    <Link className='text-4xl font-semibold font-roboto text-logo' to="/">YUMMMZO</Link>
                 </div>
             </>
         </div>

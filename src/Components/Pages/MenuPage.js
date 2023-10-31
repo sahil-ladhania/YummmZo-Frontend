@@ -61,10 +61,10 @@ const MenuPage = () => {
         }
     }, [restaurantId , setMenuItems]);
     return (
-        <div className='bg-page-background'>
+        <div className=''>
             <>
-                <div className='max-w-6xl ml-auto mr-auto'>
-                    {/* Navbar Section */}
+                <div className='bg-navbar-gradient'>
+                    {/* Navbar Component */}
                     <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                 </div>
                 <div className='max-w-4xl ml-auto mr-auto'>

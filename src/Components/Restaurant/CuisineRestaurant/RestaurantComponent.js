@@ -29,17 +29,17 @@ const RestaurantComponent = ({restaurant , loading , setLoading}) => {
                         <>
                             {/* Main Component */}
                             <Link onClick={handleMenuLoader} className=''>
-                                <div className='restaurant-card bg-secondary cursor-pointer'>
-                                    <img className='font-roboto text-yummmzo-color' src={imageURL} alt={restaurantName} />
+                                <div className='restaurant-card bg-neutral-100  cursor-pointer'>
+                                    <img className='font-roboto text-secondary' src={imageURL} alt={restaurantName} />
                                     <div className='restaurant-info'>
-                                        <div className='mb-5 pt-1 font-semibold font-roboto text-yummmzo-color'>{restaurantName}</div>
-                                        <div className='mb-5 text-sm font-roboto text-yummmzo-color'>{cuisine}</div>
+                                        <div className='mb-5 pt-1 font-semibold font-roboto text-secondary'>{restaurantName}</div>
+                                        <div className='mb-5 text-sm font-roboto text-secondary'>{cuisine}</div>
                                         <div className='flex justify-between items-center'>
-                                            <span className='flex items-center text-sm font-roboto text-yummmzo-color'><CiStar className='text-xl mr-1 text-green-700'/>{rating}</span>
-                                            <span className='font-roboto text-yummmzo-color'>.</span>
-                                            <span className='text-sm font-roboto text-yummmzo-color'>{deliveryTime} MINS</span>
-                                            <span className='font-roboto text-yummmzo-color'>.</span>
-                                            <span className='flex items-center text-sm font-roboto text-yummmzo-color'><HiCurrencyRupee className='text-xl mr-1 text-yummmzo-color'/>{priceForTwo} FOR TWO</span>
+                                            <span className='flex items-center text-sm font-roboto text-secondary'><CiStar className='text-xl mr-1 text-green-700'/>{rating}</span>
+                                            <span className='font-roboto text-secondary'>.</span>
+                                            <span className='text-sm font-roboto text-secondary'>{deliveryTime} MINS</span>
+                                            <span className='font-roboto text-secondary'>.</span>
+                                            <span className='flex items-center text-sm font-roboto text-secondary'><HiCurrencyRupee className='text-xl mr-1 text-secondary'/>{priceForTwo} FOR TWO</span>
                                         </div>
                                     </div>
                                 </div>

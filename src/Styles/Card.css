@@ -8,7 +8,7 @@
     transition: box-shadow 0.3s ease;
 }
 .restaurant-card:hover {
-    box-shadow: 0 2px 4px #FFEE33;
+    box-shadow: 0 2px 4px #FA444A;
 }
 .restaurant-card img {
     width: 250px;
@@ -20,9 +20,7 @@
     height: 320px;
     width: 285px;
     text-align: center;
-    border: 1px solid #FFEE33;
     border-radius: 10px;
-    box-shadow: 0 2px 4px #FFEE33;
     cursor: pointer;
 }
 .card-image {

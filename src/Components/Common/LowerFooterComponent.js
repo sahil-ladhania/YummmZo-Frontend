@@ -12,26 +12,26 @@ const LowerFooterComponent = () => {
             <div className='flex justify-between items-center h-auto py-5'>
                 {/* Logo Container */}
                 <div className=''>
-                    <img className='text-yummmzo-color' src="" alt="YummmZo-Logo" />
+                    <span className='text-lg font-bold text-logo'>YUMMMZO</span>
                 </div>
                 {/* Trademark Container */}
                 <div className=''>
                     <span className='font-roboto text-yummmzo-color'>©</span>
-                    <span className='font-roboto text-yummmzo-color'>2023 YummmZo</span>
+                    <span className='text-sm font-medium font-roboto text-yummmzo-color'>2023 YummmZo</span>
                 </div>
                 {/* Social Media Handles Container */}
                 <div className='flex items-center w-52 justify-between'>
                     <span className='cursor-pointer'>
-                        <CiFacebook className="text-3xl text-yummmzo-color"/>
+                        <CiFacebook className="text-3xl text-yummmzo-color hover:text-logo"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <CiInstagram className="text-3xl text-yummmzo-color"/>
+                        <CiInstagram className="text-3xl text-yummmzo-color hover:text-logo"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <CiTwitter className="text-3xl text-yummmzo-color"/>
+                        <CiTwitter className="text-3xl text-yummmzo-color hover:text-logo"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <CiLinkedin className="text-3xl text-yummmzo-color"/>
+                        <CiLinkedin className="text-3xl text-yummmzo-color hover:text-logo"/>
                     </span>
                 </div>
             </div>

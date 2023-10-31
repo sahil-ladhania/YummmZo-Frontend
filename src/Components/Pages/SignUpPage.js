@@ -13,11 +13,15 @@ const SignUpPage = () => {
     return (
         <div className='bg-gradient-tl-br h-screen'>
             <>
-                <div className='max-w-6xl ml-auto mr-auto'>
+                <div className=''>
                     {/* YummmZo Logo */}
-                    <YummmZoLogoComponent/>
-                    {/* Sign Up Form */}
-                    <SignUpComponent formData={formData} setFormData={setFormData} loading={loading} setLoading={setLoading}/>
+                    <div className='bg-navbar-gradient'>
+                        <YummmZoLogoComponent/>
+                    </div>
+                    <div className='max-w-6xl ml-auto mr-auto'>
+                        {/* Sign Up Form */}
+                        <SignUpComponent formData={formData} setFormData={setFormData} loading={loading} setLoading={setLoading}/>
+                    </div>
                 </div>
             </>
         </div>

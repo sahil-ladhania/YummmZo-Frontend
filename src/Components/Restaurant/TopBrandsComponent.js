@@ -8,7 +8,7 @@ const TopBrandsComponent = () => {
                 <div className='flex flex-col items-center mb-20'>
                     {/* Heading Section */}
                     <div className='mt-10 mb-10'>
-                        <h2 className='text-3xl font-roboto text-yummmzo-color'>Top Brands For You</h2>
+                        <h2 className='text-4xl font-medium font-roboto text-secondary'>Top Brands For You</h2>
                     </div>
                     {/* Brands Section */}
                     <div className='flex items-center justify-evenly w-full'>
@@ -20,12 +20,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className=''>
                                 <a className='' href="#">
-                                    <h5 className='text-md font-semibold font-roboto text-yummmzo-color'>Andra Gunpowder</h5>
+                                    <h5 className='text-md font-semibold font-roboto text-secondary'>Andra Gunpowder</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='' href="#">
-                                    <p className='text-sm font-medium font-roboto text-yummmzo-color'>21 min</p>
+                                    <p className='text-sm font-medium font-roboto text-secondary'>21 min</p>
                                 </a>
                             </div>
                         </div>
@@ -37,12 +37,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className=''>
                                 <a className='' href="#">
-                                    <h5 className='text-md font-semibold font-roboto text-yummmzo-color'>Burger King</h5>
+                                    <h5 className='text-md font-semibold font-roboto text-secondary'>Burger King</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='' href="#">
-                                    <p className='text-sm font-medium font-roboto text-yummmzo-color'>30 min</p>
+                                    <p className='text-sm font-medium font-roboto text-secondary'>30 min</p>
                                 </a>
                             </div>
                         </div>
@@ -54,12 +54,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className=''>
                                 <a className='' href="#">
-                                    <h5 className='text-md font-semibold font-roboto text-yummmzo-color'>Mani's Dum Biryani</h5>
+                                    <h5 className='text-md font-semibold font-roboto text-secondary'>Mani's Dum Biryani</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='' href="#">
-                                    <p className='text-sm font-medium font-roboto text-yummmzo-color'>45 min</p>
+                                    <p className='text-sm font-medium font-roboto text-secondary'>45 min</p>
                                 </a>
                             </div>
                         </div>
@@ -71,12 +71,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className=''>
                                 <a className='' href="#">
-                                    <h5 className='text-md font-semibold font-roboto text-yummmzo-color'>Subway</h5>
+                                    <h5 className='text-md font-semibold font-roboto text-secondary'>Subway</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='' href="#">
-                                    <p className='text-sm font-medium font-roboto text-yummmzo-color'>30 min</p>
+                                    <p className='text-sm font-medium font-roboto text-secondary'>30 min</p>
                                 </a>
                             </div>
                         </div>
@@ -88,12 +88,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className=''>
                                 <a className='' href="#">
-                                    <h5 className='text-md font-semibold font-roboto text-yummmzo-color'>Truffles</h5>
+                                    <h5 className='text-md font-semibold font-roboto text-secondary'>Truffles</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='' href="#">
-                                    <p className='text-sm font-medium font-roboto text-yummmzo-color'>20 min</p>
+                                    <p className='text-sm font-medium font-roboto text-secondary'>20 min</p>
                                 </a>
                             </div>
                         </div>
@@ -105,12 +105,12 @@ const TopBrandsComponent = () => {
                             </div>
                             <div className=''>
                                 <a className='' href="#">
-                                    <h5 className='text-md font-semibold font-roboto text-yummmzo-color'>Pizza Hut</h5>
+                                    <h5 className='text-md font-semibold font-roboto text-secondary'>Pizza Hut</h5>
                                 </a>
                             </div>
                             <div>
                                 <a className='' href="#">
-                                    <p className='text-sm font-medium font-roboto text-yummmzo-color'>21 min</p>
+                                    <p className='text-sm font-medium font-roboto text-secondary'>21 min</p>
                                 </a>
                             </div>
                         </div>

@@ -14,15 +14,15 @@ const UpperFooterComponent = () => {
                         </div>
                         <div className=''>
                             <ul className='leading-8'>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">About us</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Team</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Careers</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo Blog</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Bug Bounty</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo One</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo Corporate</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo Instamart</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo Genie</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">About us</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Team</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Careers</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo Blog</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Bug Bounty</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo One</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo Corporate</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo Instamart</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">YummmZo Genie</a></li>
                             </ul>
                         </div>
                     </div>
@@ -34,9 +34,9 @@ const UpperFooterComponent = () => {
                         </div>
                         <div className=''>
                             <ul className='leading-8'>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Help and Support</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Partner with us</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Ride with us</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Help and Support</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Partner with us</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Ride with us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -48,14 +48,14 @@ const UpperFooterComponent = () => {
                         </div>
                         <div className=''>
                             <ul className='leading-8'>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Terms & Condition</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Refund & Cancellation</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Privacy Policy</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Cookie Policy</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Offer Terms</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Phishing & Fraud</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Corporate - YummmZo Money Codes Terms and <br /> Conditions</a></li>
-                                <li className=''><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Corporate - YummmZo Discount Voucher Terms and <br /> Conditions</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Terms & Condition</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Refund & Cancellation</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Privacy Policy</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Cookie Policy</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Offer Terms</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Phishing & Fraud</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Corporate - YummmZo Money Codes Terms and <br /> Conditions</a></li>
+                                <li className='hover:underline cursor-pointer'><a className='text-sm font-roboto font-medium text-yummmzo-color' href="#">Corporate - YummmZo Discount Voucher Terms and <br /> Conditions</a></li>
                             </ul>
                         </div>
                     </div>

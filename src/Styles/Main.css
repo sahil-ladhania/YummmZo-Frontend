@@ -62,8 +62,7 @@
 .loader-line {
     width: 0;
     height: 100%;
-    background-image: linear-gradient(to right, #FFEE33, orange);
-    /* Loader bar color */
+    background-image: linear-gradient(to right, #FA444A, #CB0C48);
     animation: loading 2s linear infinite;
 }
 
@@ -84,7 +83,6 @@
 hr.dashed {
     border: none;
     border-top: 1px dashed #000;
-    /* Adjust color as needed */
 }
 
 /* Veg Only Toggle */

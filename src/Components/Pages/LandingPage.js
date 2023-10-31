@@ -24,7 +24,7 @@ const LandingPage = () => {
         }, 2000);
     }, [navigate])
     return (
-        <div className='bg-gradient-tl-br'>
+        <div className='bg-neutral-50'>
             <>
                 <div>
                     <div className='max-w-6xl ml-auto mr-auto'>

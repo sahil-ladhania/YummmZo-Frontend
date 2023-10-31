@@ -8,7 +8,7 @@ const VegOnlyToggleComponent = () => {
                 <div className='h-20 flex items-center'>
                     {/* Title Section */}
                     <div>
-                        <p className='mr-5 text-sm font-semibold font-roboto text-yummmzo-color'>Veg Only</p>
+                        <p className='mr-5 text-sm font-semibold font-roboto text-secondary'>Veg Only</p>
                     </div>
                     {/* Toggle Button Section */}
                     <label className="toggle">
