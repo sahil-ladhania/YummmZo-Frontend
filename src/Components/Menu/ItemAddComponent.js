@@ -40,7 +40,7 @@ const ItemAddComponent = ({ cartState , cartDispatch }) => {
                                 isAddedToCart ? 
                                 <div className='h-10 w-100 flex ai-c jc-sb'>
                                     <button className='h-10 pr-5 pl-5 bg-slate-200 rounded-sm hover:animate-glow-light' onClick={handleDecrement}>-</button>
-                                    <input className='h-10 pr-5 pl-5 text-yummmzo-color' type="button" value={quantity} />
+                                    <input className='h-10 pr-5 pl-5 text-secondary' type="button" value={quantity} />
                                     <button className='h-10 pr-5 pl-5 bg-slate-200 rounded-sm hover:animate-glow-light' onClick={handleIncrement}>+</button>
                                 </div>
                                 :

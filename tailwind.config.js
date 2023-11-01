@@ -11,12 +11,13 @@ module.exports = {
         "secondary" : "#333634",
         "yummmzo-color" : "#D9D9D9",
         "footer-black" : "#080402",
-        "button-color" : "#D9D9D9"
+        "button-color" : "#D9D9D9",
+        "light-white" : "#F1F1F1"
       },
       backgroundImage: {
         'gradient-tl-br': '#FFFFFF',
         'banner-gradient' : 'linear-gradient(to bottom right, #FA444A, #CB0C48)',
-        'navbar-gradient' : 'linear-gradient(to bottom right, #D9D9D9 , #FFFFFF)',
+        'navbar-gradient' : 'linear-gradient(to bottom right, #FFFFFF , #D9D9D9 , #FFFFFF , #D9D9D9)',
         'card-gradient' : 'linear-gradient(to bottom right, #D9D9D9 , #FFFFFF)',
       },
       fontFamily : {
@@ -28,10 +29,15 @@ module.exports = {
         "secondary" : "#333634",
         "logo" :  '#FA444A',
         "black" : "#080402",
+        "fb" : "#0866FF",
+        "insta" : "#DA3F86",
+        "twitter" : "#1DA1F2",
+        "linkeden" : "#0077B5"
       },
       borderColor : {
         "primary" : "#FFEE33",
         "yummmzo-color" : "#D9D9D9",
+        "secondary" : "#333634",
       },
       outlineColor : {
         "yummmzo-color" : "#D9D9D9",

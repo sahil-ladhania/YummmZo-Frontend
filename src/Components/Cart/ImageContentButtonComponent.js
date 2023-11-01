@@ -26,10 +26,10 @@ const ImageContentButtonComponent = ({loading , setLoading}) => {
                     </div>
                     {/* Content Section */}
                     <div className='flex flex-col items-center h-36 justify-center'>
-                        <div className='text-2xl font-semibold h-10 font-roboto text-yummmzo-color'>
+                        <div className='text-2xl font-semibold h-10 font-roboto text-secondary'>
                             Your cart is empty
                         </div>
-                        <div className='text-sm h-10 font-roboto text-yummmzo-color'>
+                        <div className='text-sm h-10 font-roboto text-secondary'>
                             You can go to home page to view more restaurants
                         </div>
                     </div>

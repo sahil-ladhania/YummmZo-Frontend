@@ -17,7 +17,7 @@ const CheckoutPage = () => {
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     return (
-        <div className='bg-gradient-tl-br'>
+        <div className='bg-secondary'>
             <>
                 <div>
                     <div className='bg-navbar-gradient'>

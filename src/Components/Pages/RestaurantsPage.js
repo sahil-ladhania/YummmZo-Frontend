@@ -60,7 +60,7 @@ const RestaurantsPage = () => {
                     {/* Restaurant Search Bar Component */}
                     <RestaurantSearchComponent/>
                     {/* Inspiration Component */}
-                    <InspirationForFirstOrderComponent cuisines={cuisines}/>
+                    <InspirationForFirstOrderComponent cuisines={cuisines} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                     {/* Filters Component */}
                     <RestaurantFilterComponent restaurants={restaurants} setRestaurants={setRestaurants} filteredRestaurants={filteredRestaurants} setFilteredRestaurants={setFilteredRestaurants} isFastDeliveryActive={isFastDeliveryActive} setIsFastDeliveryActive={setIsFastDeliveryActive} isRatingActive={isRatingActive} setIsRatingActive={setIsRatingActive} isCostLTHActive={isCostLTHActive} setIsCostLTHActive={setIsCostLTHActive} isCostHTLActive={isCostHTLActive} setIsCostHTLActive={setIsCostHTLActive}/>
                     {/* Restaurant Lists Component */}

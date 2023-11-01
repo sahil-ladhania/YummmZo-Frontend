@@ -22,16 +22,16 @@ const LowerFooterComponent = () => {
                 {/* Social Media Handles Container */}
                 <div className='flex items-center w-52 justify-between'>
                     <span className='cursor-pointer'>
-                        <CiFacebook className="text-3xl text-yummmzo-color hover:text-logo"/>
+                        <CiFacebook className="text-3xl text-yummmzo-color hover:text-fb"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <CiInstagram className="text-3xl text-yummmzo-color hover:text-logo"/>
+                        <CiInstagram className="text-3xl text-yummmzo-color hover:text-insta"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <CiTwitter className="text-3xl text-yummmzo-color hover:text-logo"/>
+                        <CiTwitter className="text-3xl text-yummmzo-color hover:text-twitter"/>
                     </span>
                     <span className='cursor-pointer'>
-                        <CiLinkedin className="text-3xl text-yummmzo-color hover:text-logo"/>
+                        <CiLinkedin className="text-3xl text-yummmzo-color hover:text-linkeden"/>
                     </span>
                 </div>
             </div>

@@ -99,107 +99,109 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
         <div className='max-w-6xl ml-auto mr-auto'>
             <>
                 {/* Main Component */}
-                <div className='h-28 flex items-center justify-between'>
-                    {/* Left Part */}
-                    <div className='flex items-center w-5/12'>
-                        <div>
+                <div className='h-28 flex items-center justify-between fixed top-0 left-0 w-full bg-navbar-gradient z-10'>
+                    <div className='max-w-6xl ml-auto mr-auto flex items-center w-full'>
+                        {/* Left Part */}
+                        <div className='flex items-center w-5/12'>
+                            <div>
+                                {
+                                    loading ? 
+                                        <LoaderComponent/>
+                                        :
+                                        <>
+                                            <NavLink onClick={handleHomeLoader} className="mr-5 text-4xl font-semibold font-roboto text-logo">YUMMMZO</NavLink>
+                                        </>
+                                }
+                            </div>
+                            <div className=''>
+                                <a onClick={handleCurrentLocation} className='flex items-center' href="#">
+                                    <span className='text-sm font-medium mr-2 font-roboto text-secondary'>Home</span>
+                                    <span className='text-sm font-roboto mr-2 text-logo'>{currentLocation.slice(0,25)}</span>
+                                    <span><CiCircleChevDown className='text-md  text-logo'/></span>
+                                </a>
+                            </div>
+                        </div>
+                        {/* Right Part */}
+                        <div className='w-7/12'>
+                            <ul className='flex justify-between'>
+                                <li className=''>
+                                    {
+                                    loading ? 
+                                        <LoaderComponent/>
+                                        :
+                                        <>
+                                            <NavLink onClick={handleRestaurantLoader}  className="flex items-center py-5 px-2">
+                                                <CiForkAndKnife className='text-4xl fill-red-400'/>
+                                                <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Restaurants</span>
+                                            </NavLink>
+                                        </>
+                                    }
+                                </li>
+                                <li className=''>
+                                    {
+                                        loading ? 
+                                            <LoaderComponent/>
+                                            :
+                                            <>
+                                                <NavLink onClick={handleAddRestaurantLoader} className="flex items-center py-5 px-2">
+                                                    <CiCirclePlus className='text-4xl fill-red-400'/>
+                                                    <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Add Restaurant</span>
+                                                </NavLink>
+                                            </>
+                                    }
+                                </li>
+                                <li className='relative group'>
+                                    {
+                                        auth.user ?
+                                            <NavLink onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-center py-5 px-2">
+                                                <CiUser className='text-4xl fill-red-400'/>
+                                                <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'> {auth.user.firstName}</span>
+                                            </NavLink>
+                                            :
+                                            <>
+                                                {
+                                                    loading ? 
+                                                        <LoaderComponent/>
+                                                        :
+                                                        <>
+                                                            <NavLink onClick={handleLoginLoader} onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-cente py-5 px-2" to="/login">
+                                                                <CiUser className='text-4xl fill-red-400'/>
+                                                                <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Login</span>
+                                                            </NavLink>
+                                                        </>
+                                                }
+                                            </>
+                                    }
+                                </li>
+                                <li className=''>
+                                    {
+                                        loading ? 
+                                            <LoaderComponent/>
+                                            :
+                                            <>
+                                                <NavLink onClick={handleCartLoader} onMouseEnter={handleCartDropdownEnter} onMouseLeave={handleCartDropdownLeave} className="flex items-center py-5 px-2">
+                                                    <CiShoppingCart className='text-4xl  fill-red-400 '/>
+                                                    <CartBadgeComponent/>
+                                                    <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Cart</span>
+                                                </NavLink>
+                                                
+                                            </>
+                                    }
+                                </li>
+                            </ul>
                             {
-                                loading ? 
-                                    <LoaderComponent/>
+                                isProfileDropdownVisible ?
+                                    <ProfileDropdownComponent auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                                     :
-                                    <>
-                                        <NavLink onClick={handleHomeLoader} className="mr-5 text-4xl font-semibold font-roboto text-logo">YUMMMZO</NavLink>
-                                    </>
+                                    null
+                            }
+                            {
+                                isEmptyCartDropdownVisible ? 
+                                    <EmptyCartComponent/>
+                                    :
+                                    null
                             }
                         </div>
-                        <div className=''>
-                            <a onClick={handleCurrentLocation} className='flex items-center' href="#">
-                                <span className='text-sm font-medium mr-2 font-roboto text-secondary'>Home</span>
-                                <span className='text-sm font-roboto mr-2 text-logo'>{currentLocation.slice(0,25)}</span>
-                                <span><CiCircleChevDown className='text-md  text-logo'/></span>
-                            </a>
-                        </div>
-                    </div>
-                    {/* Right Part */}
-                    <div className='w-7/12'>
-                        <ul className='flex justify-between'>
-                            <li className=''>
-                                {
-                                loading ? 
-                                    <LoaderComponent/>
-                                    :
-                                    <>
-                                        <NavLink onClick={handleRestaurantLoader}  className="flex items-center py-5 px-2">
-                                            <CiForkAndKnife className='text-4xl fill-red-400'/>
-                                            <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Restaurants</span>
-                                        </NavLink>
-                                    </>
-                                }
-                            </li>
-                            <li className=''>
-                                {
-                                    loading ? 
-                                        <LoaderComponent/>
-                                        :
-                                        <>
-                                            <NavLink onClick={handleAddRestaurantLoader} className="flex items-center py-5 px-2">
-                                                <CiCirclePlus className='text-4xl fill-red-400'/>
-                                                <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Add Restaurant</span>
-                                            </NavLink>
-                                        </>
-                                }
-                            </li>
-                            <li className=''>
-                                {
-                                    auth.user ?
-                                        <NavLink onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-center py-5 px-2">
-                                            <CiUser className='text-4xl fill-red-400'/>
-                                            <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'> {auth.user.firstName}</span>
-                                        </NavLink>
-                                        :
-                                        <>
-                                            {
-                                                loading ? 
-                                                    <LoaderComponent/>
-                                                    :
-                                                    <>
-                                                        <NavLink onClick={handleLoginLoader} onMouseEnter={handleProfileDropdownEnter} onMouseLeave={handleProfileDropdownLeave} className="flex items-cente py-5 px-2" to="/login">
-                                                            <CiUser className='text-4xl fill-red-400'/>
-                                                            <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Login</span>
-                                                        </NavLink>
-                                                    </>
-                                            }
-                                        </>
-                                }
-                            </li>
-                            <li className=''>
-                                {
-                                    loading ? 
-                                        <LoaderComponent/>
-                                        :
-                                        <>
-                                            <NavLink onClick={handleCartLoader} onMouseEnter={handleCartDropdownEnter} onMouseLeave={handleCartDropdownLeave} className="flex items-center py-5 px-2">
-                                                <CiShoppingCart className='text-4xl  fill-red-400'/>
-                                                <CartBadgeComponent/>
-                                                <span className='text-lg pr-2 pl-2 font-roboto text-secondary hover:text-logo'>Cart</span>
-                                            </NavLink>
-                                            
-                                        </>
-                                }
-                            </li>
-                        </ul>
-                        {
-                            isProfileDropdownVisible ?
-                                <ProfileDropdownComponent auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
-                                :
-                                null
-                        }
-                        {
-                            isEmptyCartDropdownVisible ? 
-                                <EmptyCartComponent/>
-                                :
-                                null
-                        }
                     </div>
                 </div>
             </>

@@ -6,26 +6,26 @@ const UserAddressComponent = () => {
         <div>
             <>
                 {/* Main Component */}
-                <div className='flex items-start border-2 border-yummmzo-color rounded-sm w-96 mb-10 p-5'>
+                <div className='flex items-start border-2 border-secondary rounded-sm w-96 mb-10 p-5'>
                     {/* Icon Section */}
                     <div className='mr-5'>
-                        <span><CiHome className='text-xl mt-1 text-yummmzo-color'/></span>
+                        <span><CiHome className='text-xl mt-1 text-secondary'/></span>
                     </div>
                     {/* Address Section */}
                     <div className='w-96'>
                         <div className='mb-1'>
-                            <h1 className='text-lg font-semibold font-roboto text-yummmzo-color'>Home</h1>
+                            <h1 className='text-lg font-semibold font-roboto text-secondary'>Home</h1>
                         </div>
                         <div className='mb-1'>
-                            <p className='text-sm font-roboto text-yummmzo-color'>
+                            <p className='text-sm font-roboto text-secondary'>
                                 khasra no 1074, Arthala, Mohan Nagar, Ghaziabad, Uttar Pradesh 201007, G.T. Road, Kailash Park, Arthala, SH 57, Kaila...
                             </p>
                         </div>
                         <div className='mb-2'>
-                            <span className='text-sm font-semibold font-roboto text-yummmzo-color'>32 MINS</span>
+                            <span className='text-sm font-semibold font-roboto text-secondary'>32 MINS</span>
                         </div>
                         <div>
-                            <button className='pr-5 pl-5 pt-3 pb-3 bg-slate-200 rounded-sm font-roboto hover:animate-glow-light'>Deliver Here</button>
+                            <button className='pr-5 pl-5 pt-3 pb-3 bg-button-color rounded-sm font-roboto hover:animate-glow-light'>Deliver Here</button>
                         </div>
                     </div>
                 </div>

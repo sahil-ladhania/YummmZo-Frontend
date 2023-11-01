@@ -1,21 +1,31 @@
 import React from 'react'
+import { CiCircleChevRight } from "react-icons/ci";
+import { CiCircleChevLeft } from "react-icons/ci";
 
-const InspirationForFirstOrderComponent = ({ cuisines }) => {
+const InspirationForFirstOrderComponent = ({ cuisines , auth , setAuth , loading , setLoading }) => {
     return (
-        <div>
+        <div className='max-w-5xl ml-auto mr-auto'>
             <>
                 {/* Main Component */}
                 <div className='flex flex-col h-72 items-start justify-evenly'>
-                    <div>
-                        <span className='text-4xl font-medium py-2 mb-2 font-roboto text-secondary'>Inspiration for your first order</span>
+                    <div className='flex justify-between w-full mt-10'>
+                        <span className='text-4xl font-medium py-2 mb-2 font-roboto text-secondary'>
+                            What's on your mind ?
+                        </span>
+                        <div className='flex items-center'>
+                            <span><CiCircleChevLeft className='text-2xl text-secondary mx-2 cursor-pointer'/></span>
+                            <span><CiCircleChevRight className='text-2xl text-secondary mx-2 cursor-pointer'/></span>
+                        </div>
                     </div>
-                    <div className='flex cursor-pointer w-full bg-card-gradient'>
-                        {cuisines.map((cuisine, index) => (
-                            <div key={index} className='h-40 w-36 flex mb-5 mt-5 flex-col items-center justify-center mr-2 ml-2'>
-                                <img className='h-16 mb-5 rounded-full' src={cuisine.imageURL} alt="" />
-                                <a className='text-sm font-medium font-roboto text-secondary text-center' href="#">{cuisine.cuisineName}</a>
-                            </div>
-                        ))}
+                    <div className='flex cursor-pointer w-full bg-light-white drop-shadow'>
+                        <div className='flex overflow-x-auto'>
+                            {cuisines.map((cuisine, index) => (
+                                <div key={index} className='h-40 w-auto flex  mx-10 flex-col items-center justify-center'>
+                                    <img className='rounded-full mb-2' src={cuisine.imageURL} alt="" />
+                                    <a className='text-sm font-medium font-roboto text-secondary text-center' href="#">{cuisine.cuisineName}</a>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </>

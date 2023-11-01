@@ -20,13 +20,13 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
         }, 2000);
     };
     return (
-        <div>
+        <div className=''>
             <>
                 {
                     auth.user ? 
                     <>
                         {/* Main Component */}
-                        <div className='w-4/12 h-profile-dropdown overflow-y-auto p-5 bg-secondary rounded-md absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-10 ml-52'>
+                        <div className='w-4/12 h-profile-dropdown overflow-y-auto p-5 bg-secondary rounded-md absolute top-10 right-0 mt-10 ml-52'>
                             {/* Profile Title */}
                             <div className='font-roboto text-yummmzo-color text-2xl font-semibold py-5'>
                                 Hello, {auth.user.firstName}!

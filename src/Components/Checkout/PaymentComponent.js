@@ -6,11 +6,11 @@ const PaymentComponent = () => {
         <div className=''>
             <>
                 {/* Main Component */}
-                <div className='bg-secondary w-full p-5 border-2 border-yummmzo-color rounded-sm'>
+                <div className='bg-card-gradient w-full p-5 border-2 border-secondary rounded-sm'>
                     {/* Text Component */}
                     <div className='flex items-center'>
-                        <CiWallet className='text-xl mr-2 text-yummmzo-color'/>
-                        <span className='text-lg font-medium font-roboto text-yummmzo-color'>Payment</span>
+                        <CiWallet className='text-xl mr-2 text-secondary'/>
+                        <span className='text-lg font-medium font-roboto text-secondary'>Payment</span>
                     </div>
                 </div>
             </>
