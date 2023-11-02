@@ -69,7 +69,7 @@ const MenuPage = () => {
                 </div>
                 <div className='max-w-4xl ml-auto mr-auto'>
                     {/* Links | Favourites | Search in Menu Section */}
-                    <LinkFavSearchComponent restaurantDetails={restaurantDetails}/>
+                    <LinkFavSearchComponent restaurantDetails={restaurantDetails} auth={auth} setAuth={setAuth}/>
                     {/* Restaurant Name | Address | Cuisine | Rating Section */}
                     <RestaurantNameAddressCuisineRatingComponent restaurantDetails={restaurantDetails}/>
                     {/* Time and Price for two Section */}

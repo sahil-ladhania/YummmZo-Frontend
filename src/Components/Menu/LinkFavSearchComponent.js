@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 
-const LinkFavSearchComponent = ({ restaurantDetails }) => {
+const LinkFavSearchComponent = ({ restaurantDetails , auth , setAuth }) => {
     // State Variables.
     const [favourites, setFavorites] = useState(false);
     // Handler Functions.
