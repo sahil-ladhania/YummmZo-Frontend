@@ -99,8 +99,7 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
         <div className='max-w-6xl ml-auto mr-auto'>
             <>
                 {/* Main Component */}
-                <div className='h-28 flex items-center justify-between fixed top-0 left-0 w-full bg-navbar-gradient z-10'>
-                    <div className='max-w-6xl ml-auto mr-auto flex items-center w-full'>
+                <div className='h-28 flex items-center justify-between'>
                         {/* Left Part */}
                         <div className='flex items-center w-5/12'>
                             <div>
@@ -203,7 +202,6 @@ const NavbarComponent = ({currentLocation , setCurrentLocation , auth , setAuth 
                             }
                         </div>
                     </div>
-                </div>
             </>
         </div>
     )

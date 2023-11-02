@@ -20,7 +20,7 @@ const CheckoutPage = () => {
         <div className='bg-secondary'>
             <>
                 <div>
-                    <div className='bg-navbar-gradient'>
+                    <div className='bg-navbar-gradient mb-20'>
                         {/* Navbar Component */}
                         <NavbarComponent currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                     </div>
