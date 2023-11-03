@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoaderComponent from '../../Utils/LoaderComponent';
 
 const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
@@ -28,9 +28,16 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                         {/* Main Component */}
                         <div className='w-4/12 h-profile-dropdown overflow-y-auto p-5 bg-secondary rounded-md absolute top-10 right-0 mt-10 ml-52'>
                             {/* Profile Title */}
-                            <div className='font-roboto text-yummmzo-color text-2xl font-semibold py-5'>
-                                Hello, {auth.user.firstName}!
-                            </div>
+                            {
+                                auth.user ?
+                                    <div className='font-roboto text-yummmzo-color text-2xl font-semibold py-5'>
+                                        Hello, {auth.user.firstName}!
+                                    </div>
+                                    :
+                                    <div className='font-roboto text-yummmzo-color text-2xl font-semibold py-5'>
+                                        Hello, User!
+                                    </div>
+                            }
                             {/* Profile Divider */}
                             <div>
                                 <hr />
@@ -46,21 +53,35 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                                 Name
                                             </div>
                                             <div>
-                                                <a className='font-roboto text-primary' href="#">Edit</a>
+                                                <a className='font-roboto text-logo' href="#">Edit</a>
                                             </div>
                                         </div>
-                                        <div className='font-roboto text-yummmzo-color font-medium'>
-                                            {auth.user.firstName}
-                                        </div>
+                                        {
+                                            auth.user ? 
+                                                <div className='font-roboto text-yummmzo-color font-medium'>
+                                                    {auth.user.firstName}
+                                                </div>
+                                                :
+                                                <div className='font-roboto text-yummmzo-color font-medium'>
+                                                    User
+                                                </div>
+                                        }
                                     </div>
                                     {/* Email Row */}
                                     <div className=''>
                                         <div className='font-roboto text-yummmzo-color'>
                                             Email
                                         </div>
-                                        <div className='font-roboto text-yummmzo-color font-medium'>
-                                            {auth.user.email}
-                                        </div>
+                                        {
+                                            auth.user ? 
+                                                <div className='font-roboto text-yummmzo-color font-medium'>
+                                                    {auth.user.email}
+                                                </div>
+                                                :
+                                                <div className='font-roboto text-yummmzo-color font-medium'>
+                                                    user@gmail.com
+                                                </div>
+                                        }
                                     </div>
                                 </div>
                                 {/* Profile Divider */}
@@ -74,10 +95,10 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                             Phone
                                         </div>
                                         <div>
-                                            <a className='font-roboto text-primary' href="#">Edit</a>
+                                            <a className='font-roboto text-logo' href="#">Edit</a>
                                         </div>
                                     </div>
-                                    <div className='font-roboto text-primary text-sm'>
+                                    <div className='font-roboto text-logo text-sm'>
                                         What's your phone number?
                                     </div>
                                 </div>
@@ -92,7 +113,7 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                             Password
                                         </div>
                                         <div>
-                                            <a className='font-roboto text-primary' href="#">Edit</a>
+                                            <a className='font-roboto text-logo' href="#">Edit</a>
                                         </div>
                                     </div>
                                     <div className='font-roboto text-yummmzo-color'>
@@ -125,7 +146,7 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                             </p>
                                         </div>
                                         <div>
-                                            <button className='font-roboto text-primary'>Toggle</button>
+                                            <button className='font-roboto text-logo'>Toggle</button>
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +161,7 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                             Promo code
                                         </div>
                                         <div>
-                                            <a className='font-roboto text-primary' href="#">Add</a>
+                                            <a className='font-roboto text-logo' href="#">Add</a>
                                         </div>
                                     </div>
                                     <div className='font-roboto text-yummmzo-color'>
@@ -154,8 +175,11 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                 {/* Logout Section */}
                                 <div className='py-5'>
                                     <div className='flex items-center justify-end'>
-                                        <a onClick={handleLogout} className='font-roboto text-primary' href="#">Log out</a>
+                                        <a onClick={handleLogout} className='font-roboto text-logo' href="#">Log out</a>
                                     </div>
+                                    {
+                                    
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -183,7 +207,7 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                                 Name
                                             </div>
                                             <div>
-                                                <a className='font-roboto text-primary' href="#">Edit</a>
+                                                <a className='font-roboto text-logo' href="#">Edit</a>
                                             </div>
                                         </div>
                                         <div className='font-roboto text-yummmzo-color font-medium'>
@@ -211,10 +235,10 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                             Phone
                                         </div>
                                         <div>
-                                            <a className='font-roboto text-primary' href="#">Edit</a>
+                                            <a className='font-roboto text-logo' href="#">Edit</a>
                                         </div>
                                     </div>
-                                    <div className='font-roboto text-primary text-sm'>
+                                    <div className='font-roboto text-logo text-sm'>
                                         What's your phone number?
                                     </div>
                                 </div>
@@ -229,7 +253,7 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                             Password
                                         </div>
                                         <div>
-                                            <a className='font-roboto text-primary' href="#">Edit</a>
+                                            <a className='font-roboto text-logo' href="#">Edit</a>
                                         </div>
                                     </div>
                                     <div className='font-roboto text-yummmzo-color'>
@@ -262,7 +286,7 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                             </p>
                                         </div>
                                         <div>
-                                            <button className='font-roboto text-primary'>Toggle</button>
+                                            <button className='font-roboto text-logo'>Toggle</button>
                                         </div>
                                     </div>
                                 </div>
@@ -277,7 +301,7 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                             Promo code
                                         </div>
                                         <div>
-                                            <a className='font-roboto text-primary' href="#">Add</a>
+                                            <a className='font-roboto text-logo' href="#">Add</a>
                                         </div>
                                     </div>
                                     <div className='font-roboto text-yummmzo-color'>
@@ -295,9 +319,16 @@ const ProfileDropdownComponent = ({auth , setAuth , loading , setLoading}) => {
                                             <LoaderComponent/>
                                             :
                                             <>
-                                                <div className='flex items-center justify-end'>
-                                                    <a onClick={handleLogout} className='font-roboto text-primary' href="#">Log out</a>
-                                                </div>
+                                                {
+                                                    auth.user ?
+                                                        <div className='flex items-center justify-end'>
+                                                            <a onClick={handleLogout} className='font-roboto text-logo' href="#">Log out</a>
+                                                        </div>
+                                                        :
+                                                        <div className='flex items-center justify-end'>
+                                                            <Link to="/login" className='font-roboto text-logo'>Login</Link>
+                                                        </div>
+                                                }
                                             </>
                                     }
                                 </div>

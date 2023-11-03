@@ -9,7 +9,7 @@ const RestaurantResults = ({ data  }) => {
             <>
                 {/* Main Component */}
                 <Link to={`/menu/${data._id}`}>
-                    <div className='h-auto w-full hover:bg-primary rounded-sm p-2 flex items-start justify-start cursor-pointer'>
+                    <div className='h-auto w-full hover:bg-white rounded-sm p-2 flex items-start justify-start cursor-pointer'>
                         {/* Restaurant Image Container */}
                         <div className='mr-10'>
                             <img className='rounded-md h-28 w-32 mt-1' src={data.imageURL} alt="" />

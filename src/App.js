@@ -62,7 +62,6 @@ function App() {
                                 <Route path="/landing" element={<LandingPage/>}/>
                                 <Route path="/menu/:restaurantId" element={<MenuPage/>}/>
                                 <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
-                                <Route path="/profile" element={<ProfileDropdownComponent/>}/>
                                 <Route path="/cuisineResult" element={<CuisineResults/>}/>
                                 <Route path="/restaurantResult" element={<RestaurantResults/>}/>
                                 <Route path="/menuItemResult" element={<MenuItemsResultComponent/>}/>
