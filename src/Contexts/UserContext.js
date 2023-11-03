@@ -14,6 +14,7 @@ const UserContextProvider = ({children}) => {
         email : '',
         password : ''
     });
+    const [isAuthenticated , setIsAuthenticated] = useState(!!initialUser);
     const [auth , setAuth] = useState({
         user : initialUser ? JSON.parse(initialUser) : null,
         token : initialToken || ''
@@ -23,7 +24,7 @@ const UserContextProvider = ({children}) => {
         localStorage.setItem("jwt_token" , auth.token);
     }, [auth]);
     return(
-        <UserContext.Provider value={{formData , setFormData , auth , setAuth}}>
+        <UserContext.Provider value={{formData , setFormData , auth , setAuth , isAuthenticated , setIsAuthenticated}}>
             {children}
         </UserContext.Provider>
     )

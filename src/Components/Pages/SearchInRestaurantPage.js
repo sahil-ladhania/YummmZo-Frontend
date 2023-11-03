@@ -1,11 +1,14 @@
 // Importing Components | Modules | Libraries
 import React, {useContext} from 'react'
+import { useParams } from 'react-router-dom';
 import NavbarComponent from '../Common/NavbarComponent';
 import SearchInRestaurantComponent from '../Menu/SearchInRestaurantComponent';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
 import { UserContext } from '../../Contexts/UserContext';
 
 const SearchInRestaurantPage = () => {
+    // Getting ID.
+    const { userId , restaurantId } = useParams();
     // Accessing Input States From The Context.
     const {formData , setFormData , auth , setAuth} = useContext(UserContext);
     // Accessing Current Location From The Context.

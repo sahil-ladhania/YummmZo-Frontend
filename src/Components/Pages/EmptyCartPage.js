@@ -1,5 +1,6 @@
 // Importing Components | Modules | Libraries
 import React, {useContext} from 'react'
+import { useParams } from 'react-router-dom';
 import NavbarComponent from '../Common/NavbarComponent';
 import ImageContentButtonComponent from '../Cart/ImageContentButtonComponent';
 import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationContext';
@@ -7,6 +8,8 @@ import { UserContext } from '../../Contexts/UserContext';
 import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 
 const EmptyCartPage = () => {
+    // Getting ID.
+    const { userId } = useParams();
     // Accessing Loading State From The Context.
     const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Input States From The Context.

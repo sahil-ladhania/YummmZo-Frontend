@@ -1,5 +1,6 @@
 // Importing Components | Modules | Libraries
 import React, { useContext, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import NavbarComponent from '../Common/NavbarComponent'
 import PopularCuisinesComponent from '../Layout/PopularCuisinesComponent'
 import FooterComponent from '../Common/FooterComponent';
@@ -12,10 +13,12 @@ import { UserContext } from '../../Contexts/UserContext';
 import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 
 const HomePage = () => {
+    // Getting ID.
+    const { userId , restaurantId } = useParams();
     // Accessing Loading State From The Context.
     const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Input States From The Context.
-    const {formData , setFormData , auth , setAuth} = useContext(UserContext);
+    const {formData , setFormData , auth , setAuth , isAuthenticated , setIsAuthenticated} = useContext(UserContext);
     // Accessing Current Location From The Context.
     const {currentLocation , setCurrentLocation} = useContext(UserCurrentLocationContext);
     // Accessing Cuisines From The Context.

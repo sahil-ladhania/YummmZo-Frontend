@@ -1,5 +1,6 @@
 // Importing Components | Modules | Libraries
 import React, {useContext , useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 import NavbarComponent from '../Common/NavbarComponent';
 import FooterComponent from '../Common/FooterComponent';
 import RestaurantSearchComponent from '../Restaurant/RestaurantSearchComponent';
@@ -17,6 +18,8 @@ import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 import { CartContext } from '../../Contexts/CartContext';
 
 const RestaurantsPage = () => {
+    // Getting ID.
+    const { userId } = useParams();
     // Accessing Cart State From The Context.
     const {cartState , cartDispatch} = useContext(CartContext);
     // Accessing Loading State From The Context.

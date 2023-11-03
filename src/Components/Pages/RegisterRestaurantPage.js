@@ -1,10 +1,13 @@
 // Importing Components | Modules | Libraries
 import React from 'react'
+import { useParams } from 'react-router-dom';
 import AddRestaurantFormComponent from '../Restaurant/AddRestaurantFormComponent';
 import YummmZoBusinessNavbarComponent from '../Restaurant/YummmZoBusinessNavbarComponent';
 import GoBackNextButtonsComponent from '../Restaurant/GoBackNextButtonsComponent';
 
 const RegisterRestaurantPage = () => {
+    // Getting ID.
+    const { userId } = useParams();
     return (
         <div className=''>
             <>

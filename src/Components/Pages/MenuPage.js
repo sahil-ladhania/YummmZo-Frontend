@@ -20,6 +20,8 @@ import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 import { CartContext } from '../../Contexts/CartContext';
 
 const MenuPage = () => {
+    // Getting ID.
+    const { userId , restaurantId } = useParams();
     // Accessing Cart State From The Context.
     const {cartState , cartDispatch} = useContext(CartContext);
     // Accessing Loading State From The Context.
@@ -32,8 +34,6 @@ const MenuPage = () => {
     const { restaurantDetails , setRestaurantDetails } = useContext(RestaurantDetailsContext);
     // Accessing MenuItems From The Context.
     const { menuItems , setMenuItems } = useContext(MenuContext);
-    // Getting ID.
-    const { restaurantId } = useParams();
     // Fetching Restaurant Details From Database.
     useEffect(() => {
         if(restaurantId){

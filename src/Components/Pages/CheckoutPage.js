@@ -1,5 +1,6 @@
 // Importing Components | Modules | Libraries
 import React, { useContext, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import NavbarComponent from '../Common/NavbarComponent';
 import DeliveryAddressComponent from '../Checkout/DeliveryAddressComponent';
 import BillComponent from '../Checkout/BillComponent';
@@ -10,6 +11,8 @@ import { UserContext } from '../../Contexts/UserContext';
 import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 
 const CheckoutPage = () => {
+    // Getting ID.
+    const { userId } = useParams();
     // Accessing Loading State From The Context.
     const {loading , setLoading} = useContext(PageLoaderContext);
     // Accessing Input States From The Context.

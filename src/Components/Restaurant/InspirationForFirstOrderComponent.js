@@ -9,9 +9,16 @@ const InspirationForFirstOrderComponent = ({ cuisines , auth , setAuth , loading
                 {/* Main Component */}
                 <div className='flex flex-col h-72 items-start justify-evenly'>
                     <div className='flex justify-between w-full mt-10'>
-                        <span className='text-4xl font-medium py-2 mb-2 font-roboto text-secondary'>
-                            What's on your mind ?
-                        </span>
+                        {
+                            auth.user ?
+                                <span className='text-4xl font-medium py-2 mb-2 font-roboto text-secondary'>
+                                    {auth.user.firstName}, What's on your mind ?
+                                </span>
+                                :
+                                <span className='text-4xl font-medium py-2 mb-2 font-roboto text-secondary'>
+                                    What's on your mind ?
+                                </span>
+                        }
                         <div className='flex items-center'>
                             <span><CiCircleChevLeft className='text-2xl text-secondary mx-2 cursor-pointer'/></span>
                             <span><CiCircleChevRight className='text-2xl text-secondary mx-2 cursor-pointer'/></span>
