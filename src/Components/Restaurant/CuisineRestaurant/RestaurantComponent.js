@@ -33,13 +33,13 @@ const RestaurantComponent = ({restaurant , loading , setLoading}) => {
                                     <img className='font-roboto text-secondary' src={imageURL} alt={restaurantName} />
                                     <div className='restaurant-info'>
                                         <div className='mb-5 pt-1 font-semibold font-roboto text-secondary'>{restaurantName}</div>
-                                        <div className='mb-5 text-sm font-roboto text-secondary'>{cuisine}</div>
+                                        <div className='mb-5 text-sm font-medium font-roboto text-secondary'>{cuisine}</div>
                                         <div className='flex justify-between items-center'>
-                                            <span className='flex items-center text-sm font-roboto text-secondary'><CiStar className='text-xl mr-1 text-green-700'/>{rating}</span>
+                                            <span className='flex items-center text-sm font-roboto text-secondary font-medium'><CiStar className='text-xl mr-1 text-green-700 font-medium'/>{rating}</span>
                                             <span className='font-roboto text-secondary'>.</span>
-                                            <span className='text-sm font-roboto text-secondary'>{deliveryTime} MINS</span>
+                                            <span className='text-sm font-roboto text-secondary font-medium'>{deliveryTime} MINS</span>
                                             <span className='font-roboto text-secondary'>.</span>
-                                            <span className='flex items-center text-sm font-roboto text-secondary'><HiCurrencyRupee className='text-xl mr-1 text-secondary'/>{priceForTwo} FOR TWO</span>
+                                            <span className='flex items-center text-sm font-roboto text-secondary font-medium'><HiCurrencyRupee className='text-xl mr-1 text-secondary'/>{priceForTwo} FOR TWO</span>
                                         </div>
                                     </div>
                                 </div>

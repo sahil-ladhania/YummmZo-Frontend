@@ -78,7 +78,7 @@ const MenuPage = () => {
                     <CouponsSectionComponent/>
                     {/* Veg Only Section */}
                     <VegOnlyToggleComponent/>
-                    {/* Menu Section*/}
+                    {/* -----Menu Section-----*/}
                     {/* Heading Section */}
                     <ItemCategoryHeadingComponent/>
                     {/* Menu Section Component */}

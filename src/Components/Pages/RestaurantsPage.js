@@ -16,6 +16,7 @@ import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationCo
 import { UserContext } from '../../Contexts/UserContext';
 import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 import { CartContext } from '../../Contexts/CartContext';
+import OffersScrollComponent from '../Restaurant/OffersScrollComponent';
 
 const RestaurantsPage = () => {
     // Getting ID.
@@ -62,6 +63,8 @@ const RestaurantsPage = () => {
                 <div className='max-w-5xl ml-auto mr-auto'>
                     {/* Restaurant Search Bar Component */}
                     <RestaurantSearchComponent/>
+                    {/* Offer Scroll Component */}
+                    <OffersScrollComponent auth={auth} setAuth={setAuth}/>
                     {/* Inspiration Component */}
                     <InspirationForFirstOrderComponent cuisines={cuisines} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                     {/* Filters Component */}
