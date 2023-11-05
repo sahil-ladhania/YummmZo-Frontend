@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/material.css';
-import loginUser from '../../Services/LoginService.js';
+import { loginUser } from '../../Services/LoginService.js';
 import { getLocation } from 'current-location-geo';
 import LoaderComponent from '../../Utils/LoaderComponent.js';
 
