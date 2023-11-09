@@ -65,6 +65,10 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
             <>
                 {/* Main Component */}
                 <div className='flex items-center justify-between'>
+                    {/* Image */}
+                    <div className='w-7/12'>
+                        <img className='h-96' src="https://images.unsplash.com/photo-1530554764233-e79e16c91d08?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image" />
+                    </div>
                     {/* Log In Form */}
                     <div className='w-5/12 flex flex-col justify-between items-center bg-secondary p-5 rounded-sm mr-24'>
                         {/* Form Haeding Section */}
@@ -144,10 +148,6 @@ const LogInComponent = ({formData , setFormData , currentLocation , setCurrentLo
                             <p className='mb-5 font-roboto text-yummmzo-color'>-------------------Or-------------------</p>
                         </div>
                         {/* Sign Up With Google Section */}
-                    </div>
-                    {/* Image */}
-                    <div className='w-7/12'>
-                        <img className='h-96' src="https://assets.materialup.com/uploads/7d01cb77-d023-499b-b583-e5c17b57ca00/preview.jpg" alt="Image" />
                     </div>
                 </div>
             </>

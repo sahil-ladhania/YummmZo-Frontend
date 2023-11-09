@@ -16,9 +16,11 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-tl-br': '#FFFFFF',
-        'banner-gradient' : 'linear-gradient(to bottom right, #FA444A, #CB0C48)',
+        'banner-gradient' : 'linear-gradient(to bottom right, #FF3044,#CB0C48)',
         'navbar-gradient' : 'linear-gradient(to bottom right, #FFFFFF , #D9D9D9 , #FFFFFF , #D9D9D9)',
         'card-gradient' : 'linear-gradient(to bottom right, #D9D9D9 , #FFFFFF)',
+        'signup-gradient' : 'linear-gradient(to bottom right, #FF3044,#CB0C48)',
+        'signin-gradient' : 'linear-gradient(to bottom right, #FF3044,#CB0C48)',
       },
       fontFamily : {
         roboto: ['Roboto', 'sans'],
@@ -48,6 +50,9 @@ module.exports = {
       animation: {
         'glow-light': 'glow-light 1s', // Define the 'glow-light' animation
       },
+      height: {
+        "signup-form" : "750px"
+      }
     },
   },
   plugins: [],

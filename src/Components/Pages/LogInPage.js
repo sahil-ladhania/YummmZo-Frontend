@@ -14,17 +14,11 @@ const LogInPage = () => {
     // Accessing Input States From The Context.
     const {formData , setFormData , auth , setAuth} = useContext(UserContext);
     return (
-        <div className='h-screen'>
+        <div className='bg-signin-gradient backdrop-filter backdrop-blur-lg'>
             <>
-                <div className=''>
-                    {/* YummmZo Logo */}
-                    <div className='bg-navbar-gradient'>
-                        <YummmZoLogoComponent/>
-                    </div>
-                    <div className='max-w-6xl ml-auto mr-auto'>
-                        {/* Log In Form */}
-                        <LogInComponent formData={formData} setFormData={setFormData} currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
-                    </div>
+                <div className='max-w-6xl ml-auto mr-auto'>
+                    {/* Log In Form */}
+                    <LogInComponent formData={formData} setFormData={setFormData} currentLocation={currentLocation} setCurrentLocation={setCurrentLocation} auth={auth} setAuth={setAuth} loading={loading} setLoading={setLoading}/>
                 </div>
             </>
         </div>
