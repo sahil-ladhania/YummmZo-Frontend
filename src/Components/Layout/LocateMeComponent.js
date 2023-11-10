@@ -98,7 +98,7 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation , loading , set
                                                 <LoaderComponent/>
                                                 :
                                                 <>
-                                                    <Link onClick={handleLoginLoader} className='pr-5 pl-5 pt-3 pb-3 bg-button-color rounded-sm font-roboto hover:animate-glow-light'>Login</Link>
+                                                    <Link onClick={handleLoginLoader} className='pr-5 pl-5 pt-3 pb-3 bg-signup-gradient text-white rounded-sm font-roboto hover:animate-glow-light'>Login</Link>
                                                 </>
                                         }
                                         {
@@ -106,7 +106,7 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation , loading , set
                                                 <LoaderComponent/>
                                                 :
                                                 <>
-                                                    <Link onClick={handleSignupLoader} className='pr-5 pl-5 pt-3 pb-3 bg-button-color rounded-sm font-roboto hover:animate-glow-light'>Sign Up</Link>
+                                                    <Link onClick={handleSignupLoader} className='pr-5 pl-5 pt-3 pb-3 bg-signin-gradient text-white rounded-sm font-roboto hover:animate-glow-light'>Sign Up</Link>
                                                 </>
                                         }
                                     </div>
@@ -119,9 +119,9 @@ const LocateMeComponent = ({currentLocation , setCurrentLocation , loading , set
                                 {/* Locate Me Section */}
                                 <div className='h-20 flex justify-start items-center'>
                                     <input className="w-80 h-10 outline-none rounded-l-sm p-2 bg-white font-roboto text-secondary" type="text" placeholder='Enter your delivery location'/>
-                                    <div onClick={handleCurrentLocation} className='flex items-center bg-button-color rounded-r-sm h-10 cursor-pointer hover:animate-glow-light'>
-                                        <span className='pr-1 pl-1 text-xl'><CiLocationOn/></span>
-                                        <span className='pr-3 pl-3 text-sm font-roboto'>Locate Me</span>
+                                    <div onClick={handleCurrentLocation} className='flex items-center bg-signup-gradient rounded-r-sm h-10 cursor-pointer hover:animate-glow-light'>
+                                        <span className='pr-1 pl-1 text-xl text-white'><CiLocationOn/></span>
+                                        <span className='pr-3 pl-3 text-sm font-roboto text-white'>Locate Me</span>
                                     </div>
                                 </div>
                                 {/* Popular Cities Heading */}

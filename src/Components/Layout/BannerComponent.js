@@ -8,7 +8,7 @@ const BannerComponent = () => {
                 <div className='h-auto flex items-center justify-between py-10'>
                     {/* Content Section */}
                     <div className=''>
-                        <p className='text-4xl font-bold h-24 w-64 font-roboto text-yummmzo-color'>Restaurants in your pocket</p>
+                        <p className='text-4xl font-bold h-24 w-64 font-roboto text-white'>Restaurants in your pocket</p>
                         <p className='h-24 w-96 text-lg font-medium font-roboto text-black'>
                             Order from your favorite restaurants & track on the go, with the all-new YummmZo app.
                         </p>

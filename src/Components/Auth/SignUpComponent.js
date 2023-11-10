@@ -12,28 +12,33 @@ const SignUpComponent = ({formData , setFormData , loading , setLoading}) => {
     // Handler Functions.
     const handleRegister = (e) => {
         e.preventDefault();
-        registerUser(formData)
-            .then((userData) => {
-                if(userData){
-                    console.log(userData);
-                    setTimeout(() => {
-                        toast.success("Registration Successfull ...");
-                        navigate('/login');
-                    },1000);
-                    setFormData({
-                        firstName: '',
-                        lastName: '',
-                        email: '',
-                        password: '',
-                    });
-                }
-                else{
-                    toast.error("Invalid Credentials !!!");
-                }
-            })
-            .catch((error) => {
-                console.log(error);
-            })
+        if(formData.firstName === '' || formData.lastName === '' || formData.email === '' || formData.password === ''){
+            return toast.error("Please Fill All Feilds !!!");
+        }
+        else{
+            registerUser(formData)
+                .then((userData) => {
+                    if(userData){
+                        console.log(userData);
+                        setTimeout(() => {
+                            toast.success("Registration Successfull ...");
+                            navigate('/login');
+                        },1000);
+                        setFormData({
+                            firstName: '',
+                            lastName: '',
+                            email: '',
+                            password: '',
+                        });
+                    }
+                    else{
+                        toast.error("Invalid Credentials !!!");
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
     }
     const handleLoginLoader = () => {
         setLoading(true);
@@ -59,7 +64,7 @@ const SignUpComponent = ({formData , setFormData , loading , setLoading}) => {
                             {/* Form Heading Section */}
                             <div className='flex flex-col items-start justify-between mb-5'>
                                 <h1 className='text-5xl font-semibold font-roboto text-secondary tracking-wide mb-2'>Sign Up</h1>
-                                <div className='text-sm font-normal font-roboto text-secondary'>Already have an account ? <Link className='font-roboto font-medium text-secondary' to="/login">Log in</Link></div>
+                                <div className='text-sm font-normal font-roboto text-secondary'>Already have an account ? <Link className='font-roboto font-medium text-secondary underline hover:no-underline' to="/login">Log in</Link></div>
                             </div>
                             {/* Sign up with Number / Email Section */}
                             <div className='flex flex-col justify-evenly'>
@@ -112,7 +117,7 @@ const SignUpComponent = ({formData , setFormData , loading , setLoading}) => {
                             </div>
                             {/* Create Account */}
                             <div className='my-2'>
-                                <button onClick={handleRegister} className='pr-5 pl-5 pt-3 pb-3 bg-banner-gradient rounded-sm w-96 mb-5 font-roboto text-xl hover:animate-glow-button text-white tracking-wide'>Sign Up</button>
+                                <button onClick={handleRegister} className='pr-5 pl-5 pt-3 pb-3 bg-banner-gradient rounded-sm w-96 mb-5 font-roboto text-xl hover:animate-glow-light text-white tracking-wide'>Sign Up</button>
                             </div>
                             {/* ----- or ----- Section */}
                             <div className='mb-5 flex items-center'>

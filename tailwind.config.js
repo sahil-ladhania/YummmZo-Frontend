@@ -29,7 +29,7 @@ module.exports = {
         "yummmzo-color" : "#D9D9D9",
         "primary" : "#FFEE33",
         "secondary" : "#333634",
-        "logo" :  '#FA444A',
+        "logo" :  '#FF3044',
         "black" : "#080402",
         "fb" : "#0866FF",
         "insta" : "#DA3F86",

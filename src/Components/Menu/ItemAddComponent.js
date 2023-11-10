@@ -41,12 +41,12 @@ const ItemAddComponent = ({ cartState , cartDispatch }) => {
                             {
                                 isAddedToCart ? 
                                 <div className='h-10 w-100 flex ai-c jc-sb'>
-                                    <button className='h-10 pr-5 pl-5 bg-button-color rounded-sm hover:animate-glow-light' onClick={handleDecrement}>-</button>
+                                    <button className='h-10 pr-5 pl-5 bg-signup-gradient text-white rounded-sm hover:animate-glow-light' onClick={handleDecrement}>-</button>
                                     <input className='h-10 pr-5 pl-5 text-secondary' type="button" value={quantity} />
-                                    <button className='h-10 pr-5 pl-5 bg-button-color rounded-sm hover:animate-glow-light' onClick={handleIncrement}>+</button>
+                                    <button className='h-10 pr-5 pl-5 bg-signup-gradient text-white rounded-sm hover:animate-glow-light' onClick={handleIncrement}>+</button>
                                 </div>
                                 :
-                                <button onClick={handleAddToCart} className='h-10 pr-5 pl-5 bg-button-color rounded-sm hover:animate-glow-light'>Add To Cart</button>
+                                <button onClick={handleAddToCart} className='h-10 pr-5 pl-5 bg-signup-gradient text-white rounded-sm hover:animate-glow-light'>Add To Cart</button>
                             }
                         </div>
                 </div>
