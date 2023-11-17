@@ -54,7 +54,7 @@ function App() {
                                 <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
                                 <Route path="/searchInRestaurant/:userId/:restaurantId" element={<SearchInRestaurantPage/>}/>
                                 <Route path="/cart/:userId" element={<EmptyCartPage/>}/>
-                                <Route path="/checkout/:userId" element={<CheckoutPage/>}/>
+                                {/* <Route path="/checkout/:userId" element={<CheckoutPage/>}/> */}
                                 <Route path="*" element={<FourZeroFourPage/>}/>
                               </Routes>
                             </CartContextProvider>
