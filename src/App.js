@@ -23,6 +23,7 @@ import { UserContextProvider } from './Contexts/UserContext';
 import { UserCurrentLocationContextProvider } from './Contexts/UserCurrentLocationContext';
 import { PageLoaderContextProvider } from './Contexts/PageLoaderContext';
 import { CartContextProvider } from './Contexts/CartContext';
+import ReviewListComponent from './Components/Restaurant/ReviewListComponent';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
                                 <Route path="/searchInRestaurant" element={<SearchInRestaurantPage/>}/>
                                 <Route path="/searchInRestaurant/:userId/:restaurantId" element={<SearchInRestaurantPage/>}/>
                                 <Route path="/cart/:userId" element={<EmptyCartPage/>}/>
+                                <Route path="/userReview" element={<ReviewListComponent/>}/>
                                 {/* <Route path="/checkout/:userId" element={<CheckoutPage/>}/> */}
                                 <Route path="*" element={<FourZeroFourPage/>}/>
                               </Routes>

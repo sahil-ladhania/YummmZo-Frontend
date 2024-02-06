@@ -18,6 +18,8 @@ import { UserCurrentLocationContext } from '../../Contexts/UserCurrentLocationCo
 import { UserContext } from '../../Contexts/UserContext';
 import { PageLoaderContext } from '../../Contexts/PageLoaderContext';
 import { CartContext } from '../../Contexts/CartContext';
+import ReviewButtonComponent from '../Restaurant/ReviewButtonComponent';
+import MenuButtonComponent from '../Restaurant/MenuButtonComponent';
 
 const MenuPage = () => {
     // Getting ID.
@@ -76,8 +78,16 @@ const MenuPage = () => {
                     <TimeAndPriceForTwoComponent restaurantDetails={restaurantDetails}/>
                     {/* Coupons Section */}
                     <CouponsSectionComponent/>
-                    {/* Veg Only Section */}
-                    <VegOnlyToggleComponent/>
+                    <div className='flex items-center'>
+                        {/* Veg Only Section */}
+                        <VegOnlyToggleComponent/>
+                        <div className='flex w-60 justify-around'>
+                            {/* Reviews Section */}
+                            <ReviewButtonComponent/>
+                            {/* Menu Items Section */}
+                            <MenuButtonComponent/>
+                        </div>
+                    </div>
                     {/* -----Menu Section-----*/}
                     {/* Heading Section */}
                     <ItemCategoryHeadingComponent/>
